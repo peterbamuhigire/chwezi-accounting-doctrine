@@ -1,0 +1,6 @@
+# Local-only mirror destinations and adoption stamps are not part of
+# the doctrine repo. Adoption metadata lives in each consumer engine.
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
