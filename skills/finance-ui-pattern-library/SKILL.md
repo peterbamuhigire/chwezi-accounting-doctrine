@@ -83,7 +83,7 @@ This skill enforces 32 patterns from `design-anti-patterns.md` automatically; th
 
 ## Auto-loading
 
-This skill is referenced from each engine's `CLAUDE.md` "Finance & Accounting Trigger" block. When the request is UI-flavoured (HTML, CSS, JSX, mobile native code, screen mock, dashboard, report, print) and finance scope is detected, this skill is loaded automatically alongside the doctrine.
+This skill is referenced from each engine's `AGENTS.md` "Finance & Accounting Trigger" block. When the request is UI-flavoured (HTML, CSS, JSX, mobile native code, screen mock, dashboard, report, print) and finance scope is detected, this skill is loaded automatically alongside the doctrine.
 
 ## Files
 
