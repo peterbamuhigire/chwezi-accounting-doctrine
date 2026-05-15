@@ -12,12 +12,11 @@
 
 param(
   [switch]$DryRun,
-  [string]$Engine
+  [string]$Engine,
+  [string]$Master = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 )
 
 $ErrorActionPreference = 'Stop'
-
-$Master = 'C:\wamp64\www\_chwezi-doctrine'
 
 # Consumer engines: engine key -> root path
 $Engines = @{
@@ -30,7 +29,7 @@ $Engines = @{
 # For each engine, doctrine and skills mirror destinations.
 # skills-web-dev (.claude\skills) uses `_doctrine/` and `skills/` (its existing
 # skills folder); the others use `doctrine/` and `skills/finance/`.
-$Layout = @{
+$EngineLayouts = @{
   'web-dev'      = @{ doctrine = '_doctrine'; skills = 'skills' }
   'srs'          = @{ doctrine = 'doctrine';  skills = 'skills\finance' }
   'proposal'     = @{ doctrine = 'doctrine';  skills = 'skills\finance' }
@@ -95,9 +94,9 @@ foreach ($key in $targets) {
     continue
   }
   $engineRoot = $Engines[$key]
-  $layout = $Layout[$key]
-  $doctrineDst = Join-Path $engineRoot $layout.doctrine
-  $skillsDst   = Join-Path $engineRoot $layout.skills
+  $engineLayout = $EngineLayouts[$key]
+  $doctrineDst = Join-Path $engineRoot $engineLayout.doctrine
+  $skillsDst   = Join-Path $engineRoot $engineLayout.skills
 
   Write-Host "==> $key  ($engineRoot)" -ForegroundColor Cyan
 

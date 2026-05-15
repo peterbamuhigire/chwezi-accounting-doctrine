@@ -1,13 +1,14 @@
 # Executive Summary
 
-Overall score: **72 / 100**  
-Current judgement: **Strong foundation, not yet world-class release-grade.**
+Baseline score: **72 / 100**
+Report-v2 target score: **92-94 / 100 after evidence, validation, and reviewer sign-off**
+Current judgement: **Strong foundation with a documented 90+ evidence path; still pass-with-caveats until the evidence package is complete.**
 
 The repository has the right conceptual backbone for a serious accounting and finance doctrine engine. Its strongest areas are the accounting boundary, Chart of Accounts doctrine, ledger invariants, tax-return pack concept, live-rate verification protocol, role-conditioned finance UX, print-fidelity standard, month-end close playbook, audit-ready reporting pack, internal controls, and a blocker-based finance quality gate.
 
 Those are the right primitives for an engine that guides software development, software planning, SDLC support, business planning, proposal writing, and strategy work. The repository is already pointed toward a professional standard rather than a casual template library.
 
-However, it is not yet safe to claim "100% accurate", "fully standardized", or "better than Big Four work" in a literal sense. The package currently lacks executable validators, a source-register implementation, complete reference files promised by skills, complete East Africa country packs, current 2027 standards-transition handling, and enough canonical examples/tests to force downstream engines to behave consistently. It also has visible quality issues such as mojibake encoding artifacts and a likely stale mirror path in `integration/mirror.ps1`.
+However, it is not yet safe to claim "100% accurate", "fully standardized", or "better than Big Four work" in a literal sense. The report-v2 uplift shows a credible path to 90+, but the claim depends on evidence: executable validators, a source-register implementation, complete reference classification, Uganda verified-source entries, 2027 standards-transition handling, canonical posting fixtures, normalized skills, a clean mojibake scan, mirror dry-run evidence, audit export sample, release manifest, and reviewer sign-off.
 
 The right goal is not to imitate PwC, Deloitte, EY, KPMG, or other firms. The right goal is to encode the same professional disciplines that make their outputs valuable: authoritative sources, versioned methodology, reviewer sign-off, risk-based judgement, audit evidence, consistent templates, current standards monitoring, quality control, independence/ethics awareness, and plain-language client communication.
 
@@ -35,3 +36,13 @@ Depth should come from references, examples, snippets, test fixtures, source reg
 6. Fix encoding, missing references, and stale integration paths.
 7. Require every final client output to have a plain-language explanation layer, accounting treatment layer, and evidence/caveat layer.
 
+## Report-V2 Documentation Added
+
+The fin-analysis pack now includes:
+
+- `08-target-90-evidence-package.md`
+- `09-finding-closure-matrix.md`
+- `10-implementation-backlog.md`
+- `11-definition-of-done-and-rescore.md`
+
+The release-evidence documentation also includes `docs/release-manifest-template.yaml` and the `docs/audit-export-sample/` skeleton. These are scaffolds for release evidence, not substitutes for validation output or professional review.

@@ -1,0 +1,1 @@
+journal_id,tenant_id,book,entry_date,period,source_type,source_id,idempotency_key,status,description,created_by,created_at_utc,posted_by,posted_at_utc,reverses_journal_id,approval_reference,audit_log_id

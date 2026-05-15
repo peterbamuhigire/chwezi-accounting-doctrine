@@ -1,0 +1,97 @@
+# Chwezi source-register schema
+#
+# Each country/topic file is a YAML sequence of entries. This schema is a
+# repository contract for validators and reviewers; it is not evidence that any
+# entry is current.
+
+schema_version: "2026-05-14"
+entry_type: "source-register-entry"
+document_shape: "sequence"
+required_fields:
+  - id
+  - topic
+  - jurisdiction
+  - value_or_rule
+  - source_url_or_doc
+  - source_tier
+  - date_accessed_utc
+  - verifier
+  - output_affected
+  - effective_from
+  - expires_or_recheck_due
+  - state
+  - archive_snapshot
+  - notes
+field_rules:
+  id:
+    type: string
+    pattern: "^[A-Z]{2,3}-[A-Z0-9-]+$"
+    example: "UG-VAT-STANDARD-RATE"
+  topic:
+    type: string
+  jurisdiction:
+    type: string
+    pattern: "^[A-Z]{2}$"
+  value_or_rule:
+    type: string
+    rule: "Use exact statutory value only when reviewed; otherwise describe the pending rule area."
+  source_url_or_doc:
+    type: string
+    rule: "Official URL, enacted law, regulator page, or local archive path."
+  source_tier:
+    type: integer
+    allowed_values: [1, 2, 3, 4, 5, 6]
+  date_accessed_utc:
+    type: string
+    format: "YYYY-MM-DDTHH:MM:SSZ"
+  verifier:
+    type: string
+    rule: "Named reviewer for verified-current; role or pending reviewer for draft entries."
+  output_affected:
+    type: sequence
+    min_items: 1
+  effective_from:
+    type: string
+    format: "YYYY-MM-DD or pending-review"
+  expires_or_recheck_due:
+    type: string
+    format: "YYYY-MM-DD"
+  state:
+    type: string
+    allowed_values:
+      - draft
+      - verified-current
+      - verified-with-caveat
+      - stale
+      - superseded
+      - no-source-found
+  archive_snapshot:
+    type: string
+    rule: "Archive URL, local evidence path, or capture-required-before-release."
+  notes:
+    type: string
+state_machine:
+  draft:
+    meaning: "Source identified but not reviewed."
+    can_support_final_output: false
+  verified-current:
+    meaning: "Official source checked, date recorded, reviewer named, and archive captured."
+    can_support_final_output: true
+  verified-with-caveat:
+    meaning: "Source checked, but scope or interpretation caveat remains."
+    can_support_final_output: "Only with caveat and reviewer approval."
+  stale:
+    meaning: "Recheck date passed."
+    can_support_final_output: false
+  superseded:
+    meaning: "Replaced by a newer authority entry."
+    can_support_final_output: false
+  no-source-found:
+    meaning: "Search attempted; no official source found."
+    can_support_final_output: false
+quality_gate_rules:
+  - "Final statutory values require state verified-current or reviewer-approved verified-with-caveat."
+  - "verified-current requires a named reviewer and an archive_snapshot that is not capture-required-before-release."
+  - "draft, stale, superseded, and no-source-found entries cannot support final statutory output."
+  - "Every entry used by a report, posting rule, tax schedule, or payroll run must be within its recheck date."
+  - "No hardcoded final rate may bypass this register."

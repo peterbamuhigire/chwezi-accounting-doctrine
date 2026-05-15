@@ -1,0 +1,1 @@
+journal_line_id,journal_id,line_no,account_code,account_name,account_type,currency,debit_minor,credit_minor,dimension_department,dimension_branch,dimension_project,dimension_customer,dimension_supplier,tax_code,source_register_id,source_document_id,audit_log_id

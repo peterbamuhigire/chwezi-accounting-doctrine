@@ -1,0 +1,33 @@
+- id: UG-VAT-STANDARD-RATE
+  topic: Uganda VAT standard rate and VAT treatment seed
+  jurisdiction: UG
+  value_or_rule: "Pending reviewer extraction from the URA Taxation Handbook FY 2024-25 and current law."
+  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  source_tier: 2
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "tax reviewer pending"
+  output_affected:
+    - sales-tax-codes
+    - vat-return-pack
+    - efris-invoice-validation
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Official source URL identified in the uplift report. Do not use for final VAT rates until reviewed, archived, and marked verified-current or approved verified-with-caveat."
+- id: UG-VAT-RETURN-PACK-SOURCE
+  topic: Uganda VAT return pack source hierarchy
+  jurisdiction: UG
+  value_or_rule: "Use URA and enacted VAT law as the authority set for VAT return mapping; current forms and filing fields require reviewer confirmation."
+  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  source_tier: 2
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "tax reviewer pending"
+  output_affected:
+    - vat-return-pack
+    - tax-control-reconciliation
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Draft hierarchy only. Final VAT return field mapping requires current URA form/source review."

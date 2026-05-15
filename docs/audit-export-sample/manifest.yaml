@@ -1,0 +1,50 @@
+# Sample audit export manifest skeleton.
+# This bundle demonstrates required structure only. Replace placeholders with reconciled sample data before using it as release evidence.
+
+audit_export:
+  entity_name: "Sample Entity Ltd"
+  entity_identifier: "SAMPLE-ENTITY"
+  tin: "<sample-tin>"
+  period_start: "2026-05-01"
+  period_end: "2026-05-31"
+  framework: "IFRS for SMEs baseline with 2027 transition caveats where applicable"
+  currency: "UGX"
+  prepared_at_utc: "<yyyy-mm-ddThh:mm:ssZ>"
+  prepared_by: "<name-or-role>"
+  status: "skeleton" # skeleton | draft | reviewed | released
+
+release_reference:
+  doctrine_version: "<version>"
+  source_commit: "<git-sha>"
+  release_manifest: "../release-manifest-template.yaml"
+  validation_report: "../validation-report-<version>.md"
+
+contents:
+  index: "00-index.md"
+  reports:
+    trial_balance: "reports/trial-balance.md"
+    profit_or_loss: "reports/profit-or-loss.md"
+    financial_position: "reports/financial-position.md"
+    cash_movement: "reports/cash-movement.md"
+    tax_control_reconciliation: "reports/tax-control-reconciliation.md"
+  ledger:
+    journals: "ledger/journals.csv"
+    journal_lines: "ledger/journal-lines.csv"
+    source_document_map: "ledger/source-document-map.csv"
+  evidence:
+    invoices: "evidence/invoices/README.md"
+    receipts: "evidence/receipts/README.md"
+    bank_statements: "evidence/bank-statements/README.md"
+  signoffs:
+    preparer: "signoffs/preparer.md"
+    reviewer: "signoffs/reviewer.md"
+    controller: "signoffs/controller.md"
+  hashes:
+    readme: "hashes/README.md"
+    sha256sums: "hashes/sha256sums.txt"
+
+open_caveats:
+  - "This sample bundle contains placeholders and CSV headers only."
+  - "No report values are asserted by this skeleton."
+  - "Source documents must be attached before audit reliance."
+  - "Hashes must be regenerated after files are populated."

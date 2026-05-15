@@ -1,6 +1,7 @@
 # System Scorecard Out Of 100
 
-Overall score: **72 / 100**
+Baseline score: **72 / 100**
+Report-v2 target score: **92-94 / 100 after required evidence is implemented and signed off**
 
 ## Summary
 
@@ -42,6 +43,22 @@ Main score reducers:
 | After Phase 3 standards/country updates | 91 | Uganda verified pack, 2027 standards transition, country skeletons. |
 | After Phase 4 productization | 95+ | Sample audit export, client templates, release evidence bundles, reviewer sign-off workflow. |
 
+## Report-V2 Target Model
+
+| Category | Weight | Baseline | Target | Required evidence |
+|---|---:|---:|---:|---|
+| Accounting doctrine correctness | 15 | 12 | 14 | 2027 standards transition notes, SME/full IFRS decision tree, reviewer sign-off. |
+| Ledger architecture and invariants | 15 | 12 | 14 | Ledger-posting-engine core, balanced and failure fixtures, idempotency and reversal tests. |
+| Tax, statutory, and live verification | 12 | 7 | 11 | Source-register schema, Uganda verified pack, stale/missing-source gate. |
+| Reporting and audit readiness | 12 | 9 | 11 | Audit export sample, report pack manifest, hashes, source drilldown, sign-off workflow. |
+| Internal controls and governance | 10 | 7 | 9 | Engagement quality, ethics, independence, reviewer competence, maker-checker evidence. |
+| UX for laymen and non-accountants | 8 | 7 | 8 | Three-layer output rule in client-facing templates. |
+| Skill architecture and composability | 10 | 6 | 9 | 25-skill catalogue and explicit Inputs/Outputs in every skill. |
+| Standards freshness | 8 | 5 | 8 | IFRS Required 2026, IFRS 18, IFRS for SMEs third edition, IAASB 2025, IESBA 2025 entries and review calendar. |
+| Repository engineering quality | 6 | 3 | 6 | CI or local validator, mojibake scan, link check, mirror dry-run. |
+| East Africa/Africa extensibility | 4 | 4 | 4 | Country skeletons that block final rates until verified. |
+| **Total** | **100** | **72** | **94** | Release-evidence bundle. |
+
 ## Release Decision
 
 Current release decision: **pass-with-caveats**.
@@ -61,3 +78,4 @@ Not allowed yet:
 - Claiming Big Four equivalent assurance.
 - Using country placeholders as final country packs.
 
+The target model is conditional. It should be used to drive implementation and re-score preparation, not as a current score until the definition of done in `11-definition-of-done-and-rescore.md` is satisfied.

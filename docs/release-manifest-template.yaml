@@ -1,0 +1,124 @@
+# Chwezi accounting doctrine release manifest template.
+# Complete this file for each release and store the completed manifest with the release evidence bundle.
+
+release:
+  doctrine_version: "<version>"
+  release_id: "chwezi-accounting-doctrine-<version>-<yyyymmdd>"
+  source_commit: "<git-sha>"
+  branch_or_tag: "<branch-or-tag>"
+  released_at_utc: "<yyyy-mm-ddThh:mm:ssZ>"
+  prepared_by: "<name-or-role>"
+  release_state: "draft" # draft | candidate | released | withdrawn
+  validation_state: "pass-with-caveats" # pass | pass-with-caveats | fail | not-run
+
+scorecard:
+  baseline_score: 72
+  target_score_range: "92-94 after evidence, validation, and reviewer sign-off"
+  current_claimed_score: null
+  score_claim_caveat: "Do not claim 90+ until validation evidence and reviewer sign-offs are attached."
+
+validation:
+  validation_report: "docs/validation-report-<version>.md"
+  blocker_findings: null
+  high_findings: null
+  high_findings_waived: null
+  mojibake_matches: null
+  local_link_check: "not-run"
+  skill_contract_check: "not-run"
+  source_register_check: "not-run"
+  mirror_dry_run: "not-run"
+  notes:
+    - "Attach validator output before release approval."
+
+standards_basis:
+  ifrs_required: "2026 baseline"
+  ifrs_18_transition: "required for annual reporting periods beginning on or after 2027-01-01"
+  ifrs_for_smes_2025_transition: "required for annual reporting periods beginning on or after 2027-01-01"
+  iaasb_reference: "2025 handbook"
+  iesba_reference: "2025 handbook or current standards page"
+  source_capture_state: "capture-required-before-release"
+
+source_register:
+  state: "not-verified" # not-implemented | not-verified | uganda-minimum-verified | verified-with-caveats
+  snapshot_path: "doctrine/source-register/<snapshot-or-folder>"
+  uganda_active_surfaces:
+    vat: "not-verified"
+    paye: "not-verified"
+    nssf: "not-verified"
+    wht: "not-verified"
+    income_tax: "not-verified"
+    efris: "not-verified"
+    exchange_rates: "not-verified"
+  country_pack_states:
+    uganda: "draft"
+    kenya: "skeleton"
+    rwanda: "skeleton"
+    tanzania: "skeleton"
+    south_africa: "skeleton"
+
+evidence_packages:
+  target_90_evidence_package: "docs/fin-analysis/08-target-90-evidence-package.md"
+  finding_closure_matrix: "docs/fin-analysis/09-finding-closure-matrix.md"
+  implementation_backlog: "docs/fin-analysis/10-implementation-backlog.md"
+  definition_of_done: "docs/fin-analysis/11-definition-of-done-and-rescore.md"
+  audit_export_sample: "docs/audit-export-sample/"
+  reference_manifest: "docs/reference-manifest.md"
+  validation_report: "docs/validation-report-<version>.md"
+
+finding_summary:
+  closed:
+    - "<finding-id>"
+  open:
+    - "F-001"
+    - "F-002"
+    - "F-003"
+    - "F-004"
+    - "F-005"
+    - "F-006"
+    - "F-007"
+    - "F-008"
+    - "F-009"
+    - "F-010"
+    - "F-011"
+    - "F-012"
+  waivers:
+    - id: "<finding-id>"
+      owner: "<name-or-role>"
+      approver: "<name-or-role>"
+      expires_on: "<yyyy-mm-dd>"
+      scope: "<release-scope>"
+      rationale: "<why release can proceed>"
+
+reviewer_signoffs:
+  doctrine_owner:
+    name: "<name>"
+    signed_at_utc: null
+    scope: "Doctrine completeness and versioning"
+  accounting_reviewer:
+    name: "<name>"
+    signed_at_utc: null
+    scope: "Accounting doctrine, ledger invariants, reporting basis"
+  tax_reviewer:
+    name: "<name>"
+    signed_at_utc: null
+    scope: "Tax, statutory, payroll, source-register states"
+  tooling_reviewer:
+    name: "<name>"
+    signed_at_utc: null
+    scope: "Validation harness, links, mojibake, mirror dry-run"
+  delivery_reviewer:
+    name: "<name>"
+    signed_at_utc: null
+    scope: "Plain-language layer, client caveats, release package"
+
+open_caveats:
+  - "Non-Uganda country packs are skeletons unless separately verified."
+  - "Final statutory outputs require verified-current or reviewer-approved verified-with-caveat source-register entries."
+  - "Archive snapshots for web sources must be captured before public or client-facing release."
+  - "Audit export sample placeholders are not real financial statements."
+
+hashes:
+  sha256_manifest: "docs/audit-export-sample/hashes/sha256sums.txt"
+  hash_method: "sha256"
+  generated_at_utc: null
+  generated_by: "<name-or-role>"

@@ -1,0 +1,18 @@
+- id: UG-INCOME-TAX-RULES
+  topic: Uganda income tax rates, small taxpayer treatment, and filing source seed
+  jurisdiction: UG
+  value_or_rule: "Pending reviewer extraction from the URA Taxation Handbook FY 2024-25 and current income tax authority."
+  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  source_tier: 2
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "tax reviewer pending"
+  output_affected:
+    - income-tax-computation
+    - deferred-tax-caveats
+    - tax-payment-schedule
+    - management-accounts-tax-note
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Do not use for final corporation tax, presumptive tax, advance tax, or tax-return output until reviewed and archived."

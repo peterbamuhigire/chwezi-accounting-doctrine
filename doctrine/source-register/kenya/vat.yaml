@@ -1,0 +1,17 @@
+- id: KE-VAT-SKELETON
+  topic: Kenya VAT source skeleton
+  jurisdiction: KE
+  value_or_rule: "Pending Kenya reviewer extraction of VAT registration, rates, exempt/zero-rated treatment, filing, and return-pack mapping."
+  source_url_or_doc: "https://kra.go.ke/individual/filing-paying/types-of-taxes/value-added-tax"
+  source_tier: 2
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "Kenya tax reviewer pending"
+  output_affected:
+    - kenya-sales-tax-codes
+    - kenya-vat-return-pack
+    - kenya-tax-control-reconciliation
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Skeleton only. Do not use for final Kenya VAT values or filings."

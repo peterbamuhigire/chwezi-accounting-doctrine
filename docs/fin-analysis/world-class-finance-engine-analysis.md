@@ -1,8 +1,8 @@
-# World-Class Finance Doctrine Engine Analysis
+﻿# World-Class Finance Doctrine Engine Analysis
 
-Prepared: 2026-05-14  
-Repository: `C:\wamp64\www\chwezi-accounting-doctrine`  
-Doctrine version reviewed: `1.0.0`  
+Prepared: 2026-05-14
+Repository: `C:\wamp64\www\chwezi-accounting-doctrine`
+Doctrine version reviewed: `1.0.0`
 Current repository release assessment: `pass-with-caveats` for internal doctrine use; not yet safe to claim "100% current" or "Big Four equivalent" without the remediation programme below.
 
 ## Executive Summary
@@ -85,7 +85,7 @@ The repo is not yet executable enough. It describes rules, but there is no CI or
 
 The repo has broken or incomplete reference promises. Examples include `ledger-invariants.md` pointing to an internal-controls acceptance-test reference that is not present, several skills listing `references/*.md` or `examples/*.md` files that do not exist, and integration references to files in consumer engines that are not part of this repo. Some of those are intentional future files, but they need a manifest state: `present`, `planned`, `external`, or `deprecated`.
 
-The repo has encoding defects. Strings such as `â€”`, `â†’`, `â‰¤`, and box-drawing artifacts appear in multiple files. For a doctrine engine that generates premium client-facing artifacts, this is a visible quality defect.
+The baseline evaluation found encoding defects: corrupted dash, arrow, comparison, and box-drawing glyphs appeared in multiple files. For a doctrine engine that generates premium client-facing artifacts, this is a visible quality defect.
 
 The mirror script uses `$Master = 'C:\wamp64\www\_chwezi-doctrine'`, while this repository is located at `C:\wamp64\www\chwezi-accounting-doctrine`. If `_chwezi-doctrine` is no longer the canonical path, mirroring will fail or copy stale material.
 
@@ -489,7 +489,7 @@ Target duration: 1 to 2 weeks.
 
 | Work item | Owner | Acceptance evidence |
 |---|---|---|
-| Fix mojibake and encoding artifacts | Doctrine maintainer | Scan returns no `â`, `Ã`, replacement characters, or corrupted arrows. |
+| Fix mojibake and encoding artifacts | Doctrine maintainer | Scan returns no corrupted glyph signatures, replacement characters, or corrupted arrows. |
 | Fix mirror path and add dry-run verification | Tooling owner | `integration/mirror.ps1 -DryRun` succeeds from repo root. |
 | Add reference manifest | Doctrine maintainer | Every declared reference is present/planned/external/deprecated. |
 | Add validation harness | Tooling owner | Validator runs locally and returns structured output. |
@@ -545,4 +545,3 @@ For this doctrine engine, "world class" should be defined by evidence, not adjec
 - Every release has a manifest, validation result, reviewer sign-off, and known gaps.
 
 The repository is already pointed in the right direction. The next step is to turn it from a strong written doctrine into a tested, versioned, evidence-producing methodology engine.
-

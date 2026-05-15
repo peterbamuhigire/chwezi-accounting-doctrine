@@ -1,0 +1,394 @@
+﻿{
+    "doctrine_validation":  "pass-with-caveats",
+    "ran_at":  "2026-05-15T00:30:58",
+    "repo_root":  "C:\\wamp64\\www\\chwezi-accounting-doctrine",
+    "strict":  false,
+    "blocker_findings":  0,
+    "high_findings":  0,
+    "medium_findings":  0,
+    "caveat_findings":  46,
+    "checks":  [
+                   {
+                       "check":  "mojibake",
+                       "state":  "pass",
+                       "summary":  {
+                                       "files_scanned":  181,
+                                       "mojibake_matches":  0,
+                                       "strict":  false
+                                   },
+                       "findings":  [
+
+                                    ],
+                       "exit_code":  0
+                   },
+                   {
+                       "check":  "skill-contracts",
+                       "state":  "pass-with-caveats",
+                       "summary":  {
+                                       "active_finance_skills":  25,
+                                       "skill_directories":  25,
+                                       "planned_skill_directories":  0,
+                                       "declared_references":  69,
+                                       "missing_declared_references":  44,
+                                       "quality_gate_blockers":  40,
+                                       "quality_gate_blockers_covered":  40,
+                                       "quality_gate_planned_rows":  15,
+                                       "strict":  false
+                                   },
+                       "findings":  [
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\audit-ready-reporting-pack\\references\\notes-templates.md",
+                                            "path":  "skills\\audit-ready-reporting-pack\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\audit-ready-reporting-pack\\references\\auditor-export-format.md",
+                                            "path":  "skills\\audit-ready-reporting-pack\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\audit-ready-reporting-pack\\examples\\may-2026-monthly-pack.md",
+                                            "path":  "skills\\audit-ready-reporting-pack\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\bank-and-mobile-money-reconciliation\\references\\provider-quirks.md",
+                                            "path":  "skills\\bank-and-mobile-money-reconciliation\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\bank-and-mobile-money-reconciliation\\references\\data-model.sql",
+                                            "path":  "skills\\bank-and-mobile-money-reconciliation\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\finance-ui-pattern-library\\examples\\ledger-trial-balance.md",
+                                            "path":  "skills\\finance-ui-pattern-library\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\finance-ui-pattern-library\\examples\\reconciliation-triage.md",
+                                            "path":  "skills\\finance-ui-pattern-library\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\finance-ux-for-non-accountants\\references\\workflow-vocabulary.md",
+                                            "path":  "skills\\finance-ux-for-non-accountants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\finance-ux-for-non-accountants\\references\\microcopy-style.md",
+                                            "path":  "skills\\finance-ux-for-non-accountants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\finance-ux-for-non-accountants\\examples\\cashier-day-flow.md",
+                                            "path":  "skills\\finance-ux-for-non-accountants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-agriculture\\references\\fair-value-methodology.md",
+                                            "path":  "skills\\ias-agriculture\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-agriculture\\references\\cohort-data-model.md",
+                                            "path":  "skills\\ias-agriculture\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-agriculture\\examples\\birdc-layer-flock-q2-2026.md",
+                                            "path":  "skills\\ias-agriculture\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-government-grants\\references\\grant-register-schema.md",
+                                            "path":  "skills\\ias-government-grants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-government-grants\\references\\donor-restriction-pattern.md",
+                                            "path":  "skills\\ias-government-grants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-government-grants\\examples\\ngo-restricted-grant-cycle.md",
+                                            "path":  "skills\\ias-government-grants\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-impairment\\references\\indicator-checklist.md",
+                                            "path":  "skills\\ias-impairment\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-impairment\\references\\value-in-use-workpaper-template.md",
+                                            "path":  "skills\\ias-impairment\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-income-tax-deferred-tax\\references\\temporary-difference-catalog.md",
+                                            "path":  "skills\\ias-income-tax-deferred-tax\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-income-tax-deferred-tax\\references\\recognition-checklist.md",
+                                            "path":  "skills\\ias-income-tax-deferred-tax\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-income-tax-deferred-tax\\examples\\sme-tax-provision-2026-04.md",
+                                            "path":  "skills\\ias-income-tax-deferred-tax\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-provisions-contingencies\\references\\recognition-decision-tree.md",
+                                            "path":  "skills\\ias-provisions-contingencies\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ias-provisions-contingencies\\references\\onerous-contract-test.md",
+                                            "path":  "skills\\ias-provisions-contingencies\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-financial-instruments\\references\\section-11-impairment.md",
+                                            "path":  "skills\\ifrs-financial-instruments\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-financial-instruments\\references\\ifrs-9-ecl-simplified-trade-receivables.md",
+                                            "path":  "skills\\ifrs-financial-instruments\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-financial-instruments\\references\\effective-interest-schedule.md",
+                                            "path":  "skills\\ifrs-financial-instruments\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-for-smes-equivalents\\references\\full-ifrs-to-sme-mapping.md",
+                                            "path":  "skills\\ifrs-for-smes-equivalents\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-for-smes-equivalents\\references\\client-profile-decision-tree.md",
+                                            "path":  "skills\\ifrs-for-smes-equivalents\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-leases\\references\\exemption-test.md",
+                                            "path":  "skills\\ifrs-leases\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-leases\\references\\full-ifrs-16-lessee-model.md",
+                                            "path":  "skills\\ifrs-leases\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-revenue-recognition\\references\\section-23-summary.md",
+                                            "path":  "skills\\ifrs-revenue-recognition\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-revenue-recognition\\references\\ifrs-15-five-step.md",
+                                            "path":  "skills\\ifrs-revenue-recognition\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\ifrs-revenue-recognition\\examples\\multi-element-software-licence-plus-support.md",
+                                            "path":  "skills\\ifrs-revenue-recognition\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\internal-controls-library\\references\\sod-conflict-matrix.md",
+                                            "path":  "skills\\internal-controls-library\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\internal-controls-library\\references\\exception-indicators.md",
+                                            "path":  "skills\\internal-controls-library\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\internal-controls-library\\examples\\payment-approval-flow.md",
+                                            "path":  "skills\\internal-controls-library\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\management-accounting-dimensions\\references\\dimensions-spec.md",
+                                            "path":  "skills\\management-accounting-dimensions\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\management-accounting-dimensions\\references\\allocation-rules-pattern.md",
+                                            "path":  "skills\\management-accounting-dimensions\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\management-accounting-dimensions\\examples\\contribution-margin-by-branch.md",
+                                            "path":  "skills\\management-accounting-dimensions\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\month-end-and-year-end-close-playbook\\references\\year-end-extras.md",
+                                            "path":  "skills\\month-end-and-year-end-close-playbook\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\month-end-and-year-end-close-playbook\\examples\\first-close-checklist.md",
+                                            "path":  "skills\\month-end-and-year-end-close-playbook\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\opening-balances-and-migration-playbook\\references\\cutover-pack.md",
+                                            "path":  "skills\\opening-balances-and-migration-playbook\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\opening-balances-and-migration-playbook\\references\\legacy-source-extractors.md",
+                                            "path":  "skills\\opening-balances-and-migration-playbook\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SKILL-021",
+                                            "message":  "Declared file is planned in reference manifest: skills\\opening-balances-and-migration-playbook\\examples\\sme-cutover-pack-2026-04-30.md",
+                                            "path":  "skills\\opening-balances-and-migration-playbook\\SKILL.md",
+                                            "line":  0
+                                        },
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "GATE-002",
+                                            "message":  "15 quality-gate blocker rows are mapped to planned fixtures or checks.",
+                                            "path":  "docs/quality-gate-fixture-map.md",
+                                            "line":  0
+                                        }
+                                    ],
+                       "exit_code":  0
+                   },
+                   {
+                       "check":  "source-register",
+                       "state":  "pass-with-caveats",
+                       "summary":  {
+                                       "entry_files":  9,
+                                       "verified_current_entries":  0,
+                                       "verified_with_caveat_entries":  0,
+                                       "draft_entries":  9,
+                                       "stale_entries":  0,
+                                       "strict":  false
+                                   },
+                       "findings":  [
+                                        {
+                                            "severity":  "caveat",
+                                            "code":  "SRC-007",
+                                            "message":  "No verified-current entries found. Release can only support draft or caveated non-final outputs.",
+                                            "path":  "doctrine/source-register",
+                                            "line":  0
+                                        }
+                                    ],
+                       "exit_code":  0
+                   },
+                   {
+                       "check":  "links",
+                       "state":  "pass",
+                       "summary":  {
+                                       "local_links_checked":  0,
+                                       "external_links_seen":  0,
+                                       "broken_local_links":  0,
+                                       "strict":  false
+                                   },
+                       "findings":  [
+
+                                    ],
+                       "exit_code":  0
+                   }
+               ]
+}

@@ -54,7 +54,7 @@ Each consumer engine records its adopted doctrine version in `<engine>/doctrine/
 
 ## Mirror sync
 
-When the master tree at `_chwezi-doctrine/` changes, the mirror script at `integration/mirror.ps1` copies the changed files to every consumer engine. After the sync, the adoption record is updated.
+When this master tree changes, the mirror script at `integration/mirror.ps1` copies the changed files to every consumer engine. The script defaults to the repository root and can be pointed at another source with `-Master`. After the sync, the adoption record is updated.
 
 ## Review cadence
 

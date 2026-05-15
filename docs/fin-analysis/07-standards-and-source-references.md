@@ -45,3 +45,6 @@ Each file should state:
 - quality-gate blockers
 - acceptance evidence
 
+## Source Capture Caveat
+
+The report-v2 extract notes that several web sources were verified as live official pages, but archive snapshots were still marked capture-required-before-release. A public or client-facing release should include archive.org, archive.today, or controlled local evidence captures in the source register before claiming final statutory or standards-current output.

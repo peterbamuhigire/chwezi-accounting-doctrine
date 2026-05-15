@@ -160,3 +160,65 @@ Permissions are scoped narrowly. A cashier cannot create a supplier; only reques
 - `examples/cashier-day-flow.md` — a cashier's complete day on the workflow surface.
 
 Last reviewed: 2026-05-12. Next review due: 2026-11-12.
+
+## Prerequisites
+
+- Load `doctrine/accounting-finance-doctrine.md` before applying this skill.
+- Load `governance/finance-accounting-quality-gate.md` when the output is a release, client artefact, SRS, SDS, proposal, business plan, or implementation plan.
+- Use `doctrine/source-register/` for final statutory, tax, payroll, FX, EFRIS, eTIMS, or authority-template values.
+
+## Inputs
+
+| Artifact | Produced by | Required? | Validation |
+|---|---|---|---|
+| Finance context map | `finance-module-audit` | Required | Entity, framework, jurisdiction, modules, users, and deployment context are named. |
+| Doctrine baseline | Doctrine owner | Required | Doctrine version and reporting framework are stated. |
+| Source-register snapshot | `tax-statutory-source-register-and-country-packs` | Required for final statutory output | Entries are `verified-current` or reviewer-approved `verified-with-caveat`. |
+| Ledger/posting context | `ledger-posting-engine-core` | Required when postings are affected | Posting boundary, CoA mappings, control accounts, dimensions, and period state are known. |
+
+## Outputs
+
+| Artifact | Consumed by | Acceptance evidence |
+|---|---|---|
+| Skill-specific decision record | Implementer, reviewer, quality gate | Scope, assumptions, chosen treatment, rejected alternatives, and caveats are recorded. |
+| Implementation or workflow contract | Software, SRS, SDS, proposal, or business-plan engine | Contract names inputs, outputs, controls, evidence, and failure conditions. |
+| Acceptance evidence | Finance quality gate | Tests, fixtures, examples, source links, reviewer sign-off, or evidence-pack references are present. |
+| Plain-language explanation | Client, owner, manager, operator | Business meaning is stated before technical accounting treatment where client-facing. |
+
+## Decision Rules
+
+- Prefer IFRS for SMEs for typical SME entities unless full IFRS, local law, donor requirements, or client policy requires otherwise.
+- Treat every money-touching workflow as ledger, control, reconciliation, evidence, and reporting scope.
+- Do not finalize statutory values without source-register support and reviewer status.
+- Use business-language output for operators and accountant-language output for ledger, reporting, and audit users.
+- Escalate uncertain framework, tax, or statutory interpretations to the required reviewer role instead of presenting them as final.
+
+## Acceptance Evidence
+
+- Inputs and outputs above are present or explicitly marked not applicable.
+- Relevant quality-gate blockers have been checked and no blocker remains unresolved.
+- Examples or fixtures cover at least one happy path and one failure or caveat path for this skill's domain.
+- Reviewer role, review date, and open caveats are recorded for release-grade artefacts.
+
+## Anti-Patterns
+
+- Treating draft planning assumptions as final statutory or accounting facts.
+- Hiding tax, payroll, FX, or authority-template caveats in prose instead of source-register state.
+- Producing technically correct accounting output without a plain-language layer for non-accountant users.
+- Closing a remediation or implementation item without observable evidence.
+
+## Required References
+
+- `doctrine/accounting-finance-doctrine.md`.
+- `governance/finance-accounting-quality-gate.md`.
+- `docs/reference-manifest.md` for declared reference states.
+- Domain-specific references listed earlier in this skill.
+
+## Examples
+
+- Include at least one normal workflow example for this skill's domain.
+- Include at least one exception, rejection, reversal, stale-source, or reviewer-caveat example where the domain can fail.
+
+## Review Metadata
+
+Last reviewed: 2026-05-15. Next review due: 2026-11-15.

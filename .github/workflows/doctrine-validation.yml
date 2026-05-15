@@ -1,0 +1,30 @@
+name: Doctrine Validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Run doctrine validator
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run validation harness
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools\validate-doctrine.ps1 -ReportPath doctrine-validation-report.json
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: doctrine-validation-report
+          path: doctrine-validation-report.json

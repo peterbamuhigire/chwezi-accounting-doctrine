@@ -141,3 +141,45 @@ Add a validator that checks:
 - every quality-gate blocker has a fixture
 - `Last reviewed` and `Next review due` are present
 
+## Release Manifest Minimum Fields
+
+Every release should complete `docs/release-manifest-template.yaml` with:
+
+```yaml
+release:
+  doctrine_version: "<version>"
+  source_commit: "<git-sha>"
+  released_at_utc: "<timestamp>"
+  validation_state: "pass-with-caveats"
+  blocker_findings: 0
+  high_findings: 0
+  source_register_state: "<state>"
+  standards_basis:
+    ifrs_required: "2026 baseline"
+    ifrs_18_transition: "present"
+    ifrs_for_smes_2025_transition: "present"
+  reviewer_signoffs:
+    doctrine_owner: "<name/date>"
+    accounting_reviewer: "<name/date>"
+    tax_reviewer: "<name/date>"
+    tooling_reviewer: "<name/date>"
+  open_caveats:
+    - "Non-Uganda country packs are skeletons unless separately verified."
+```
+
+## Audit Export Sample Shape
+
+The audit export sample should remain inspectable in source control:
+
+```text
+docs/audit-export-sample/
+  manifest.yaml
+  00-index.md
+  reports/
+  ledger/
+  evidence/
+  signoffs/
+  hashes/
+```
+
+The skeleton proves bundle shape only. It does not prove real report values until populated with sample figures, reconciled ledger rows, source-document references, sign-offs, and hashes.

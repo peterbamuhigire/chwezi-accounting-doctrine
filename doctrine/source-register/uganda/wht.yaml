@@ -1,0 +1,18 @@
+- id: UG-WHT-RATES
+  topic: Uganda withholding tax rates and transaction categories
+  jurisdiction: UG
+  value_or_rule: "Pending reviewer extraction from the URA Taxation Handbook FY 2024-25 and current law."
+  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  source_tier: 2
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "tax reviewer pending"
+  output_affected:
+    - supplier-withholding
+    - customer-withholding-credit
+    - wht-return-pack
+    - tax-control-reconciliation
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Draft source seed only. Final WHT rates require current transaction-type review, certificates treatment, and archive evidence."

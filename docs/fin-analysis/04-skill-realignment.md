@@ -1,8 +1,8 @@
 # Skill Realignment
 
-Maximum total skills: **25**  
-Current skills: **18**  
-Recommended additions: **7**  
+Maximum total skills: **25**
+Current skills: **18**
+Recommended additions: **7**
 Recommended final count: **25**
 
 ## Principle
@@ -89,4 +89,3 @@ skills/<skill-name>/
 ```
 
 Promote a reference to a new skill only when it becomes a recurring workflow with distinct inputs, outputs, and quality gates.
-

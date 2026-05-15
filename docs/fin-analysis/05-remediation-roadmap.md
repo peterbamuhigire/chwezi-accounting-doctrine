@@ -2,7 +2,7 @@
 
 ## Phase 1: Stabilize The Doctrine Package
 
-Target duration: 1 to 2 weeks.  
+Target duration: 1 to 2 weeks.
 Target score after phase: **80 / 100**.
 
 | Work item | Owner | Acceptance evidence |
@@ -15,7 +15,7 @@ Target score after phase: **80 / 100**.
 
 ## Phase 2: Build Missing Core Skills
 
-Target duration: 2 to 4 weeks.  
+Target duration: 2 to 4 weeks.
 Target score after phase: **86 / 100**.
 
 | Work item | Owner | Acceptance evidence |
@@ -30,7 +30,7 @@ Target score after phase: **86 / 100**.
 
 ## Phase 3: Standards And Country Updates
 
-Target duration: 2 to 6 weeks.  
+Target duration: 2 to 6 weeks.
 Target score after phase: **91 / 100**.
 
 | Work item | Owner | Acceptance evidence |
@@ -43,7 +43,7 @@ Target score after phase: **91 / 100**.
 
 ## Phase 4: Productize For Premium Client Work
 
-Target duration: ongoing.  
+Target duration: ongoing.
 Target score after phase: **95+ / 100**.
 
 | Work item | Owner | Acceptance evidence |
@@ -53,3 +53,17 @@ Target score after phase: **95+ / 100**.
 | Client assurance pack | Delivery lead | Executive summary, scope, assumptions, evidence, sign-offs, residual risk. |
 | Training examples | Doctrine owner | Examples for owner-manager, cashier, accountant, auditor. |
 
+## Report-V2 Release Evidence Track
+
+The report-v2 uplift narrows the immediate release-evidence work to:
+
+| Work item | Evidence now expected |
+|---|---|
+| Target 90+ evidence package | `docs/fin-analysis/08-target-90-evidence-package.md`. |
+| Finding closure matrix | `docs/fin-analysis/09-finding-closure-matrix.md`. |
+| Implementation backlog | `docs/fin-analysis/10-implementation-backlog.md`. |
+| Definition of done and re-score narrative | `docs/fin-analysis/11-definition-of-done-and-rescore.md`. |
+| Release manifest | `docs/release-manifest-template.yaml`, completed per release. |
+| Audit export sample | `docs/audit-export-sample/` skeleton, later populated with sample values and hashes. |
+
+This track supports re-score preparation. It does not remove the need for the Phase 1 to Phase 3 implementation work.

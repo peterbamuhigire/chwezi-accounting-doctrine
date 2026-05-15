@@ -1,0 +1,18 @@
+- id: UG-EFRIS-HANDBOOK-2024-25
+  topic: Uganda EFRIS e-invoicing source seed
+  jurisdiction: UG
+  value_or_rule: "Pending reviewer extraction of EFRIS evidence fields, fiscal document identifiers, invoice validation, credit-note handling, and current platform requirements."
+  source_url_or_doc: "https://ura.go.ug/storage/2025/01/THE-EFRIS-HANDBOOK-2024-25-2.pdf"
+  source_tier: 3
+  date_accessed_utc: "2026-05-14T21:07:52Z"
+  verifier: "tax systems reviewer pending"
+  output_affected:
+    - efris-invoice-validation
+    - sales-invoice-printing
+    - credit-note-validation
+    - vat-return-pack
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-08-14"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Handbook URL identified in the uplift report. Final EFRIS implementation must verify current URA platform rules and retain archive evidence."
