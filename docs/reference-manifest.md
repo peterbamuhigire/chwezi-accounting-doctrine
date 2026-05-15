@@ -1,4 +1,4 @@
-# Reference Manifest
+﻿# Reference Manifest
 
 Purpose: classify repository references so validators can distinguish a broken promise from an intentionally planned, external, or deprecated artifact.
 
@@ -66,7 +66,7 @@ State values:
 | `doctrine/source-register/schema.yaml` | present | tax reviewer | caveated release evidence | Schema exists; validator treats it as container metadata. |
 | `doctrine/source-register/uganda/vat.yaml` | present | tax reviewer | blocks final statutory output | Uganda VAT entry exists but is not verified-current. |
 | `doctrine/source-register/uganda/paye.yaml` | present | tax reviewer | blocks final statutory output | Uganda PAYE entry exists but is not verified-current. |
-| `doctrine/source-register/uganda/nssf.yaml` | present | tax reviewer | blocks final statutory output | Uganda NSSF entry exists but is not verified-current. |
+| `doctrine/source-register/uganda/nssf.yaml` | present | tax reviewer | release evidence | Uganda NSSF mandatory contribution entry is verified-current for the scoped rule fields; other payroll/tax surfaces remain verification-gated. |
 | `doctrine/source-register/uganda/wht.yaml` | present | tax reviewer | blocks final statutory output | Uganda WHT entry exists but is not verified-current. |
 | `doctrine/source-register/uganda/income-tax.yaml` | present | tax reviewer | blocks final statutory output | Uganda income-tax entry exists but is not verified-current. |
 | `doctrine/source-register/uganda/efris.yaml` | present | tax reviewer | blocks final statutory output | Uganda EFRIS entry exists but is not verified-current. |
@@ -112,58 +112,58 @@ State values:
 
 | Path | State | Owner | Release impact | Notes |
 |---|---|---|---|---|
-| `skills/audit-ready-reporting-pack/references/notes-templates.md` | planned | reporting owner | caveat | Declared by skill Files section. |
-| `skills/audit-ready-reporting-pack/references/auditor-export-format.md` | planned | reporting owner | caveat | Declared by skill Files section. |
-| `skills/audit-ready-reporting-pack/examples/may-2026-monthly-pack.md` | planned | reporting owner | caveat | Declared by skill Files section. |
+| `skills/audit-ready-reporting-pack/references/notes-templates.md` | present | reporting owner | release evidence | Exists. |
+| `skills/audit-ready-reporting-pack/references/auditor-export-format.md` | present | reporting owner | release evidence | Exists. |
+| `skills/audit-ready-reporting-pack/examples/may-2026-monthly-pack.md` | present | reporting owner | release evidence | Exists. |
 | `skills/bank-and-mobile-money-reconciliation/references/match-rules.md` | present | reconciliation owner | release evidence | Exists. |
-| `skills/bank-and-mobile-money-reconciliation/references/data-model.sql` | planned | reconciliation owner | caveat | Declared by skill Files section. |
-| `skills/bank-and-mobile-money-reconciliation/references/provider-quirks.md` | planned | reconciliation owner | caveat | Declared by skill Files section. |
+| `skills/bank-and-mobile-money-reconciliation/references/data-model.sql` | present | reconciliation owner | release evidence | Exists. |
+| `skills/bank-and-mobile-money-reconciliation/references/provider-quirks.md` | present | reconciliation owner | release evidence | Exists. |
 | `skills/bank-and-mobile-money-reconciliation/examples/mtn-momo-month-end.md` | present | reconciliation owner | release evidence | Exists. |
 | `skills/finance-ui-pattern-library/references/tokens.md` | present | UX owner | release evidence | Exists. |
 | `skills/finance-ui-pattern-library/references/components.md` | present | UX owner | release evidence | Exists. |
 | `skills/finance-ui-pattern-library/references/print-stylesheet-template.md` | present | UX owner | release evidence | Exists. |
 | `skills/finance-ui-pattern-library/references/lint-checks.md` | present | UX owner | release evidence | Exists. |
 | `skills/finance-ui-pattern-library/examples/cashier-record-sale.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/examples/ledger-trial-balance.md` | planned | UX owner | caveat | Declared by skill Files section. |
-| `skills/finance-ui-pattern-library/examples/reconciliation-triage.md` | planned | UX owner | caveat | Declared by skill Files section. |
-| `skills/finance-ux-for-non-accountants/references/workflow-vocabulary.md` | planned | UX owner | caveat | Declared by skill Files section. |
-| `skills/finance-ux-for-non-accountants/references/microcopy-style.md` | planned | UX owner | caveat | Declared by skill Files section. |
-| `skills/finance-ux-for-non-accountants/examples/cashier-day-flow.md` | planned | UX owner | caveat | Declared by skill Files section. |
-| `skills/ias-agriculture/references/fair-value-methodology.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-agriculture/references/cohort-data-model.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-agriculture/examples/birdc-layer-flock-q2-2026.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-government-grants/references/grant-register-schema.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-government-grants/references/donor-restriction-pattern.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-government-grants/examples/ngo-restricted-grant-cycle.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-impairment/references/indicator-checklist.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-impairment/references/value-in-use-workpaper-template.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-income-tax-deferred-tax/references/temporary-difference-catalog.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-income-tax-deferred-tax/references/recognition-checklist.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-income-tax-deferred-tax/examples/sme-tax-provision-2026-04.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-provisions-contingencies/references/recognition-decision-tree.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ias-provisions-contingencies/references/onerous-contract-test.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-financial-instruments/references/section-11-impairment.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-financial-instruments/references/ifrs-9-ecl-simplified-trade-receivables.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-financial-instruments/references/effective-interest-schedule.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-for-smes-equivalents/references/full-ifrs-to-sme-mapping.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-for-smes-equivalents/references/client-profile-decision-tree.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-leases/references/exemption-test.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-leases/references/full-ifrs-16-lessee-model.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-revenue-recognition/references/section-23-summary.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-revenue-recognition/references/ifrs-15-five-step.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/ifrs-revenue-recognition/examples/multi-element-software-licence-plus-support.md` | planned | IFRS reviewer | caveat | Declared by skill Files section. |
-| `skills/internal-controls-library/references/sod-conflict-matrix.md` | planned | controls owner | caveat | Declared by skill Files section. |
-| `skills/internal-controls-library/references/exception-indicators.md` | planned | controls owner | caveat | Declared by skill Files section. |
-| `skills/internal-controls-library/examples/payment-approval-flow.md` | planned | controls owner | caveat | Declared by skill Files section. |
-| `skills/management-accounting-dimensions/references/dimensions-spec.md` | planned | management accounting owner | caveat | Declared by skill Files section. |
-| `skills/management-accounting-dimensions/references/allocation-rules-pattern.md` | planned | management accounting owner | caveat | Declared by skill Files section. |
-| `skills/management-accounting-dimensions/examples/contribution-margin-by-branch.md` | planned | management accounting owner | caveat | Declared by skill Files section. |
+| `skills/finance-ui-pattern-library/examples/ledger-trial-balance.md` | present | UX owner | release evidence | Exists. |
+| `skills/finance-ui-pattern-library/examples/reconciliation-triage.md` | present | UX owner | release evidence | Exists. |
+| `skills/finance-ux-for-non-accountants/references/workflow-vocabulary.md` | present | UX owner | release evidence | Exists. |
+| `skills/finance-ux-for-non-accountants/references/microcopy-style.md` | present | UX owner | release evidence | Exists. |
+| `skills/finance-ux-for-non-accountants/examples/cashier-day-flow.md` | present | UX owner | release evidence | Exists. |
+| `skills/ias-agriculture/references/fair-value-methodology.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-agriculture/references/cohort-data-model.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-agriculture/examples/birdc-layer-flock-q2-2026.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-government-grants/references/grant-register-schema.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-government-grants/references/donor-restriction-pattern.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-government-grants/examples/ngo-restricted-grant-cycle.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-impairment/references/indicator-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-impairment/references/value-in-use-workpaper-template.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-income-tax-deferred-tax/references/temporary-difference-catalog.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-income-tax-deferred-tax/references/recognition-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-income-tax-deferred-tax/examples/sme-tax-provision-2026-04.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-provisions-contingencies/references/recognition-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ias-provisions-contingencies/references/onerous-contract-test.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-financial-instruments/references/section-11-impairment.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-financial-instruments/references/ifrs-9-ecl-simplified-trade-receivables.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-financial-instruments/references/effective-interest-schedule.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-for-smes-equivalents/references/full-ifrs-to-sme-mapping.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-for-smes-equivalents/references/client-profile-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-leases/references/exemption-test.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-leases/references/full-ifrs-16-lessee-model.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-revenue-recognition/references/section-23-summary.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-revenue-recognition/references/ifrs-15-five-step.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/ifrs-revenue-recognition/examples/multi-element-software-licence-plus-support.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/internal-controls-library/references/sod-conflict-matrix.md` | present | controls owner | release evidence | Exists. |
+| `skills/internal-controls-library/references/exception-indicators.md` | present | controls owner | release evidence | Exists. |
+| `skills/internal-controls-library/examples/payment-approval-flow.md` | present | controls owner | release evidence | Exists. |
+| `skills/management-accounting-dimensions/references/dimensions-spec.md` | present | management accounting owner | release evidence | Exists. |
+| `skills/management-accounting-dimensions/references/allocation-rules-pattern.md` | present | management accounting owner | release evidence | Exists. |
+| `skills/management-accounting-dimensions/examples/contribution-margin-by-branch.md` | present | management accounting owner | release evidence | Exists. |
 | `skills/month-end-and-year-end-close-playbook/references/close-task-template.md` | present | close owner | release evidence | Exists. |
-| `skills/month-end-and-year-end-close-playbook/references/year-end-extras.md` | planned | close owner | caveat | Declared by skill Files section. |
-| `skills/month-end-and-year-end-close-playbook/examples/first-close-checklist.md` | planned | close owner | caveat | Declared by skill Files section. |
-| `skills/opening-balances-and-migration-playbook/references/cutover-pack.md` | planned | migration owner | caveat | Declared by skill Files section. |
-| `skills/opening-balances-and-migration-playbook/references/legacy-source-extractors.md` | planned | migration owner | caveat | Declared by skill Files section. |
-| `skills/opening-balances-and-migration-playbook/examples/sme-cutover-pack-2026-04-30.md` | planned | migration owner | caveat | Declared by skill Files section. |
+| `skills/month-end-and-year-end-close-playbook/references/year-end-extras.md` | present | close owner | release evidence | Exists. |
+| `skills/month-end-and-year-end-close-playbook/examples/first-close-checklist.md` | present | close owner | release evidence | Exists. |
+| `skills/opening-balances-and-migration-playbook/references/cutover-pack.md` | present | migration owner | release evidence | Exists. |
+| `skills/opening-balances-and-migration-playbook/references/legacy-source-extractors.md` | present | migration owner | release evidence | Exists. |
+| `skills/opening-balances-and-migration-playbook/examples/sme-cutover-pack-2026-04-30.md` | present | migration owner | release evidence | Exists. |
 
 ## External Sources
 

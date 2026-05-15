@@ -61,7 +61,7 @@ Tier 1 or Tier 2 evidence is required for verified-current rates and statutory t
 
 | Country | Status | Release consequence |
 |---|---|---|
-| Uganda | Draft seed entries present. | Final statutory output remains blocked until reviewer verification and archives are added. |
+| Uganda | One verified-current NSSF mandatory contribution entry; VAT, PAYE, WHT, income-tax, exchange-rate, and EFRIS entries remain draft seeds. | Final output may rely only on the verified NSSF contribution fields within their caveated scope; other statutory outputs remain blocked until reviewer verification and archives are added. |
 | Kenya | VAT and eTIMS skeletons present. | Final rates and eTIMS claims blocked. |
 | Rwanda | Skeleton README only. | Planning use only. |
 | Tanzania | Skeleton README only. | Planning use only. |

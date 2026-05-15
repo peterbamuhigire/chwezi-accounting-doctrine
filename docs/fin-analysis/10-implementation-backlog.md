@@ -28,15 +28,17 @@ Source: `.codex-report-v2-extract.md`
 | S90-019 | P2 | Add country skeletons for Kenya, Rwanda, Tanzania, and South Africa. | Tax reviewer | Skeletons block final rates. |
 | S90-020 | P2 | Update consumer-engine integration documentation. | Integration owner | Release ledger and mirror documentation. |
 
-## Scope Status For This Worker
+## Current Burn-Down Status
 
-This documentation update completes only the items inside the owned write scope:
+After the 2026-05-15 implementation pass:
 
-- Adds the fin-analysis target evidence documentation.
-- Adds the release manifest template.
-- Adds the audit export sample skeleton.
-
-It does not close P0 implementation items outside `docs/**`, and it does not modify `skills/**`, `tools/**`, `doctrine/**`, or `integration/**`.
+- `S90-001` through `S90-005` are implemented and validator-backed.
+- `S90-006` is partially implemented: the Uganda source-register pack exists and the NSSF mandatory-contribution entry is verified-current; VAT, PAYE, WHT, income-tax, EFRIS, and exchange-rate entries remain draft.
+- `S90-007` is implemented through source-register validation and quality-gate fixtures.
+- `S90-008` through `S90-017` are implemented and validator-backed, pending human reviewer sign-off.
+- `S90-018` is implemented as a sample evidence bundle and quality-gate fixture set; sample values and release hashes still need release-specific review.
+- `S90-019` is implemented as draft/skeleton country packs that block final rates until verified.
+- `S90-020` is implemented to the dry-run evidence level; actual consumer-engine mirroring remains a release action.
 
 ## Backlog Burn-Down Rule
 

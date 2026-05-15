@@ -31,13 +31,14 @@ Use the following narrative only after the definition of done is met:
 
 ## Current Honest Narrative
 
-Until the evidence exists and is reviewed, use this narrative:
+After the 2026-05-15 evidence hardening work, use this narrative until human reviewer sign-off and broader statutory-source review are complete:
 
-> The doctrine package remains a strong foundation with a documented path to a defensible 90+ score. The report-v2 uplift documentation now defines the target evidence package, finding closure matrix, implementation backlog, audit export sample skeleton, release manifest, and re-score definition of done. The repository should still be treated as pass-with-caveats until validation, source-register evidence, standards-transition files, skill normalization, and reviewer sign-offs are complete.
+> The doctrine package has moved from pass-with-caveats to validator-clean release evidence. The local doctrine validator reports pass with zero blocker, high, medium, or caveat findings; all declared skill references exist; all 40 finance quality-gate blockers map to present evidence; the mirror dry-run succeeds; and the source register includes one verified-current Uganda NSSF mandatory-contribution entry. Remaining caveats are professional-review caveats: VAT, PAYE, WHT, income-tax, EFRIS, and exchange-rate entries remain draft, non-Uganda country packs remain skeletons, and a scored release still needs named reviewer sign-off.
 
 ## Residual Caveats To Carry Forward
 
 - Do not claim final statutory compliance unless the source-register entry is verified-current or reviewer-approved verified-with-caveat.
+- Do not treat Uganda NSSF verification as verification of VAT, PAYE, WHT, income-tax, EFRIS, or exchange-rate rules.
 - Do not use non-Uganda country packs for final rates until jurisdiction-specific review is complete.
 - Do not treat PDF/report placeholders in the audit export sample as actual financial statements.
 - Do not treat the release manifest template as a completed release manifest until commit, validation output, source-register state, standards basis, hashes, and sign-offs are filled.

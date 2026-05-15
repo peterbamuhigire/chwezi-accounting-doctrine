@@ -59,7 +59,7 @@ function Copy-Tree($src, $dst, $label) {
 function Write-Adoption($engineKey, $engineRoot, $doctrineDest) {
   $stamp = Get-Date -Format 'yyyy-MM-dd'
   $body = @"
-# Doctrine adoption — $engineKey
+# Doctrine adoption - $engineKey
 
 | Field | Value |
 |---|---|
