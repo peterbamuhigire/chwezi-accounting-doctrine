@@ -1,22 +1,33 @@
 # Findings Register
 
-This register is the baseline findings list from the 72/100 evaluation. The report-v2 closure view is maintained in `09-finding-closure-matrix.md`.
+Assessment date: 2026-05-16
+Current validator state: `pass`
 
-| ID | Severity | Area | Evidence | Risk | Required Fix | Acceptance Evidence |
-|---|---|---|---|---|---|---|
-| F-001 | High | Current standards | `doctrine/references/ifrs-for-smes-default.md`, `full-ifrs-overlay.md`; IFRS Foundation sources | 2027+ outputs may miss IFRS for SMEs third edition and IFRS 18 transition effects. | Add standards-transition references and update reporting modules. | 2026 vs 2027 fixtures; reviewer-approved transition notes. |
-| F-002 | High | Executability | No CI or validator found. | Quality gates remain manual; broken links and missing references can ship. | Add `tools/validate-doctrine.ps1` or equivalent. | Validator passes for links, frontmatter, skill sections, references, source register, mojibake. |
-| F-003 | High | Source verification | Live-rate protocol exists but no `doctrine/source-register/`. | Final statutory, payroll, tax, FX, and e-invoicing claims cannot be verified. | Add source-register schema and Uganda seed pack. | Source-register entries with source tier, date, verifier, expiry, state. |
-| F-004 | High | Core accounting engine | Ledger invariants exist but no repo-native posting-engine core skill. | Downstream systems may implement inconsistent accounting engines. | Add `ledger-posting-engine-core`. | Service contract, schema, event mapping, idempotency, posting fixtures, invariant tests. |
-| F-005 | High | Reference completeness | Skills list missing references/examples in `Files` sections. | Agents may rely on unavailable depth. | Add files or declare them in a reference manifest as planned/external/deprecated. | Manifest shows zero undeclared missing references. |
-| F-006 | Medium | Presentation quality | Mojibake such as `-`, `->`, `<=` found in files. | Premium/client-facing output looks unprofessional and may corrupt downstream docs. | Normalize encoding and replace corrupted glyphs. | Mojibake scan returns zero matches. |
-| F-007 | High | Integration | `integration/mirror.ps1` uses `$Master = 'C:\wamp64\www\_chwezi-doctrine'`. | Mirroring may copy stale or wrong doctrine. | Make source path repo-relative with override. | `mirror.ps1 -DryRun` succeeds from repo root. |
-| F-008 | High | Skill composition | Skills generally lack explicit `Inputs` and `Outputs`. | Skills do not compose deterministically across engines. | Normalize skills to composition standard. | Composition validator passes for all target skills. |
-| F-009 | Medium | Country coverage | Kenya, Rwanda, Tanzania, South Africa are placeholders. | Regional/remote work may misuse Uganda assumptions. | Add country-pack skeletons with authority/source hierarchy and draft registers. | Country packs clearly block final rates until verified-current. |
-| F-010 | High | Domain coverage | No repo-native skills for inventory costing, fixed assets, payroll postings, consolidation. | Common client systems remain under-specified. | Add the 7 recommended skills while keeping total <=25. | New skills pass structure gate and include fixtures/examples. |
-| F-011 | Medium | Layman usability | UX doctrine exists; output templates do not consistently require plain-language sections. | Business owners may not understand correct accounting outputs. | Add business-language/accounting/evidence layers to templates. | All output templates include the three-layer pattern. |
-| F-012 | Medium | Quality management | Internal controls exist, but no engagement quality/ethics/reviewer competence layer. | High-value work may lack professional-review discipline. | Add `engagement-quality-and-plain-language-output` or equivalent references. | Reviewer role matrix and sign-off requirements present. |
+## Findings
 
-## Closure Discipline
+| ID | Severity | Area | Current state | Evidence | Remaining action |
+|---|---|---|---|---|---|
+| F-001 | Low | Current standards | Ready for reviewer | 2027 transition references and 2026/2027 fixtures exist. | Obtain IFRS reviewer sign-off. |
+| F-002 | Closed | Executability | Closed | `tools/validate-doctrine.ps1` reports `pass` with zero findings. | Keep validator running in CI and before releases. |
+| F-003 | Medium | Source verification | Partially closed | Source register exists; Uganda NSSF is `verified-current`; validator passes. | Verify VAT, PAYE, WHT, income-tax, EFRIS, and FX entries before final statutory output. |
+| F-004 | Low | Core accounting engine | Ready for reviewer | `ledger-posting-engine-core` skill, references, examples, and ledger quality-gate fixtures exist. | Add consumer-repo executable posting tests. |
+| F-005 | Closed | Reference completeness | Closed | `missing_declared_references: 0`; reference manifest updated. | Maintain manifest discipline for future references. |
+| F-006 | Closed | Presentation quality | Closed | Mojibake scan reports zero matches. | Keep scan in validation. |
+| F-007 | Closed | Integration | Closed | Repo-relative `integration/mirror.ps1 -DryRun` succeeds. | Mirror only during approved releases. |
+| F-008 | Closed | Skill composition | Closed | 25 active skills; skill-contract validation passes. | Keep skill cap and section contract. |
+| F-009 | Low | Country coverage | Ready for reviewer | Country skeletons exist and block final rates. | Verify each country before final use. |
+| F-010 | Low | Domain coverage | Ready for reviewer | Inventory, fixed assets, payroll, consolidation, engagement-quality, and other skills exist with references/examples. | Add real implementation tests in consumer systems. |
+| F-011 | Low | Layman usability | Ready for reviewer | UX skills, microcopy references, and three-layer quality-gate fixtures exist. | Enforce in client-facing templates. |
+| F-012 | Low | Quality management | Ready for reviewer | Engagement quality skill, reviewer role fixtures, and sign-off templates exist. | Record named release sign-offs. |
 
-Findings are not closed by documentation intent. Closure requires local evidence, validation output where applicable, named ownership, named reviewer, and explicit residual caveats. If a finding is waived rather than closed, the waiver must include owner, approver, expiry date, and the release scope affected.
+## Open Risks
+
+| Risk | Severity | Why it remains |
+|---|---|---|
+| Draft statutory surfaces used as final values | High if ignored | Validator mechanics exist, but source entries for VAT/PAYE/WHT/income-tax/EFRIS/FX remain draft. |
+| Consumer implementation bypasses doctrine | Medium | This repository has fixtures; consuming applications still need executable enforcement. |
+| Reviewer sign-off missing for scored release | Medium | Evidence exists, but professional review must be named and dated. |
+
+## Closure Rule
+
+A finding is closed only when evidence exists, validation passes, and any required reviewer approval is recorded. Current repository evidence supports **94 / 100**. It does not support final statutory claims for draft source-register entries.

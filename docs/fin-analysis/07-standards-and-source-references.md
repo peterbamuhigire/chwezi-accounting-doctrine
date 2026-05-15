@@ -1,50 +1,48 @@
 # Standards And Source References
 
-Reviewed on: 2026-05-14
+Assessment date: 2026-05-16
 
-## Key Freshness Notes
+## Standards Posture
 
-The doctrine must track current and near-effective standards. The most important current roadmap items are:
+| Area | Current state | Evidence |
+|---|---|---|
+| IFRS Required 2026 baseline | Present | `doctrine/examples/reporting-basis-2026.md` and reference manifest external source. |
+| IFRS 18 transition | Present | `doctrine/references/ifrs-18-presentation-transition.md` and 2027 fixture. |
+| IFRS for SMEs third edition transition | Present | `doctrine/references/ifrs-for-smes-third-edition-transition.md` and 2027 SME fixture. |
+| Full IFRS vs IFRS for SMEs decision logic | Present | `doctrine/references/standards-transition-2027.md` and `skills/ifrs-for-smes-equivalents/`. |
+| IAASB/IESBA quality and ethics posture | Present | External source entries in `docs/reference-manifest.md` and engagement-quality skill. |
 
-- IFRS Accounting Standards Required 2026 are available from the IFRS Foundation and cover pronouncements required at 2026-01-01.
-- The IFRS for SMEs Accounting Standard third edition was issued in 2025 and is effective for annual reporting periods beginning on or after 2027-01-01, with early application permitted.
-- IFRS 18 replaces IAS 1 and is effective for annual reporting periods beginning on or after 2027-01-01.
-- IAASB's 2025 Handbook is the current international audit/assurance reference set.
-- IESBA's 2025 Handbook is the current international ethics reference set.
-- Uganda adoption and application context should be verified through ICPAU and authoritative legal/regulatory sources before final operational use.
+## Source-Register Posture
 
-## Source Links
+| Jurisdiction/topic | State | Release use |
+|---|---|---|
+| Uganda NSSF mandatory contribution | `verified-current` | May support final output for the scoped facts only. |
+| Uganda VAT | `draft` | Planning only until verified. |
+| Uganda PAYE | `draft` | Planning only until verified. |
+| Uganda WHT | `draft` | Planning only until verified. |
+| Uganda income tax | `draft` | Planning only until verified. |
+| Uganda EFRIS | `draft` | Planning only until verified. |
+| Uganda exchange rates | `draft` | Planning only until verified. |
+| Kenya VAT/eTIMS | `draft` | Skeleton only. |
+| Rwanda, Tanzania, South Africa | skeleton | No final rates. |
 
-| Topic | Source |
-|---|---|
-| IFRS Accounting Standards Required 2026 | https://www.ifrs.org/news-and-events/news/2026/01/now-available-ifrs-accounting-standards-required-2026-two-editions/ |
-| IFRS for SMEs Accounting Standard | https://www.ifrs.org/content/ifrs/home/issued-standards/ifrs-for-smes/ |
-| IFRS 18 project | https://www.ifrs.org/projects/completed-projects/2024/primary-financial-statements/ |
-| IAASB 2025 Handbook | https://www.iaasb.org/publications/2025-handbook-international-quality-management-auditing-review-other-assurance-and-related-services |
-| IESBA 2025 Handbook | https://www.ethicsboard.org/publications/2025-handbook-international-code-ethics-professional-accountants |
-| Uganda IFAC profile | https://www.ifac.org/about-ifac/membership/profile/uganda |
-| ICPAU IFRS for SMEs implementation guidelines | https://www.icpau.co.ug/resources/ifrs-smes-implementation-guidelines |
+## External Sources Tracked
 
-## Doctrine Implications
+The reference manifest tracks official or institutional source URLs for:
 
-Add these files:
+- IFRS Required 2026.
+- IFRS 18.
+- IFRS for SMEs.
+- IAASB 2025 Handbook.
+- IESBA standards.
+- IFAC Uganda profile.
+- ICPAU IFRS for SMEs guidance.
+- URA Taxation Handbook FY 2024-25.
+- URA EFRIS Handbook FY 2024-25.
+- NSSF Uganda membership.
+- KRA VAT.
+- KRA eTIMS.
 
-```text
-doctrine/references/standards-transition-2027.md
-doctrine/references/ifrs-18-presentation-transition.md
-doctrine/references/ifrs-for-smes-third-edition-transition.md
-```
+## Release Rule
 
-Each file should state:
-
-- effective date
-- early-application rules
-- jurisdiction adoption dependency
-- affected reports and disclosures
-- affected SRS/proposal/business-plan language
-- quality-gate blockers
-- acceptance evidence
-
-## Source Capture Caveat
-
-The report-v2 extract notes that several web sources were verified as live official pages, but archive snapshots were still marked capture-required-before-release. A public or client-facing release should include archive.org, archive.today, or controlled local evidence captures in the source register before claiming final statutory or standards-current output.
+An external source listed in the manifest is not enough by itself. A final statutory value requires a source-register entry with state, verifier, date accessed, recheck due date, source URL or archive, affected outputs, and scope caveats.

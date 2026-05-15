@@ -1,91 +1,51 @@
 # Skill Realignment
 
-Maximum total skills: **25**
-Current skills: **18**
-Recommended additions: **7**
-Recommended final count: **25**
+Assessment date: 2026-05-16
+Current state: **complete and validator-backed**
 
-## Principle
+## Current Catalogue
 
-Do not increase quality by endlessly adding skills. Increase quality by making each skill deeper, reference-backed, tested, and composable. A skill should exist only when it captures a repeatable, high-risk workflow that downstream engines must execute consistently.
+The active finance skill catalogue is now capped at **25** and `tools/check-skill-contracts.ps1` reports `pass`.
 
-## Recommended 25 Skills
+| # | Skill | Current state |
+|---:|---|---|
+| 1 | `finance-module-audit` | Active, normalized. |
+| 2 | `audit-ready-reporting-pack` | Active with references and example pack. |
+| 3 | `internal-controls-library` | Active with SoD, exception indicators, and payment-flow example. |
+| 4 | `ledger-posting-engine-core` | Active with posting contract, fixtures, and invariant references. |
+| 5 | `tax-statutory-source-register-and-country-packs` | Active with source-register discipline. |
+| 6 | `bank-and-mobile-money-reconciliation` | Active with match rules, data model, provider quirks, and example. |
+| 7 | `month-end-and-year-end-close-playbook` | Active with close templates and year-end extensions. |
+| 8 | `opening-balances-and-migration-playbook` | Active with cutover references and example pack. |
+| 9 | `management-accounting-dimensions` | Active with dimensions spec and allocation rules. |
+| 10 | `inventory-costing-and-stock-accounting` | Active with costing fixtures and IFRS/SME constraints. |
+| 11 | `fixed-assets-and-depreciation` | Active with asset lifecycle evidence. |
+| 12 | `payroll-and-statutory-postings-east-africa` | Active with statutory-source gates. |
+| 13 | `ifrs-for-smes-equivalents` | Active with SME/full IFRS mapping. |
+| 14 | `ifrs-revenue-recognition` | Active with Section 23, IFRS 15, and example. |
+| 15 | `ifrs-leases` | Active with exemption and full IFRS 16 references. |
+| 16 | `ifrs-financial-instruments` | Active with Section 11, ECL, and effective-interest references. |
+| 17 | `ias-impairment` | Active with indicator and VIU workpaper references. |
+| 18 | `ias-provisions-contingencies` | Active with recognition and onerous-contract references. |
+| 19 | `ias-income-tax-deferred-tax` | Active with temporary-difference and recognition references. |
+| 20 | `ias-government-grants` | Active with grant-register and donor-restriction references. |
+| 21 | `ias-agriculture` | Active with fair-value and cohort references. |
+| 22 | `consolidation-and-intercompany` | Active with consolidation workflow and examples. |
+| 23 | `finance-ux-for-non-accountants` | Active with vocabulary, microcopy, and cashier flow. |
+| 24 | `finance-ui-pattern-library` | Active with tokens, components, examples, and lint checks. |
+| 25 | `engagement-quality-and-plain-language-output` | Active with reviewer and plain-language evidence. |
 
-### Tier 0: Doctrine Spine And Gates
+## Validation Evidence
 
-| # | Skill | Decision |
-|---|---|---|
-| 1 | `finance-module-audit` | Keep and normalize. |
-| 2 | `audit-ready-reporting-pack` | Keep and deepen. |
-| 3 | `internal-controls-library` | Keep and deepen. |
-| 4 | `ledger-posting-engine-core` | Add. |
-| 5 | `tax-statutory-source-register-and-country-packs` | Add. |
+| Metric | Result |
+|---|---:|
+| Active finance skills | 25 |
+| Planned skill directories | 0 |
+| Declared references | 69 |
+| Missing declared references | 0 |
+| Quality-gate blockers covered | 40 / 40 |
+| Planned quality-gate rows | 0 |
 
-### Tier 1: Operating Finance Workflows
+## Governance Rule
 
-| # | Skill | Decision |
-|---|---|---|
-| 6 | `bank-and-mobile-money-reconciliation` | Keep and deepen. |
-| 7 | `month-end-and-year-end-close-playbook` | Keep and deepen. |
-| 8 | `opening-balances-and-migration-playbook` | Keep and deepen. |
-| 9 | `management-accounting-dimensions` | Keep and deepen. |
-| 10 | `inventory-costing-and-stock-accounting` | Add. |
-| 11 | `fixed-assets-and-depreciation` | Add. |
-| 12 | `payroll-and-statutory-postings-east-africa` | Add. |
-
-### Tier 2: Standards Modules
-
-| # | Skill | Decision |
-|---|---|---|
-| 13 | `ifrs-for-smes-equivalents` | Keep and update. |
-| 14 | `ifrs-revenue-recognition` | Keep and deepen. |
-| 15 | `ifrs-leases` | Keep and deepen. |
-| 16 | `ifrs-financial-instruments` | Keep and deepen. |
-| 17 | `ias-impairment` | Keep and deepen. |
-| 18 | `ias-provisions-contingencies` | Keep and deepen. |
-| 19 | `ias-income-tax-deferred-tax` | Keep and deepen. |
-| 20 | `ias-government-grants` | Keep and deepen. |
-| 21 | `ias-agriculture` | Keep and deepen. |
-| 22 | `consolidation-and-intercompany` | Add. |
-
-### Tier 3: UX And Commercial Output
-
-| # | Skill | Decision |
-|---|---|---|
-| 23 | `finance-ux-for-non-accountants` | Keep and deepen. |
-| 24 | `finance-ui-pattern-library` | Keep and deepen. |
-| 25 | `engagement-quality-and-plain-language-output` | Add. |
-
-## Required Skill Contract
-
-Every skill should include:
-
-- prerequisites
-- when the skill applies
-- inputs
-- outputs
-- non-negotiables
-- decision rules
-- implementation or workflow contract
-- anti-patterns
-- acceptance evidence
-- read-next links
-- directly resolvable references
-
-## Depth Strategy
-
-Use references and examples for depth:
-
-```text
-skills/<skill-name>/
-  SKILL.md
-  references/
-    decision-rules.md
-    implementation-contract.md
-    acceptance-tests.md
-  examples/
-    happy-path.md
-    failure-case.md
-```
-
-Promote a reference to a new skill only when it becomes a recurring workflow with distinct inputs, outputs, and quality gates.
+Do not add a 26th active finance skill without a written waiver. New depth should normally be added as references, examples, fixtures, or source-register entries under the existing 25-skill catalogue.

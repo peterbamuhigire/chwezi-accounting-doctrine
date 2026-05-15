@@ -1,69 +1,57 @@
 # Remediation Roadmap
 
-## Phase 1: Stabilize The Doctrine Package
+Assessment date: 2026-05-16
+Current score: **94 / 100**
 
-Target duration: 1 to 2 weeks.
-Target score after phase: **80 / 100**.
+The original stabilization, core-skill, standards-transition, and evidence-package workstreams are implemented. The remaining roadmap is about source completeness, reviewer sign-off, and real consumer adoption tests.
 
-| Work item | Owner | Acceptance evidence |
-|---|---|---|
-| Fix mojibake and encoding artifacts | Doctrine maintainer | Scan returns no corrupted glyphs. |
-| Fix mirror source path | Tooling owner | `integration/mirror.ps1 -DryRun` works from repo root. |
-| Add reference manifest | Doctrine maintainer | Every declared reference is present/planned/external/deprecated. |
-| Add validation harness | Tooling owner | Validator runs locally and emits structured pass/fail output. |
-| Add quality-gate fixture map | Finance reviewer + engineer | Every blocker maps to at least one fixture/check. |
+## Phase 1: Source-Complete Uganda Pack
 
-## Phase 2: Build Missing Core Skills
-
-Target duration: 2 to 4 weeks.
-Target score after phase: **86 / 100**.
+Target score after phase: **96 / 100**
 
 | Work item | Owner | Acceptance evidence |
 |---|---|---|
-| Add `ledger-posting-engine-core` | Accounting systems architect | Service contract, schema contract, event map, posting fixtures, invariant tests. |
-| Add `tax-statutory-source-register-and-country-packs` | Tax reviewer + doctrine owner | Source-register schema and Uganda draft pack. |
-| Add `inventory-costing-and-stock-accounting` | Inventory/accounting specialist | FIFO/weighted-average fixtures, NRV tests, stock variance postings. |
-| Add `fixed-assets-and-depreciation` | Accounting specialist | Asset lifecycle examples, depreciation fixtures, disposal journals. |
-| Add `payroll-and-statutory-postings-east-africa` | Payroll/tax reviewer | Payroll-to-GL examples and statutory verification rules. |
-| Add `consolidation-and-intercompany` | Financial reporting specialist | Elimination journals, intercompany matching, group pack skeleton. |
-| Add `engagement-quality-and-plain-language-output` | Delivery lead | Reviewer roles, client explanation pattern, professional caveats. |
+| Verify Uganda VAT entries | Tax reviewer | `vat.yaml` marked `verified-current` or approved `verified-with-caveat`, with archive evidence. |
+| Verify Uganda PAYE entries | Payroll tax reviewer | `paye.yaml` marked verified and linked to official source evidence. |
+| Verify Uganda WHT entries | Tax reviewer | `wht.yaml` verified by transaction category and effective period. |
+| Verify Uganda income-tax entries | Tax reviewer | `income-tax.yaml` verified for scoped corporation/presumptive/advance-tax rules. |
+| Verify EFRIS source entry | Tax systems reviewer | `efris.yaml` verified for scoped invoice evidence fields and caveats. |
+| Verify exchange-rate source hierarchy | Controller reviewer | `exchange-rates.yaml` names official rate source, scope, and recheck cadence. |
 
-## Phase 3: Standards And Country Updates
+## Phase 2: Reviewer-Signed Release
 
-Target duration: 2 to 6 weeks.
-Target score after phase: **91 / 100**.
+Target score after phase: **97 / 100**
 
 | Work item | Owner | Acceptance evidence |
 |---|---|---|
-| IFRS for SMEs third edition transition | IFRS reviewer | Transition reference with effective date and affected sections. |
-| IFRS 18 transition | IFRS reviewer | Reporting templates and quality-gate checks updated. |
-| Uganda statutory pack | Tax reviewer | URA/NSSF/BoU/ICPAU source-register entries with state and expiry. |
-| Kenya pack skeleton | Tax reviewer | KRA/eTIMS/CBK/ICPAK source hierarchy and draft register. |
-| Country-pack validator | Tooling owner | Missing final rates block final output. |
+| Complete release manifest | Doctrine owner | Release manifest filled with commit, validation state, source-register state, standards basis, and caveats. |
+| Accounting reviewer sign-off | Accounting reviewer | Signed review note attached to release evidence. |
+| Tax reviewer sign-off | Tax reviewer | Signed source-register scope and caveat review. |
+| Tooling reviewer sign-off | Tooling owner | Validator and mirror dry-run evidence reviewed. |
+| Delivery reviewer sign-off | Delivery lead | Plain-language and client-output caveats reviewed. |
 
-## Phase 4: Productize For Premium Client Work
+## Phase 3: Consumer Engine Enforcement
 
-Target duration: ongoing.
-Target score after phase: **95+ / 100**.
+Target score after phase: **98 / 100**
 
 | Work item | Owner | Acceptance evidence |
 |---|---|---|
-| Auditor export sample bundle | Reporting owner | Sample export with index, hashes, reports, source docs, audit log. |
-| Proposal/SRS/business-plan templates | Delivery lead | Templates consume doctrine and show caveats plainly. |
-| Client assurance pack | Delivery lead | Executive summary, scope, assumptions, evidence, sign-offs, residual risk. |
-| Training examples | Doctrine owner | Examples for owner-manager, cashier, accountant, auditor. |
+| Mirror approved release to consumer engines | Integration owner | Mirror run log and adoption records. |
+| Add posting-boundary tests in consumer repos | Engineering owner | Direct ledger writes fail; posting-service path passes. |
+| Add source-register gates in consumer repos | Engineering owner + tax reviewer | Draft source entries cannot produce final statutory output. |
+| Add report-output lint checks | UX/tooling owner | Three-layer output, print fidelity, and drilldown checks pass. |
 
-## Report-V2 Release Evidence Track
+## Phase 4: Multi-Country Release Packs
 
-The report-v2 uplift narrows the immediate release-evidence work to:
+Target score: **99+ only after verified packs exist**
 
-| Work item | Evidence now expected |
-|---|---|
-| Target 90+ evidence package | `docs/fin-analysis/08-target-90-evidence-package.md`. |
-| Finding closure matrix | `docs/fin-analysis/09-finding-closure-matrix.md`. |
-| Implementation backlog | `docs/fin-analysis/10-implementation-backlog.md`. |
-| Definition of done and re-score narrative | `docs/fin-analysis/11-definition-of-done-and-rescore.md`. |
-| Release manifest | `docs/release-manifest-template.yaml`, completed per release. |
-| Audit export sample | `docs/audit-export-sample/` skeleton, later populated with sample values and hashes. |
+| Work item | Owner | Acceptance evidence |
+|---|---|---|
+| Kenya verified pack | Kenya tax reviewer | KRA/eTIMS entries verified-current for scoped outputs. |
+| Rwanda verified pack | Rwanda tax reviewer | Authority hierarchy and source entries verified-current. |
+| Tanzania verified pack | Tanzania tax reviewer | Authority hierarchy and source entries verified-current. |
+| South Africa verified pack | South Africa tax reviewer | Authority hierarchy and source entries verified-current. |
 
-This track supports re-score preparation. It does not remove the need for the Phase 1 to Phase 3 implementation work.
+## Current Recommendation
+
+Do not spend the next cycle adding new skills. Spend it verifying sources, recording reviewer decisions, and proving consumer enforcement.

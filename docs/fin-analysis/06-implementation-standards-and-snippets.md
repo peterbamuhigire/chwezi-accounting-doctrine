@@ -1,185 +1,97 @@
 # Implementation Standards And Snippets
 
-## Three-Layer Output Rule
+Assessment date: 2026-05-16
 
-Every generated finance output should have three layers:
+These are the standards that now govern the doctrine package after the 94/100 reassessment.
 
-| Layer | Audience | Purpose |
-|---|---|---|
-| Business meaning | Owner, manager, cashier, client | Explains what happened in plain language. |
-| Accounting treatment | Accountant, implementer | Shows debits, credits, recognition, measurement, framework. |
-| Evidence and caveats | Reviewer, auditor, tax adviser | Shows source documents, verification state, sign-off, gaps. |
+## Validator Command
 
-Example:
+Run before every release:
 
-```markdown
-### Recording a VAT-inclusive sale
-
-Business meaning: The customer paid the full shelf price. The business keeps the net sale amount and owes the VAT portion to the tax authority.
-
-Accounting treatment: Debit cash or receivable for the gross amount. Credit revenue for the net amount. Credit output VAT control for the tax amount.
-
-Evidence: Attach receipt/invoice, tax code, source-register entry, cashier identity, and settlement reference. Do not finalize if the tax rate is not verified-current.
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\validate-doctrine.ps1 -ReportPath docs\validation-report-current.json
 ```
 
-## Posting Value Objects
-
-```php
-<?php
-declare(strict_types=1);
-
-final readonly class JournalEntry
-{
-    /**
-     * @param list<JournalLine> $lines
-     */
-    public function __construct(
-        public int $tenantId,
-        public string $book,
-        public string $idempotencyKey,
-        public DateTimeImmutable $entryDate,
-        public string $sourceType,
-        public string $sourceId,
-        public string $description,
-        public array $lines,
-        public ?int $reversesJournalId = null,
-    ) {}
-}
-
-final readonly class JournalLine
-{
-    /**
-     * @param array<string, string|int|null> $dimensions
-     */
-    public function __construct(
-        public int $accountId,
-        public string $currency,
-        public int $debitMinor,
-        public int $creditMinor,
-        public array $dimensions = [],
-    ) {}
-}
-```
-
-## Ledger Invariant Test
-
-```php
-public function test_posted_journal_balances_by_currency(): void
-{
-    $entry = $this->fixture->vatInclusiveCashSale();
-
-    $posted = $this->postingService->post($entry);
-
-    $totals = $this->journalLines->totalsByCurrency($posted->journalId);
-
-    foreach ($totals as $currency => $total) {
-        self::assertSame(
-            $total->debitMinor,
-            $total->creditMinor,
-            "Journal must balance for {$currency}"
-        );
-    }
-}
-```
-
-## VAT-Inclusive Posting Fixture
+Acceptance state:
 
 ```yaml
-source:
-  type: pos_sale
-  gross_minor: 118000
-  currency: UGX
-  tax_code: UG-VAT-STANDARD
-  tax_rate_source_state: verified-current
-expected_journal:
-  - account: cash_on_hand
-    debit_minor: 118000
-    credit_minor: 0
-  - account: sales_revenue
-    debit_minor: 0
-    credit_minor: 100000
-  - account: output_vat_control
-    debit_minor: 0
-    credit_minor: 18000
-acceptance:
-  - debits_equal_credits
-  - tax_code_has_effective_period
-  - output_vat_routes_to_control_account
-  - report_drilldown_reaches_source_document
+doctrine_validation: pass
+blocker_findings: 0
+high_findings: 0
+medium_findings: 0
+caveat_findings: 0
 ```
 
-## Source Register Entry
+## Source-Register Rule
+
+Final statutory output may use only entries with one of these states:
 
 ```yaml
-- topic: Uganda VAT standard rate
-  jurisdiction: UG
-  value_or_rule: "<verified value or draft placeholder>"
-  source_url_or_doc: "<Tier 1 or Tier 2 source>"
-  source_tier: 1
-  date_accessed: "2026-05-14"
-  verifier: "<named reviewer>"
-  output_affected:
-    - sales-tax-codes
-    - vat-return-pack
-  expiry_or_recheck: "2026-08-14"
-  state: draft
-  evidence_archive: "<path>"
-  notes: "Do not use in final output until state is verified-current."
+state: verified-current
 ```
 
-## Validator Requirements
-
-Add a validator that checks:
-
-- skill count is <= 25
-- all skill frontmatter is valid
-- all skills have required sections
-- all declared references are present or explicitly planned
-- local links resolve
-- mojibake scan passes
-- no final statutory values exist without source-register references
-- every quality-gate blocker has a fixture
-- `Last reviewed` and `Next review due` are present
-
-## Release Manifest Minimum Fields
-
-Every release should complete `docs/release-manifest-template.yaml` with:
+or:
 
 ```yaml
-release:
-  doctrine_version: "<version>"
-  source_commit: "<git-sha>"
-  released_at_utc: "<timestamp>"
-  validation_state: "pass-with-caveats"
-  blocker_findings: 0
-  high_findings: 0
-  source_register_state: "<state>"
-  standards_basis:
-    ifrs_required: "2026 baseline"
-    ifrs_18_transition: "present"
-    ifrs_for_smes_2025_transition: "present"
-  reviewer_signoffs:
-    doctrine_owner: "<name/date>"
-    accounting_reviewer: "<name/date>"
-    tax_reviewer: "<name/date>"
-    tooling_reviewer: "<name/date>"
-  open_caveats:
-    - "Non-Uganda country packs are skeletons unless separately verified."
+state: verified-with-caveat
+reviewer_approval: "<name, date, scope>"
 ```
 
-## Audit Export Sample Shape
+Draft entries can support planning, SRS, proposals, and internal architecture, but not final rates, filings, or statutory calculations.
 
-The audit export sample should remain inspectable in source control:
+## Current Verified-Current Example
 
-```text
-docs/audit-export-sample/
-  manifest.yaml
-  00-index.md
-  reports/
-  ledger/
-  evidence/
-  signoffs/
-  hashes/
+```yaml
+id: UG-NSSF-MEMBERSHIP-CONTRIBUTIONS
+jurisdiction: UG
+state: verified-current
+source_url_or_doc: "https://www.nssfug.org/about-us/membership/"
+archive_snapshot: "docs/quality-gate-fixtures/source-register-evidence/uganda-nssf-membership-2026-05-15.md"
+scope: "Mandatory contribution split, age band, Government Pensions exception, and monthly remittance due date only."
 ```
 
-The skeleton proves bundle shape only. It does not prove real report values until populated with sample figures, reconciled ledger rows, source-document references, sign-offs, and hashes.
+## Quality-Gate Evidence Rule
+
+Every blocker in `governance/finance-accounting-quality-gate.md` must map to present evidence in `docs/quality-gate-fixture-map.md`.
+
+Current acceptance state:
+
+```yaml
+blockers_in_quality_gate: 40
+mapped_rows: 40
+present_evidence_rows: 40
+planned_evidence_rows: 0
+```
+
+## Skill Reference Rule
+
+Every path declared in a skill `## Files` section must exist or be intentionally classified. Current release evidence requires existence.
+
+Current acceptance state:
+
+```yaml
+active_finance_skills: 25
+declared_references: 69
+missing_declared_references: 0
+```
+
+## Client-Facing Output Pattern
+
+Every client-facing finance output should keep three layers:
+
+| Layer | Required content |
+|---|---|
+| Business meaning | What happened in plain operational language. |
+| Accounting treatment | Journal, account, recognition, measurement, and report effect. |
+| Evidence and caveat | Source document, source-register state, reviewer state, and open caveats. |
+
+## Consumer-Repository Enforcement
+
+When a consumer application adopts this doctrine, add executable tests for:
+
+- Direct journal-line writes rejected.
+- Balanced posting-service entries accepted.
+- Locked-period postings rejected unless reopened under policy.
+- Draft source-register entries blocked from final statutory output.
+- Posted records corrected by reversal, not edit/delete.
+- Report output includes framework, drilldown, print fidelity, and caveats.
