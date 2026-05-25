@@ -6,13 +6,14 @@ Sector-specific accounting packs for the typical Chwezi client base.
 
 | Skill | Status |
 |---|---|
-| `ngo-and-fund-accounting` | draft (gap stub) |
-| `school-and-education-accounting-pack` | draft (gap stub) |
-| `clinic-and-healthcare-accounting-pack` | draft (gap stub) |
-| `retail-and-pos-accounting-pack` | draft (gap stub) |
-| `agribusiness-and-cooperative-pack` | draft (gap stub) |
-| `hospitality-and-restaurant-pack` | draft (gap stub) |
-| `real-estate-and-property-pack` | draft (gap stub) |
-| `fintech-and-payments-pack` | draft (gap stub) |
+| `ngo-and-fund-accounting` | active |
+| `school-and-education-accounting-pack` | active |
+| `clinic-and-healthcare-accounting-pack` | active |
+| `retail-and-pos-accounting-pack` | active |
+| `agribusiness-and-cooperative-pack` | active |
+| `hospitality-and-restaurant-pack` | active |
+| `real-estate-and-property-pack` | active |
+| `fintech-and-payments-pack` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

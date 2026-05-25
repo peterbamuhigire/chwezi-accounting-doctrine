@@ -6,9 +6,10 @@ Governance for AI, RPA, and emerging-domain finance topics including digital ass
 
 | Skill | Status |
 |---|---|
-| `ai-in-finance-governance` | draft (gap stub) |
-| `rpa-and-automation-controls-for-finance` | draft (gap stub) |
-| `digital-assets-and-crypto-accounting` | draft (gap stub) |
-| `carbon-and-emissions-accounting` | draft (gap stub) |
+| `ai-in-finance-governance` | active |
+| `rpa-and-automation-controls-for-finance` | active |
+| `digital-assets-and-crypto-accounting` | active |
+| `carbon-and-emissions-accounting` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

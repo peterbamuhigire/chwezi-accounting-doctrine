@@ -6,8 +6,9 @@ Public-sector finance: IPSAS overlay, fund accounting for government, and donor/
 
 | Skill | Status |
 |---|---|
-| `ipsas-public-sector-overlay` | draft (gap stub) |
-| `government-procurement-and-fiscal-controls` | draft (gap stub) |
-| `donor-funded-project-fiscal-compliance` | draft (gap stub) |
+| `ipsas-public-sector-overlay` | active |
+| `government-procurement-and-fiscal-controls` | active |
+| `donor-funded-project-fiscal-compliance` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

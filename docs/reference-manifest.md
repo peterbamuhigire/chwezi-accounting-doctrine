@@ -20,6 +20,8 @@ State values:
 | `tools/check-skill-contracts.ps1` | present | tooling | release gate | Checks skill frontmatter, section contract, declared files, and quality-gate map coverage. |
 | `tools/check-source-register.ps1` | present | tooling | release gate | Validates source-register presence and entry metadata when available. |
 | `tools/check-links.ps1` | present | tooling | release gate | Validates local Markdown links. |
+| `tools/close-gap-stubs.ps1` | present | tooling | doctrine maintenance | Converts draft gap stubs into active doctrine skills with source-basis, implementation-rules, and example files. |
+| `tools/invoke-doctrine-conformance-scan.ps1` | present | tooling | doctrine conformance facility | Scans a target system, codebase, plan, proposal, or prose artefact against finance doctrine risk patterns. |
 | `.github/workflows/doctrine-validation.yml` | present | tooling | release gate | Runs the validator on GitHub Actions. |
 | `docs/validation-report-template.md` | present | tooling | release evidence | Human-readable validation report template. |
 | `docs/quality-gate-fixture-map.md` | present | doctrine owner | release evidence | Maps finance quality-gate blockers to checks, fixtures, or planned fixtures. |
@@ -97,6 +99,7 @@ State values:
 | `skills/02-ifrs-core-standards/ifrs-leases/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
 | `skills/02-ifrs-core-standards/ifrs-revenue-recognition/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
 | `skills/10-controls-governance-and-fraud/internal-controls-library/SKILL.md` | present | controls owner | release evidence | Active skill. |
+| `skills/10-controls-governance-and-fraud/finance-doctrine-conformance-scanner/SKILL.md` | present | doctrine owner | release evidence | Active conformance-scanner facility for codebases, systems, plans, proposals, and prose artefacts. |
 | `skills/01-foundations/management-accounting-dimensions/SKILL.md` | present | management accounting owner | release evidence | Active skill. |
 | `skills/06-close-consolidation-and-reporting/month-end-and-year-end-close-playbook/SKILL.md` | present | close owner | release evidence | Active skill. |
 | `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/SKILL.md` | present | migration owner | release evidence | Active skill. |

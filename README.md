@@ -47,7 +47,7 @@ chwezi-accounting-doctrine/
 |   |-- 07-financial-statements-and-disclosures/ # primary statements, cash-flow statement, notes, going concern, S1/S2
 |   |-- 08-tax-and-statutory/                    # source register, VAT/WHT mechanics, transfer pricing, e-invoicing
 |   |-- 09-budgeting-fpa-and-costing/            # budgets, forecasts, variance, KPIs, costing methods, pricing
-|   |-- 10-controls-governance-and-fraud/        # internal controls, engagement quality, anti-fraud, AML, whistleblowing, SOX-style ICFR
+|   |-- 10-controls-governance-and-fraud/        # internal controls, engagement quality, anti-fraud, AML, whistleblowing, SOX-style ICFR, conformance scanning
 |   |-- 11-sector-and-fund-accounting/           # NGO, schools, clinics, retail, agribusiness, hospitality, real estate, fintech
 |   |-- 12-public-sector-and-ipsas/              # IPSAS overlay, public procurement, donor fiscal compliance
 |   |-- 13-project-and-contract-accounting/      # POC/WIP, construction contracts, professional services
@@ -59,6 +59,10 @@ chwezi-accounting-doctrine/
 |   |-- finance-accounting-quality-gate.md
 |   |-- cleanup-backlog.md
 |   `-- how-to-reference-this-doctrine.md
+|-- tools/
+|   |-- validate-doctrine.ps1
+|   |-- close-gap-stubs.ps1
+|   `-- invoke-doctrine-conformance-scan.ps1
 `-- integration/
     |-- mirror.ps1
     |-- changelog-entries.md
@@ -84,6 +88,16 @@ Run the local doctrine gate before mirroring or release:
 ```
 
 The validation target is `pass-with-caveats` or better until all statutory source-register entries have named reviewer sign-off and archive evidence.
+
+## Doctrine Conformance Scanning
+
+Use the scanner when a codebase, implementation plan, proposal, business plan, blog post, or mixed artefact must be aligned to the finance doctrine:
+
+```powershell
+.\tools\invoke-doctrine-conformance-scan.ps1 -TargetPath "C:\path\to\target" -OutputPath ".\docs\conformance-scan.md"
+```
+
+The scanner is paired with `skills/10-controls-governance-and-fraud/finance-doctrine-conformance-scanner/`. It produces risk-ranked findings and alignment instructions; human reviewer sign-off is still required for final conformance.
 
 ## Provenance
 

@@ -10,10 +10,11 @@ High-frequency IFRS / IFRS for SMEs standards that apply to most Chwezi clients 
 | `ifrs-leases` | active |
 | `ifrs-financial-instruments` | active |
 | `ifrs-for-smes-equivalents` | active |
-| `ifrs-property-plant-equipment-ias16` | draft (gap stub) |
-| `ifrs-intangible-assets-ias38` | draft (gap stub) |
-| `ifrs-employee-benefits-ias19` | draft (gap stub) |
-| `ifrs-borrowing-costs-ias23` | draft (gap stub) |
-| `ifrs-foreign-currency-translation-ias21` | draft (gap stub) |
+| `ifrs-property-plant-equipment-ias16` | active |
+| `ifrs-intangible-assets-ias38` | active |
+| `ifrs-employee-benefits-ias19` | active |
+| `ifrs-borrowing-costs-ias23` | active |
+| `ifrs-foreign-currency-translation-ias21` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

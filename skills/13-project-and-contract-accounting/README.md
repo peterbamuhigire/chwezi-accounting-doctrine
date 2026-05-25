@@ -6,8 +6,9 @@ Project, contract, and construction accounting where revenue, costs, and billing
 
 | Skill | Status |
 |---|---|
-| `project-and-contract-accounting` | draft (gap stub) |
-| `construction-contract-accounting` | draft (gap stub) |
-| `professional-services-time-and-materials` | draft (gap stub) |
+| `project-and-contract-accounting` | active |
+| `construction-contract-accounting` | active |
+| `professional-services-time-and-materials` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

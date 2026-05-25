@@ -13,22 +13,24 @@ This analysis is **complementary** to `docs/fin-analysis/`, which scored the *cu
 | 00 | [00-index.md](00-index.md) | This index. |
 | 01 | [01-executive-summary.md](01-executive-summary.md) | Headline graded score out of 100 with category-level breakdown. |
 | 02 | [02-category-reorganization.md](02-category-reorganization.md) | The 17-category structure, what was moved where, and why. |
-| 03 | [03-gap-register.md](03-gap-register.md) | Every identified gap with severity, rationale, and the stub skill that now scaffolds it. |
-| 04 | [04-skills-matrix.md](04-skills-matrix.md) | The full 17-category x N-skill matrix with status (active / gap-stub draft). |
-| 05 | [05-roadmap-for-uplift.md](05-roadmap-for-uplift.md) | Prioritised remediation roadmap to turn gap-stubs into release-grade skills. |
+| 03 | [03-gap-register.md](03-gap-register.md) | Every identified gap with severity, rationale, closure status, and the skill that covers it. |
+| 04 | [04-skills-matrix.md](04-skills-matrix.md) | The full 17-category x N-skill matrix with current status. |
+| 05 | [05-roadmap-for-uplift.md](05-roadmap-for-uplift.md) | Reviewer-signoff and depth-expansion roadmap after gap closure. |
 | 06 | [06-methodology-and-evidence.md](06-methodology-and-evidence.md) | Methodology, scoring rubric, and sources informing the grading. |
+| 07 | [07-gap-closure-and-hardening.md](07-gap-closure-and-hardening.md) | Closure record for the 76 gaps and the doctrine conformance scanner facility. |
 
 ## Headline result
 
 | Metric | Value |
 |---|---|
 | Categories (new structure) | 17 |
-| Active skills (pre-existing, fully written) | 25 |
-| Draft gap-stub skills scaffolded in this pass | 76 |
-| Total SKILL.md files now in `skills/` | 101 |
-| Wider-lens doctrine score (this pack, out of 100) | **62 / 100** |
+| Active skills after hardening | 102 |
+| Gap skills closed in hardening pass | 76 |
+| Draft gap-stub skills remaining | 0 |
+| Total SKILL.md files now in `skills/` | 102 |
+| Doctrine validator state after hardening | **pass** |
 | Narrow-lens shipped-state score (`docs/fin-analysis/02`) | 94 / 100 |
 
-The two scores are not in conflict. The shipped 25-skill catalogue is high-quality against its declared scope; the wider lens shows the doctrine is also missing several pillars (sector packs, full IFRS coverage, treasury/AR/AP, FP&A, IPSAS, sustainability) that have now been scaffolded as stubs and roadmapped.
+The original wider-lens score in this pack was the pre-closure baseline. The hardening pass closed the identified coverage gaps by activating the 76 gap skills, adding source-basis references, implementation-rule references, worked examples, and a conformance scanner facility. Client-specific statutory, legal, actuarial, tax, and judgemental conclusions still require current source-register verification and named reviewer sign-off.
 
 Last reviewed: 2026-05-25. Next review due: 2026-08-25.

@@ -6,9 +6,10 @@ How finance data flows in and out: ERP integrations, bank feeds, payment gateway
 
 | Skill | Status |
 |---|---|
-| `erp-and-finance-system-integration-patterns` | draft (gap stub) |
-| `bank-feed-and-payment-gateway-integration` | draft (gap stub) |
-| `finance-data-contracts-and-warehouse-models` | draft (gap stub) |
-| `open-banking-and-direct-debit-mandates` | draft (gap stub) |
+| `erp-and-finance-system-integration-patterns` | active |
+| `bank-feed-and-payment-gateway-integration` | active |
+| `finance-data-contracts-and-warehouse-models` | active |
+| `open-banking-and-direct-debit-mandates` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

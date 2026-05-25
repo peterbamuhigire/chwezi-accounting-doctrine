@@ -6,8 +6,9 @@ Cybersecurity, data privacy, retention, and business continuity for finance syst
 
 | Skill | Status |
 |---|---|
-| `finance-data-privacy-and-retention` | draft (gap stub) |
-| `finance-cybersecurity-controls` | draft (gap stub) |
-| `business-continuity-and-disaster-recovery-finance` | draft (gap stub) |
+| `finance-data-privacy-and-retention` | active |
+| `finance-cybersecurity-controls` | active |
+| `business-continuity-and-disaster-recovery-finance` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+

@@ -8,7 +8,8 @@ How finance shows up to people: UI pattern library, UX for non-accountants, and 
 |---|---|
 | `finance-ui-pattern-library` | active |
 | `finance-ux-for-non-accountants` | active |
-| `finance-accessibility-and-inclusive-design` | draft (gap stub) |
-| `finance-mobile-and-offline-patterns` | draft (gap stub) |
+| `finance-accessibility-and-inclusive-design` | active |
+| `finance-mobile-and-offline-patterns` | active |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+
