@@ -82,88 +82,88 @@ State values:
 
 | Path | State | Owner | Release impact | Notes |
 |---|---|---|---|---|
-| `skills/audit-ready-reporting-pack/SKILL.md` | present | reporting owner | release evidence | Active skill. |
-| `skills/bank-and-mobile-money-reconciliation/SKILL.md` | present | reconciliation owner | release evidence | Active skill. |
-| `skills/finance-module-audit/SKILL.md` | present | doctrine owner | release evidence | Active skill. |
-| `skills/finance-ui-pattern-library/SKILL.md` | present | UX owner | release evidence | Active skill. |
-| `skills/finance-ux-for-non-accountants/SKILL.md` | present | UX owner | release evidence | Active skill. |
-| `skills/ias-agriculture/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ias-government-grants/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ias-impairment/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ias-income-tax-deferred-tax/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ias-provisions-contingencies/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ifrs-financial-instruments/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ifrs-for-smes-equivalents/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ifrs-leases/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/ifrs-revenue-recognition/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
-| `skills/internal-controls-library/SKILL.md` | present | controls owner | release evidence | Active skill. |
-| `skills/management-accounting-dimensions/SKILL.md` | present | management accounting owner | release evidence | Active skill. |
-| `skills/month-end-and-year-end-close-playbook/SKILL.md` | present | close owner | release evidence | Active skill. |
-| `skills/opening-balances-and-migration-playbook/SKILL.md` | present | migration owner | release evidence | Active skill. |
-| `skills/ledger-posting-engine-core/SKILL.md` | present | accounting systems architect | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/tax-statutory-source-register-and-country-packs/SKILL.md` | present | tax reviewer | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/inventory-costing-and-stock-accounting/SKILL.md` | present | inventory accounting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/fixed-assets-and-depreciation/SKILL.md` | present | accounting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/payroll-and-statutory-postings-east-africa/SKILL.md` | present | payroll reviewer | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/consolidation-and-intercompany/SKILL.md` | present | reporting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
-| `skills/engagement-quality-and-plain-language-output/SKILL.md` | present | delivery lead | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/06-close-consolidation-and-reporting/audit-ready-reporting-pack/SKILL.md` | present | reporting owner | release evidence | Active skill. |
+| `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/SKILL.md` | present | reconciliation owner | release evidence | Active skill. |
+| `skills/06-close-consolidation-and-reporting/finance-module-audit/SKILL.md` | present | doctrine owner | release evidence | Active skill. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/SKILL.md` | present | UX owner | release evidence | Active skill. |
+| `skills/16-ux-and-presentation/finance-ux-for-non-accountants/SKILL.md` | present | UX owner | release evidence | Active skill. |
+| `skills/03-ifrs-specialised-standards/ias-agriculture/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/03-ifrs-specialised-standards/ias-government-grants/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/03-ifrs-specialised-standards/ias-impairment/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/03-ifrs-specialised-standards/ias-income-tax-deferred-tax/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/03-ifrs-specialised-standards/ias-provisions-contingencies/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/02-ifrs-core-standards/ifrs-financial-instruments/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/02-ifrs-core-standards/ifrs-for-smes-equivalents/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/02-ifrs-core-standards/ifrs-leases/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/02-ifrs-core-standards/ifrs-revenue-recognition/SKILL.md` | present | IFRS reviewer | release evidence | Active skill. |
+| `skills/10-controls-governance-and-fraud/internal-controls-library/SKILL.md` | present | controls owner | release evidence | Active skill. |
+| `skills/01-foundations/management-accounting-dimensions/SKILL.md` | present | management accounting owner | release evidence | Active skill. |
+| `skills/06-close-consolidation-and-reporting/month-end-and-year-end-close-playbook/SKILL.md` | present | close owner | release evidence | Active skill. |
+| `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/SKILL.md` | present | migration owner | release evidence | Active skill. |
+| `skills/01-foundations/ledger-posting-engine-core/SKILL.md` | present | accounting systems architect | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/08-tax-and-statutory/tax-statutory-source-register-and-country-packs/SKILL.md` | present | tax reviewer | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/04-subledgers-and-operations/inventory-costing-and-stock-accounting/SKILL.md` | present | inventory accounting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/04-subledgers-and-operations/fixed-assets-and-depreciation/SKILL.md` | present | accounting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/04-subledgers-and-operations/payroll-and-statutory-postings-east-africa/SKILL.md` | present | payroll reviewer | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/06-close-consolidation-and-reporting/consolidation-and-intercompany/SKILL.md` | present | reporting specialist | caveated release evidence | Active skill present; review metadata still needs normalization. |
+| `skills/10-controls-governance-and-fraud/engagement-quality-and-plain-language-output/SKILL.md` | present | delivery lead | caveated release evidence | Active skill present; review metadata still needs normalization. |
 
 ## Declared Skill References And Examples
 
 | Path | State | Owner | Release impact | Notes |
 |---|---|---|---|---|
-| `skills/audit-ready-reporting-pack/references/notes-templates.md` | present | reporting owner | release evidence | Exists. |
-| `skills/audit-ready-reporting-pack/references/auditor-export-format.md` | present | reporting owner | release evidence | Exists. |
-| `skills/audit-ready-reporting-pack/examples/may-2026-monthly-pack.md` | present | reporting owner | release evidence | Exists. |
-| `skills/bank-and-mobile-money-reconciliation/references/match-rules.md` | present | reconciliation owner | release evidence | Exists. |
-| `skills/bank-and-mobile-money-reconciliation/references/data-model.sql` | present | reconciliation owner | release evidence | Exists. |
-| `skills/bank-and-mobile-money-reconciliation/references/provider-quirks.md` | present | reconciliation owner | release evidence | Exists. |
-| `skills/bank-and-mobile-money-reconciliation/examples/mtn-momo-month-end.md` | present | reconciliation owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/references/tokens.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/references/components.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/references/print-stylesheet-template.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/references/lint-checks.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/examples/cashier-record-sale.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/examples/ledger-trial-balance.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ui-pattern-library/examples/reconciliation-triage.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ux-for-non-accountants/references/workflow-vocabulary.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ux-for-non-accountants/references/microcopy-style.md` | present | UX owner | release evidence | Exists. |
-| `skills/finance-ux-for-non-accountants/examples/cashier-day-flow.md` | present | UX owner | release evidence | Exists. |
-| `skills/ias-agriculture/references/fair-value-methodology.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-agriculture/references/cohort-data-model.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-agriculture/examples/birdc-layer-flock-q2-2026.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-government-grants/references/grant-register-schema.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-government-grants/references/donor-restriction-pattern.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-government-grants/examples/ngo-restricted-grant-cycle.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-impairment/references/indicator-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-impairment/references/value-in-use-workpaper-template.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-income-tax-deferred-tax/references/temporary-difference-catalog.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-income-tax-deferred-tax/references/recognition-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-income-tax-deferred-tax/examples/sme-tax-provision-2026-04.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-provisions-contingencies/references/recognition-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ias-provisions-contingencies/references/onerous-contract-test.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-financial-instruments/references/section-11-impairment.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-financial-instruments/references/ifrs-9-ecl-simplified-trade-receivables.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-financial-instruments/references/effective-interest-schedule.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-for-smes-equivalents/references/full-ifrs-to-sme-mapping.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-for-smes-equivalents/references/client-profile-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-leases/references/exemption-test.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-leases/references/full-ifrs-16-lessee-model.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-revenue-recognition/references/section-23-summary.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-revenue-recognition/references/ifrs-15-five-step.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/ifrs-revenue-recognition/examples/multi-element-software-licence-plus-support.md` | present | IFRS reviewer | release evidence | Exists. |
-| `skills/internal-controls-library/references/sod-conflict-matrix.md` | present | controls owner | release evidence | Exists. |
-| `skills/internal-controls-library/references/exception-indicators.md` | present | controls owner | release evidence | Exists. |
-| `skills/internal-controls-library/examples/payment-approval-flow.md` | present | controls owner | release evidence | Exists. |
-| `skills/management-accounting-dimensions/references/dimensions-spec.md` | present | management accounting owner | release evidence | Exists. |
-| `skills/management-accounting-dimensions/references/allocation-rules-pattern.md` | present | management accounting owner | release evidence | Exists. |
-| `skills/management-accounting-dimensions/examples/contribution-margin-by-branch.md` | present | management accounting owner | release evidence | Exists. |
-| `skills/month-end-and-year-end-close-playbook/references/close-task-template.md` | present | close owner | release evidence | Exists. |
-| `skills/month-end-and-year-end-close-playbook/references/year-end-extras.md` | present | close owner | release evidence | Exists. |
-| `skills/month-end-and-year-end-close-playbook/examples/first-close-checklist.md` | present | close owner | release evidence | Exists. |
-| `skills/opening-balances-and-migration-playbook/references/cutover-pack.md` | present | migration owner | release evidence | Exists. |
-| `skills/opening-balances-and-migration-playbook/references/legacy-source-extractors.md` | present | migration owner | release evidence | Exists. |
-| `skills/opening-balances-and-migration-playbook/examples/sme-cutover-pack-2026-04-30.md` | present | migration owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/audit-ready-reporting-pack/references/notes-templates.md` | present | reporting owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/audit-ready-reporting-pack/references/auditor-export-format.md` | present | reporting owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/audit-ready-reporting-pack/examples/may-2026-monthly-pack.md` | present | reporting owner | release evidence | Exists. |
+| `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/references/match-rules.md` | present | reconciliation owner | release evidence | Exists. |
+| `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/references/data-model.sql` | present | reconciliation owner | release evidence | Exists. |
+| `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/references/provider-quirks.md` | present | reconciliation owner | release evidence | Exists. |
+| `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/examples/mtn-momo-month-end.md` | present | reconciliation owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/references/tokens.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/references/components.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/references/print-stylesheet-template.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/references/lint-checks.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/examples/cashier-record-sale.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/examples/ledger-trial-balance.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ui-pattern-library/examples/reconciliation-triage.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ux-for-non-accountants/references/workflow-vocabulary.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ux-for-non-accountants/references/microcopy-style.md` | present | UX owner | release evidence | Exists. |
+| `skills/16-ux-and-presentation/finance-ux-for-non-accountants/examples/cashier-day-flow.md` | present | UX owner | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-agriculture/references/fair-value-methodology.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-agriculture/references/cohort-data-model.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-agriculture/examples/birdc-layer-flock-q2-2026.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-government-grants/references/grant-register-schema.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-government-grants/references/donor-restriction-pattern.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-government-grants/examples/ngo-restricted-grant-cycle.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-impairment/references/indicator-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-impairment/references/value-in-use-workpaper-template.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-income-tax-deferred-tax/references/temporary-difference-catalog.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-income-tax-deferred-tax/references/recognition-checklist.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-income-tax-deferred-tax/examples/sme-tax-provision-2026-04.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-provisions-contingencies/references/recognition-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/03-ifrs-specialised-standards/ias-provisions-contingencies/references/onerous-contract-test.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-financial-instruments/references/section-11-impairment.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-financial-instruments/references/ifrs-9-ecl-simplified-trade-receivables.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-financial-instruments/references/effective-interest-schedule.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-for-smes-equivalents/references/full-ifrs-to-sme-mapping.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-for-smes-equivalents/references/client-profile-decision-tree.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-leases/references/exemption-test.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-leases/references/full-ifrs-16-lessee-model.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-revenue-recognition/references/section-23-summary.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-revenue-recognition/references/ifrs-15-five-step.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/02-ifrs-core-standards/ifrs-revenue-recognition/examples/multi-element-software-licence-plus-support.md` | present | IFRS reviewer | release evidence | Exists. |
+| `skills/10-controls-governance-and-fraud/internal-controls-library/references/sod-conflict-matrix.md` | present | controls owner | release evidence | Exists. |
+| `skills/10-controls-governance-and-fraud/internal-controls-library/references/exception-indicators.md` | present | controls owner | release evidence | Exists. |
+| `skills/10-controls-governance-and-fraud/internal-controls-library/examples/payment-approval-flow.md` | present | controls owner | release evidence | Exists. |
+| `skills/01-foundations/management-accounting-dimensions/references/dimensions-spec.md` | present | management accounting owner | release evidence | Exists. |
+| `skills/01-foundations/management-accounting-dimensions/references/allocation-rules-pattern.md` | present | management accounting owner | release evidence | Exists. |
+| `skills/01-foundations/management-accounting-dimensions/examples/contribution-margin-by-branch.md` | present | management accounting owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/month-end-and-year-end-close-playbook/references/close-task-template.md` | present | close owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/month-end-and-year-end-close-playbook/references/year-end-extras.md` | present | close owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/month-end-and-year-end-close-playbook/examples/first-close-checklist.md` | present | close owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/references/cutover-pack.md` | present | migration owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/references/legacy-source-extractors.md` | present | migration owner | release evidence | Exists. |
+| `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/examples/sme-cutover-pack-2026-04-30.md` | present | migration owner | release evidence | Exists. |
 
 ## External Sources
 
@@ -189,3 +189,4 @@ State values:
 | `C:\wamp64\www\_chwezi-doctrine` | deprecated | integration owner | must not support release | Historical mirror master path flagged by F-007; use repo-relative `integration/mirror.ps1` default or explicit override instead. |
 
 Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+

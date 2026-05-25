@@ -1,4 +1,4 @@
-# Target 90 Evidence Package
+﻿# Target 90 Evidence Package
 
 Assessment date: 2026-05-16
 Status: **implemented**
@@ -23,7 +23,7 @@ The original target was a defensible 90+ score. The current package supports **9
 | Standards transition files | Present | `doctrine/references/standards-transition-2027.md` |
 | IFRS 18 transition | Present | `doctrine/references/ifrs-18-presentation-transition.md` |
 | IFRS for SMEs third edition transition | Present | `doctrine/references/ifrs-for-smes-third-edition-transition.md` |
-| Ledger posting engine core | Present | `skills/ledger-posting-engine-core/` |
+| Ledger posting engine core | Present | `skills/01-foundations/ledger-posting-engine-core/` |
 | 25-skill catalogue | Present and passing | `skills/` |
 | Audit export sample | Present | `docs/audit-export-sample/` |
 | Release manifest template | Present | `docs/release-manifest-template.yaml` |
@@ -46,3 +46,4 @@ The original target was a defensible 90+ score. The current package supports **9
 ## Re-score Position
 
 The evidence package now justifies a 90+ re-score. The defensible score is **94 / 100** because the package is validator-clean but not source-complete or reviewer-signed across all statutory surfaces.
+

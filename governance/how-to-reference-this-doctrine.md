@@ -1,4 +1,4 @@
-# How to Reference This Doctrine
+﻿# How to Reference This Doctrine
 
 Each consumer engine references the doctrine in a slightly different way. This file gives the exact pattern.
 
@@ -52,7 +52,7 @@ When the trigger fires:
 4. Apply the finance and accounting quality gate from `doctrine/governance/finance-accounting-quality-gate.md` to the generated artefact.
 5. Record the gate run in the artefact manifest.
 
-The `finance-module-audit` skill is the standard implementation harness for analysing any software system that has a finance or accounting element. It auto-runs whenever such a system is the subject of an analysis request. See `skills/finance-module-audit/SKILL.md`.
+The `finance-module-audit` skill is the standard implementation harness for analysing any software system that has a finance or accounting element. It auto-runs whenever such a system is the subject of an analysis request. See `skills/06-close-consolidation-and-reporting/finance-module-audit/SKILL.md`.
 ```
 
 ## `AGENTS.md` Block
@@ -105,3 +105,4 @@ When an engine adopts a new doctrine version:
 5. Commit with the conventional message `doctrine: adopt v<semver>`.
 
 Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+

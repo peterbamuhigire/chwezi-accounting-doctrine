@@ -1,4 +1,4 @@
-# Standards And Source References
+﻿# Standards And Source References
 
 Assessment date: 2026-05-16
 
@@ -9,7 +9,7 @@ Assessment date: 2026-05-16
 | IFRS Required 2026 baseline | Present | `doctrine/examples/reporting-basis-2026.md` and reference manifest external source. |
 | IFRS 18 transition | Present | `doctrine/references/ifrs-18-presentation-transition.md` and 2027 fixture. |
 | IFRS for SMEs third edition transition | Present | `doctrine/references/ifrs-for-smes-third-edition-transition.md` and 2027 SME fixture. |
-| Full IFRS vs IFRS for SMEs decision logic | Present | `doctrine/references/standards-transition-2027.md` and `skills/ifrs-for-smes-equivalents/`. |
+| Full IFRS vs IFRS for SMEs decision logic | Present | `doctrine/references/standards-transition-2027.md` and `skills/02-ifrs-core-standards/ifrs-for-smes-equivalents/`. |
 | IAASB/IESBA quality and ethics posture | Present | External source entries in `docs/reference-manifest.md` and engagement-quality skill. |
 
 ## Source-Register Posture
@@ -46,3 +46,4 @@ The reference manifest tracks official or institutional source URLs for:
 ## Release Rule
 
 An external source listed in the manifest is not enough by itself. A final statutory value requires a source-register entry with state, verifier, date accessed, recheck due date, source URL or archive, affected outputs, and scope caveats.
+

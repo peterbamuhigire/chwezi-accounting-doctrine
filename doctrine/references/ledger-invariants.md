@@ -1,4 +1,4 @@
-# Ledger Invariants
+﻿# Ledger Invariants
 
 The non-negotiable rules that every ledger implementation, every posting service, every test suite, and every reviewer enforces.
 
@@ -94,6 +94,7 @@ Every posting that requires evidence under the CoA evidence policy (typically su
 
 ## 11. Acceptance tests
 
-Every consumer engine derives ledger acceptance tests from this file. See `../../skills/internal-controls-library/references/acceptance-tests.md` for the canonical test set.
+Every consumer engine derives ledger acceptance tests from this file. See `../../skills/10-controls-governance-and-fraud/internal-controls-library/references/acceptance-tests.md` for the canonical test set.
 
 Last reviewed: 2026-05-12. Next review due: 2026-11-12.
+

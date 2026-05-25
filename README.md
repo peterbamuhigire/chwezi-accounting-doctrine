@@ -37,14 +37,24 @@ chwezi-accounting-doctrine/
 |       |-- vat-inclusive-posting.md
 |       |-- reversal-pattern.md
 |       `-- reconciliation-evidence-pack.md
-|-- skills/
-|   |-- audit-ready-reporting-pack/
-|   |-- bank-and-mobile-money-reconciliation/
-|   |-- finance-module-audit/
-|   |-- finance-ui-pattern-library/
-|   |-- finance-ux-for-non-accountants/
-|   |-- internal-controls-library/
-|   `-- standards and workflow skills
+|-- skills/                                      # organised into category sub-folders
+|   |-- 01-foundations/                          # ledger core, CoA, dimensions, period locking, currency
+|   |-- 02-ifrs-core-standards/                  # revenue, leases, financial instruments, SMEs, PPE, intangibles, employee benefits, borrowing costs, FX
+|   |-- 03-ifrs-specialised-standards/           # impairment, agriculture, grants, deferred tax, provisions, IFRS 3/5/8/13, IAS 8/10/24/28/33/40, IFRS 1/2/17
+|   |-- 04-subledgers-and-operations/            # bank/momo recon, fixed assets, inventory, payroll, petty cash, POS, expenses
+|   |-- 05-receivables-payables-and-treasury/    # AR, AP, treasury, FX hedging, facilities and covenants
+|   |-- 06-close-consolidation-and-reporting/    # month/year close, migration, consolidation, audit-ready packs, finance-module audit
+|   |-- 07-financial-statements-and-disclosures/ # primary statements, cash-flow statement, notes, going concern, S1/S2
+|   |-- 08-tax-and-statutory/                    # source register, VAT/WHT mechanics, transfer pricing, e-invoicing
+|   |-- 09-budgeting-fpa-and-costing/            # budgets, forecasts, variance, KPIs, costing methods, pricing
+|   |-- 10-controls-governance-and-fraud/        # internal controls, engagement quality, anti-fraud, AML, whistleblowing, SOX-style ICFR
+|   |-- 11-sector-and-fund-accounting/           # NGO, schools, clinics, retail, agribusiness, hospitality, real estate, fintech
+|   |-- 12-public-sector-and-ipsas/              # IPSAS overlay, public procurement, donor fiscal compliance
+|   |-- 13-project-and-contract-accounting/      # POC/WIP, construction contracts, professional services
+|   |-- 14-systems-integration-and-data/         # ERP integration, bank feeds, data contracts, open banking
+|   |-- 15-security-privacy-and-continuity/      # data privacy, cybersecurity, BCP/DR for finance
+|   |-- 16-ux-and-presentation/                  # UI pattern library, non-accountant UX, accessibility, mobile/offline
+|   `-- 17-ai-automation-and-emerging/           # AI governance, RPA, digital assets, carbon accounting
 |-- governance/
 |   |-- finance-accounting-quality-gate.md
 |   |-- cleanup-backlog.md

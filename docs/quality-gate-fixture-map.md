@@ -1,4 +1,4 @@
-# Quality Gate Fixture Map
+﻿# Quality Gate Fixture Map
 
 Purpose: map every finance quality-gate blocker in `governance/finance-accounting-quality-gate.md` to an existing check, present fixture, or reviewed fixture. Final statutory, ledger-affecting, or client-facing release still requires the relevant source-register entries, reviewer approvals, and consumer-repo executable tests where the blocker depends on live implementation code.
 
@@ -28,14 +28,14 @@ Purpose: map every finance quality-gate blocker in `governance/finance-accountin
 | B-042 | Live-rate | Verifier and date metadata check | present | `tools/check-source-register.ps1` | Present validator. |
 | B-050 | Migration | Opening-balance sign-off checklist | present | `docs/quality-gate-fixtures/migration-cutover-fixtures.md#fixture-missing-opening-balance-sign-off` | Reviewed opening-balance sign-off fixture. |
 | B-051 | Migration | Trial-balance-only migration rejection fixture | present | `docs/quality-gate-fixtures/migration-cutover-fixtures.md#fixture-trial-balance-only-migration` | Reviewed trial-balance-only rejection fixture. |
-| B-060 | Reconciliation | Reconciliation plan checklist | present | `skills/bank-and-mobile-money-reconciliation/SKILL.md` | Active skill. |
+| B-060 | Reconciliation | Reconciliation plan checklist | present | `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/SKILL.md` | Active skill. |
 | B-061 | Reconciliation | Reconciliation triage UI example | present | `docs/quality-gate-fixtures/reconciliation-triage-fixture.md` | Reviewed downloadable-report rejection and triage-UI fixture. |
-| B-062 | Reconciliation | Feed-before-match rejection rule | present | `skills/bank-and-mobile-money-reconciliation/SKILL.md` | Active skill. |
-| B-070 | UX | Posted-record destructive verb lint | present | `skills/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-01. |
-| B-071 | UX | Gross-only display lint/checklist | present | `skills/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-07. |
+| B-062 | Reconciliation | Feed-before-match rejection rule | present | `skills/04-subledgers-and-operations/bank-and-mobile-money-reconciliation/SKILL.md` | Active skill. |
+| B-070 | UX | Posted-record destructive verb lint | present | `skills/16-ux-and-presentation/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-01. |
+| B-071 | UX | Gross-only display lint/checklist | present | `skills/16-ux-and-presentation/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-07. |
 | B-072 | UX | Drilldown affordance checklist | present | `doctrine/references/required-patterns.md` | Present required pattern. |
-| B-073 | UX | Semantic color lint | present | `skills/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-02. |
-| B-074 | UX | Controlled status taxonomy lint | present | `skills/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-05 and status taxonomy reference. |
+| B-073 | UX | Semantic color lint | present | `skills/16-ux-and-presentation/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-02. |
+| B-074 | UX | Controlled status taxonomy lint | present | `skills/16-ux-and-presentation/finance-ui-pattern-library/references/lint-checks.md` | Present lint rule L-05 and status taxonomy reference. |
 | B-075 | UX | Print stylesheet checklist | present | `doctrine/references/print-fidelity.md` | Present print fidelity reference. |
 | B-076 | UX | Role-conditioned shell checklist | present | `doctrine/references/role-conditioned-shell.md` | Present role shell reference. |
 | B-080 | Proposals and business plans | Vendor-replacement caveat checklist | present | `integration/deprecation-list.md` | Present deprecation guidance. |
@@ -57,3 +57,4 @@ Purpose: map every finance quality-gate blocker in `governance/finance-accountin
 | Deprecated-only rows | 0 |
 
 Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+

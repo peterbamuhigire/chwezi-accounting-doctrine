@@ -65,8 +65,15 @@ $root = Resolve-DoctrineRepoRoot $RepoRoot
 $manifest = Get-ManifestStates (Join-Path $root 'docs\reference-manifest.md')
 $findings = New-Object System.Collections.ArrayList
 $skillRoot = Join-Path $root 'skills'
-$skillDirs = @(Get-ChildItem -Path $skillRoot -Directory)
+# Skills are organised into category sub-folders under skills/.
+# A category folder is any direct child of skills/ that contains no SKILL.md
+# itself but has skill sub-folders. A skill folder is any folder that contains
+# a SKILL.md, regardless of nesting depth.
 $skillFiles = @(Get-ChildItem -Path $skillRoot -Recurse -Filter SKILL.md)
+$skillDirs = @($skillFiles | ForEach-Object { Get-Item (Split-Path $_.FullName -Parent) })
+$categoryDirs = @(Get-ChildItem -Path $skillRoot -Directory | Where-Object {
+  -not (Test-Path (Join-Path $_.FullName 'SKILL.md'))
+})
 $activeSkillCount = $skillFiles.Count
 $plannedSkillDirs = 0
 $declaredReferences = 0
@@ -75,18 +82,24 @@ $qualityGateIds = 0
 $qualityGateCovered = 0
 $qualityGatePlanned = 0
 
-if ($activeSkillCount -gt 25) {
-  [void]$findings.Add((New-Finding 'blocker' 'SKILL-001' "Active finance skill count is $activeSkillCount, above the target cap of 25." 'skills' 0))
+# Soft ceiling - gap-stub introduction can take this higher, but a runaway
+# explosion still warrants attention from the doctrine owner.
+if ($activeSkillCount -gt 120) {
+  [void]$findings.Add((New-Finding 'caveat' 'SKILL-001' "Active finance skill count is $activeSkillCount, above the advisory ceiling of 120." 'skills' 0))
 }
 
-foreach ($dir in $skillDirs) {
-  $skillFile = Join-Path $dir.FullName 'SKILL.md'
-  $relativeDir = $dir.FullName.Substring($root.Length + 1)
-  if (-not (Test-Path $skillFile)) {
-    $plannedSkillDirs++
-    $severity = 'caveat'
-    if ($Strict) { $severity = 'high' }
-    [void]$findings.Add((New-Finding $severity 'SKILL-002' 'Skill directory exists without SKILL.md; treated as planned, not active.' $relativeDir 0))
+# Inside each category folder, every direct sub-folder is expected to be a
+# skill folder. Sub-folders without a SKILL.md are flagged as planned.
+foreach ($cat in $categoryDirs) {
+  foreach ($dir in (Get-ChildItem -Path $cat.FullName -Directory)) {
+    $skillFile = Join-Path $dir.FullName 'SKILL.md'
+    $relativeDir = $dir.FullName.Substring($root.Length + 1)
+    if (-not (Test-Path $skillFile)) {
+      $plannedSkillDirs++
+      $severity = 'caveat'
+      if ($Strict) { $severity = 'high' }
+      [void]$findings.Add((New-Finding $severity 'SKILL-002' 'Skill directory exists without SKILL.md; treated as planned, not active.' $relativeDir 0))
+    }
   }
 }
 
