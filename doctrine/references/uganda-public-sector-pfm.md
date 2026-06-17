@@ -23,7 +23,7 @@ Government is on a **phased transition to accrual IPSAS**; default to the basis 
 4. **Treasury Instructions 2017 (TIs)** — operational detail (e.g. par 16.29.15 investment register; sec 17.20 reconciliations; par 21 losses).
 5. **MOFPED Financial Reporting Guide 2024 (rev. June 2024)** — issued by the Accountant General under PFMA s.46(2); prescribes statements, templates (FRTs), Chart of Accounts, and the annual Financial Reporting Circular.
 6. **Local Governments Act 1997** + **Local Governments (Financial and Accounting) Regulations 2007 (SI 25/2007)** — LG financial control.
-7. **Local-government procurement regulations** and the **PPDA Act 2003 (as amended)** — procurement and disposal (thresholds and methods live here, *not* in SI 25/2007). The Local Governments (PPDA) Regulations 2006 historically governed LG procurement but were reportedly revoked/replaced around February 2024 — **verify the current LG procurement instrument at the engagement date** and cite the one in force; do not assume the 2006 regulations remain operative.
+7. **PPDA Act 2003 (as amended, incl. the PPDA (Amendment) Act 2021)** with the **PPDA Regulations 2023** (gazetted 8 December 2023, effective 5 February 2024), the retained **PPDA Regulations 2014**, and the **PPDA Guidelines 2024** — procurement and disposal (thresholds and methods live here, *not* in SI 25/2007). The 2023 Regulations **harmonise central and local government** procurement under one framework and **revoked the former separate Local Governments (PPDA) Regulations 2006** (do not cite the 2006 regulations as operative). Administrative review now has two tiers (Accounting Officer, then the PPDA Appeals Tribunal). Verify the current consolidated text and any later amendments/guidelines before final output.
 8. Entity-level **Accounting Manual** and **Internal Audit Manual** — lawful subsidiary documents (LG Regs reg. 61).
 
 ## Reporting calendar (central government, FY 1 Jul – 30 Jun)
@@ -85,7 +85,7 @@ Memorandum: arrears of revenue; contingent liabilities (quantifiable and non-qua
 
 | Source | Tier | Note |
 |---|---|---|
-| Constitution; PFMA 2015; PFMR 2016; TIs 2017; LG Act 1997; SI 25/2007; PPDA Act 2003; LG PPDA Regs 2006 | Tier 1 (primary law) | Verify amendments via Uganda Gazette / URA / MOFPED |
+| Constitution; PFMA 2015; PFMR 2016; TIs 2017; LG Act 1997; SI 25/2007; PPDA Act 2003 (as amended 2021); PPDA Regulations 2023 + retained 2014 + Guidelines 2024 | Tier 1 (primary law) | 2023 regs harmonise central+local govt; verify amendments via Uganda Gazette / PPDA / MOFPED |
 | MOFPED Financial Reporting Guide 2024 (rev. June 2024); GoU CoA; annual Financial Reporting Circular; FRTs | Tier 2 (authoritative guidance) | Issued under PFMA s.46(2); updated annually |
 | Entity accounting manuals reviewed for sector practice | Tier 3 (illustrative) | See `uganda-ngo-financial-management-patterns.md` |
 
