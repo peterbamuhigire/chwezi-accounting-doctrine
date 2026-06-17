@@ -15,6 +15,7 @@ This reference records the source discipline for the skill. It does not reproduc
 |---|---|---|---|---|
 | INT-DOCTRINE | Chwezi accounting and finance doctrine | 1 - internal canonical doctrine | doctrine/accounting-finance-doctrine.md | Policy hierarchy, evidence discipline, ledger boundaries, and reviewer routing. |
 | INT-LEDGER | Chwezi ledger invariants | 1 - internal canonical doctrine | doctrine/references/ledger-invariants.md | Posting invariants, immutability, source evidence, reversals, and drilldown. |
+| UG-NGO-PATTERNS | Uganda NGO/CSO financial-management patterns (synthesised from UCOBAC Finance & Accounting Manual; MCLD Uganda Financial Management Policy May 2023; IMAU Accounting Manual) | 3 - illustrative sector practice | doctrine/references/uganda-ngo-financial-management-patterns.md | Imprest-float state machine, single-transaction cap, replenishment trigger, and certified/surprise-count cadence for Ugandan NGO engagements; floats and caps are entity-set, not statutory. |
 
 ## Source-Tier Verdict
 

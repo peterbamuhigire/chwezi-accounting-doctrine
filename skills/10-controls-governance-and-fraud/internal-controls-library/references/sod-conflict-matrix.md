@@ -37,6 +37,10 @@ compensating_control: "Controller reviews all payments next morning"
 state: "approved"
 ```
 
+## Uganda field sources
+
+For Ugandan NGO/CSO engagements, the segregation chain (request -> check -> approve -> disburse -> account -> review), the amount-tiered authorisation matrix, and the dual-signatory bank mandate (any 2 of 3) follow the patterns in `doctrine/references/uganda-ngo-financial-management-patterns.md` (synthesised from UCOBAC Finance & Accounting Manual; MCLD Uganda Financial Management Policy May 2023; IMAU Accounting Manual). These are entity-set benchmarks, not statutory mandates. For public bodies use `doctrine/references/uganda-public-sector-pfm.md` (signatory rules under SI 25/2007).
+
 ## Release blockers
 
 - Active permanent SoD conflict in production.

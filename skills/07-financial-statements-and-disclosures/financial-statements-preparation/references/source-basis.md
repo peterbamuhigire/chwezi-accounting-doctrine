@@ -18,6 +18,7 @@ This reference records the source discipline for the skill. It does not reproduc
 | IFRS-STANDARDS | IFRS Foundation - supporting materials by IFRS Accounting Standard | 1 - official standard-setter | https://www.ifrs.org/supporting-implementation/supporting-materials-by-ifrs-standards/ | Primary index for IFRS and IAS standard-specific materials; use the actual standard text for final recognition, measurement, presentation, and disclosure decisions. |
 | IFRS-SMES | IFRS Foundation - IFRS for SMEs Accounting Standard | 1 - official standard-setter | https://www.ifrs.org/issued-standards/ifrs-for-smes/ | Framework routing for entities using IFRS for SMEs rather than full IFRS. |
 | IFRS-18 | IFRS Foundation - IFRS 18 Presentation and Disclosure in Financial Statements | 1 - official standard-setter | https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/ | Transition-aware presentation and disclosure design for annual reporting periods beginning on or after the effective date. |
+| UG-NGO-PATTERNS | Uganda NGO/CSO financial-management patterns (synthesised from UCOBAC Finance & Accounting Manual; MCLD Uganda Financial Management Policy May 2023; IMAU Accounting Manual) | 3 - illustrative sector practice | doctrine/references/uganda-ngo-financial-management-patterns.md | Reporting set (I&E, SOFP, cash flow, notes) and budget-vs-actual-vs-variance narrative for Ugandan NGO statements; entity-set, not statutory. |
 
 ## Source-Tier Verdict
 

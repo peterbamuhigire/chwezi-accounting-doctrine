@@ -175,6 +175,7 @@ Where an administrator action affects accounting (role assignment giving account
 - `references/sod-conflict-matrix.md`.
 - `references/exception-indicators.md`.
 - `examples/payment-approval-flow.md`.
+- `examples/uganda-worked-example.md`.
 
 Last reviewed: 2026-05-12. Next review due: 2026-11-12.
 

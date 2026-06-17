@@ -23,7 +23,7 @@ Government is on a **phased transition to accrual IPSAS**; default to the basis 
 4. **Treasury Instructions 2017 (TIs)** — operational detail (e.g. par 16.29.15 investment register; sec 17.20 reconciliations; par 21 losses).
 5. **MOFPED Financial Reporting Guide 2024 (rev. June 2024)** — issued by the Accountant General under PFMA s.46(2); prescribes statements, templates (FRTs), Chart of Accounts, and the annual Financial Reporting Circular.
 6. **Local Governments Act 1997** + **Local Governments (Financial and Accounting) Regulations 2007 (SI 25/2007)** — LG financial control.
-7. **Local Governments (PPDA) Regulations 2006** and the **PPDA Act 2003 (as amended)** — procurement and disposal (thresholds and methods live here, *not* in SI 25/2007).
+7. **Local-government procurement regulations** and the **PPDA Act 2003 (as amended)** — procurement and disposal (thresholds and methods live here, *not* in SI 25/2007). The Local Governments (PPDA) Regulations 2006 historically governed LG procurement but were reportedly revoked/replaced around February 2024 — **verify the current LG procurement instrument at the engagement date** and cite the one in force; do not assume the 2006 regulations remain operative.
 8. Entity-level **Accounting Manual** and **Internal Audit Manual** — lawful subsidiary documents (LG Regs reg. 61).
 
 ## Reporting calendar (central government, FY 1 Jul – 30 Jun)

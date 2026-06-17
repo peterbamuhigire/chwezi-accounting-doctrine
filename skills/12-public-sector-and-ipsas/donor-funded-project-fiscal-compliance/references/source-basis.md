@@ -17,6 +17,8 @@ This reference records the source discipline for the skill. It does not reproduc
 | INT-LEDGER | Chwezi ledger invariants | 1 - internal canonical doctrine | doctrine/references/ledger-invariants.md | Posting invariants, immutability, source evidence, reversals, and drilldown. |
 | IPSASB | IPSASB standards and pronouncements | 1 - official standard-setter | https://www.ipsasb.org/standards-pronouncements | Public-sector accrual-accounting standard routing and IPSAS overlay design. |
 | WB-PROC | World Bank Procurement Regulations for IPF Borrowers | 1 - multilateral institution | https://thedocs.worldbank.org/en/doc/6c0602876d68949e80820507d90a14ed-0290012023/original/Procurement-Regulations-September-2023.pdf | Donor-funded procurement-control patterns where World Bank rules apply. |
+| UG-PFM | Uganda public-sector PFM framework (cites Constitution; PFMA 2015; PFMR 2016; Treasury Instructions 2017; LG Act 1997 and Financial & Accounting Regulations 2007 SI 25/2007; MOFPED Financial Reporting Guide 2024) | 1 - primary law via framework reference | doctrine/references/uganda-public-sector-pfm.md | GoU layering, donor-project consolidation, and fiscal-control routing for Ugandan public bodies; verify the current instrument before final output. |
+| UG-NGO-PATTERNS | Uganda NGO/CSO financial-management patterns (synthesised from UCOBAC Finance & Accounting Manual; MCLD Uganda Financial Management Policy May 2023; IMAU Accounting Manual) | 3 - illustrative sector practice | doctrine/references/uganda-ngo-financial-management-patterns.md | Cost-eligibility (Reasonable/Allocable/Allowable), unallowable-cost list, and donor-rule layering for Ugandan donor-funded engagements; benchmarks are entity-set, not statutory. |
 
 ## Source-Tier Verdict
 

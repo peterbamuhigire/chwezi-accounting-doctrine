@@ -92,6 +92,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/source-basis.md lists the official or canonical sources used for this skill and assigns source tiers.
 - references/implementation-rules.md translates the source basis into local doctrine rules, blocked-output rules, and review gates.
 - examples/worked-example.md shows a minimal evidence-backed artefact, posting/reporting impact, reconciliation, and reviewer route.
+- examples/uganda-worked-example.md shows a Ugandan public-body budget cycle (virement <=10% and quarterly expenditure-limit/commitment-control check, per uganda-public-sector-pfm.md) using illustrative budget figures, not statutory rates.
 - The skill is active for doctrine use, but client-specific statutory/legal final output still requires current source-register verification and reviewer approval.
 
 ## Anti-Patterns
@@ -108,6 +109,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/source-basis.md
 - references/implementation-rules.md
 - examples/worked-example.md
+- examples/uganda-worked-example.md
 
 ## Review Metadata
 
