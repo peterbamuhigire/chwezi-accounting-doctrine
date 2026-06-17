@@ -2,6 +2,8 @@
 
 Uganda is the home jurisdiction. This reference lists what the system must support for Uganda and what remains a live-verification target. **No statutory rate or threshold is fixed here.** All numeric values flow through the source register and the live-rate verification protocol.
 
+See also: `uganda-public-sector-pfm.md` (central/local-government PFM framework, reporting calendar, commitment control) and `uganda-ngo-financial-management-patterns.md` (NGO/CSO sector finance-manual practice). This file owns tax/EFRIS; those two own public-sector framework and NGO org-policy patterns respectively.
+
 ## Authorities and source list
 
 | Authority | Role |

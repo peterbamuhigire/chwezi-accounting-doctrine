@@ -230,6 +230,7 @@ Last reviewed: 2026-05-12. Next review due: 2026-11-12.
 - `governance/finance-accounting-quality-gate.md`.
 - `docs/reference-manifest.md` for declared reference states.
 - Domain-specific references listed earlier in this skill.
+- Read doctrine/references/uganda-ngo-financial-management-patterns.md when the engagement is Ugandan.
 
 ## Examples
 

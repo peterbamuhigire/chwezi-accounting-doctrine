@@ -43,7 +43,7 @@ Decision memo, configured policy, posting/reporting map, reconciliation evidence
 
 ## References
 
-Load eferences/source-basis.md, eferences/implementation-rules.md, and the canonical doctrine references before applying this skill.
+Load references/source-basis.md, references/implementation-rules.md, and the canonical doctrine references before applying this skill.
 <!-- dual-compat-end -->
 
 ## Prerequisites
@@ -51,8 +51,9 @@ Load eferences/source-basis.md, eferences/implementation-rules.md, and the can
 - Read doctrine/accounting-finance-doctrine.md.
 - Read doctrine/references/policy-hierarchy.md.
 - Read doctrine/references/ledger-invariants.md.
-- Read eferences/source-basis.md.
-- Read eferences/implementation-rules.md.
+- Read doctrine/references/uganda-ngo-financial-management-patterns.md when the engagement is Ugandan.
+- Read references/source-basis.md.
+- Read references/implementation-rules.md.
 - Confirm framework, jurisdiction, functional currency, reporting period, entity type, and reviewer route.
 
 ## Inputs
@@ -88,8 +89,8 @@ Load eferences/source-basis.md, eferences/implementation-rules.md, and the can
 
 ## Acceptance Evidence
 
-- eferences/source-basis.md lists the official or canonical sources used for this skill and assigns source tiers.
-- eferences/implementation-rules.md translates the source basis into local doctrine rules, blocked-output rules, and review gates.
+- references/source-basis.md lists the official or canonical sources used for this skill and assigns source tiers.
+- references/implementation-rules.md translates the source basis into local doctrine rules, blocked-output rules, and review gates.
 - examples/worked-example.md shows a minimal evidence-backed artefact, posting/reporting impact, reconciliation, and reviewer route.
 - The skill is active for doctrine use, but client-specific statutory/legal final output still requires current source-register verification and reviewer approval.
 
@@ -104,8 +105,8 @@ Load eferences/source-basis.md, eferences/implementation-rules.md, and the can
 
 ## Files
 
-- eferences/source-basis.md
-- eferences/implementation-rules.md
+- references/source-basis.md
+- references/implementation-rules.md
 - examples/worked-example.md
 
 ## Review Metadata

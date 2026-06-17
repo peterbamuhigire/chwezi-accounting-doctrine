@@ -12,7 +12,7 @@ An entity asks the finance engine to process a matter involving foundation polic
 |---|---|
 | Scope memo | Present: entity, period, framework, jurisdiction, and functional currency stated. |
 | Source document | Present: document reference, actor, date, amount, and currency captured. |
-| Policy reference | Present: eferences/source-basis.md and eferences/implementation-rules.md. |
+| Policy reference | Present: references/source-basis.md and references/implementation-rules.md. |
 | Ledger route | Present where posting is required; otherwise documented as no-posting output. |
 | Reviewer route | Present: role-based reviewer assigned in SKILL.md. |
 

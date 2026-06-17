@@ -49,6 +49,7 @@ Load the required references and examples listed below before implementation or 
 - Read `doctrine/accounting-finance-doctrine.md`.
 - Read `doctrine/references/ledger-invariants.md`.
 - Read `doctrine/references/chart-of-accounts.md`.
+- Read doctrine/references/uganda-ngo-financial-management-patterns.md when the engagement is Ugandan.
 - Read `ledger-posting-engine-core` before approving asset journals.
 - Confirm reporting framework, capitalization threshold policy, asset classes, depreciation methods, useful lives, tax jurisdiction, and evidence policy.
 
