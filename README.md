@@ -1,10 +1,38 @@
 # Chwezi Accounting & Finance Doctrine
 
-Canonical accounting and finance doctrine for the Chwezi Core Systems skills engine. This staging tree is the single source from which the four skill engines (`skills-web-dev` at `C:\Users\Peter\.claude\skills`, `srs-skills`, `proposal-skills`, `business-plan-skills`) receive their finance/accounting capability.
+Canonical accounting and finance doctrine for the Chwezi Core Systems skills engine — the **cross-cutting finance source of truth**. This tree is the single source from which the consumer skill engines (`skills-web-dev` at `C:\Users\Peter\.claude\skills`, `srs-skills`, `proposal-skills`, `business-plan-skills`) draw their finance/accounting capability. This README is also this engine's **router** — start here, then read `doctrine/accounting-finance-doctrine.md` and glob `skills/**/SKILL.md`.
 
-## Build Once, Mirror Everywhere
+## Architecture & cross-cutting engines (updated 2026-06-21)
 
-This tree is built once. The contents of `doctrine/`, `skills/`, `governance/`, and `integration/` are mirrored into each consumer engine under the engine's doctrine and skill paths. The mirror script lives at `integration/mirror.ps1` and defaults to this repository root as its source.
+- **102 finance/accounting `SKILL.md` skills** across 17 category groups under `skills/`,
+  plus the doctrine, references, governance, and tooling described below.
+- **No engine is natively discovered anymore.** This engine, like every other on this
+  machine, is reached only via the user's global engine-routing table
+  (`~/.claude/CLAUDE.md`, or `AGENTS.md` for Codex), by globbing `SKILL.md` directly and
+  reading the matching file (not via the `Skill` tool).
+- **Reference model — the mirror is retired.** As of 2026-06-21 this doctrine is consumed by
+  the **reference model, NOT mirrored.** The old "Build Once, Mirror Everywhere" approach is
+  **retired/deprecated.** Consumer engines (`srs-skills`, `business-plan-skills`,
+  `proposal-skills`, `skills-web-dev`) **no longer hold finance mirrors** — their empty mirror
+  shell folders were removed on 2026-06-21. Those engines now **route finance/accounting work
+  to this source** via the global routing table. The `integration/mirror.ps1` workflow remains
+  in the tree only as deprecated history; do not treat it as the active integration path.
+- **This is the finance peer of the cross-cutting DESIGN engine.** A parallel cross-cutting
+  engine, **`design-system-skills`**, is the single home for ALL design/typography/UI/UX/
+  visual-formatting skills plus the anti-AI-slop doctrine. It is **referenced, not mirrored**
+  (resolve its path per-device from the global routing table — never hardcode). Consult it
+  **IN ADDITION** to this engine whenever an artefact's visual presentation matters; content
+  and structure stay here, presentation comes from `design-system-skills`. See the design
+  trigger block at the foot of this file.
+
+## Build Once, Mirror Everywhere (RETIRED — historical)
+
+> **Deprecated as of 2026-06-21.** The reference model (above) replaces mirroring. This
+> section is retained only to document the former integration path. `integration/mirror.ps1`
+> still exists but is no longer the active workflow; consumer engines route to this source
+> rather than receiving copies.
+
+Historically this tree was built once and the contents of `doctrine/`, `skills/`, `governance/`, and `integration/` were mirrored into each consumer engine under the engine's doctrine and skill paths. The mirror script lives at `integration/mirror.ps1` and defaulted to this repository root as its source.
 
 ## Tree
 
@@ -76,16 +104,17 @@ This tree follows semver. The current version is recorded in `doctrine/accountin
 
 ## How Consumer Engines Use This
 
-Each consumer engine receives a mirror at its doctrine path and finance skills path. Each engine's `CLAUDE.md` and `AGENTS.md` carries a finance and accounting trigger block that loads the doctrine when finance scope is detected. See `integration/integration-plan.md` for per-engine wiring.
+**Reference model (current, since 2026-06-21).** Consumer engines no longer receive a mirror — the empty mirror shell folders were removed. Instead, each engine's `CLAUDE.md` and `AGENTS.md` carries a finance and accounting trigger block that, when finance scope is detected, **routes to this source** via the global engine-routing table: resolve this engine's path, read this `README.md`, then `doctrine/accounting-finance-doctrine.md`, and glob `skills/**/SKILL.md` here directly. See `integration/integration-plan.md` for per-engine wiring (note: any mirror steps there are now historical).
 
 ## Validation
 
-Run the local doctrine gate before mirroring or release:
+Run the local doctrine gate before release:
 
 ```powershell
 .\tools\validate-doctrine.ps1
-.\integration\mirror.ps1 -DryRun
 ```
+
+(The former `.\integration\mirror.ps1 -DryRun` step is retired along with the mirror model — see the architecture note above.)
 
 The validation target is `pass-with-caveats` or better until all statutory source-register entries have named reviewer sign-off and archive evidence.
 
