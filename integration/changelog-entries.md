@@ -47,6 +47,23 @@ Per-engine changelog entries to be pasted into each engine's `CHANGELOG.md` at a
 - Reports without print stylesheets.
 ```
 
+## Retail operating-model enhancement (2026-06-25)
+
+```markdown
+### Added
+- Expanded `retail-and-pos-accounting-pack` for omnichannel retail source events:
+  POS/day-end, cash drawer close, card/mobile-money settlement, returns
+  disposition, markdowns, promotions, gift cards, loyalty, shrink, vendor
+  funding, private label landed cost, and WBR/KPI dashboard lineage.
+- Added `references/retail-event-controls.md` with fixture-level control gates
+  for retail accounting and management reporting.
+
+### Changed
+- Updated retail implementation rules, source basis, and worked example so
+  retail software, proposal, SRS, and business-plan engines can route finance
+  impacts through controlled event evidence rather than summary-only metrics.
+```
+
 ## skills-web-dev (`C:\Users\Peter\.claude\skills`)
 
 ```markdown

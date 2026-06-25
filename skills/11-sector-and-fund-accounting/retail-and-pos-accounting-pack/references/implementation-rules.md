@@ -24,10 +24,16 @@ This skill covers sector-specific source events, controls, reporting views, tax 
 4. Require controller approval for manual override of account mapping, period state, currency, tax treatment, or evidence sufficiency.
 5. Require reviewer approval for framework selection, material estimates, disclosures, related-party items, covenant matters, public-sector restrictions, or AI-generated accounting suggestions.
 6. Preserve an immutable audit trail for approvals, rejections, reversals, and reopened-period adjustments.
+7. For retail events, preserve the operational event and accounting event separately. Operational completion does not imply accounting release.
+8. Require explicit disposition for returns before stock is restored to sellable inventory or written down.
+9. Require source agreement evidence before vendor funding, rebate, co-op, or scanback recovery is recognised or reported as recoverable.
+10. Require source lineage and reconciliation status for any retail KPI used in weekly business review, management accounts, or investor/bank reporting.
 
 ## Data Contract
 
-Minimum fields: entity_id, period_id, ramework, jurisdiction, unctional_currency, source_id, source_document_ref, event_date, posting_date, ccount_code, dimension_set, mount, currency, evidence_ref, policy_ref, judgement_ref, eview_status, exception_status.
+Minimum fields: entity_id, period_id, framework, jurisdiction, functional_currency, source_id, source_document_ref, event_date, posting_date, account_code, dimension_set, amount, currency, evidence_ref, policy_ref, judgement_ref, review_status, exception_status.
+
+Retail extension fields: store_id, channel, fulfilment_node_id, sku_id, category_id, customer_id where permitted, vendor_id, tender_type, original_transaction_ref, disposition_code, promotion_id, markdown_event_id, loyalty_program_id, gift_card_or_wallet_id, settlement_batch_id, reconciliation_status, metric_id.
 
 ## Rejection Rules
 
@@ -40,9 +46,13 @@ Reject or hold the artefact when:
 - a disclosure, policy, estimate, or judgement lacks reviewer routing;
 - an integration event lacks an idempotency key or source checksum;
 - AI or automation attempts to approve, post, or release without human approval where judgement is involved.
+- a retail return lacks original transaction link, inspection result, or disposition;
+- a discount, promotion, coupon, or markdown lacks reason code, effective period, or approval where threshold rules require it;
+- a dashboard financial KPI lacks source lineage or reconciliation status;
+- a vendor funding claim lacks agreement evidence and claim-basis calculation.
 
 ## Release Gate
 
 The skill can support internal doctrine, design, and testing after this closure pass. Client-facing release requires current source checks, unresolved-gap review, and named human sign-off according to the review metadata in SKILL.md.
 
-Last reviewed: 2026-05-25.
+Last reviewed: 2026-06-25.

@@ -157,6 +157,6 @@ Documented gaps that are blockers for final operational claims:
 - Current Uganda VAT, PAYE, WHT, NSSF, exchange-rate, EFRIS, URA return-template, URSB filing, and ICPAU framework values remain verification targets per `references/live-rate-verification-protocol.md`.
 - No stable public BoU daily exchange-rate CSV/API endpoint identified.
 - No public canonical EFRIS API/schema URL identified.
-- Sector-specific statutory and regulator details for schools, clinics, NGOs, retail/POS, manufacturing, agribusiness, hospitality not finalised in this pass.
+- Retail/POS operating-event controls have been expanded in `skills/11-sector-and-fund-accounting/retail-and-pos-accounting-pack/`; sector-specific statutory and regulator details for schools, clinics, NGOs, retail/POS, manufacturing, agribusiness, hospitality remain verification targets.
 
 Last reviewed: 2026-05-12. Next review due: 2026-11-12.

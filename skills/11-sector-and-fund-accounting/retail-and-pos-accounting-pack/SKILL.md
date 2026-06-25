@@ -1,6 +1,6 @@
 ﻿---
 name: retail-and-pos-accounting-pack
-description: Use for multi-outlet retail: SKU master, daily sales-day-end, layaway/gift cards, returns, shrinkage, and intercompany inventory transfers.
+description: Use for multi-outlet and omnichannel retail accounting: SKU master, POS/day-end, cash drawer, card/mobile-money settlement, inventory costing, markdowns, promotions, refunds, returns disposition, gift cards, loyalty, shrinkage, vendor funding, private label landed cost, planogram/space profitability, and retail KPI/WBR reporting.
 status: active
 metadata:
   portable: true
@@ -15,7 +15,7 @@ metadata:
 <!-- dual-compat-start -->
 ## Use When
 
-Use when a finance, accounting, reporting, controls, systems, or sector workflow needs sector-specific source events, controls, reporting views, tax touchpoints, and accounting classifications.
+Use when a finance, accounting, reporting, controls, systems, or sector workflow needs retail-specific source events, controls, reporting views, tax touchpoints, and accounting classifications for stores, e-commerce, POS, omnichannel fulfilment, inventory, customer returns, supplier funding, or retail dashboards.
 
 ## Do Not Use When
 
@@ -75,6 +75,25 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 | Exception register | Controller and reviewer | Captures blocked, missing, stale, disputed, or judgemental items with owner and due date. |
 | Worked example | Implementer and tester | Reproducible example under examples/worked-example.md; no client facts implied. |
 
+## Retail Event Matrix
+
+| Retail event | Accounting/control question | Required evidence |
+|---|---|---|
+| POS sale, online sale, split tender | Has the sale been decomposed by tender, tax, discount, channel, store, SKU/category, and source document? | Receipt/order, tender lines, tax code, discount reason, cashier/user, settlement batch. |
+| Cash drawer close | Does counted cash reconcile to POS expected cash with approved variance handling? | Opening float, POS cash sales, paid-in/out, count sheet, variance reason, approver, deposit evidence. |
+| Card/mobile-money settlement | Do gateway/mobile-money/card batches reconcile to POS/order tenders and bank deposits? | Provider batch, transaction IDs, fees, refunds, chargebacks, bank statement, exception queue. |
+| Refund or exchange | Is the refund linked to original sale and approved where policy requires? | Original receipt/order, return authorisation, inspection, tender reversal, approval, customer credit note where applicable. |
+| Return disposition | Does the item return to sellable stock, quarantine, repair, vendor return, donation, or disposal with valuation impact recorded? | Inspection result, disposition code, stock movement, write-down or recovery evidence. |
+| Markdown | Is the price reduction authorised, effective-dated, reflected in margin reporting, and reviewed for stock valuation effects? | Markdown event, SKU/category, original price, markdown price, reason, approver, effective period. |
+| Promotion/coupon/manual discount | Is the discount eligible, stack-controlled, funded source identified, and margin leakage visible? | Promotion setup, coupon rule, eligibility evidence, funding source, cashier override approval. |
+| Gift card/store credit/customer wallet | Is issuance and redemption tracked as a liability or customer balance until redeemed/expired according to policy? | Issuance source, redemption event, expiry policy, breakage judgement route, balance report. |
+| Loyalty points/rewards | Are points/rewards issued, redeemed, expired, and measured under an approved policy? | Programme policy, issuance/redemption events, customer balance, liability or marketing-cost route. |
+| Stock receipt/transfer/adjustment/count | Does the inventory subledger reconcile to stock evidence and GL control account? | PO/GRN/transfer/count sheet, variance reason, costing method, approver, posting batch. |
+| Shrink/loss incident | Is the loss classified, investigated, approved, and posted or reserved through a controlled route? | Incident report, count variance, CCTV/evidence pointer where applicable, investigator, approval. |
+| Vendor rebate/allowance/co-op/scanback | Is the claim supported by agreement terms and source sales/purchase/promotional evidence? | Vendor agreement, claim basis, transaction extract, invoice/credit note, dispute and recovery status. |
+| Private label landed cost | Are freight, duty, packaging, inspection, and wastage allocated to inventory or expense using a documented basis? | Supplier invoice, freight/duty documents, cost allocation workpaper, quality release/hold. |
+| Retail KPI/WBR metric | Does the dashboard metric drill back to source transactions and reconciliation status? | Metric dictionary, source lineage, refresh timestamp, reconciliation state, action owner. |
+
 ## Decision Rules
 
 1. Identify the applicable reporting framework and scope boundary before recognition, measurement, disclosure, control, or workflow design.
@@ -85,12 +104,17 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 6. Reconcile operational records to the GL control account before reporting, settlement, close sign-off, or external disclosure.
 7. Maintain an exception register for missing evidence, stale source-register values, unsupported framework assumptions, unresolved estimates, and review blockers.
 8. Do not promote illustrative examples, assumed facts, or generic rates into client output.
+9. For retail workflows, separate operational status from accounting status. A return can be operationally accepted while accounting remains pending until inspection, refund, stock disposition, and settlement evidence reconcile.
+10. For markdowns, promotions, discounts, and coupons, preserve the original price, applied price, funding source, reason code, and approval route so margin analysis and audit review are possible.
+11. For vendor funding, do not recognise or report recovery without agreement evidence, claim basis, source transactions, and dispute status.
+12. For retail dashboards and weekly business review outputs, block summary-only financial KPIs that lack drilldown to source events and reconciliation state.
 
 ## Acceptance Evidence
 
 - references/source-basis.md lists the official or canonical sources used for this skill and assigns source tiers.
 - references/implementation-rules.md translates the source basis into local doctrine rules, blocked-output rules, and review gates.
 - examples/worked-example.md shows a minimal evidence-backed artefact, posting/reporting impact, reconciliation, and reviewer route.
+- references/retail-event-controls.md defines the retail event/control matrix and acceptance fixtures for markdowns, returns, shrink, vendor funding, loyalty/gift cards, POS settlement, and WBR dashboards.
 - The skill is active for doctrine use, but client-specific statutory/legal final output still requires current source-register verification and reviewer approval.
 
 ## Anti-Patterns
@@ -106,6 +130,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 
 - references/source-basis.md
 - references/implementation-rules.md
+- references/retail-event-controls.md
 - examples/worked-example.md
 
 ## Review Metadata
@@ -114,9 +139,9 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 |---|---|
 | Owner role | Doctrine owner |
 | Reviewer roles | Sector specialist; controller; tax reviewer where statutory values appear |
-| Last reviewed | 2026-05-25 |
-| Next review due | 2026-11-25 |
+| Last reviewed | 2026-06-25 |
+| Next review due | 2026-12-25 |
 | Release state | Active doctrine content; client-specific release remains subject to reviewer approval and verified-current statutory sources where applicable. |
 | Caveat | No human reviewer name has been fabricated. Record named reviewer sign-off in the engagement or release log when obtained. |
 
-Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+Last reviewed: 2026-06-25. Next review due: 2026-12-25.
