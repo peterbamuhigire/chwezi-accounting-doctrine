@@ -114,9 +114,32 @@ Run the local doctrine gate before release:
 .\tools\validate-doctrine.ps1
 ```
 
+Additional July 2026 upgrade gates:
+
+```powershell
+.\scripts\fix-frontmatter-report.ps1 -Strict
+.\tests\accounting-invariants\scripts\Test-AccountingInvariants.ps1
+```
+
 (The former `.\integration\mirror.ps1 -DryRun` step is retired along with the mirror model — see the architecture note above.)
 
 The validation target is `pass-with-caveats` or better until all statutory source-register entries have named reviewer sign-off and archive evidence.
+
+## July 2026 World-Class Upgrade Surfaces
+
+Use these files before producing release-grade finance output:
+
+- `docs/router-map.md` - generated map of every active `skills/**/SKILL.md` entrypoint.
+- `docs/source-registers/ifrs-tax-statutory-2026.md` - dated standards and Uganda statutory source register with conflict states.
+- `references/uganda-statutory.md` - human-readable Uganda statutory snapshot; the source register remains controlling.
+- `docs/quality-gates/world-class-finance-release-gate.md` - release-blocking QA gate for finished artefacts.
+- `governance/anti-slop-finance-output.md` - prohibitions on generic finance output and required evidence layers.
+- `examples/journal-packs/retail-vat-pos/` - full retail VAT/POS transaction-to-report worked example.
+- `docs/world-class-exemplars/retail-vat-pos-pack.md` - benchmark completed evidence-pack summary.
+- `templates/sector-report-packs/ngo/` - production-ready NGO report pack template.
+- `tests/accounting-invariants/` - machine-readable accounting invariant fixtures and runner.
+
+The running example for upgraded reusable assets is **Chwezi Retail Uganda Ltd, Store KLA-01**, a VAT-registered Uganda retailer using IFRS for SMEs with POS, cash drawer, card settlement, mobile-money settlement, inventory, EFRIS evidence, and monthly controller review.
 
 ## Doctrine Conformance Scanning
 
@@ -131,7 +154,7 @@ The scanner is paired with `skills/10-controls-governance-and-fraud/finance-doct
 ## Provenance
 
 Doctrine is derived from the research project at:
-`C:\Users\Peter\Documents\Claude Projects\digital-research-engine\projects\finance-accounting-system-implementation-doctrine\`
+`C:\wamp64\www\digital-research-skills\projects\finance-accounting-system-implementation-doctrine\`
 
 Source artefacts include the canonical doctrine analysis, accounting acceptance-test library, Uganda live-rate compliance research, cross-repo quality gate adoption plan, cross-repo remediation master plan, and Wave 1 IFRS / IFRS for SMEs standards extractions.
 

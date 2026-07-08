@@ -1,0 +1,128 @@
+{
+  "fixture_id": "retail-vat-pos-2026-06-30",
+  "entity": "Chwezi Retail Uganda Ltd",
+  "framework": "IFRS for SMEs",
+  "period": "2026-06",
+  "currency": "UGX",
+  "statutory_assumptions": {
+    "vat_rate": 0.18,
+    "vat_source_key": "UG-VAT-STANDARD-RATE",
+    "efris_source_key": "UG-EFRIS",
+    "source_state": "verified-current-with-conflict-watch",
+    "final_output_caveat": "Fixture only. Final statutory output requires source-register snapshot and reviewer sign-off."
+  },
+  "period_state": {
+    "2026-06": "open",
+    "2026-05": "locked"
+  },
+  "evidence_index": [
+    { "id": "EV-001", "type": "pos-z-read", "description": "Z-read Z-KLA01-20260630" },
+    { "id": "EV-002", "type": "efris-batch", "description": "EFRIS receipt batch and credit note evidence" },
+    { "id": "EV-003", "type": "cash-count", "description": "Blind cash count and variance sign-off" },
+    { "id": "EV-004", "type": "card-batch", "description": "Card provider gross, fee, and settlement report" },
+    { "id": "EV-005", "type": "mobile-money-batch", "description": "Mobile money provider gross, fee, and settlement report" },
+    { "id": "EV-006", "type": "inventory-movement", "description": "Inventory weighted-average COGS report" },
+    { "id": "EV-007", "type": "audit-log", "description": "Posting service audit log with idempotency keys" }
+  ],
+  "positive_cases": [
+    {
+      "case_id": "POS-SALE-VAT-SPLIT",
+      "period": "2026-06",
+      "idempotency_key": "idem-pos-20260630-001",
+      "source_event_id": "POS-2026-06-30-001",
+      "expected_vat": { "gross": 11800000, "net": 10000000, "vat": 1800000, "source_key": "UG-VAT-STANDARD-RATE" },
+      "journal_lines": [
+        { "account": "Cash on Hand - Store KLA-01", "debit": 3540000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Card Settlement Clearing", "debit": 4720000, "credit": 0, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Mobile Money Settlement Clearing", "debit": 2360000, "credit": 0, "currency": "UGX", "evidence_id": "EV-005" },
+        { "account": "Customer Refund Liability/Clearing", "debit": 1180000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Sales Revenue - Retail Goods", "debit": 0, "credit": 10000000, "currency": "UGX", "evidence_id": "EV-002" },
+        { "account": "Output VAT Control", "debit": 0, "credit": 1800000, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    },
+    {
+      "case_id": "REFUND-CREDIT-NOTE",
+      "period": "2026-06",
+      "idempotency_key": "idem-pos-20260630-002",
+      "source_event_id": "POS-2026-06-30-002",
+      "expected_vat": { "gross": -236000, "net": -200000, "vat": -36000, "source_key": "UG-VAT-STANDARD-RATE" },
+      "journal_lines": [
+        { "account": "Sales Returns and Allowances", "debit": 200000, "credit": 0, "currency": "UGX", "evidence_id": "EV-002" },
+        { "account": "Output VAT Control", "debit": 36000, "credit": 0, "currency": "UGX", "evidence_id": "EV-002" },
+        { "account": "Customer Refund Liability/Clearing", "debit": 0, "credit": 236000, "currency": "UGX", "evidence_id": "EV-001" }
+      ]
+    },
+    {
+      "case_id": "SETTLEMENT-CLEARING",
+      "period": "2026-06",
+      "idempotency_key": "idem-pos-20260630-003",
+      "source_event_id": "POS-2026-06-30-004-005",
+      "clearing_opening": { "Card Settlement Clearing": 4720000, "Mobile Money Settlement Clearing": 2360000 },
+      "clearing_expectation": { "Card Settlement Clearing": 0, "Mobile Money Settlement Clearing": 0 },
+      "journal_lines": [
+        { "account": "Bank - Operating Account", "debit": 6962000, "credit": 0, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Merchant and Mobile-Money Fees", "debit": 118000, "credit": 0, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Card Settlement Clearing", "debit": 0, "credit": 4720000, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Mobile Money Settlement Clearing", "debit": 0, "credit": 2360000, "currency": "UGX", "evidence_id": "EV-005" }
+      ]
+    },
+    {
+      "case_id": "COGS-INVENTORY",
+      "period": "2026-06",
+      "idempotency_key": "idem-pos-20260630-006",
+      "source_event_id": "POS-2026-06-30-006",
+      "journal_lines": [
+        { "account": "Cost of Goods Sold - Retail Goods", "debit": 6250000, "credit": 0, "currency": "UGX", "evidence_id": "EV-006" },
+        { "account": "Inventory - Retail Goods", "debit": 0, "credit": 6250000, "currency": "UGX", "evidence_id": "EV-006" }
+      ]
+    }
+  ],
+  "negative_cases": [
+    {
+      "case_id": "REJECT-UNBALANCED",
+      "expected_failure": "unbalanced-journal",
+      "period": "2026-06",
+      "idempotency_key": "idem-negative-001",
+      "source_event_id": "NEG-001",
+      "journal_lines": [
+        { "account": "Cash", "debit": 1000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Revenue", "debit": 0, "credit": 900, "currency": "UGX", "evidence_id": "EV-001" }
+      ]
+    },
+    {
+      "case_id": "REJECT-LOCKED-PERIOD",
+      "expected_failure": "locked-period",
+      "period": "2026-05",
+      "idempotency_key": "idem-negative-002",
+      "source_event_id": "NEG-002",
+      "journal_lines": [
+        { "account": "Cash", "debit": 1000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Revenue", "debit": 0, "credit": 1000, "currency": "UGX", "evidence_id": "EV-001" }
+      ]
+    },
+    {
+      "case_id": "REJECT-MISSING-EVIDENCE",
+      "expected_failure": "missing-evidence",
+      "period": "2026-06",
+      "idempotency_key": "idem-negative-003",
+      "source_event_id": "NEG-003",
+      "journal_lines": [
+        { "account": "Cash", "debit": 1000, "credit": 0, "currency": "UGX", "evidence_id": "EV-MISSING" },
+        { "account": "Revenue", "debit": 0, "credit": 1000, "currency": "UGX", "evidence_id": "EV-001" }
+      ]
+    },
+    {
+      "case_id": "REJECT-STALE-SOURCE",
+      "expected_failure": "statutory-source-not-usable",
+      "period": "2026-06",
+      "idempotency_key": "idem-negative-004",
+      "source_event_id": "NEG-004",
+      "expected_vat": { "gross": 1180, "net": 1000, "vat": 180, "source_key": "UG-VAT-STANDARD-RATE", "source_state": "stale" },
+      "journal_lines": [
+        { "account": "Cash", "debit": 1180, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Revenue", "debit": 0, "credit": 1000, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Output VAT Control", "debit": 0, "credit": 180, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    }
+  ]
+}
