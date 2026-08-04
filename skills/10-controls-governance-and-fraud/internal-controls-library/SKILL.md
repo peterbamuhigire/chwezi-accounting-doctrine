@@ -133,6 +133,12 @@ Each control has:
 
 A control register is part of the management pack at year-end.
 
+## Control-preserving Kaizen
+
+Use the control register as the improvement baseline. For each proposed simplification, record the current control objective, trigger, owner, mechanism, evidence, cadence, exception route, SoD roles, failure mode, and residual risk. Prefer low-cost changes that remove waiting, duplication, re-keying, or unclear handoffs while preserving maker-checker, independent approval, period locks, audit-log completeness, and reviewer access.
+
+No experiment may combine incompatible roles merely to reduce cycle time. Re-test both the happy path and the rejection/override path, verify that the audit log identifies actor, timestamp, old/new value, and approval, and obtain an independent controller or internal-audit review before standardising. If the change affects role assignment or environment promotion, retain the administrator boundary and dual approval.
+
 ## Role-of-the-administrator boundary
 
 The Administrator role can:

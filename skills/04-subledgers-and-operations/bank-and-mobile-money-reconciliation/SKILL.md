@@ -151,6 +151,12 @@ Produced per `doctrine/examples/reconciliation-evidence-pack.md`. Required at mo
 - Reviewer sign-off required before close release.
 - Period-state respected: a reconciliation against a locked period requires the reopen workflow.
 
+## Reconciliation improvement and transition gate
+
+Review reconciliation age, match rate, exception causes, manual postings, duplicate imports, reviewer queries, and time-to-sign-off after each close. Test one countermeasure at a time, such as a safer match rule, clearer exception reason, or evidence-pack automation. Keep the guardrails: staged imports have no silent GL effect, source rows remain immutable, supersede is traceable, maker-checker remains intact, locked periods require governed reopen, and close release still requires reviewer sign-off.
+
+For a provider, ERP, or data migration, require inventory and baseline, parallel run or dry run, tie-out, rollback, continuity coverage, cutover authority, first-cycle monitoring, stabilisation exit criteria, and lessons-learned standardisation. Do not promote a matching improvement because the match rate rose if exception quality, control evidence, or financial accuracy worsened.
+
 ## Acceptance evidence (tests)
 
 | Test | Pass criterion |

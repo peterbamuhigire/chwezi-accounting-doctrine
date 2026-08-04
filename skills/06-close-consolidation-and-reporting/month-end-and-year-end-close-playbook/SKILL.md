@@ -118,6 +118,14 @@ Grouped by area. The exact list is configurable per entity; the categories are n
 - `pass-with-caveats` — no blockers; named items carry forward (e.g. tax provision pending tax-reviewer sign-off) with assigned owner and target date.
 - `fail` — blocker(s) remain; close not released.
 
+## Control-preserving Kaizen for close
+
+After each close, review elapsed time, late tasks, repeat exceptions, manual journals, unreconciled items, rework, evidence defects, and reviewer queries. Classify each finding as waste, data-quality failure, control deficiency, training gap, or accounting judgement. Select one small reversible improvement with a baseline, hypothesis, owner, timebox, guardrail, expected evidence, and rollback.
+
+The guardrail must preserve double-entry, cut-off, period state, immutable audit trail, reviewer independence, segregation of duties, source-document traceability, tax/statutory verification, and report tie-outs. Re-perform the close, test a failure path, obtain independent review, and compare the result with the baseline before standardising the change in the close task template, runbook, training, and test fixture. Report the audit at `min(raw score, 65)` and make the remediation plan target 95/100; the cap never waives a close blocker.
+
+Facility-change logic applies to ERP or close-process transitions: readiness evidence, continuity/fallback, cutover/rollback, stabilisation, reconciliation, and lessons-learned sign-off are required before the new close becomes standard.
+
 ## Acceptance evidence
 
 | Evidence | Description |

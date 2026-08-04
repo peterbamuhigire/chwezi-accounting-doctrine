@@ -134,6 +134,12 @@ Sign-off recorded in the audit log with role, name, timestamp, and report versio
 
 A pack is `released` after Controller sign-off and after all caveats are resolved or formally waived. A year-end pack is `released` after Director sign-off. Once released, the pack is immutable: subsequent corrections become prior-period adjustments per Section 10 / IAS 8.
 
+## Reporting-quality learning gate
+
+At each release, sample report lines across financial statements, management accounts, donor/grant outputs, tax packs, and reconciliations. Record whether each line drills to source, agrees to the ledger/control account, preserves net/tax/gross meaning, prints correctly, carries the right period/status, and has the required reviewer evidence. Track repeat defects and reviewer questions as a learning register.
+
+Use a PDCA/QC Story improvement card for material defects: problem, baseline, root cause, countermeasure, owner, target, guardrail, re-performance, result, residual risk, and standardisation. Never improve report speed by removing drilldown, immutable release, sign-off, segregation of duties, or current-source verification. A capped audit is `min(raw score, 65)` and its remediation plan must target 95/100.
+
 ## Acceptance evidence
 
 - Pack content list complete per the table above.
