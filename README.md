@@ -20,7 +20,7 @@ When finance or accounting scope is detected:
 4. Load the applicable source register and specialist `skills/**/SKILL.md` files.
 5. Load the Kaizen skill for an engine audit, product audit, or book-driven improvement:
    `skills/10-controls-governance-and-fraud/kaizen-engine-and-product-improvement/SKILL.md`.
-6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the Digital Research Engine at `C:\wamp64\www\digital-research-engine`.
+6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the [Digital Research Engine](https://github.com/peterbamuhigire/digital-research-skills).
 
 Do not rely on native skill discovery. Resolve the canonical engine path from the project `AGENTS.md` or global engine-routing table, then read the matching files directly.
 
@@ -168,11 +168,11 @@ Read only the relevant `SKILL.md` files for the task. The generated inventory is
 
 ### Digital Research
 
-Use `C:\wamp64\www\digital-research-engine` for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
+Use the [Digital Research Engine](https://github.com/peterbamuhigire/digital-research-skills) for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
 
 ### Design system
 
-When the financial artefact has material visual, UX, typography, layout, accessibility, or presentation requirements, consult `C:\wamp64\www\design-system-skills` in addition to this engine. Accounting content and controls remain here; visual design authority remains with the design engine.
+When the financial artefact has material visual, UX, typography, layout, accessibility, or presentation requirements, consult the [Design System Skills Engine](https://github.com/peterbamuhigire/design-system-skills) in addition to this engine. Accounting content and controls remain here; visual design authority remains with the design engine.
 
 ### Consumer engines
 
