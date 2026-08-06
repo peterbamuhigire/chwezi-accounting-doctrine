@@ -97,6 +97,6 @@ If a reconciliation workaround removes a repeated manual step but weakens the au
 ## References
 
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
-- Portfolio standard: `C:\wamp64\www\digital-research-skills\docs\continuous-improvement\portfolio-kaizen-standard-2026-08.md`
+- Portfolio standard: `C:\wamp64\www\digital-research-engine\docs\continuous-improvement\portfolio-kaizen-standard-2026-08.md`
 - `skills/06-close-consolidation-and-reporting/finance-module-audit/`
 - `governance/finance-accounting-quality-gate.md`

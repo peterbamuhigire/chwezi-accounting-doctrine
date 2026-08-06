@@ -1,4 +1,4 @@
-﻿# Source Basis - Retail And POS Accounting Pack
+# Source Basis - Retail And POS Accounting Pack
 
 This reference records the source discipline for the skill. It does not reproduce proprietary standard text and does not override the full standard, law, regulator guidance, contract, or reviewer judgement.
 
@@ -15,7 +15,7 @@ This reference records the source discipline for the skill. It does not reproduc
 |---|---|---|---|---|
 | INT-DOCTRINE | Chwezi accounting and finance doctrine | 1 - internal canonical doctrine | doctrine/accounting-finance-doctrine.md | Policy hierarchy, evidence discipline, ledger boundaries, and reviewer routing. |
 | INT-LEDGER | Chwezi ledger invariants | 1 - internal canonical doctrine | doctrine/references/ledger-invariants.md | Posting invariants, immutability, source evidence, reversals, and drilldown. |
-| INT-RETAIL-PLAYBOOK-RESEARCH | Umbrex retail playbook extraction and synthesis project | 2 - internal research synthesis from extracted source playbooks | C:\wamp64\www\digital-research-skills\projects\umbrex-retail-playbooks-engine-enhancement\05-output\executive-report\umbrex-retail-playbooks-engine-enhancement-report.md | Retail operating-model modules, source-event coverage, weekly business review needs, proposal/SRS/business-plan enhancement recommendations, and finance-control implications. |
+| INT-RETAIL-PLAYBOOK-RESEARCH | Umbrex retail playbook extraction and synthesis project | 2 - internal research synthesis from extracted source playbooks | C:\wamp64\www\digital-research-engine\projects\umbrex-retail-playbooks-engine-enhancement\05-output\executive-report\umbrex-retail-playbooks-engine-enhancement-report.md | Retail operating-model modules, source-event coverage, weekly business review needs, proposal/SRS/business-plan enhancement recommendations, and finance-control implications. |
 | IFRS-STANDARDS | IFRS Foundation - supporting materials by IFRS Accounting Standard | 1 - official standard-setter | https://www.ifrs.org/supporting-implementation/supporting-materials-by-ifrs-standards/ | Primary index for IFRS and IAS standard-specific materials; use the actual standard text for final recognition, measurement, presentation, and disclosure decisions. |
 | IFRS-SMES | IFRS Foundation - IFRS for SMEs Accounting Standard | 1 - official standard-setter | https://www.ifrs.org/issued-standards/ifrs-for-smes/ | Framework routing for entities using IFRS for SMEs rather than full IFRS. |
 

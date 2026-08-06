@@ -2,19 +2,19 @@
 
 Upgrade date: 2026-07-08  
 Engine: Chwezi Core Systems accounting doctrine  
-Digital Research Skills Engine path: `C:\wamp64\www\digital-research-skills`  
+Digital Research Skills Engine path: `C:\wamp64\www\digital-research-engine`
 Last verified: 2026-07-08
 
 ## Capability Orientation
 
-The live Digital Research Skills Engine at `C:\wamp64\www\digital-research-skills` is a cross-cutting evidence engine for source evaluation, verification, search strategy, legal/statutory research, OSINT, due diligence, research orchestration, executive synthesis, and anti-slop release gates. Its top-level `SKILL.md` routes standards/statutory verification through `source-evaluation`, `source-verification`, `research-techniques`, and `online-legal-research`, with `anti-ai-slop` applied continuously. The engine's controlling rule is that no claim, date, statute, URL, rate, standard, or organisation appears unless it is traceable to a real source or explicitly marked as a gap, inference, or conflict.
+The live Digital Research Skills Engine at `C:\wamp64\www\digital-research-engine` is a cross-cutting evidence engine for source evaluation, verification, search strategy, legal/statutory research, OSINT, due diligence, research orchestration, executive synthesis, and anti-slop release gates. Its top-level `SKILL.md` routes standards/statutory verification through `source-evaluation`, `source-verification`, `research-techniques`, and `online-legal-research`, with `anti-ai-slop` applied continuously. The engine's controlling rule is that no claim, date, statute, URL, rate, standard, or organisation appears unless it is traceable to a real source or explicitly marked as a gap, inference, or conflict.
 
 ## Mandatory Research Engine Files Loaded
 
 | File | Purpose in this upgrade |
 |---|---|
-| `C:\wamp64\www\digital-research-skills\SKILL.md` | Router and standard operating sequence. |
-| `C:\wamp64\www\digital-research-skills\AGENTS.md` | Codex runtime workflow and evidence discipline requirement. |
+| `C:\wamp64\www\digital-research-engine\SKILL.md` | Router and standard operating sequence. |
+| `C:\wamp64\www\digital-research-engine\AGENTS.md` | Codex runtime workflow and evidence discipline requirement. |
 | `skills/source-evaluation/SKILL.md` | Source tiers, credibility ladder, and anti-hallucination rule. |
 | `skills/source-evaluation/references/evidence-discipline.md` | Hard constraint: no unsourced claims. |
 | `skills/anti-ai-slop/SKILL.md` | Quality and specificity guardrail. |
@@ -34,7 +34,7 @@ The live Digital Research Skills Engine at `C:\wamp64\www\digital-research-skill
 | 2026-07-08 | `source-evaluation` + `source-verification` | Verify standards sources for IFRS Accounting Standards Required 2026, IFRS for SMEs third edition, IAASB Handbook, and COSO basis. | Official standard-setter or attached-book basis confirmed; IFRS for SMEs third edition remains a 2027 effective-date transition item. | `docs/source-registers/ifrs-tax-statutory-2026.md`; `FINAL-UPGRADE-REPORT.md`; `book-knowledge-map.md`. |
 | 2026-07-08 | `online-legal-research` + `research-techniques/search-operator-grammar` | Re-check Uganda VAT, PAYE, NSSF, WHT, LST, and EFRIS using primary/official sources first. | Confirmed NSSF contribution split from NSSF Uganda; EFRIS enrolment and platform channels from URA; PAYE live-page conflict with 2026 amendment material; WHT remains payment-specific; LST remains blocked without current local-authority source. | `docs/source-registers/ifrs-tax-statutory-2026.md`; `references/uganda-statutory.md`. |
 | 2026-07-08 | `online-legal-research` + `source-verification` | Resolve VAT registration threshold conflict. | URA live guidance still shows UGX 150,000,000; introduced 2026 VAT Bill shows UGX 250,000,000; Parliament Hansard records passage with a UGX 300,000,000 substitution. Final threshold logic remains blocked until assented Act/Gazette or updated URA guidance confirms the operative rule. | `docs/source-registers/ifrs-tax-statutory-2026.md`; `references/uganda-statutory.md`; `FINAL-UPGRADE-REPORT.md`. |
-| 2026-07-08 | `source-verification` | Repair prior research log and provenance path. | Corrected the prior incorrect research-engine location to `C:\wamp64\www\digital-research-skills` in durable routing and affected engine references. | `C:\Users\BIRDC\.codex\AGENTS.md`; `README.md`; `retail-and-pos-accounting-pack/references/source-basis.md`; this log. |
+| 2026-07-08 | `source-verification` | Repair prior research log and provenance path. | Corrected the prior incorrect research-engine location to `C:\wamp64\www\digital-research-engine` in durable routing and affected engine references. | `C:\Users\BIRDC\.codex\AGENTS.md`; `README.md`; `retail-and-pos-accounting-pack/references/source-basis.md`; this log. |
 
 ## Verification Manifest Summary
 
@@ -46,7 +46,7 @@ Release status: `conditional-pass`. The research process now used the live digit
 
 The redo changed the engine in five concrete ways:
 
-1. Added `C:\wamp64\www\digital-research-skills` to global Codex routing memory.
+1. Added `C:\wamp64\www\digital-research-engine` to global Codex routing memory.
 2. Removed the false blocker from the previous pass and replaced it with live research-engine invocation evidence.
 3. Replaced fallback-only research wording with explicit digital-research sub-skill invocations.
 4. Corrected VAT threshold handling from a two-way 150m/250m conflict to a three-source conflict: URA 150m, introduced Bill 250m, Parliament Hansard 300m.

@@ -20,7 +20,7 @@ When finance or accounting scope is detected:
 4. Load the applicable source register and specialist `skills/**/SKILL.md` files.
 5. Load the Kaizen skill for an engine audit, product audit, or book-driven improvement:
    `skills/10-controls-governance-and-fraud/kaizen-engine-and-product-improvement/SKILL.md`.
-6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the Digital Research Skills Engine at `C:\wamp64\www\digital-research-skills`.
+6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the Digital Research Engine at `C:\wamp64\www\digital-research-engine`.
 
 Do not rely on native skill discovery. Resolve the canonical engine path from the project `AGENTS.md` or global engine-routing table, then read the matching files directly.
 
@@ -168,7 +168,7 @@ Read only the relevant `SKILL.md` files for the task. The generated inventory is
 
 ### Digital Research
 
-Use `C:\wamp64\www\digital-research-skills` for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
+Use `C:\wamp64\www\digital-research-engine` for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
 
 ### Design system
 

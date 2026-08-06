@@ -17,7 +17,7 @@ Close structural gaps so the engine is coherent, navigable, and source-register 
 | No sub-skill missing frontmatter | Complete | `scripts/fix-frontmatter-report.ps1 -Strict` returns `pass`. |
 | README and CHANGELOG exist | Complete | `README.md`; `CHANGELOG.md`. |
 | Running example defined | Complete | `docs/engine-upgrade-july-2026/book-knowledge-map.md`; retail VAT/POS pack. |
-| Research log initialised | Complete | `docs/engine-upgrade-july-2026/research-engine-integration-log.md` uses `C:\wamp64\www\digital-research-skills`. |
+| Research log initialised | Complete | `docs/engine-upgrade-july-2026/research-engine-integration-log.md` uses `C:\wamp64\www\digital-research-engine`. |
 | Source register started | Complete | `docs/source-registers/ifrs-tax-statutory-2026.md`; `references/uganda-statutory.md`. |
 
 ## Validation

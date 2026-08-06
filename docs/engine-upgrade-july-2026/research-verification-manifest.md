@@ -1,7 +1,7 @@
 # Research Verification Manifest
 
 Engine: Chwezi Core Systems accounting doctrine  
-Research engine: `C:\wamp64\www\digital-research-skills`  
+Research engine: `C:\wamp64\www\digital-research-engine`
 Verifier: Codex builder using Digital Research Skills Engine methodology  
 Checked at: 2026-07-08  
 Release status: conditional-pass

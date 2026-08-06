@@ -20,7 +20,7 @@ Enrich the engine with worked examples, templates, tests, QA gates, anti-pattern
 | Examples populated | Complete | `examples/journal-packs/retail-vat-pos/README.md`; `docs/world-class-exemplars/retail-vat-pos-pack.md`. |
 | Book knowledge map complete | Complete | `docs/engine-upgrade-july-2026/book-knowledge-map.md` covers all eight attached books. |
 | Cross-references present | Complete | README, retail pack, NGO template, quality gate, and source register cross-reference relevant skills and controls. |
-| Research log updated | Complete | `research-engine-integration-log.md` records live use of `C:\wamp64\www\digital-research-skills`; `research-verification-manifest.md` records source and claim verification. |
+| Research log updated | Complete | `research-engine-integration-log.md` records live use of `C:\wamp64\www\digital-research-engine`; `research-verification-manifest.md` records source and claim verification. |
 
 ## Validation
 

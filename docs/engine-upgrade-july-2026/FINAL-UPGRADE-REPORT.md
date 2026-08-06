@@ -80,7 +80,7 @@ Residual scoring risk: Uganda PAYE, VAT-threshold, WHT, and LST final statutory 
 
 ## Research Engine Contributions
 
-The live Digital Research Skills Engine at `C:\wamp64\www\digital-research-skills` was loaded and applied during the redo. Files read included the top-level router, `AGENTS.md`, `source-evaluation`, `evidence-discipline`, `anti-ai-slop`, `source-verification`, `verification-routine`, `research-techniques`, `search-operator-grammar`, `online-legal-research`, `source-hierarchy-and-authority`, `east-african-overlay`, and `release-blocking-gates`.
+The live Digital Research Skills Engine at `C:\wamp64\www\digital-research-engine` was loaded and applied during the redo. Files read included the top-level router, `AGENTS.md`, `source-evaluation`, `evidence-discipline`, `anti-ai-slop`, `source-verification`, `verification-routine`, `research-techniques`, `search-operator-grammar`, `online-legal-research`, `source-hierarchy-and-authority`, `east-african-overlay`, and `release-blocking-gates`.
 
 Research invocations and impact:
 
@@ -112,7 +112,7 @@ Research invocations and impact:
 - Update `docs/source-registers/ifrs-tax-statutory-2026.md`, `references/uganda-statutory.md`, and machine-readable `doctrine/source-register/uganda/` entries whenever Uganda Finance Acts, URA handbooks, NSSF rules, EFRIS notices, LST schedules, WHT rules, VAT thresholds, PAYE bands, or exchange-rate sources change.
 - Add new templates under `templates/<deliverable-family>/`, finished examples under `examples/<workflow>/`, and benchmark summaries under `docs/world-class-exemplars/`.
 - Extend the running example by adding new source events to `tests/accounting-invariants/fixtures/` and corresponding narrative in `examples/journal-packs/retail-vat-pos/`.
-- Use `C:\wamp64\www\digital-research-skills` for every standards, statutory, benchmark, or compliance refresh; update `research-verification-manifest.md` with source IDs and claim IDs each time.
+- Use `C:\wamp64\www\digital-research-engine` for every standards, statutory, benchmark, or compliance refresh; update `research-verification-manifest.md` with source IDs and claim IDs each time.
 
 ## Recommended Next Upgrade Trigger
 
