@@ -1,5 +1,9 @@
 # Chwezi Accounting and Finance Doctrine
 
+See [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md) for
+finance-specific agent roles, thin commands, period-control hooks, evidence,
+and segregation-of-duties rules.
+
 Canonical accounting and finance doctrine for the Chwezi skill-engine portfolio. This repository is the cross-cutting finance source of truth for accounting, IFRS, IFRS for SMEs, IPSAS, tax, treasury, controls, reporting, finance systems, and money-touching product work.
 
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
