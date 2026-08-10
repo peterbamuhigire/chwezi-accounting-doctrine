@@ -82,6 +82,17 @@ Run the doctrine validator, source-register checks, accounting invariants, finan
 
 Finance doctrine remains authoritative. Kaizen cannot weaken period locks, audit trails, segregation of duties, reconciliation, statutory verification, privacy, or approval controls. A faster process that increases misstatement or fraud risk is a failed experiment.
 
+## Mandatory 65-to-95 gate
+
+The first pass is an initial analysis, not a certification: calculate the raw result,
+publish `min(raw_score, 65)`, and keep control failures and unassessed evidence
+separate from the score. Only then may a reversible improvement cycle target 95/100.
+Each proposed change must state its root cause, control guardrail, owner, measure,
+stop/rollback rule, re-performance evidence, residual risk, and re-audit date.
+Run the gate at engine level (doctrine, skills, controls, references, validators,
+and handoffs) and product level (report, reconciliation, budget, control, or finance
+system). A product cannot inherit a passing result from the engine.
+
 ## Anti-Patterns
 
 - Treating lean as fewer controls. Fix: remove waste, not control objectives.
