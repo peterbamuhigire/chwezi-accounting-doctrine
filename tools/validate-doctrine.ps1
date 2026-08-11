@@ -30,20 +30,25 @@ function Get-PowerShellExe {
 
 $root = Resolve-DoctrineRepoRoot $RepoRoot
 $checks = @(
-  'check-mojibake.ps1',
-  'check-skill-contracts.ps1',
-  'check-source-register.ps1',
-  'check-links.ps1'
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-mojibake.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-skill-contracts.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-source-register.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-links.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-repository-discovery.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'update-router-map.ps1'); arguments = @('-Check') },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\accounting-invariants\scripts\Test-AccountingInvariants.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\router-map\scripts\Test-RouterMapNegativeControls.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\source-register\scripts\Test-SourceRegisterNegativeControls.ps1'); arguments = @() }
 )
 $results = New-Object System.Collections.ArrayList
 $psExe = Get-PowerShellExe
 
 foreach ($check in $checks) {
-  $script = Join-Path $PSScriptRoot $check
+  $script = $check.path
   if (-not (Test-Path $script)) {
     throw "Missing validator check script: $script"
   }
-  $args = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $script, '-RepoRoot', $root, '-Json')
+  $args = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $script, '-RepoRoot', $root, '-Json') + $check.arguments
   if ($Strict) { $args += '-Strict' }
   $output = & $psExe @args
   $exitCode = $LASTEXITCODE

@@ -1,5 +1,6 @@
 param(
   [string]$RepoRoot,
+  [string]$RegisterRoot,
   [switch]$Json,
   [switch]$Strict
 )
@@ -40,10 +41,40 @@ function Get-ScalarValue {
   return $null
 }
 
+function Get-SourceRegisterEntries {
+  param([string[]]$Lines)
+
+  $entries = New-Object System.Collections.Generic.List[object]
+  $current = $null
+  foreach ($line in $Lines) {
+    if ($line -match '^-\s+' -and $line -notmatch '^-\s+id:\s*') {
+      if ($null -ne $current) { [void]$entries.Add($current) }
+      $current = [pscustomobject]@{ id = $null; state = $null }
+      continue
+    }
+    $idMatch = [regex]::Match($line, '^\s*-\s+id:\s*(.+?)\s*$')
+    if ($idMatch.Success) {
+      if ($null -ne $current) { [void]$entries.Add($current) }
+      $current = [pscustomobject]@{
+        id = $idMatch.Groups[1].Value.Trim().Trim('"').Trim("'")
+        state = $null
+      }
+      continue
+    }
+    if ($null -ne $current -and $line -match '^\s+state:\s*(.+?)\s*$') {
+      $current.state = $matches[1].Trim().Trim('"').Trim("'")
+    }
+  }
+  if ($null -ne $current) { [void]$entries.Add($current) }
+  return $entries.ToArray()
+}
+
 $root = Resolve-DoctrineRepoRoot $RepoRoot
-$registerRoot = Join-Path $root 'doctrine\source-register'
+$registerRoot = if ($RegisterRoot) { (Resolve-Path $RegisterRoot).Path } else { Join-Path $root 'doctrine\source-register' }
 $findings = New-Object System.Collections.ArrayList
 $entryFiles = 0
+$sourceEntries = New-Object System.Collections.Generic.List[object]
+$duplicateSourceIds = New-Object System.Collections.Generic.List[string]
 $verifiedCurrent = 0
 $verifiedWithCaveat = 0
 $draftEntries = 0
@@ -59,9 +90,20 @@ if (-not (Test-Path $registerRoot)) {
   }
   foreach ($file in $files) {
     $entryFiles++
-    $relative = $file.FullName.Substring($root.Length + 1)
+    $relative = if ($file.FullName.StartsWith($root, [System.StringComparison]::OrdinalIgnoreCase)) {
+      $file.FullName.Substring($root.Length + 1)
+    } else {
+      $file.FullName
+    }
     $lines = @(Get-Content -LiteralPath $file.FullName -Encoding UTF8)
     $text = ($lines -join "`n")
+    foreach ($entry in (Get-SourceRegisterEntries $lines)) {
+      [void]$sourceEntries.Add([pscustomobject]@{
+        id = $entry.id
+        state = $entry.state
+        path = $relative
+      })
+    }
     $state = Get-ScalarValue $lines 'state'
     if (-not $state) {
       [void]$findings.Add((New-Finding 'high' 'SRC-002' 'Source-register file has no state field.' $relative 0))
@@ -101,6 +143,14 @@ if (-not (Test-Path $registerRoot)) {
   if ($verifiedCurrent -eq 0) {
     [void]$findings.Add((New-Finding 'caveat' 'SRC-007' 'No verified-current entries found. Release can only support draft or caveated non-final outputs.' 'doctrine/source-register' 0))
   }
+
+  foreach ($group in @($sourceEntries | Group-Object id | Where-Object { $_.Name -and $_.Count -gt 1 })) {
+    [void]$duplicateSourceIds.Add([string]$group.Name)
+    [void]$findings.Add((New-Finding 'high' 'SRC-008' "Duplicate source-register identity appears $($group.Count) times: $($group.Name)" (($group.Group | Select-Object -First 1).path) 0))
+  }
+  foreach ($entry in @($sourceEntries | Where-Object { [string]::IsNullOrWhiteSpace([string]$_.id) })) {
+    [void]$findings.Add((New-Finding 'high' 'SRC-009' 'Source-register entry has no identity id.' $entry.path 0))
+  }
 }
 
 $state = Get-ValidationState @($findings)
@@ -109,6 +159,8 @@ $result = [pscustomobject]@{
   state = $state
   summary = [pscustomobject]@{
     entry_files = $entryFiles
+    source_entries = $sourceEntries.Count
+    duplicate_source_ids = @($duplicateSourceIds)
     verified_current_entries = $verifiedCurrent
     verified_with_caveat_entries = $verifiedWithCaveat
     draft_entries = $draftEntries

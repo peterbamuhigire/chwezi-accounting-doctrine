@@ -1,6 +1,6 @@
 {
-  "fixture_id": "retail-vat-pos-2026-06-30",
-  "entity": "Chwezi Retail Uganda Ltd",
+  "fixture_id": "TEST-FICTIONAL-retail-vat-pos-2026-06-30",
+  "entity": "TEST-FICTIONAL Retail Example Ltd",
   "framework": "IFRS for SMEs",
   "period": "2026-06",
   "currency": "UGX",
@@ -8,9 +8,11 @@
     "vat_rate": 0.18,
     "vat_source_key": "UG-VAT-STANDARD-RATE",
     "efris_source_key": "UG-EFRIS",
-    "source_state": "verified-current-with-conflict-watch",
-    "final_output_caveat": "Fixture only. Final statutory output requires source-register snapshot and reviewer sign-off."
+    "source_state": "draft",
+    "final_output_status": "blocked-pending-source-review",
+    "final_output_caveat": "Illustrative fixture only. Final statutory output remains blocked until the applicable source-register entry is reviewed, archived, and approved."
   },
+  "fixture_usage": "illustrative-test-only",
   "period_state": {
     "2026-06": "open",
     "2026-05": "locked"
@@ -27,6 +29,7 @@
   "positive_cases": [
     {
       "case_id": "POS-SALE-VAT-SPLIT",
+      "journal_id": "JRN-TEST-POS-001",
       "period": "2026-06",
       "idempotency_key": "idem-pos-20260630-001",
       "source_event_id": "POS-2026-06-30-001",
@@ -38,6 +41,25 @@
         { "account": "Customer Refund Liability/Clearing", "debit": 1180000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
         { "account": "Sales Revenue - Retail Goods", "debit": 0, "credit": 10000000, "currency": "UGX", "evidence_id": "EV-002" },
         { "account": "Output VAT Control", "debit": 0, "credit": 1800000, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    },
+    {
+      "case_id": "FULL-REVERSAL-OF-POS-SALE",
+      "journal_id": "JRN-TEST-REV-001",
+      "reversal_of_case_id": "POS-SALE-VAT-SPLIT",
+      "reversal_of_journal_id": "JRN-TEST-POS-001",
+      "reversal_type": "full",
+      "expected_reversal": true,
+      "period": "2026-06",
+      "idempotency_key": "idem-test-reversal-001",
+      "source_event_id": "TEST-REV-001",
+      "journal_lines": [
+        { "account": "Cash on Hand - Store KLA-01", "debit": 0, "credit": 3540000, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Card Settlement Clearing", "debit": 0, "credit": 4720000, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Mobile Money Settlement Clearing", "debit": 0, "credit": 2360000, "currency": "UGX", "evidence_id": "EV-005" },
+        { "account": "Customer Refund Liability/Clearing", "debit": 0, "credit": 1180000, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Sales Revenue - Retail Goods", "debit": 10000000, "credit": 0, "currency": "UGX", "evidence_id": "EV-002" },
+        { "account": "Output VAT Control", "debit": 1800000, "credit": 0, "currency": "UGX", "evidence_id": "EV-002" }
       ]
     },
     {
@@ -117,11 +139,61 @@
       "period": "2026-06",
       "idempotency_key": "idem-negative-004",
       "source_event_id": "NEG-004",
+      "source_usage": "final-statutory-output",
       "expected_vat": { "gross": 1180, "net": 1000, "vat": 180, "source_key": "UG-VAT-STANDARD-RATE", "source_state": "stale" },
       "journal_lines": [
         { "account": "Cash", "debit": 1180, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
         { "account": "Revenue", "debit": 0, "credit": 1000, "currency": "UGX", "evidence_id": "EV-001" },
         { "account": "Output VAT Control", "debit": 0, "credit": 180, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    },
+    {
+      "case_id": "REJECT-DRAFT-FINAL-OUTPUT",
+      "expected_failure": "draft-source-final-output",
+      "period": "2026-06",
+      "idempotency_key": "idem-negative-005",
+      "source_event_id": "NEG-005",
+      "source_usage": "final-statutory-output",
+      "expected_vat": { "gross": 1180, "net": 1000, "vat": 180, "source_key": "UG-VAT-STANDARD-RATE", "source_state": "draft" },
+      "journal_lines": [
+        { "account": "Cash", "debit": 1180, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Revenue", "debit": 0, "credit": 1000, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Output VAT Control", "debit": 0, "credit": 180, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    },
+    {
+      "case_id": "REJECT-MALFORMED-REVERSAL",
+      "expected_failure": "malformed-reversal-linkage",
+      "journal_id": "JRN-TEST-BAD-REV-001",
+      "reversal_of_case_id": "POS-SALE-VAT-SPLIT",
+      "reversal_of_journal_id": "JRN-NOT-THE-ORIGINAL",
+      "reversal_type": "full",
+      "expected_reversal": true,
+      "period": "2026-06",
+      "idempotency_key": "idem-negative-006",
+      "source_event_id": "NEG-006",
+      "journal_lines": [
+        { "account": "Cash on Hand - Store KLA-01", "debit": 0, "credit": 3540000, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Sales Revenue - Retail Goods", "debit": 9999999, "credit": 0, "currency": "UGX", "evidence_id": "EV-002" }
+      ]
+    }
+  ],
+  "duplicate_cases": [
+    {
+      "case_id": "REJECT-DUPLICATE-IDEMPOTENCY",
+      "expected_failure": "duplicate-idempotency-key",
+      "duplicate_of_case_id": "POS-SALE-VAT-SPLIT",
+      "duplicate_key_name": "idempotency_key",
+      "period": "2026-06",
+      "idempotency_key": "idem-pos-20260630-001",
+      "source_event_id": "TEST-DUPLICATE-001",
+      "journal_lines": [
+        { "account": "Cash on Hand - Store KLA-01", "debit": 3540000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Card Settlement Clearing", "debit": 4720000, "credit": 0, "currency": "UGX", "evidence_id": "EV-004" },
+        { "account": "Mobile Money Settlement Clearing", "debit": 2360000, "credit": 0, "currency": "UGX", "evidence_id": "EV-005" },
+        { "account": "Customer Refund Liability/Clearing", "debit": 1180000, "credit": 0, "currency": "UGX", "evidence_id": "EV-001" },
+        { "account": "Sales Revenue - Retail Goods", "debit": 0, "credit": 10000000, "currency": "UGX", "evidence_id": "EV-002" },
+        { "account": "Output VAT Control", "debit": 0, "credit": 1800000, "currency": "UGX", "evidence_id": "EV-002" }
       ]
     }
   ]

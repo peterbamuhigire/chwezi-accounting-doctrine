@@ -4,10 +4,57 @@ description: >-
   Use when auditing any software, SRS, proposal, POS, ERP, SaaS, mobile app, or
   workflow that touches money, billing, payments, tax, payroll, banking, mobile
   money, inventory, statutory compliance, financial reports, or accounting records.
+metadata:
+  portable: true
+  compatible_with:
+  - claude-code
+  - codex
 ---
 
 # Finance Module Audit
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
+
+<!-- dual-compat-start -->
+## Use When
+
+- Audit a finance-touching system or artefact for ledger integrity, control
+  effectiveness, source-state discipline, reconciliation, and release evidence.
+
+## Do Not Use When
+
+- The scope has no money, accounting record, financial report, tax, payroll,
+  banking, or control consequence; use the owning domain skill instead.
+
+## Required Inputs
+
+- Finance context, reporting basis, jurisdiction, artefacts inspected, available
+  tests, source-register state, intended outputs, and reviewer boundary.
+
+## Workflow
+
+- Establish scope, inspect evidence, trace money flows, test invariants and
+  controls, classify gaps, and issue the decision record with acceptance evidence.
+
+## Quality Standards
+
+- Do not certify from screenshots or claims alone. Preserve source-state caveats,
+  reviewer accountability, segregation of duties, and audit-trace evidence.
+
+## Anti-Patterns
+
+- Do not treat draft statutory values as current, close findings on prose alone,
+  or claim a passing release without observable evidence.
+
+## Outputs
+
+- Produce a finding register, standards scorecard, remediation plan, decision,
+  acceptance evidence, and residual-risk statement.
+
+## References
+
+- Load the directly linked audit protocol, scorecard, report template,
+  remediation plan, canonical doctrine, and finance quality gate.
+<!-- dual-compat-end -->
 
 ## Auto-run trigger (read first)
 
@@ -16,7 +63,7 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 When the auto-run fires, the agent:
 
 1. Loads this `SKILL.md` and the four reference files in this folder.
-2. Loads the canonical doctrine at `<engine-root>/skills/_doctrine/accounting-finance-doctrine.md` (skills-web-dev path) **or** `<engine-root>/doctrine/accounting-finance-doctrine.md` (other engines).
+2. Resolves the canonical Chwezi doctrine from the active repository's `AGENTS.md`, `README.md`, or global engine-routing table, then loads `doctrine/accounting-finance-doctrine.md`. Do not assume a consumer-specific `_doctrine` mirror.
 3. Loads the relevant doctrine reference files under `doctrine/references/`.
 4. Loads any specialist finance skill from the new skill suite that matches the target (e.g. `bank-and-mobile-money-reconciliation` if mobile money is in scope; `finance-ui-pattern-library` if UI work is involved).
 5. Runs the audit workflow below.
@@ -35,7 +82,7 @@ Use this skill to determine whether a software system makes finance and accounti
 3. `references/scorecard.md`.
 4. `references/report-template.md` (when writing the final report).
 5. `references/remediation-master-plan.md` (when assembling the plan).
-6. The canonical doctrine: `accounting-finance-doctrine.md` and its `references/` plus the `governance/finance-accounting-quality-gate.md`.
+6. The canonical doctrine: `doctrine/accounting-finance-doctrine.md` and its `doctrine/references/` plus `governance/finance-accounting-quality-gate.md`.
 
 ## Audit workflow
 

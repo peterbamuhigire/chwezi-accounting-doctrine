@@ -1,0 +1,15 @@
+- id: TEST-DUPLICATE-SOURCE-STATE
+  topic: Negative-control source state two
+  jurisdiction: UG
+  value_or_rule: "Test only."
+  source_url_or_doc: "test-only"
+  source_tier: 6
+  date_accessed_utc: "2026-08-11T00:00:00Z"
+  verifier: "test-only"
+  output_affected:
+    - test-only
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: stale
+  archive_snapshot: "capture-required-before-release"
+  notes: "Negative control only."
