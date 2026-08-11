@@ -72,6 +72,8 @@ Forbidden patterns include direct writes to journal tables, single-sided effects
 
 ## The Kaizen operating contract
 
+For a ready-to-run product or project operation, use [`prompts/full-kaizen-operation.md`](prompts/full-kaizen-operation.md).
+
 Continuous improvement applies to this doctrine, every skill, and every product produced from the engine. Improvement must remove waste and uncertainty without weakening accounting invariants, controls, segregation of duties, source verification, privacy, or reviewer accountability.
 
 ### Required cycle
