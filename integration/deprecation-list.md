@@ -1,6 +1,6 @@
 # Deprecation List
 
-Items deprecated by the v1.0.0 doctrine adoption. Each entry: deprecated item, reason, replacement, deprecation date, removal date.
+Items deprecated by the v1.1.0 doctrine adoption. Each entry: deprecated item, reason, replacement, deprecation date, removal date.
 
 | # | Item | Reason | Replacement | Deprecated | Remove by |
 |---|---|---|---|---|---|
@@ -16,6 +16,7 @@ Items deprecated by the v1.0.0 doctrine adoption. Each entry: deprecated item, r
 | 10 | Compliance disclosures rendered as disconnected modal dumps | UX anti-pattern. | Disclosures rendered inline at the relevant field. | 2026-05-12 | Next MINOR. |
 | 11 | Dashboards displaying summary numbers without drilldown | Hides audit trail. | Required drilldown affordance. | 2026-05-12 | Next MINOR. |
 | 12 | Country-context rate values shipped as permanent facts | Statutory risk. | Source-register-referenced verification-gated values. | 2026-05-12 | Immediate (mark current values as `draft` until verified). |
+| 13 | Stock-item sales flags (`is_sales_item`, `is_saleable`) used as customer-sales gates | Duplicates the Product catalogue and allows sales without a governed Product identity, price, or bundle mapping. | Active Product status plus explicit Product-to-Stock-Item or Product-to-component mapping. Retain columns only for migration and historical compatibility until dependants are removed. | 2026-08-16 | Next MAJOR after consumer migrations and data audit. |
 
 A MINOR removal lasts at least one MINOR cycle before final removal. A MAJOR removal is announced one cycle in advance.
 

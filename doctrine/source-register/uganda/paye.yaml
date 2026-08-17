@@ -1,17 +1,17 @@
 - id: UG-PAYE-RATES
   topic: Uganda PAYE rates, brackets, reliefs, and filing treatment
   jurisdiction: UG
-  value_or_rule: "Pending reviewer extraction from the URA Taxation Handbook FY 2024-25 and current PAYE authority."
-  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  value_or_rule: "URA monthly PAYE schedule: resident taxable income 0-235,000 nil; 235,000-335,000 at 10% over 235,000; 335,000-410,000 at 20% over 335,000 plus 10,000; 410,000-10,000,000 at 30% over 410,000 plus 25,000; above 10,000,000 adds 10% on the excess over 10,000,000. Non-resident schedule and the 30% multiple-employer treatment are also recorded in the country-pack JSON."
+  source_url_or_doc: "https://ura.go.ug/en/domestic-taxes/paye-rates/"
   source_tier: 2
-  date_accessed_utc: "2026-05-14T21:07:52Z"
-  verifier: "payroll tax reviewer pending"
+  date_accessed_utc: "2026-08-16T00:00:00Z"
+  verifier: "Codex source-register verification 2026-08-16"
   output_affected:
     - payroll-gross-to-net
     - paye-return-pack
     - payroll-liability-schedule
-  effective_from: "pending-review"
-  expires_or_recheck_due: "2026-08-14"
-  state: draft
-  archive_snapshot: "capture-required-before-release"
-  notes: "Do not ship payroll calculations or PAYE schedules from this entry until reviewed against current URA authority."
+  effective_from: "2026-01-01"
+  expires_or_recheck_due: "2026-11-16"
+  state: verified-current
+  archive_snapshot: "https://ura.go.ug/en/domestic-taxes/paye-rates/"
+  notes: "Verified against the current official URA PAYE rates page on 2026-08-16. The application stores both resident and non-resident monthly bands as JSON and fails closed after the recheck date."

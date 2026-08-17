@@ -1,0 +1,17 @@
+- id: UG-LST-RATES
+  topic: Uganda Local Service Tax employee wage bands and collection schedule
+  jurisdiction: UG
+  value_or_rule: "Annual employee LST bands are UGX 0 up to monthly income of 100,000; then 5,000, 10,000, 20,000, 30,000, 40,000, 60,000, 70,000, 80,000, 90,000, and 100,000 above 1,000,000. Employee LST may be deducted in four equal instalments during the first four months of the financial year."
+  source_url_or_doc: "https://ulii.org/en/akn/ug/act/2008/8/eng@2008-07-07"
+  source_tier: 1
+  date_accessed_utc: "2026-08-16T00:00:00Z"
+  verifier: "Codex source-register verification 2026-08-16"
+  output_affected:
+    - payroll-gross-to-net
+    - local-service-tax-schedule
+    - payroll-liability-schedule
+  effective_from: "2026-01-01"
+  expires_or_recheck_due: "2026-11-16"
+  state: verified-current
+  archive_snapshot: "https://media.ulii.org/media/legislation/17886/source_file/local-governments-amendment-no-2-act-2008.pdf"
+  notes: "Operational collection guidance is cross-checked against the KCCA Local Service Tax FAQ: https://kcca.go.ug/uDocs/Local_Service_Tax_FAQs.pdf. The application stores the employee wage bands and four-installment schedule in the tenant-owned JSON rule snapshot."

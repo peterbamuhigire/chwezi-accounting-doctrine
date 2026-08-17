@@ -4,14 +4,14 @@
   value_or_rule: "Mandatory NSSF applies to employers for employees between 16 and 55 years of age, except employees under the Government Pensions scheme. Employer deducts 5% from employee total gross monthly wage and adds 10% employer contribution, for a total contribution of 15% per employee. Contributions are paid by the 15th day of the following month."
   source_url_or_doc: "https://www.nssfug.org/about-us/membership/"
   source_tier: 2
-  date_accessed_utc: "2026-05-15T02:26:54Z"
-  verifier: "OpenAI Codex source-register verification 2026-05-15"
+  date_accessed_utc: "2026-08-16T00:00:00Z"
+  verifier: "Codex source-register verification 2026-08-16"
   output_affected:
     - payroll-gross-to-net
     - nssf-return-pack
     - payroll-liability-schedule
   effective_from: "2026-05-15"
-  expires_or_recheck_due: "2026-08-15"
+  expires_or_recheck_due: "2026-11-16"
   state: verified-current
   archive_snapshot: "docs/quality-gate-fixtures/source-register-evidence/uganda-nssf-membership-2026-05-15.md"
   notes: "Verified against the official NSSF Uganda membership page on 2026-05-15. This entry covers mandatory contribution split, eligible age band, Government Pensions scheme exception, and monthly remittance due date only; it does not cover benefit eligibility, voluntary contributions, amnesty, penalties, arrears, or edge-case payroll classification."

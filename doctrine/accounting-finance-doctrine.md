@@ -1,6 +1,6 @@
 ---
 name: accounting-finance-doctrine
-version: 1.0.0
+version: 1.1.0
 status: pass-with-caveats
 applies-to: skills-web-dev, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts.
 owner: Chwezi Core Systems finance/accounting doctrine owner.
@@ -21,6 +21,42 @@ Payroll, expenses, purchases, stock and inventory, POS, banking, mobile money, g
 A sale, payment received, supplier bill, stock receipt, payroll run, bank charge, refund, mobile-money transaction, cash-drawer close, grant receipt, asset acquisition, or tax event enters the accounting boundary through an approved posting service, reconciliation, or review workflow.
 
 Non-accountant screens may present business language first, but they must not permit accounting damage without permissions, review, reversal controls, and audit evidence.
+
+### Product-first commercial model
+
+The commercial catalogue and the inventory master are separate bounded contexts:
+
+- **Products are sold.** A sales transaction selects a Product, applies the
+  Product's price and commercial attributes, and records the Product as the
+  customer-facing line item.
+- **Stock items are held and consumed.** A Stock Item is purchased, received,
+  manufactured, grown, issued as an ingredient, transferred, counted, valued,
+  and relieved from inventory. A Stock Item is not a customer-facing sales
+  catalogue entry merely because it has a cost or quantity on hand.
+- **Product-to-stock mapping drives inventory relief.** A physical Product
+  maps to one finished Stock Item when its sale deducts one inventory item.
+  Bundled or composite Products map to an explicit list of component Stock
+  Items and quantities; the sale still selects the Product, while the posting
+  service relieves the mapped components.
+- **Purchase pricing belongs to Stock Items.** Purchase price lists enumerate
+  only Stock Items explicitly marked as purchase items. Purchase cost, last
+  purchase rate, valuation cost, and supplier terms must not be inferred from
+  a Product selling price.
+- **Sale pricing belongs to Products.** Sales price lists enumerate active
+  Products, including products that do not maintain stock. A physical Product
+  without its required stock mapping must be blocked from an inventory-
+  deducting sale, not silently converted into a direct Stock Item sale.
+- **No duplicate sales gates.** Legacy Stock Item fields such as
+  `is_sales_item` and `is_saleable` must not authorise customer sales when a
+  Product catalogue exists. They may be retained temporarily for migration or
+  historical compatibility, but new operational code must use Product
+  existence, Product status, product type, and explicit inventory mappings.
+
+Every implementation must make this boundary visible in its schema, API,
+price-list queries, POS search, batch availability, sales posting, reports,
+seeding fixtures, and translations. A code path that accepts a Stock Item ID
+as a sale selection is a compatibility adapter only; it must resolve that ID
+to an active Product before pricing, stock validation, or posting.
 
 ## 3. The Chart of Accounts backbone
 
@@ -110,6 +146,10 @@ See `references/forbidden-patterns.md`.
 12. Plain East African business English microcopy on workflow surfaces; accountant terminology on ledger surfaces.
 13. Live-rate verification logged at the point of every rate, threshold, or template reference.
 14. Evidence attachment inline on every posting screen.
+15. Product-first commercial boundaries: Products are sold; Stock Items are
+    procured, produced, grown, consumed, transferred, counted, and valued.
+16. Bundle/component mappings are explicit and tenant-scoped; no sale may
+    bypass the Product-to-component resolution required for inventory relief.
 
 See `references/required-patterns.md` and `references/design-system-finance-accounting.md`.
 

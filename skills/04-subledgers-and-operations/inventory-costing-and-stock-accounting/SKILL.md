@@ -82,6 +82,14 @@ Load the required references and examples listed below before implementation or 
 6. Expiry, damage, shrinkage, and wastage use controlled variance accounts and remain visible in management reports.
 7. NRV indicators trigger write-down review and handoff to impairment or inventory NRV evidence.
 8. Tax on purchases or sales uses source-register-backed tax codes where final statutory values are involved.
+9. Keep commercial identity separate from inventory identity: sales select active
+   Products, while procurement, production, agriculture, ingredients, stock
+   movements, and valuation select Stock Items.
+10. Require an explicit tenant-scoped Product-to-Stock-Item mapping for every
+    physical Product sale; bundled Products require explicit component mappings
+    and quantities so COGS and inventory relief remain complete.
+11. Do not use legacy Stock Item sales flags as a substitute for Product
+    catalogue status, Product pricing, or bundle/component resolution.
 
 ## Acceptance Evidence
 

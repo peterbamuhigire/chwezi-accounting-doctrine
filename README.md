@@ -1,14 +1,12 @@
 # Chwezi Accounting and Finance Doctrine
 
-See [`docs/control-plane-adoption.md`](docs/control-plane-adoption.md) for
-finance-specific agent roles, thin commands, period-control hooks, evidence,
-and segregation-of-duties rules.
+This engine provides the canonical accounting and finance doctrine for the Chwezi skill-engine portfolio. It governs the accounting concepts, reporting bases, controls, evidence requirements, and finance-system patterns needed when work touches money, financial reporting, or statutory outputs.
 
-Canonical accounting and finance doctrine for the Chwezi skill-engine portfolio. This repository is the cross-cutting finance source of truth for accounting, IFRS, IFRS for SMEs, IPSAS, tax, treasury, controls, reporting, finance systems, and money-touching product work.
+Accountants, controllers, auditors, finance-system teams, and other product or delivery engines use it for ledgers and subledgers, IFRS, IFRS for SMEs, IPSAS, tax and statutory processes, treasury, budgeting, reconciliations, close, reporting, migration, audit evidence, controls, and finance UX. It also gives non-finance teams a route for handling finance-touching websites, software, proposals, business plans, dashboards, databases, and runbooks.
+
+It provides shared rules and review paths that help teams preserve balanced postings, immutable posted history, source traceability, reconciliations, segregation of duties, and qualified reporting decisions. It is not a substitute for an accountant, auditor, tax adviser, lawyer, regulator, or standard-setter; current and uncertain statutory, tax, exchange-rate, and standards claims must be verified through the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> and the applicable source register.
 
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
-
-Current state: `pass-with-caveats` doctrine status, 103 active `SKILL.md` skills in 17 category groups, and a Kaizen operating contract adopted in August 2026.
 
 ## Start here
 
@@ -20,7 +18,7 @@ When finance or accounting scope is detected:
 4. Load the applicable source register and specialist `skills/**/SKILL.md` files.
 5. Load the Kaizen skill for an engine audit, product audit, or book-driven improvement:
    `skills/10-controls-governance-and-fraud/kaizen-engine-and-product-improvement/SKILL.md`.
-6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the [Digital Research Engine](https://github.com/peterbamuhigire/digital-research-skills).
+6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>.
 
 Do not rely on native skill discovery. Resolve the canonical engine path from the project `AGENTS.md` or global engine-routing table, then read the matching files directly.
 
@@ -138,7 +136,7 @@ The August 2026 book intake was used as a source of improvement patterns, not as
 | AI for Game Developers | Used only as a transferable pattern for deterministic fallbacks, state-machine reasoning, instrumentation, and recovery in finance automation; dated APIs are not adopted. |
 | Dynamic Characters and Anatomy for Artists | Routed to design/game engines. No accounting doctrine or financial claim is derived from these books. Anatomy extraction was not usable. |
 
-The detailed portfolio study and provenance limits are maintained in the Digital Research engine. The local accounting adoption record is `docs/continuous-improvement/kaizen-adoption-2026-08.md`.
+The detailed portfolio study and provenance limits are maintained in the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>. The local accounting adoption record is `docs/continuous-improvement/kaizen-adoption-2026-08.md`.
 
 ## Skill catalogue
 
@@ -170,15 +168,15 @@ Read only the relevant `SKILL.md` files for the task. The generated inventory is
 
 ### Digital Research
 
-Use the [Digital Research Engine](https://github.com/peterbamuhigire/digital-research-skills) for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
+Use the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
 
 ### Design system
 
-When the financial artefact has material visual, UX, typography, layout, accessibility, or presentation requirements, consult the [Design System Skills Engine](https://github.com/peterbamuhigire/design-system-skills) in addition to this engine. Accounting content and controls remain here; visual design authority remains with the design engine.
+When the financial artefact has material visual, UX, typography, layout, accessibility, or presentation requirements, consult the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a> in addition to this engine. Accounting content and controls remain here; visual design authority remains with the design engine.
 
 ### Consumer engines
 
-The business-plan, proposal, SRS, website, social-media, software-development, and Linux engines route finance scope here. They must not create local finance mirrors or invent accounting, IFRS, IPSAS, tax, statutory, or exchange-rate rules.
+The <a href="https://github.com/peterbamuhigire/business-plan-skills" target="_blank" rel="noopener noreferrer">Business Plan</a>, <a href="https://github.com/peterbamuhigire/proposal-skills" target="_blank" rel="noopener noreferrer">Proposal</a>, <a href="https://github.com/peterbamuhigire/srs-skills" target="_blank" rel="noopener noreferrer">SRS</a>, <a href="https://github.com/peterbamuhigire/website-skills" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://github.com/peterbamuhigire/social-media-skills" target="_blank" rel="noopener noreferrer">Social Media</a>, <a href="https://github.com/peterbamuhigire/chwezi-dev-engine" target="_blank" rel="noopener noreferrer">software-development</a>, and <a href="https://github.com/peterbamuhigire/linux-skills" target="_blank" rel="noopener noreferrer">Linux</a> engines route finance scope here. They must not create local finance mirrors or invent accounting, IFRS, IPSAS, tax, statutory, or exchange-rate rules.
 
 ## Validation and release
 
@@ -240,5 +238,5 @@ Last reviewed: 2026-08-04. Next review due: 2026-11-04.
 <!-- design-system-skills:trigger v1 -->
 ### Design and presentation trigger
 
-Any work affecting typography, colour, layout, grid, visual identity, UI screens, or document presentation must also route to `design-system-skills`. Resolve its path from the global engine-routing table, read its README and doctrine, and load only the relevant skills. Content, accounting structure, and control evidence remain governed by this engine; visual presentation is governed by the design engine.
+Any work affecting typography, colour, layout, grid, visual identity, UI screens, or document presentation must also route to the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>. Read its README and doctrine, and load only the relevant skills. Content, accounting structure, and control evidence remain governed by this engine; visual presentation is governed by the design engine.
 <!-- /design-system-skills:trigger -->

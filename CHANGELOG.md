@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-08-16 - Product-first commercial and inventory boundary
+
+- Added the canonical rule that Products are sold while Stock Items are
+  purchased, received, manufactured, grown, consumed, transferred, counted,
+  and valued.
+- Defined explicit Product-to-Stock-Item and Product-to-component mappings for
+  inventory relief, including bundled products.
+- Defined sale price lists as Product-based and purchase price lists as
+  Stock-Item-based with `is_purchase_item = 1`.
+- Deprecated `is_sales_item` and `is_saleable` as customer-sales gates; they
+  remain migration-compatibility fields until downstream consumers are
+  removed and audited.
+
 ## 2026-07-08 - Engine Upgrade Foundation, Enrichment, and Polish
 
 - Added root-level source register `docs/source-registers/ifrs-tax-statutory-2026.md` for IFRS, IFRS for SMEs, IAASB, COSO, Uganda VAT, PAYE, NSSF, WHT, LST, EFRIS, NGO, and retail/POS source surfaces.
