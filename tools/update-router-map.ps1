@@ -57,9 +57,18 @@ function Get-RouterMapText {
     throw "Missing active skills root: $skillsRoot"
   }
 
+  $skillFiles = New-Object 'System.Collections.Generic.List[System.IO.FileInfo]'
+  Get-ChildItem -LiteralPath $skillsRoot -Recurse -File -Filter 'SKILL.md' |
+    ForEach-Object { [void]$skillFiles.Add($_) }
+  $skillFiles.Sort([System.Comparison[System.IO.FileInfo]]{
+    param($left, $right)
+    $leftRelative = $left.FullName.Substring($Root.Length).TrimStart('\', '/') -replace '\\', '/'
+    $rightRelative = $right.FullName.Substring($Root.Length).TrimStart('\', '/') -replace '\\', '/'
+    return [StringComparer]::Ordinal.Compare($leftRelative, $rightRelative)
+  })
+
   $rows = @(
-    Get-ChildItem -LiteralPath $skillsRoot -Recurse -File -Filter 'SKILL.md' |
-      Sort-Object FullName |
+      $skillFiles |
       ForEach-Object {
         $lines = Get-Content -LiteralPath $_.FullName -Encoding UTF8
         $name = Get-FrontmatterValue $lines 'name'
