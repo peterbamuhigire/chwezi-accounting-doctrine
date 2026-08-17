@@ -100,7 +100,27 @@ function Get-RouterMapText {
 
 function Normalize-Text {
   param([string]$Text)
-  return (($Text -replace "`r`n", "`n").TrimEnd("`n"))
+  $withoutBom = $Text.TrimStart([char]0xFEFF)
+  return (($withoutBom -replace "`r`n", "`n" -replace "`r", "`n").TrimEnd("`n"))
+}
+
+function Get-FirstTextDifference {
+  param(
+    [string]$Actual,
+    [string]$Expected
+  )
+
+  $actualLines = $Actual -split "`n"
+  $expectedLines = $Expected -split "`n"
+  $limit = [Math]::Max($actualLines.Count, $expectedLines.Count)
+  for ($index = 0; $index -lt $limit; $index++) {
+    $actualLine = if ($index -lt $actualLines.Count) { $actualLines[$index] } else { '<missing>' }
+    $expectedLine = if ($index -lt $expectedLines.Count) { $expectedLines[$index] } else { '<missing>' }
+    if ($actualLine -cne $expectedLine) {
+      return "line $($index + 1): actual=[$actualLine] expected=[$expectedLine]"
+    }
+  }
+  return 'no line-level difference found'
 }
 
 function Resolve-MapPath {
@@ -195,8 +215,11 @@ if ($Check) {
   } elseif ($null -ne $generated) {
     $actual = Get-Content -LiteralPath $mapPath -Raw -Encoding UTF8
     $actualRows = Add-RouterMapSemanticFindings $actual (Get-RouterRows $generated.Text) $findings
-    if ((Normalize-Text $actual) -cne (Normalize-Text $generated.Text)) {
-      Add-Finding $findings 'ROUTER-002' 'Router map differs from filesystem-derived output; run tools/update-router-map.ps1.' 0
+    $normalizedActual = Normalize-Text $actual
+    $normalizedExpected = Normalize-Text $generated.Text
+    if ($normalizedActual -cne $normalizedExpected) {
+      $difference = Get-FirstTextDifference $normalizedActual $normalizedExpected
+      Add-Finding $findings 'ROUTER-002' "Router map differs from filesystem-derived output; run tools/update-router-map.ps1. ($difference)" 0
     }
   }
 } elseif ($null -ne $generated) {
