@@ -36,3 +36,10 @@ or quarantine duplicate events.
 Direct writes to posted history, missing approvals, stale statutory sources,
 and unreconciled balances fail closed. Native hooks are optional; explicit
 control steps and audit evidence are not.
+
+## Human approval adapter
+
+Ledger, close, tax, payment, and reporting controls are detailed in
+[`approval-enforcement.md`](approval-enforcement.md) and catalogued in
+[`approval-adapter.json`](approval-adapter.json). The accounting boundary must
+link every L3 mutation to an independent approval before posting.
