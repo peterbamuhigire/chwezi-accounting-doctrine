@@ -1,145 +1,145 @@
 ---
 name: ifrs-financial-instruments
-description: Financial-instrument classification, measurement, and impairment under IFRS 9 (full IFRS) and Sections 11 and 12 (IFRS for SMEs). Trade receivables, payables, bank balances, loans, deposits, debt and equity instruments, derivatives, expected credit loss (ECL), hedge accounting. Use when financial instruments are material. Tier-3 scope — Section 11 basic-instruments handling is built first; full IFRS 9 ECL deferred until a client materially requires it.
+description: Advanced financial-instrument classification, measurement, impairment, derecognition, modification, hedge-accounting and risk-disclosure review under IFRS 9 and IFRS 7, with Sections 11 and 12 routing for IFRS for SMEs.
+status: active
+metadata:
+  portable: true
+  category: 02-ifrs-core-standards
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
-# Financial Instruments (IFRS 9 / Sections 11 and 12)
+# Financial Instruments (IFRS 9 / IFRS 7 / Sections 11 and 12)
 
-## Tier-3 scope
+## Use When
 
-Most Chwezi SME clients hold only basic financial instruments: trade receivables, trade payables, bank balances, simple loans. For these, Section 11 (IFRS for SMEs) gives a complete model. Full IFRS 9 (classification by business model and SPPI test, ECL, hedge accounting) becomes load-bearing only for clients with material receivables, financing operations, or banking activity. Build Section 11 first; build full IFRS 9 when demanded.
+Use for classification, measurement, impairment, derecognition, modification,
+hedge accounting, financial-risk disclosures, or material cash, receivable,
+payable, debt, equity, derivative or financing arrangements.
 
-## Required first reads
+## Do Not Use When
 
-- `doctrine/accounting-finance-doctrine.md`
-- `doctrine/references/ifrs-for-smes-default.md` (Sections 11, 12)
-- `doctrine/references/full-ifrs-overlay.md` (IFRS 9)
-- `doctrine/references/chart-of-accounts.md`
-
-## Section 11 — basic financial instruments (IFRS for SMEs default)
-
-Scope: cash, demand and fixed-term deposits, commercial paper, bonds, trade and other accounts receivable / payable, loans receivable and payable, commitments to receive a loan, and most basic investments in non-convertible preference shares and non-puttable ordinary shares.
-
-- Initial measurement at transaction price (including transaction costs for those not at FVTPL); long-dated payment terms at PV.
-- Subsequent at amortised cost using the effective-interest method.
-- Impairment: assess at each reporting date; recognise impairment loss when objective evidence indicates an impairment event (incurred-loss-style for trade receivables).
-- Derecognition on transfer of substantially all risks and rewards.
-
-## Section 12 — other financial-instrument issues (IFRS for SMEs)
-
-For instruments outside Section 11 (e.g. options, forwards, complex hybrids). Most SME clients do not use 12.
-
-## IFRS 9 (full IFRS)
-
-- **Classification:** business model + SPPI (solely payments of principal and interest). Buckets: amortised cost; FVOCI (debt); FVTPL; FVOCI (equity election).
-- **Measurement:** amortised cost via effective interest, fair value otherwise.
-- **Impairment:** Expected Credit Loss (ECL) model — 12-month ECL on Stage 1, lifetime ECL on Stage 2 and 3. Trade receivables use the simplified approach (lifetime ECL from initial recognition).
-- **Hedge accounting:** optional; rules differ from IAS 39 (more principles-based).
-
-## Initial build (Tier-3 minimum)
-
-- Trade receivables: track per customer, ageing buckets, allowance for doubtful debts:
-  - Section 11: incurred-loss assessment at each reporting date.
-  - IFRS 9: provision matrix by ageing bucket (loss-rate approach for simplified ECL on trade receivables).
-- Trade payables: amortised cost (typically face value short-term).
-- Bank balances: cash equivalents.
-- Loans: amortised cost via effective interest; schedule generator.
-- Equity instruments held: cost less impairment under Section 11 where fair value not reliably measurable; otherwise fair value.
-- Derecognition rules: standard.
-
-## CoA implications
-
-Section 11 / IFRS 9 simplified ECL on trade receivables:
-
-| Code | Name |
-|---|---|
-| 1300 Trade Receivables Control | Asset. |
-| 1310 Allowance for Doubtful Debts | Contra. |
-| 6600 Bad Debts Expense | P&L. |
-| 6610 Movement in Allowance for Doubtful Debts | P&L. |
-
-Loans:
-
-| Code | Name |
-|---|---|
-| 2600 Borrowings — Current Portion | |
-| 2700 Borrowings — Non-current | |
-| 8100 Interest Expense | |
-
-## Forbidden patterns
-
-- "Stage 2 / Stage 3" / ECL language used on an SME book without selecting full IFRS (blocker).
-- Trade receivables held at face value with no allowance assessment (major).
-- Hedge accounting applied without documentation (blocker under both standards).
-- Equity instruments at FVTPL without explicit policy (where Section 11 cost model would otherwise apply).
-
-## Files
-
-- `SKILL.md`.
-- `references/section-11-impairment.md`.
-- `references/ifrs-9-ecl-simplified-trade-receivables.md`.
-- `references/effective-interest-schedule.md`.
-
-Last reviewed: 2026-05-12. Next review due: 2026-11-12.
+Do not mix the IFRS 9 route with Sections 11/12. Do not infer fair value, ECL,
+hedge effectiveness or final disclosure from a generic template. Use licensed
+Standard text and professional review for client conclusions.
 
 ## Prerequisites
 
-- Load `doctrine/accounting-finance-doctrine.md` before applying this skill.
-- Load `governance/finance-accounting-quality-gate.md` when the output is a release, client artefact, SRS, SDS, proposal, business plan, or implementation plan.
-- Use `doctrine/source-register/` for final statutory, tax, payroll, FX, EFRIS, eTIMS, or authority-template values.
+- `doctrine/accounting-finance-doctrine.md`.
+- `doctrine/references/ifrs-for-smes-default.md` and `doctrine/references/full-ifrs-overlay.md`.
+- `doctrine/references/chart-of-accounts.md` and ledger-posting invariants.
+- `doctrine/source-register/ifrs/ifrs-advanced-2026.yaml` plus the Digital Research verification manifest.
+
+## Scope and framework gate
+
+Select full IFRS or IFRS for SMEs before classification. Full IFRS requires
+evidence for business model, SPPI, effective interest, fair value, ECL,
+modification/derecognition, hedge designation and IFRS 7 risk disclosures.
+Sections 11 and 12 remain separately routed for eligible SME reporting.
+
+## IFRS 9 decision model
+
+1. Identify contractual cash-flow rights, unit of account, embedded features,
+   collateral, guarantees, counterparty and modification history.
+2. Assess the business model using how groups of assets are managed and
+   evaluated, not a one-instrument intention.
+3. Test SPPI using contractual cash flows and the economic relationship of
+   principal with consideration for time value, credit risk and other basic
+   lending risks/costs. Escalate leveraged, equity-linked, commodity-linked,
+   non-recourse or modified-time-value features.
+4. Classify and measure at amortised cost, FVOCI or FVTPL as applicable; retain
+   effective-interest, fair-value, OCI and derecognition evidence.
+5. Build ECL evidence for exposure at default, probability of default, loss
+   given default, expected life, forward-looking scenarios, staging,
+   collateral/guarantees, write-offs and model validation. Use lifetime ECL
+   from initial recognition for qualifying simplified-approach receivables.
+6. For modifications, compare original and revised cash flows, assess
+   derecognition, and preserve linked modification/correction records.
+7. For hedge accounting, document objective, hedged item, hedging instrument,
+   eligible risk, hedge ratio, effectiveness, ineffectiveness and rebalancing.
+8. Link all results to IFRS 7 significance, credit, liquidity, market-risk,
+   maturity and sensitivity disclosures.
+
+## IFRS for SMEs route
+
+Section 11 covers basic instruments such as cash, deposits, trade receivables,
+payables and simple loans using its own recognition, measurement and impairment
+requirements. Section 12 routes other instruments such as options, forwards and
+complex hybrids. Never use IFRS 9 staging language to describe an SME book
+without an explicit full-IFRS basis decision.
 
 ## Inputs
 
 | Artifact | Produced by | Required? | Validation |
-|---|---|---|---|
-| Finance context map | `finance-module-audit` | Required | Entity, framework, jurisdiction, modules, users, and deployment context are named. |
-| Doctrine baseline | Doctrine owner | Required | Doctrine version and reporting framework are stated. |
-| Source-register snapshot | `tax-statutory-source-register-and-country-packs` | Required for final statutory output | Entries are `verified-current` or reviewer-approved `verified-with-caveat`. |
-| Ledger/posting context | `ledger-posting-engine-core` | Required when postings are affected | Posting boundary, CoA mappings, control accounts, dimensions, and period state are known. |
+|---|---|---:|---|
+| Reporting-basis memo | Engagement owner | Required | IFRS/SME basis, entity, period and jurisdiction are explicit. |
+| Instrument inventory and contracts | Treasury / subledger | Required | Terms, cash flows, counterparties, collateral and modifications captured. |
+| Business-model and SPPI workpaper | Controller | Required for full IFRS | Evidence and rejected alternatives recorded. |
+| ECL/valuation/hedge model pack | Risk/treasury owner | Required when applicable | Inputs, source data, scenarios, sensitivity and validation recorded. |
+| Reviewer route | Doctrine owner | Required | IFRS reviewer, model reviewer and approval state present. |
 
 ## Outputs
 
 | Artifact | Consumed by | Acceptance evidence |
 |---|---|---|
-| Skill-specific decision record | Implementer, reviewer, quality gate | Scope, assumptions, chosen treatment, rejected alternatives, and caveats are recorded. |
-| Implementation or workflow contract | Software, SRS, SDS, proposal, or business-plan engine | Contract names inputs, outputs, controls, evidence, and failure conditions. |
-| Acceptance evidence | Finance quality gate | Tests, fixtures, examples, source links, reviewer sign-off, or evidence-pack references are present. |
-| Plain-language explanation | Client, owner, manager, operator | Business meaning is stated before technical accounting treatment where client-facing. |
+| Classification and measurement memo | Controller and reporting owner | Basis, instrument facts, model and conclusion reconcile. |
+| ECL / fair-value / hedge workpaper | Risk owner, auditor and reviewer | Data lineage, assumptions, scenarios and exception path present. |
+| IFRS 7 disclosure pack | Notes and financial-statement reviewer | Risk tables and narrative tie to internal risk information and ledger balances. |
+| Posting/reporting map | GL and close | Entries route through posting service, period and evidence controls. |
 
 ## Decision Rules
 
-- Prefer IFRS for SMEs for typical SME entities unless full IFRS, local law, donor requirements, or client policy requires otherwise.
-- Treat every money-touching workflow as ledger, control, reconciliation, evidence, and reporting scope.
-- Do not finalize statutory values without source-register support and reviewer status.
-- Use business-language output for operators and accountant-language output for ledger, reporting, and audit users.
-- Escalate uncertain framework, tax, or statutory interpretations to the required reviewer role instead of presenting them as final.
+| Condition | Decision |
+|---|---|
+| Full IFRS not selected | Route to Sections 11/12 and do not use IFRS 9 staging or hedge claims. |
+| SPPI result uncertain | Do not default to amortised cost; escalate with contract evidence. |
+| ECL model data incomplete | Use a qualified workpaper and block final release until data/model review. |
+| Modification changes cash flows materially | Assess derecognition before modification accounting. |
+| Hedge documentation absent | Do not apply hedge accounting; route as exception. |
+| Risk disclosure cannot reconcile to internal risk information | Block or qualify the disclosure and assign an owner. |
 
 ## Acceptance Evidence
 
-- Inputs and outputs above are present or explicitly marked not applicable.
-- Relevant quality-gate blockers have been checked and no blocker remains unresolved.
-- Examples or fixtures cover at least one happy path and one failure or caveat path for this skill's domain.
-- Reviewer role, review date, and open caveats are recorded for release-grade artefacts.
+- `references/section-11-impairment.md`, `references/ifrs-9-ecl-simplified-trade-receivables.md`, `references/effective-interest-schedule.md`, and `references/advanced-ifrs9-classification-and-ecl.md` are used as appropriate.
+- `examples/advanced-ifrs9-ecl-and-hedge-routing.md` covers a full-IFRS route and a blocked documentation path.
+- Classification, measurement, impairment and disclosure outputs reconcile to source records.
+- Reviewer role, current source status, model limitations and unresolved items are visible.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | IFRS 9 classification/ECL workpaper | Markdown using `references/advanced-ifrs9-classification-and-ecl.md` | `docs/ifrs-workpapers/ifrs9-<id>.md` |
+| Release evidence | IFRS 7 risk-disclosure reconciliation | Markdown decision record | `docs/ifrs-workpapers/ifrs7-risk-<period>.md` |
 
 ## Anti-Patterns
 
-- Treating draft planning assumptions as final statutory or accounting facts.
-- Hiding tax, payroll, FX, or authority-template caveats in prose instead of source-register state.
-- Producing technically correct accounting output without a plain-language layer for non-accountant users.
-- Closing a remediation or implementation item without observable evidence.
+- Applying Section 11 and IFRS 9 to the same instrument without a basis decision.
+- Treating face value as amortised cost without effective-interest consideration.
+- Using a provision matrix with no portfolio segmentation, historical loss,
+  current-condition or forward-looking evidence.
+- Applying hedge accounting after the fact without designation and documentation.
+- Reporting an ECL number with no staging, scenario, data lineage or sensitivity.
+- Omitting liquidity maturity analysis because the entity has “simple” instruments.
 
-## Required References
+## Files
 
-- `doctrine/accounting-finance-doctrine.md`.
-- `governance/finance-accounting-quality-gate.md`.
-- `docs/reference-manifest.md` for declared reference states.
-- Domain-specific references listed earlier in this skill.
-
-## Examples
-
-- Include at least one normal workflow example for this skill's domain.
-- Include at least one exception, rejection, reversal, stale-source, or reviewer-caveat example where the domain can fail.
+- `references/section-11-impairment.md`
+- `references/ifrs-9-ecl-simplified-trade-receivables.md`
+- `references/effective-interest-schedule.md`
+- `references/advanced-ifrs9-classification-and-ecl.md`
+- `examples/advanced-ifrs9-ecl-and-hedge-routing.md`
 
 ## Review Metadata
 
-Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+| Field | Value |
+|---|---|
+| Owner role | IFRS financial-instruments reviewer |
+| Reviewer roles | IFRS technical reviewer; treasury/risk model reviewer; controller |
+| Last reviewed | 2026-08-27 |
+| Next review due | 2026-12-31 |
+| Release state | Active advanced doctrine route; client release requires current source and human review |
+| Caveat | ECL, fair value and hedge conclusions are model- and evidence-sensitive. |
+
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

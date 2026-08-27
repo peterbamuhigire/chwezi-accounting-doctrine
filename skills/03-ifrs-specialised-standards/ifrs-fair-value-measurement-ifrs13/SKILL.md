@@ -108,6 +108,20 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/implementation-rules.md
 - examples/worked-example.md
 
+## Advanced review handoff
+
+For every valuation, record unit of account, highest and best use where
+relevant, principal/most advantageous market, market-participant assumptions,
+valuation technique, observable/unobservable inputs, Level 1/2/3 hierarchy,
+calibration, sensitivity, valuation-adjustment risk, and disclosure tie-out.
+IFRS 13 does not replace another Standard's scope or measurement exception.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Fair-value measurement workpaper | Markdown with technique, inputs, hierarchy and sensitivity | `docs/ifrs-workpapers/ifrs13-<id>.md` |
+
 ## Review Metadata
 
 | Field | Value |

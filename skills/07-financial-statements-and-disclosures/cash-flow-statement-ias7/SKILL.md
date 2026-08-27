@@ -108,6 +108,20 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/implementation-rules.md
 - examples/worked-example.md
 
+## Advanced review handoff
+
+Classify each cash movement from source transactions, not account labels alone.
+Reconcile operating/investing/financing totals to the change in cash and cash
+equivalents, disclose material non-cash investing/financing transactions, and
+tie components and restrictions to the statement of financial position. Review
+IFRS 18 interaction for full-IFRS periods in scope.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Cash-flow classification and reconciliation | Markdown source-to-line mapping | `docs/ifrs-workpapers/ias7-<period>.md` |
+
 ## Review Metadata
 
 | Field | Value |

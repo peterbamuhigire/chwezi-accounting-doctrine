@@ -108,6 +108,20 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/implementation-rules.md
 - examples/worked-example.md
 
+## Advanced review handoff
+
+For each qualifying asset, document expenditures, activities necessary to prepare
+the asset, directly attributable borrowing costs, specific and general
+borrowings, weighted-average capitalisation rate, temporary suspension, and
+cessation when substantially all activities are complete. Reconcile capitalised
+interest to the asset register and expense to the effective-interest schedule.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Borrowing-cost capitalisation workpaper | Markdown calculation and reconciliation | `docs/ifrs-workpapers/ias23-<id>.md` |
+
 ## Review Metadata
 
 | Field | Value |

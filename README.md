@@ -140,17 +140,17 @@ The detailed portfolio study and provenance limits are maintained in the <a href
 
 ## Skill catalogue
 
-There are 103 active skills across 17 groups:
+There are 107 active skills across 17 groups:
 
 | Group | Scope |
 |---|---|
 | `01-foundations` | CoA, ledger core, dimensions, currency, period locks, immutability. |
-| `02-ifrs-core-standards` | Revenue, leases, financial instruments, SMEs, PPE, intangibles, employee benefits, borrowing costs, FX. |
-| `03-ifrs-specialised-standards` | Impairment, agriculture, grants, deferred tax, provisions, business combinations, disclosures, and specialist IAS/IFRS. |
+| `02-ifrs-core-standards` | Conceptual Framework, revenue, leases, financial instruments, SMEs, PPE, intangibles, employee benefits, borrowing costs, FX. |
+| `03-ifrs-specialised-standards` | IFRS 18, impairment, agriculture, grants, deferred tax, provisions, business combinations, disclosures, and specialist IAS/IFRS. |
 | `04-subledgers-and-operations` | Bank/mobile-money reconciliation, fixed assets, inventory, payroll, petty cash, POS, expenses. |
 | `05-receivables-payables-and-treasury` | AR, AP, treasury, FX, hedging, facilities, and covenants. |
-| `06-close-consolidation-and-reporting` | Close, continuous close, consolidation, migration, audit PBC, reporting packs, and finance-module audits. |
-| `07-financial-statements-and-disclosures` | Primary statements, cash flow, notes, going concern, and disclosure support. |
+| `06-close-consolidation-and-reporting` | Close, continuous close, advanced consolidation, migration, audit PBC, reporting packs, and finance-module audits. |
+| `07-financial-statements-and-disclosures` | Primary statements, cash flow, published-statement analysis, notes, going concern, and disclosure support. |
 | `08-tax-and-statutory` | Source registers, VAT/WHT, transfer pricing, e-invoicing, and statutory packs. |
 | `09-budgeting-fpa-and-costing` | Budgets, forecasts, variance, KPIs, costing, and pricing. |
 | `10-controls-governance-and-fraud` | Controls, SoD, audit quality, fraud, AML, whistleblowing, ICFR, conformance, and Kaizen. |
@@ -164,11 +164,15 @@ There are 103 active skills across 17 groups:
 
 Read only the relevant `SKILL.md` files for the task. The generated inventory is available at `docs/router-map.md`.
 
+The advanced IFRS route is summarized in `docs/advanced-ifrs-capability-matrix.md` and checked by `tools/check-advanced-ifrs-readiness.ps1`.
+
 ## Operating routes
 
 ### Digital Research
 
 Use the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
+
+For advanced IFRS work, use the Conceptual Framework and IFRS 18 routes first, then the applicable transaction, consolidation, disclosure, and published-statement analysis routes. Current-standard conclusions remain source-register and reviewer gated.
 
 ### Design system
 

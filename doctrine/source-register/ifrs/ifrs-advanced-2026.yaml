@@ -1,0 +1,271 @@
+- id: IF-CONCEPTUAL-FRAMEWORK-2018
+  topic: IFRS Conceptual Framework for Financial Reporting
+  jurisdiction: IF
+  value_or_rule: "Use the revised Conceptual Framework as the conceptual basis for policy development and interpretation when no IFRS Accounting Standard directly applies; it does not override a Standard."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - conceptual-framework-policy-analysis
+    - accounting-judgement-memo
+    - materiality-and-disclosure-review
+  effective_from: "2020-01-01"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Official IFRS Foundation page and issued-standards material were accessed. Human technical review and archive capture remain required before final client output."
+
+- id: IF-IFRS18-PRESENTATION-2027
+  topic: IFRS 18 Presentation and Disclosure in Financial Statements
+  jurisdiction: IF
+  value_or_rule: "Trigger IFRS 18 presentation and disclosure review for annual periods beginning on or after 2027-01-01 or an approved early-application period; review operating profit, profit before financing and income taxes, MPMs, and aggregation/disaggregation."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - primary-financial-statements
+    - mpm-disclosures
+    - issued-not-effective-disclosures
+    - consolidated-statement-review
+  effective_from: "2027-01-01"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "The official page also lists active implementation projects. Recheck live projects and issued amendments before each client release."
+
+- id: IF-IFRS9-FINANCIAL-INSTRUMENTS
+  topic: IFRS 9 Financial Instruments
+  jurisdiction: IF
+  value_or_rule: "Route financial-instrument classification, measurement, impairment, derecognition, modification, hedge accounting, and risk disclosures to the advanced IFRS 9/IFRS 7 workflow."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - financial-instrument-review
+    - ecl-workpaper
+    - hedge-accounting-review
+    - ifrs7-risk-disclosures
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Source supports routing and current-standard orientation; paragraph-level application and client-specific classification require licensed Standard access and reviewer sign-off."
+
+- id: IF-IFRS10-CONSOLIDATION
+  topic: IFRS 10 Consolidated Financial Statements
+  jurisdiction: IF
+  value_or_rule: "Assess control and consolidate a parent and subsidiaries as a single economic entity, subject to the investment-entity exception and applicable current requirements."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - control-assessment
+    - consolidated-financial-statements
+    - nci-review
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Source accessed and claim scope recorded; complex control, de facto agent, structured-entity, and investment-entity conclusions remain reviewer-gated."
+
+- id: IF-IFRS11-JOINT-ARRANGEMENTS
+  topic: IFRS 11 Joint Arrangements
+  jurisdiction: IF
+  value_or_rule: "Assess contractual joint control and classify a joint arrangement using the rights and obligations arising from the arrangement."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-11-joint-arrangements/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - joint-control-assessment
+    - joint-operation-review
+    - joint-venture-review
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Unanimous-consent and rights/obligations analysis requires contract evidence and professional review."
+
+- id: IF-IFRS12-INTERESTS-OTHER-ENTITIES
+  topic: IFRS 12 Disclosure of Interests in Other Entities
+  jurisdiction: IF
+  value_or_rule: "Disclose information enabling users to evaluate the nature, risks, and effects of interests in subsidiaries, joint arrangements, associates, and unconsolidated structured entities."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-12-disclosure-of-interests-in-other-entities/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - interests-in-other-entities-disclosure
+    - group-risk-disclosures
+    - nci-disclosures
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Summarised financial information, restrictions, commitments, and structured-entity disclosures require source schedules and reviewer sign-off."
+
+- id: IF-IFRS13-FAIR-VALUE
+  topic: IFRS 13 Fair Value Measurement
+  jurisdiction: IF
+  value_or_rule: "Use the market-participant exit-price framework, valuation techniques, observable/unobservable inputs, fair-value hierarchy, and required disclosures when another Standard requires or permits fair value."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-13-fair-value-measurement/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - valuation-workpaper
+    - fair-value-hierarchy
+    - sensitivity-disclosure
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "IFRS 13 scope exclusions and interaction with impairment, leases, employee benefits, and share-based payment must be checked for each use."
+
+- id: IF-IFRS15-REVENUE
+  topic: IFRS 15 Revenue from Contracts with Customers
+  jurisdiction: IF
+  value_or_rule: "Apply the five-step model: identify the contract, identify performance obligations, determine transaction price, allocate consideration using relative stand-alone selling prices, and recognise revenue as obligations are satisfied."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - revenue-recognition
+    - contract-assets-and-liabilities
+    - revenue-disclosures
+  effective_from: "2018-01-01"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Advanced judgement areas require contract evidence, estimates, and reviewer sign-off."
+
+- id: IF-IFRS16-LEASES
+  topic: IFRS 16 Leases
+  jurisdiction: IF
+  value_or_rule: "For a lessee, identify leases and recognise a right-of-use asset and lease liability subject to the Standard's exemptions and measurement requirements; assess reassessment, modification, and sale-and-leaseback consequences."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - lease-identification
+    - rou-assets-and-lease-liabilities
+    - lease-disclosures
+  effective_from: "2019-01-01"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Discount-rate, term, modification, and data completeness conclusions are estimate-sensitive and reviewer-gated."
+
+- id: IF-IAS7-CASH-FLOWS
+  topic: IAS 7 Statement of Cash Flows
+  jurisdiction: IF
+  value_or_rule: "Classify cash flows as operating, investing, or financing; support direct or indirect operating presentation; exclude non-cash investing/financing transactions while disclosing them separately; reconcile cash and cash equivalents."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - statement-of-cash-flows
+    - cash-reconciliation
+    - non-cash-transaction-disclosures
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "IFRS 18-related presentation interaction and entity policy choices require the current reporting-basis assessment."
+
+- id: IF-IAS23-BORROWING-COSTS
+  topic: IAS 23 Borrowing Costs
+  jurisdiction: IF
+  value_or_rule: "Capitalise borrowing costs directly attributable to acquisition, construction, or production of a qualifying asset; expense other borrowing costs; document commencement, suspension, cessation, and general-borrowing calculations."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ias-23-borrowing-costs/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - qualifying-asset-cost
+    - borrowing-cost-capitalisation
+    - interest-expense
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Source supports the routing rule; project-specific qualifying-asset and financing evidence remain required."
+
+- id: IF-IAS36-IMPAIRMENT
+  topic: IAS 36 Impairment of Assets
+  jurisdiction: IF
+  value_or_rule: "Assess recoverable amount as the higher of fair value less costs of disposal and value in use, including annual tests for goodwill and specified intangible assets and CGU allocation where individual cash inflows are not independent."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - impairment-test
+    - cgu-and-goodwill-review
+    - impairment-sensitivity-disclosure
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Cash-flow forecasts, discount rates, headroom, and sensitivity conclusions require independent valuation/IFRS review."
+
+- id: IF-IAS37-PROVISIONS
+  topic: IAS 37 Provisions, Contingent Liabilities and Contingent Assets
+  jurisdiction: IF
+  value_or_rule: "Assess present legal or constructive obligation, probable outflow, reliable estimate, discounting, onerous contracts, restructurings, and contingent disclosures."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - provision-recognition
+    - litigation-and-contingency-review
+    - onerous-contract-review
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Legal correspondence and probability assessments require appropriate legal/accounting reviewer input."
+
+- id: IF-IFRS7-FINANCIAL-RISK
+  topic: IFRS 7 Financial Instruments Disclosures
+  jurisdiction: IF
+  value_or_rule: "Disclose significance of financial instruments and the nature and extent of credit, liquidity, market, and other risks, including how management manages those risks."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-7-financial-instruments-disclosures/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - financial-instrument-risk-disclosures
+    - liquidity-maturity-analysis
+    - ecl-and-credit-risk-disclosures
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "Risk disclosures must be based on internal risk information and current applicable amendments."
+
+- id: IF-IFRS8-SEGMENTS
+  topic: IFRS 8 Operating Segments
+  jurisdiction: IF
+  value_or_rule: "Use the management approach: identify operating segments from internal reports regularly reviewed by the Chief Operating Decision Maker, apply aggregation/reportability tests, and reconcile segment information to the financial statements."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-8-operating-segments/"
+  source_tier: 1
+  date_accessed_utc: "2026-08-27T00:00:00Z"
+  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  output_affected:
+    - operating-segment-review
+    - codm-evidence
+    - segment-reconciliation
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-31"
+  state: draft
+  archive_snapshot: "capture-required-before-release"
+  notes: "CODM identification and aggregation require internal-management evidence and reviewer judgement."

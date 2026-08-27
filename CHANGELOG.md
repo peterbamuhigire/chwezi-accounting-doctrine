@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-08-27 - Advanced IFRS research and review capability
+
+- Added Conceptual Framework and IFRS 18 routes, including materiality,
+  transition, aggregation/disaggregation, and MPM workpapers.
+- Deepened IFRS 9, IFRS 15, IFRS 16, IAS 36, IAS 37, IAS 16, IAS 10, IAS 7,
+  IAS 23, and IFRS 13 review guidance with evidence-producing examples.
+- Added advanced consolidated-statement review for IFRS 10/11/12 and published
+  IFRS financial-statement analysis for management, audit committee, investor,
+  and regulator audiences.
+- Added Digital Research source evaluation/verification records, a complete
+  Kaizen cycle, an advanced IFRS capability matrix, and a deterministic
+  readiness checker with negative and live-repository tests.
+- Kept new IFRS source-register entries in `draft` state pending named human
+  IFRS review and source capture/archive.
+
 ## 2026-08-16 - Product-first commercial and inventory boundary
 
 - Added the canonical rule that Products are sold while Stock Items are

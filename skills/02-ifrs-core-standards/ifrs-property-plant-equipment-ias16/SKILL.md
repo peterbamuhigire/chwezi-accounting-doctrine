@@ -108,6 +108,20 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/implementation-rules.md
 - examples/worked-example.md
 
+## Advanced review handoff
+
+Require componentisation when significant parts have different useful lives,
+separate subsequent-cost and replacement analysis, cost/revaluation policy
+consistency, depreciation from when available for use, derecognition evidence,
+IAS 36 interaction, and reconciliation of gross carrying amount, accumulated
+depreciation, impairment and revaluation movements.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | PPE component and movement workpaper | Markdown reconciliation | `docs/ifrs-workpapers/ias16-<id>.md` |
+
 ## Review Metadata
 
 | Field | Value |

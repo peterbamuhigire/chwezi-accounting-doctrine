@@ -1,133 +1,132 @@
 ---
 name: ifrs-leases
-description: Lease accounting under IFRS 16 (full IFRS) and Section 20 (IFRS for SMEs). Lessee single on-balance-sheet model under IFRS 16; lessee operating-vs-finance classification under Section 20. Short-term and low-value exemptions. Lessor classification. Sale-and-leaseback. Use when leases or rental arrangements are in scope. Tier-3 scope — full lessee build deferred until a client materially requires it; Section 20 short-term operating-lease handling and IFRS 16 exemption-test reference are built first.
+description: Advanced lease identification, measurement, reassessment, modification, sale-and-leaseback, lessor and disclosure review under IFRS 16, with Section 20 routing for IFRS for SMEs.
+status: active
+metadata:
+  portable: true
+  category: 02-ifrs-core-standards
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Leases (IFRS 16 / Section 20)
 
-## Tier-3 scope
+## Use When
 
-This skill is Tier-3 in the build queue. Most Chwezi SME clients have short-term leases (rent, equipment hire) where the IFRS 16 short-term and low-value exemptions or the Section 20 operating-lease model apply. The full IFRS 16 lessee model (right-of-use asset and lease liability with discount-rate computation, reassessment, modification) is built when a real client carries material non-cancellable, non-short-term, non-low-value leases under full IFRS.
+Use for lease populations, embedded leases, ROU assets, lease liabilities,
+discount rates, options, modifications, reassessments, sale-and-leaseback,
+lessor accounting and lease disclosures.
 
-## Required first reads
+## Do Not Use When
 
-- `doctrine/accounting-finance-doctrine.md`
-- `doctrine/references/ifrs-for-smes-default.md` (Section 20)
-- `doctrine/references/full-ifrs-overlay.md` (IFRS 16)
-
-## Section 20 (IFRS for SMEs)
-
-Lessee classifies leases as finance leases or operating leases at inception. Finance lease: substantially all the risks and rewards of ownership transfer. Operating lease: otherwise. Recognition:
-
-- Operating lease (lessee): rental expense on a straight-line basis over the lease term (unless another systematic basis is more representative).
-- Finance lease (lessee): asset and lease liability at the lower of fair value and PV of minimum lease payments; subsequent depreciation of the asset and interest on the liability using the effective-interest method.
-
-Lessor: mirror classification; operating-lease income on a straight-line basis or finance-lease receivable with effective-interest.
-
-## IFRS 16 lessee model
-
-Single on-balance-sheet model for all leases:
-
-- Right-of-use (ROU) asset and lease liability recognised at lease commencement.
-- ROU = lease liability + prepayments + initial direct costs + dismantling provision − incentives.
-- Lease liability = PV of unpaid lease payments at incremental borrowing rate (or implicit rate if determinable).
-- Subsequent: depreciate ROU; unwind interest on liability.
-
-Exemptions:
-
-- Short-term leases (≤ 12 months, no purchase option): may elect straight-line expense.
-- Low-value underlying asset (≤ ~USD 5,000 equivalent when new): may elect straight-line expense.
-
-## Initial build (Tier-3 minimum)
-
-- Lease register: lessor, asset, commencement, end, payments schedule, renewal options, purchase options, dismantling obligation.
-- Section 20: classification logic; straight-line expense generator.
-- IFRS 16: exemption-test calculator; for non-exempt, manual workings until full ROU engine is built.
-- Disclosure note generator for both frameworks.
-
-## CoA implications (when full IFRS 16 is implemented)
-
-| Code | Name |
-|---|---|
-| 1850 Right-of-Use Asset | Non-current, by class. |
-| 1859 Accumulated Depreciation — ROU | Non-current contra. |
-| 2710 Lease Liability — Current | Current portion. |
-| 2720 Lease Liability — Non-current | Non-current portion. |
-| 6510 Depreciation of ROU | P&L. |
-| 8110 Interest on Lease Liabilities | P&L. |
-
-## Forbidden patterns
-
-- Lessee operating-lease classification under full IFRS without explicit short-term / low-value exemption documentation (blocker).
-- Mixing exemption election year-on-year without disclosure (major).
-- Section 20 finance-lease accounting on a lease where risk-and-reward transfer is not substantially all (blocker).
-
-## Files
-
-- `SKILL.md`.
-- `references/exemption-test.md` (to be built when needed).
-- `references/full-ifrs-16-lessee-model.md` (to be built when needed).
-
-Last reviewed: 2026-05-12. Next review due: 2026-11-12.
+Do not apply the IFRS 16 lessee model to an IFRS for SMEs report without a
+documented framework decision. Do not treat a lease as operating under full IFRS
+merely because payments are described as rent.
 
 ## Prerequisites
 
-- Load `doctrine/accounting-finance-doctrine.md` before applying this skill.
-- Load `governance/finance-accounting-quality-gate.md` when the output is a release, client artefact, SRS, SDS, proposal, business plan, or implementation plan.
-- Use `doctrine/source-register/` for final statutory, tax, payroll, FX, EFRIS, eTIMS, or authority-template values.
+- `doctrine/accounting-finance-doctrine.md`, `doctrine/references/full-ifrs-overlay.md`.
+- `doctrine/references/ifrs-for-smes-default.md` (Section 20).
+- Lease contracts, payment schedules, asset data, discount-rate evidence and
+  `IF-IFRS16-LEASES` source-register entry.
+
+## IFRS 16 workstream
+
+1. Search contracts, service arrangements, outsourcing, transport and embedded
+   asset arrangements for an identified asset and the right to control use.
+2. Determine commencement date, enforceable period, lease term, extension and
+   termination options, purchase options, indexation and variable payments.
+3. Measure the liability at present value using the implicit rate when readily
+   determinable; otherwise use an evidence-backed incremental borrowing rate.
+4. Measure ROU asset using the liability, prepayments, incentives, initial direct
+   costs and restoration/decommissioning obligations.
+5. Run the schedule for interest, payments, depreciation, impairment and current
+   versus non-current classification; reconcile lease register to GL.
+6. Reassess triggered changes to term, index/rate, residual value guarantee or
+   purchase option; determine separate lease versus remeasurement treatment.
+7. Assess transfer and seller-lessee accounting in sale-and-leaseback separately
+   from legal form.
+8. Link additions, carrying amounts, maturity, expense, cash flows and judgement
+   disclosures to the reporting pack.
+
+## IFRS for SMEs Section 20 route
+
+Classify leases as finance or operating based on transfer of substantially all
+risks and rewards. Finance leases recognise an asset and liability at the lower
+of fair value and present value of minimum lease payments; operating-lease
+expense is generally systematic over the term. The lessor route mirrors the
+framework and requires its own disclosure review.
 
 ## Inputs
 
 | Artifact | Produced by | Required? | Validation |
-|---|---|---|---|
-| Finance context map | `finance-module-audit` | Required | Entity, framework, jurisdiction, modules, users, and deployment context are named. |
-| Doctrine baseline | Doctrine owner | Required | Doctrine version and reporting framework are stated. |
-| Source-register snapshot | `tax-statutory-source-register-and-country-packs` | Required for final statutory output | Entries are `verified-current` or reviewer-approved `verified-with-caveat`. |
-| Ledger/posting context | `ledger-posting-engine-core` | Required when postings are affected | Posting boundary, CoA mappings, control accounts, dimensions, and period state are known. |
+|---|---|---:|---|
+| Framework and lease-scope memo | Reporting owner | Required | Full IFRS/SME basis and scope assumptions explicit. |
+| Contract population | Procurement/legal/operations | Required | Completeness search and identified assets recorded. |
+| Payment and option schedule | Treasury/lease owner | Required | Fixed, index-linked, variable, incentive and option data reconciled. |
+| Discount-rate evidence | Treasury/valuation reviewer | Required for IFRS 16 | Implicit/IBR selection and source evidence present. |
+| Reviewer route | Doctrine owner | Required | IFRS reviewer and model reviewer assigned. |
 
 ## Outputs
 
 | Artifact | Consumed by | Acceptance evidence |
 |---|---|---|
-| Skill-specific decision record | Implementer, reviewer, quality gate | Scope, assumptions, chosen treatment, rejected alternatives, and caveats are recorded. |
-| Implementation or workflow contract | Software, SRS, SDS, proposal, or business-plan engine | Contract names inputs, outputs, controls, evidence, and failure conditions. |
-| Acceptance evidence | Finance quality gate | Tests, fixtures, examples, source links, reviewer sign-off, or evidence-pack references are present. |
-| Plain-language explanation | Client, owner, manager, operator | Business meaning is stated before technical accounting treatment where client-facing. |
+| Lease-identification memo | Controller and auditor | Contract, asset, control and exemption conclusion. |
+| ROU/liability schedule | GL, close and reporting | Opening plus movement equals closing and agrees to source schedule. |
+| Modification/reassessment workpaper | Controller | Trigger, recalculation, posting and disclosure impact traceable. |
+| Lease disclosure pack | Financial-statement reviewer | Class, maturity, additions, carrying amounts, expense and judgements reconcile. |
 
 ## Decision Rules
 
-- Prefer IFRS for SMEs for typical SME entities unless full IFRS, local law, donor requirements, or client policy requires otherwise.
-- Treat every money-touching workflow as ledger, control, reconciliation, evidence, and reporting scope.
-- Do not finalize statutory values without source-register support and reviewer status.
-- Use business-language output for operators and accountant-language output for ledger, reporting, and audit users.
-- Escalate uncertain framework, tax, or statutory interpretations to the required reviewer role instead of presenting them as final.
+| Condition | Decision |
+|---|---|
+| Underlying asset low-value or lease term within the permitted short-term exemption | Document election and consistent policy; do not silently omit from population. |
+| Full IFRS arrangement lacks exemption evidence | Recognise and measure through IFRS 16 route or block pending evidence. |
+| Option assessment changes | Reassess lease term and remeasure using the applicable requirements. |
+| Contract modification adds right of use at commensurate price | Assess separate lease before remeasurement. |
+| Sale-and-leaseback transfer is not a sale | Do not derecognise the asset as a sale. |
+| Discount rate is unsupported | Block final schedule or obtain reviewer-approved rate evidence. |
 
 ## Acceptance Evidence
 
-- Inputs and outputs above are present or explicitly marked not applicable.
-- Relevant quality-gate blockers have been checked and no blocker remains unresolved.
-- Examples or fixtures cover at least one happy path and one failure or caveat path for this skill's domain.
-- Reviewer role, review date, and open caveats are recorded for release-grade artefacts.
+- `references/exemption-test.md`, `references/full-ifrs-16-lessee-model.md`, and `references/advanced-ifrs16-lessee-workpaper.md` are completed as applicable.
+- `examples/lease-modification-and-reassessment.md` covers a modification and a blocked missing-rate path.
+- Lease register, schedule, GL and disclosures reconcile.
+- Reviewer and current-source states are explicit.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Lease identification and ROU schedule | Markdown using `references/advanced-ifrs16-lessee-workpaper.md` | `docs/ifrs-workpapers/ifrs16-<id>.md` |
+| Release evidence | Lease population completeness and exception log | Markdown table | `docs/ifrs-workpapers/lease-exceptions-<period>.md` |
 
 ## Anti-Patterns
 
-- Treating draft planning assumptions as final statutory or accounting facts.
-- Hiding tax, payroll, FX, or authority-template caveats in prose instead of source-register state.
-- Producing technically correct accounting output without a plain-language layer for non-accountant users.
-- Closing a remediation or implementation item without observable evidence.
+- Treating all rent invoices as operating leases under full IFRS.
+- Using a generic discount rate with no currency, term, collateral or credit evidence.
+- Changing exemption elections without policy and disclosure documentation.
+- Ignoring embedded leases in service contracts.
+- Editing a posted lease journal instead of a linked correction/reversal.
+- Publishing a ROU schedule that does not tie to the lease register and GL.
 
-## Required References
+## Files
 
-- `doctrine/accounting-finance-doctrine.md`.
-- `governance/finance-accounting-quality-gate.md`.
-- `docs/reference-manifest.md` for declared reference states.
-- Domain-specific references listed earlier in this skill.
-
-## Examples
-
-- Include at least one normal workflow example for this skill's domain.
-- Include at least one exception, rejection, reversal, stale-source, or reviewer-caveat example where the domain can fail.
+- `references/exemption-test.md`
+- `references/full-ifrs-16-lessee-model.md`
+- `references/advanced-ifrs16-lessee-workpaper.md`
+- `examples/lease-modification-and-reassessment.md`
 
 ## Review Metadata
 
-Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+| Field | Value |
+|---|---|
+| Owner role | IFRS leases reviewer |
+| Reviewer roles | IFRS technical reviewer; treasury/valuation reviewer; controller |
+| Last reviewed | 2026-08-27 |
+| Next review due | 2026-12-31 |
+| Release state | Active advanced doctrine route; client release requires current source and human review |
+| Caveat | Lease completeness, term and discount-rate judgements are evidence-sensitive. |
+
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

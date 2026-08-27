@@ -168,6 +168,28 @@ State values:
 | `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/references/legacy-source-extractors.md` | present | migration owner | release evidence | Exists. |
 | `skills/06-close-consolidation-and-reporting/opening-balances-and-migration-playbook/examples/sme-cutover-pack-2026-04-30.md` | present | migration owner | release evidence | Exists. |
 
+## 2026-08 Advanced IFRS Additions
+
+| Path | State | Owner | Release impact | Notes |
+|---|---|---|---|---|
+| `doctrine/source-register/ifrs/ifrs-advanced-2026.yaml` | present | IFRS reviewer | caveated release evidence | Digital Research evidence register; entries remain draft pending named human review and source capture/archive. |
+| `skills/02-ifrs-core-standards/ifrs-conceptual-framework-and-accounting-judgements/` | present | IFRS reviewer | release evidence | Conceptual Framework route, judgement tree, materiality workpaper, and example. |
+| `skills/03-ifrs-specialised-standards/ifrs-18-presentation-and-disclosures/` | present | IFRS reviewer | caveated release evidence | IFRS 18 presentation, MPM, aggregation/disaggregation, transition, and disclosure route. |
+| `skills/02-ifrs-core-standards/ifrs-financial-instruments/references/advanced-ifrs9-classification-and-ecl.md` | present | IFRS reviewer | release evidence | Classification, measurement, ECL, modification, hedge, and IFRS 7 workpaper. |
+| `skills/02-ifrs-core-standards/ifrs-leases/references/advanced-ifrs16-lessee-workpaper.md` | present | IFRS reviewer | release evidence | Lease identification, measurement, reassessment, modification, and presentation workpaper. |
+| `skills/03-ifrs-specialised-standards/ias-impairment/references/advanced-ias36-cgu-and-viu-workpaper.md` | present | IFRS reviewer | release evidence | CGU, goodwill, VIU, FVLCD, headroom, sensitivity, and reversal workpaper. |
+| `skills/06-close-consolidation-and-reporting/advanced-ifrs-consolidated-statements-review/` | present | group reporting owner | caveated release evidence | IFRS 10/11/12, IAS 28, NCI, eliminations, and IFRS 18 consolidation review route. |
+| `skills/07-financial-statements-and-disclosures/published-ifrs-financial-statement-analysis/` | present | IFRS analysis reviewer | caveated release evidence | Source-backed published-statement analysis and audience advice route. |
+| `tools/check-advanced-ifrs-readiness.ps1` | present | tooling | release gate | Deterministic advanced IFRS route and skill-contract readiness checker. |
+| `tests/advanced-ifrs/scripts/Test-AdvancedIfRSReadiness.ps1` | present | testing owner | release gate | Negative fixture plus live-repository readiness test. |
+| `tests/advanced-ifrs/fixtures/minimal-incomplete-engine/` | present | testing owner | test evidence | Intentional incomplete fixture; must fail the readiness checker. |
+| `docs/advanced-ifrs-capability-matrix.md` | present | doctrine owner | release evidence | User requirement-to-route-to-evidence mapping and caveats. |
+| `docs/research/ifrs-advanced-2026-08/` | present | Digital Research owner | source evidence | Source evaluation and verification manifest for official IFRS research. |
+| `docs/kaizen/2026-08-27-advanced-ifrs/` | present | Kaizen owner | process evidence | Baseline, backlog, experiments, validation, report, and next cycle. |
+| `docs/release-evidence/advanced-ifrs-2026-08-bundle.md` | present | release owner | release evidence | Cross-category release evidence bundle. |
+| `docs/superpowers/specs/2026-08-27-advanced-ifrs-engine-design.md` | present | architecture owner | design evidence | Approved architecture and acceptance criteria. |
+| `docs/superpowers/plans/2026-08-27-advanced-ifrs-engine.md` | present | delivery owner | delivery evidence | Approved implementation plan and execution checklist. |
+
 ## External Sources
 
 | Path | State | Owner | Release impact | Notes |

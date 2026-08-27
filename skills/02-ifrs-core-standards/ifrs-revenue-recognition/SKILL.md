@@ -113,6 +113,13 @@ Where outcome is materially the same, the system uses one engine; the framework 
 | Contract asset | 1320 Other Receivables (or a dedicated 1330-range account). |
 | Contract liability / deferred revenue | 2200 Customer Advances / Deferred Revenue. |
 | Refund liability | new account under 2200-range. |
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | IFRS 15 judgement matrix | Markdown using `references/advanced-ifrs15-judgement-matrix.md` | `docs/ifrs-workpapers/ifrs15-<id>.md` |
+| Release evidence | Contract balance and disclosure reconciliation | Markdown decision record | `docs/ifrs-workpapers/revenue-<period>.md` |
 | Right-to-recover product | new asset under 1500-range inventory. |
 | Costs to obtain a contract (capitalised) | new intangible asset account (Section 23 generally expenses; IFRS 15 may capitalise). |
 
@@ -143,6 +150,8 @@ VAT applies at the point of supply per the country's VAT Act; this may not coinc
 - `references/section-23-summary.md`.
 - `references/ifrs-15-five-step.md`.
 - `examples/multi-element-software-licence-plus-support.md`.
+- `references/advanced-ifrs15-judgement-matrix.md`.
+- `examples/variable-consideration-and-modification.md`.
 
 Last reviewed: 2026-05-12. Next review due: 2026-11-12.
 

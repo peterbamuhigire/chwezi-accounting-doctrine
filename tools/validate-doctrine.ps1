@@ -32,6 +32,7 @@ $root = Resolve-DoctrineRepoRoot $RepoRoot
 $checks = @(
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-mojibake.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-skill-contracts.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-advanced-ifrs-readiness.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-source-register.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-links.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-repository-discovery.ps1'); arguments = @() },

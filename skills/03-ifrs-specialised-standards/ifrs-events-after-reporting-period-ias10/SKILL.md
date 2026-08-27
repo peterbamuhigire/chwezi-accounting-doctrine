@@ -108,6 +108,20 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/implementation-rules.md
 - examples/worked-example.md
 
+## Advanced review handoff
+
+Build a post-reporting-period event log from the reporting date to the
+authorisation date. Classify evidence of conditions existing at reporting date
+as adjusting, and new conditions as non-adjusting; assess going concern,
+materiality, note disclosure, and approval-date evidence. Never backdate an
+entry or alter posted history.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Events-after-reporting-period log | Markdown event matrix with evidence and adjustment decision | `docs/ifrs-workpapers/ias10-<period>.md` |
+
 ## Review Metadata
 
 | Field | Value |

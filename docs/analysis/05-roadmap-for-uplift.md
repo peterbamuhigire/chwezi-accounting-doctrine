@@ -1,6 +1,6 @@
 # Roadmap for Uplift
 
-This roadmap was the original sequence for turning the 76 gap-stubs into release-grade skills. On 2026-05-25, the gap-closure pass converted all 76 stubs to active doctrine skills with source-basis references, implementation rules, and worked examples. The remaining roadmap is now a reviewer-signoff and depth-expansion plan, not a stub-remediation plan. Sequencing is driven by:
+This roadmap was the original sequence for turning the 76 gap-stubs into release-grade skills. On 2026-05-25, the gap-closure pass converted all 76 stubs to active doctrine skills with source-basis references, implementation rules, and worked examples. The 2026-08-27 advanced IFRS wave added the Conceptual Framework, IFRS 18, deeper core-standard, consolidation, and published-statement analysis routes. The remaining roadmap is now a reviewer-signoff and depth-expansion plan, not a stub-remediation plan. Sequencing is driven by:
 
 1. **Dependency chain** — foundational skills first, derivative skills later.
 2. **Consumer-engine demand** — what `proposal-skills`, `srs-skills`, `business-plan-skills`, and `web-dev` will hit first on real client work.
@@ -146,6 +146,13 @@ A closed gap skill is considered client-release-ready when:
 - **Reviewer bandwidth is the binding constraint.** Waves 1-3 concentrate IFRS-reviewer load. Plan around this.
 - **Sector packs need sector specialists.** Do not let a generalist reviewer sign these off; sector-specific accounting nuance is where most engagements fail.
 - **The source register must lead.** No skill should quote final statutory values ahead of verified-current country-pack source-register entries.
-- **The 25-skill cap was lifted to 120.** If aggregate skill count starts approaching 120 (currently 102), revisit category granularity rather than the cap.
+- **The 25-skill cap was lifted to 120.** If aggregate skill count starts approaching 120 (currently 107), revisit category granularity rather than the cap.
 
-Last reviewed: 2026-05-25. Next review due: 2026-08-25.
+## 2026-08 advanced IFRS wave — completed implementation
+
+Implementation is complete for the advanced IFRS capability matrix, research
+evidence pack, Kaizen cycle, active skill routes, and deterministic readiness
+checker. The next cycle is named human IFRS review, authoritative-source
+capture/archive, and consumer-repository executable/system validation.
+
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

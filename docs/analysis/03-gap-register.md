@@ -194,4 +194,19 @@ The closure is a doctrine-content closure, not a substitute for client-specific 
 | emerging | 8 |
 | **Total gaps closed as active doctrine skills** | **76** |
 
-Last reviewed: 2026-05-25. Next review due: 2026-08-25.
+## 2026-08 advanced IFRS capability wave
+
+The advanced IFRS wave closed the depth gaps identified for Conceptual
+Framework judgements, IFRS 18 presentation and management-defined performance
+measures, IFRS 9, IFRS 15, IFRS 16, IAS 36, IAS 37, IAS 16, IAS 10, IAS 7,
+IAS 23, IFRS 13, IFRS 7, IFRS 8, IFRS 10/11/12, and published-statement
+analysis. New routes, workpapers, examples, source-evaluation records, and a
+deterministic readiness check are listed in
+`docs/advanced-ifrs-capability-matrix.md`.
+
+Remaining release conditions are explicit: source-register entries for this
+wave remain `draft` pending named human IFRS review and source capture/archive;
+entity-specific conclusions, statutory outputs, audit assurance, and
+production-system tests remain reviewer- and consumer-system-gated.
+
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

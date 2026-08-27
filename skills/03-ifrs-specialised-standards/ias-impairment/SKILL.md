@@ -1,149 +1,136 @@
 ---
 name: ias-impairment
-description: Impairment of non-financial assets under IAS 36 (full IFRS) and Section 27 (IFRS for SMEs). Indicator-based testing, recoverable amount (higher of fair value less costs of disposal and value in use), cash-generating units, goodwill impairment, reversal. Use when material PPE, intangibles, goodwill, or investment property carrying amounts could be impaired. Tier-3 scope — indicator-based reference built first; full annual-test machinery deferred until a goodwill-heavy or asset-intensive client demands it.
+description: Use when identifying, measuring, reviewing, or disclosing impairment under IAS 36 and Section 27, including CGU allocation, goodwill, value in use, fair value less costs of disposal, sensitivities, reversals, and disclosures.
+status: active
+metadata:
+  portable: true
+  category: 03-ifrs-specialised-standards
+  compatible_with:
+    - claude-code
+    - codex
 ---
 
 # Impairment of Assets (IAS 36 / Section 27)
 
-## Tier-3 scope
+## Use When
 
-For typical SME clients, impairment is indicator-driven and assessed annually as part of close. The full IAS 36 machinery (annual mandatory test of goodwill, cash-generating unit determination, value-in-use cash-flow projections with discount rates) becomes load-bearing for asset-intensive or M&A-active clients. Build the indicator-based assessment first; build full machinery when required.
+Use for impairment indicators, annual goodwill or indefinite-life tests, CGU
+allocation, VIU models, fair value less costs of disposal, headroom, sensitivity,
+impairment/reversal postings and disclosures.
 
-## Required first reads
+## Do Not Use When
 
-- `doctrine/accounting-finance-doctrine.md`
-- `doctrine/references/ifrs-for-smes-default.md` (Section 27)
-- `doctrine/references/full-ifrs-overlay.md` (IAS 36)
-- `doctrine/references/chart-of-accounts.md`
-
-## Indicators
-
-External:
-
-- Significant decline in market value beyond normal use.
-- Significant adverse changes in technology, market, economy, legal environment.
-- Increase in market interest rates affecting discount rates.
-- Carrying amount > market capitalisation (listed entities).
-
-Internal:
-
-- Obsolescence or physical damage.
-- Plans to discontinue, restructure, or dispose of an asset.
-- Worse-than-expected economic performance.
-
-## Recoverable amount
-
-= higher of:
-
-- Fair value less costs of disposal.
-- Value in use (PV of future cash flows from the asset / CGU).
-
-## Carrying amount > recoverable amount → impairment loss
-
-Recognised in P&L (or against revaluation surplus where applicable).
-
-## Reversal
-
-Section 27 / IAS 36 allow reversal of prior impairment (other than goodwill) up to the original carrying amount less subsequent depreciation, if indicators reverse.
-
-Goodwill impairment is **not** reversed under either framework.
-
-## Goodwill specifics
-
-- Section 19 (IFRS for SMEs): goodwill amortised over useful life (max 10 years if useful life cannot be reliably estimated). Impairment tested on indicators.
-- IFRS 3 (full IFRS): goodwill not amortised; tested for impairment annually.
-
-## Build implications
-
-- Indicator-assessment checklist run at each reporting date.
-- Where indicator triggers, the system supports a workpaper for recoverable-amount calculation.
-- Impairment journal posted via the posting service.
-- Reversal journal where conditions met; goodwill impairments locked from reversal.
-- Disclosure note generator.
-
-## CoA implications
-
-| Code | Name |
-|---|---|
-| 1799 Accumulated Impairment — PPE | Non-current contra. |
-| 1899 Accumulated Impairment — Intangibles | Non-current contra. |
-| 6750 Impairment Loss — PPE | P&L. |
-| 6760 Impairment Loss — Intangibles / Goodwill | P&L. |
-| 6770 Reversal of Impairment Loss | P&L (gain). |
-
-## Forbidden patterns
-
-- Reversal of goodwill impairment (blocker).
-- Carrying amount > recoverable amount left unrecognised when indicator confirmed (blocker).
-- Annual goodwill impairment test claimed under IFRS for SMEs (mis-application of frameworks).
-- Discount rate hardcoded (use entity / asset-specific rate).
-
-## Files
-
-- `SKILL.md`.
-- `references/indicator-checklist.md`.
-- `references/value-in-use-workpaper-template.md` (build when first needed).
-
-Last reviewed: 2026-05-12. Next review due: 2026-11-12.
+Do not apply IAS 36 to assets whose impairment is governed by another Standard,
+including financial assets within IFRS 9, inventory, deferred tax assets,
+employee-benefit assets, fair-value investment property, biological assets and
+assets held for sale. Do not substitute Section 27 for full IFRS IAS 36.
 
 ## Prerequisites
 
-- Load `doctrine/accounting-finance-doctrine.md` before applying this skill.
-- Load `governance/finance-accounting-quality-gate.md` when the output is a release, client artefact, SRS, SDS, proposal, business plan, or implementation plan.
-- Use `doctrine/source-register/` for final statutory, tax, payroll, FX, EFRIS, eTIMS, or authority-template values.
+- `doctrine/accounting-finance-doctrine.md`, `doctrine/references/full-ifrs-overlay.md`.
+- `doctrine/references/ifrs-for-smes-default.md` (Section 27).
+- Asset register, budgets/forecasts, valuation evidence, CGU map and
+  `IF-IAS36-IMPAIRMENT` source-register entry.
+
+## Advanced IAS 36 workstream
+
+1. Build the complete asset population and assess market, technology, legal,
+   economic, rate, damage, performance, restructuring and disposal indicators
+   at each reporting date.
+2. For full IFRS, test goodwill, indefinite-life intangibles and intangibles not
+   yet available for use annually, and test other assets when indicators exist.
+3. Allocate goodwill to the lowest CGU or CGU group monitored for management and
+   expected to benefit from the combination; document consistency and limits.
+4. Determine carrying amount on a comparable basis, including corporate assets
+   and relevant liabilities, without double-counting recognised assets.
+5. Estimate recoverable amount as the higher of VIU and fair value less costs of
+   disposal. For VIU, evidence current-condition cash flows, forecast period,
+   terminal assumptions and discount-rate consistency.
+6. Calculate headroom and sensitivities for reasonably possible changes in growth,
+   margin, cash conversion and discount rate. Expose model limitations.
+7. Allocate a loss according to the framework and CGU rules, preserve revaluation
+   treatment, and use linked correction/reversal postings.
+8. Reverse non-goodwill impairment only when conditions support it and never above
+   the carrying amount that would have resulted absent impairment. Do not reverse
+   goodwill impairment under IAS 36.
+9. Disclose assumptions, CGU composition, goodwill allocation, loss/reversal,
+   sensitivity and estimation uncertainty; obtain independent review.
+
+## Section 27 route
+
+Apply the IFRS for SMEs impairment requirements, including its treatment of
+indicators, recoverable amount, reversal and goodwill. Record the framework
+selection before any annual-test conclusion.
 
 ## Inputs
 
 | Artifact | Produced by | Required? | Validation |
-|---|---|---|---|
-| Finance context map | `finance-module-audit` | Required | Entity, framework, jurisdiction, modules, users, and deployment context are named. |
-| Doctrine baseline | Doctrine owner | Required | Doctrine version and reporting framework are stated. |
-| Source-register snapshot | `tax-statutory-source-register-and-country-packs` | Required for final statutory output | Entries are `verified-current` or reviewer-approved `verified-with-caveat`. |
-| Ledger/posting context | `ledger-posting-engine-core` | Required when postings are affected | Posting boundary, CoA mappings, control accounts, dimensions, and period state are known. |
+|---|---|---:|---|
+| Reporting-basis memo | Engagement owner | Required | Full IFRS/SME basis and period explicit. |
+| Asset and CGU register | Fixed-asset/reporting owner | Required | Carrying amounts, useful lives, goodwill and allocations reconcile. |
+| Forecast and valuation model | FP&A/valuation owner | Required when test triggered | Current condition, assumptions, rate, scenarios and sensitivity documented. |
+| Indicator and judgement log | Controller | Required | External/internal indicators and rejected alternatives recorded. |
+| Reviewer route | Doctrine owner | Required | IFRS and valuation reviewer assigned. |
 
 ## Outputs
 
 | Artifact | Consumed by | Acceptance evidence |
 |---|---|---|
-| Skill-specific decision record | Implementer, reviewer, quality gate | Scope, assumptions, chosen treatment, rejected alternatives, and caveats are recorded. |
-| Implementation or workflow contract | Software, SRS, SDS, proposal, or business-plan engine | Contract names inputs, outputs, controls, evidence, and failure conditions. |
-| Acceptance evidence | Finance quality gate | Tests, fixtures, examples, source links, reviewer sign-off, or evidence-pack references are present. |
-| Plain-language explanation | Client, owner, manager, operator | Business meaning is stated before technical accounting treatment where client-facing. |
+| Impairment indicator and scope memo | Close owner | Population completeness and applicable Standard exclusions. |
+| CGU/VIU/FVLCD workpaper | Controller, valuation reviewer and auditor | Carrying amount, recoverable amount, headroom and sensitivity reconcile. |
+| Journal and reversal map | GL and close | Posting service, period, approval and immutability controls preserved. |
+| Impairment disclosure pack | Financial-statement reviewer | Assumptions, sensitivities, movements and uncertainty are traceable. |
 
 ## Decision Rules
 
-- Prefer IFRS for SMEs for typical SME entities unless full IFRS, local law, donor requirements, or client policy requires otherwise.
-- Treat every money-touching workflow as ledger, control, reconciliation, evidence, and reporting scope.
-- Do not finalize statutory values without source-register support and reviewer status.
-- Use business-language output for operators and accountant-language output for ledger, reporting, and audit users.
-- Escalate uncertain framework, tax, or statutory interpretations to the required reviewer role instead of presenting them as final.
+| Condition | Decision |
+|---|---|
+| Goodwill or qualifying intangible under full IFRS | Annual test required even without an indicator. |
+| Recoverable amount below carrying amount | Recognise impairment and route the journal through approved posting. |
+| VIU model uses unsupported future restructurings or growth | Reject/adjust model and escalate. |
+| Goodwill impairment reversal proposed | Block; IAS 36 prohibits reversal. |
+| Discount rate or forecast not independently evidenced | Block final conclusion or mark `NOT ASSESSED`. |
+| Section 27 selected | Apply SME route; do not import IAS 36 annual-goodwill-test logic. |
 
 ## Acceptance Evidence
 
-- Inputs and outputs above are present or explicitly marked not applicable.
-- Relevant quality-gate blockers have been checked and no blocker remains unresolved.
-- Examples or fixtures cover at least one happy path and one failure or caveat path for this skill's domain.
-- Reviewer role, review date, and open caveats are recorded for release-grade artefacts.
+- `references/indicator-checklist.md`, `references/value-in-use-workpaper-template.md`, and `references/advanced-ias36-cgu-and-viu-workpaper.md` are completed as applicable.
+- `examples/goodwill-cgu-sensitivity.md` covers annual testing, headroom, sensitivity and the blocked goodwill-reversal path.
+- Asset register, forecast, valuation, journal and disclosure outputs reconcile.
+- Human IFRS/valuation review and source status are explicit.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | CGU/VIU impairment workpaper | Markdown using `references/advanced-ias36-cgu-and-viu-workpaper.md` | `docs/ifrs-workpapers/ias36-<id>.md` |
+| Release evidence | Impairment sensitivity and exception log | Markdown table | `docs/ifrs-workpapers/ias36-exceptions-<period>.md` |
 
 ## Anti-Patterns
 
-- Treating draft planning assumptions as final statutory or accounting facts.
-- Hiding tax, payroll, FX, or authority-template caveats in prose instead of source-register state.
-- Producing technically correct accounting output without a plain-language layer for non-accountant users.
-- Closing a remediation or implementation item without observable evidence.
+- Testing only when management expects a loss while skipping mandatory annual tests.
+- Assigning goodwill to CGUs that do not receive the expected benefits.
+- Using a budget model without reconciling to approved plans and current condition.
+- Calling a single discount-rate assumption “objective” without evidence or sensitivity.
+- Reversing goodwill impairment or exceeding the no-impairment carrying amount.
+- Leaving a triggered impairment loss unposted while the report is released.
 
-## Required References
+## Files
 
-- `doctrine/accounting-finance-doctrine.md`.
-- `governance/finance-accounting-quality-gate.md`.
-- `docs/reference-manifest.md` for declared reference states.
-- Domain-specific references listed earlier in this skill.
-
-## Examples
-
-- Include at least one normal workflow example for this skill's domain.
-- Include at least one exception, rejection, reversal, stale-source, or reviewer-caveat example where the domain can fail.
+- `references/indicator-checklist.md`
+- `references/value-in-use-workpaper-template.md`
+- `references/advanced-ias36-cgu-and-viu-workpaper.md`
+- `examples/goodwill-cgu-sensitivity.md`
 
 ## Review Metadata
 
-Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+| Field | Value |
+|---|---|
+| Owner role | IFRS impairment reviewer |
+| Reviewer roles | IFRS technical reviewer; independent valuation reviewer; controller |
+| Last reviewed | 2026-08-27 |
+| Next review due | 2026-12-31 |
+| Release state | Active advanced doctrine route; client release requires current source and human review |
+| Caveat | VIU, FVLCD, CGU and sensitivity conclusions are estimate-sensitive. |
+
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

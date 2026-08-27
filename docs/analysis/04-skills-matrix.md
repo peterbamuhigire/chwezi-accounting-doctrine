@@ -1,6 +1,6 @@
 ﻿# Skills Matrix
 
-All 102 SKILL.md files across the 17 categories. Statuses:
+All 107 SKILL.md files across the 17 categories. Statuses:
 
 - **active** - written doctrine content with required sections, source-basis references, implementation rules, examples, and validator coverage.
 - **active (caveated)** - usable for doctrine design and implementation, but client-specific statutory/legal/judgemental output still requires current source-register verification and named reviewer approval.
@@ -19,6 +19,7 @@ All 102 SKILL.md files across the 17 categories. Statuses:
 
 | Skill | Status |
 |---|---|
+| $(ifrs-conceptual-framework-and-accounting-judgements.Name) | active (caveated) |
 | $(ifrs-borrowing-costs-ias23.Name) | active |
 | $(ifrs-employee-benefits-ias19.Name) | active |
 | $(ifrs-financial-instruments.Name) | active |
@@ -33,6 +34,7 @@ All 102 SKILL.md files across the 17 categories. Statuses:
 
 | Skill | Status |
 |---|---|
+| $(ifrs-18-presentation-and-disclosures.Name) | active (caveated) |
 | $(ias-agriculture.Name) | active |
 | $(ias-government-grants.Name) | active |
 | $(ias-impairment.Name) | active |
@@ -78,6 +80,7 @@ All 102 SKILL.md files across the 17 categories. Statuses:
 
 | Skill | Status |
 |---|---|
+| $(advanced-ifrs-consolidated-statements-review.Name) | active (caveated) |
 | $(audit-pbc-and-evidence-management.Name) | active |
 | $(audit-ready-reporting-pack.Name) | active |
 | $(consolidation-and-intercompany.Name) | active |
@@ -95,6 +98,7 @@ All 102 SKILL.md files across the 17 categories. Statuses:
 | $(going-concern-and-viability-assessment.Name) | active |
 | $(integrated-and-sustainability-reporting-s1-s2.Name) | active |
 | $(notes-and-disclosure-pack.Name) | active |
+| $(published-ifrs-financial-statement-analysis.Name) | active (caveated) |
 
 ## 08 tax and statutory
 
@@ -196,8 +200,8 @@ All 102 SKILL.md files across the 17 categories. Statuses:
 
 | Status | Count |
 |---|---:|
-| active | 102 |
+| active | 107 |
 | draft (gap stub) | 0 |
-| **All SKILL.md** | **102** |
+| **All SKILL.md** | **107** |
 
-Last reviewed: 2026-05-25. Next review due: 2026-08-25.
+Last reviewed: 2026-08-27. Next review due: 2026-12-31.

@@ -136,6 +136,20 @@ Last reviewed: 2026-05-12. Next review due: 2026-11-12.
 - Include at least one normal workflow example for this skill's domain.
 - Include at least one exception, rejection, reversal, stale-source, or reviewer-caveat example where the domain can fail.
 
+## Advanced review handoff
+
+For each item, evidence the past event, present legal or constructive obligation,
+probability assessment, best estimate, risk/uncertainty, discounting, expected
+reimbursements, movement, reversal and contingent disclosure. Onerous contracts
+and restructurings require their own recognition tests; future operating losses
+are not a present obligation.
+
+## Evidence Produced
+
+| Category | Artifact | Format | Example |
+|---|---|---|---|
+| Correctness | Provision and contingency workpaper | Markdown decision tree and estimate schedule | `docs/ifrs-workpapers/ias37-<id>.md` |
+
 ## Review Metadata
 
 Last reviewed: 2026-05-15. Next review due: 2026-11-15.
