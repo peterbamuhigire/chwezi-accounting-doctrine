@@ -20,6 +20,8 @@ When finance or accounting scope is detected:
    `skills/10-controls-governance-and-fraud/kaizen-engine-and-product-improvement/SKILL.md`.
 6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>.
 
+For electronic fiscal taxing, load `skills/08-tax-and-statutory/electronic-fiscal-taxing/SKILL.md` and its jurisdiction reference. The older `e-invoicing-and-fiscal-device-integration` skill remains a compatibility route for existing callers.
+
 Do not rely on native skill discovery. Resolve the canonical engine path from the project `AGENTS.md` or global engine-routing table, then read the matching files directly.
 
 ## What this engine governs
@@ -140,7 +142,7 @@ The detailed portfolio study and provenance limits are maintained in the <a href
 
 ## Skill catalogue
 
-There are 107 active skills across 17 groups:
+There are 108 active skills across 17 groups:
 
 | Group | Scope |
 |---|---|

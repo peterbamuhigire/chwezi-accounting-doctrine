@@ -1,6 +1,6 @@
-﻿---
+---
 name: e-invoicing-and-fiscal-device-integration
-description: Use when integrating with fiscal devices and e-invoicing platforms (EFRIS, eTIMS, EBM, etc.): document numbering, signing, transmission, void/credit, and reconciliation to the ledger.
+description: Use for legacy e-invoicing and fiscal-device requests that need compatibility routing; the canonical electronic fiscal taxing doctrine now owns jurisdiction-neutral controls and Uganda EFRIS references.
 status: active
 metadata:
   portable: true
@@ -10,16 +10,20 @@ metadata:
     - codex
 ---
 
-# E Invoicing And Fiscal Device Integration
+# E Invoicing And Fiscal Device Integration (Compatibility Route)
 
 <!-- dual-compat-start -->
 ## Use When
 
-Use when a finance, accounting, reporting, controls, systems, or sector workflow needs country-specific statutory mechanics, fiscal-document controls, tax account mapping, and verified-current source-register use.
+Use when an existing caller names this legacy skill or asks specifically for a
+compatibility review of e-invoicing/fiscal-device integration. For new work,
+load `electronic-fiscal-taxing`, which is the canonical general doctrine.
 
 ## Do Not Use When
 
-Do not use as a substitute for professional judgement, current statutory verification, full standard text, legal advice, actuarial valuation, tax opinion, or named reviewer approval where the engagement requires it.
+Do not use as a substitute for professional judgement, current statutory
+verification, legal advice, tax opinion, or the canonical
+`electronic-fiscal-taxing` skill.
 
 ## Required Inputs
 
@@ -43,7 +47,8 @@ Decision memo, configured policy, posting/reporting map, reconciliation evidence
 
 ## References
 
-Load references/source-basis.md, references/implementation-rules.md, and the canonical doctrine references before applying this skill.
+Load `electronic-fiscal-taxing` plus the retained legacy references only when an
+existing integration must be interpreted or migrated.
 <!-- dual-compat-end -->
 
 ## Prerequisites
@@ -51,8 +56,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - Read doctrine/accounting-finance-doctrine.md.
 - Read doctrine/references/policy-hierarchy.md.
 - Read doctrine/references/ledger-invariants.md.
-- Read references/source-basis.md.
-- Read references/implementation-rules.md.
+- Read `../electronic-fiscal-taxing/SKILL.md` and its selected jurisdiction pack.
 - Confirm framework, jurisdiction, functional currency, reporting period, entity type, and reviewer route.
 
 ## Inputs
@@ -88,9 +92,8 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 
 ## Acceptance Evidence
 
-- references/source-basis.md lists the official or canonical sources used for this skill and assigns source tiers.
-- references/implementation-rules.md translates the source basis into local doctrine rules, blocked-output rules, and review gates.
-- examples/worked-example.md shows a minimal evidence-backed artefact, posting/reporting impact, reconciliation, and reviewer route.
+- The canonical skill and its selected references are loaded for new work.
+- Existing callers can still find the retained source-basis and implementation rules.
 - The skill is active for doctrine use, but client-specific statutory/legal final output still requires current source-register verification and reviewer approval.
 
 ## Anti-Patterns
@@ -114,9 +117,9 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 |---|---|
 | Owner role | Doctrine owner |
 | Reviewer roles | Tax reviewer; country-pack owner; integration owner where fiscal devices are affected |
-| Last reviewed | 2026-05-25 |
-| Next review due | 2026-11-25 |
+| Last reviewed | 2026-08-28 |
+| Next review due | 2027-02-28 |
 | Release state | Active doctrine content; client-specific release remains subject to reviewer approval and verified-current statutory sources where applicable. |
 | Caveat | No human reviewer name has been fabricated. Record named reviewer sign-off in the engagement or release log when obtained. |
 
-Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+Last reviewed: 2026-08-28. Next review due: 2027-02-28.
