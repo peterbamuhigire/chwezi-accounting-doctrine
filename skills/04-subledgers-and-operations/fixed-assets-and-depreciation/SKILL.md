@@ -131,3 +131,6 @@ Load the required references and examples listed below before implementation or 
 | Caveat | This skill separates accounting depreciation from statutory tax allowances; final tax treatment requires source-register support. |
 
 Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+
+For maintenance history, component condition, life-extension decisions, and
+risk-cost-performance evidence, load [asset maintenance and reliability evidence](references/asset-maintenance-and-reliability-evidence.md).

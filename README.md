@@ -140,6 +140,10 @@ The August 2026 book intake was used as a source of improvement patterns, not as
 
 The detailed portfolio study and provenance limits are maintained in the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>. The local accounting adoption record is `docs/continuous-improvement/kaizen-adoption-2026-08.md`.
 
+## September 2026 book-driven Kaizen wave
+
+See [`docs/continuous-improvement/book-driven-kaizen-2026-09-01.md`](docs/continuous-improvement/book-driven-kaizen-2026-09-01.md) for maintenance reliability, AI data lineage, and civil-society finance resilience references.
+
 ## Skill catalogue
 
 There are 108 active skills across 17 groups:

@@ -120,3 +120,5 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 | Caveat | No human reviewer name has been fabricated. Record named reviewer sign-off in the engagement or release log when obtained. |
 
 Last reviewed: 2026-05-25. Next review due: 2026-11-25.
+
+For NGO and civil-society finance resilience, load [civil-society cyber-resilience controls](references/ngo-cyber-resilience-controls.md).
