@@ -152,6 +152,7 @@ Use only when definitions are comparable and disclose the formula:
 - `references/analysis-metric-and-risk-workpaper.md`
 - `references/audience-advice-matrix.md`
 - `examples/published-statement-review.md`
+- `../../../doctrine/references/book-driven-value-cash-and-working-capital.md` - cash, valuation, working capital, and currentness boundary.
 
 ## Review Metadata
 
@@ -165,4 +166,3 @@ Use only when definitions are comparable and disclose the formula:
 | Caveat | Published-statement analysis is decision support, not audit assurance, legal advice or investment advice. |
 
 Last reviewed: 2026-08-27. Next review due: 2026-12-31.
-

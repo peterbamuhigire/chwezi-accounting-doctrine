@@ -105,9 +105,18 @@ system). A product cannot inherit a passing result from the engine.
 
 If a reconciliation workaround removes a repeated manual step but weakens the audit trail, reject the change, retain the control, and test an automated evidence-preserving alternative.
 
+## Mandatory Digital Research currentness gate
+
+Every Kaizen cycle must begin with `digital-research-skills` source evaluation
+and source verification. Record scope, dates, freshness class, support status,
+uncertainty, and review date for current IFRS, tax, statutory, regulatory,
+technology, control, and lifecycle claims; quarantine unsupported claims as
+`NOT_ASSESSED`. Apply the [portfolio Kaizen currentness gate](../../../../digital-research-skills/docs/continuous-improvement/kaizen-currentness-gate.md).
+
 ## References
 
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
-- Portfolio standard: `C:\wamp64\www\digital-research-engine\docs\continuous-improvement\portfolio-kaizen-standard-2026-08.md`
+- Portfolio standard: resolve `digital-research-skills` through the global engine-routing table and read its `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
+- [Book-driven value, cash, and working capital](../../../doctrine/references/book-driven-value-cash-and-working-capital.md) - durable finance synthesis and current IFRS/source gate.
 - `skills/06-close-consolidation-and-reporting/finance-module-audit/`
 - `governance/finance-accounting-quality-gate.md`
