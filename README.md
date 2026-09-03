@@ -8,6 +8,16 @@ It provides shared rules and review paths that help teams preserve balanced post
 
 Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
+## Capability map
+
+| Need | Primary route |
+|---|---|
+| Reporting basis, IFRS, IPSAS, and financial statements | `skills/01-foundations/`, `skills/02-ifrs-core-standards/`, and `skills/06-close-consolidation-and-reporting/` |
+| Ledger, subledger, sales, purchases, payroll, inventory, and treasury | `skills/04-subledgers-and-operations/` and `skills/05-receivables-payables-and-treasury/` |
+| Tax, statutory, donor, public-sector, and sector accounting | `skills/08-tax-and-statutory/`, `skills/11-sector-and-fund-accounting/`, and related routes |
+| Controls, fraud, audit evidence, close, and reconciliation | `skills/10-controls-governance-and-fraud/` and `skills/06-close-consolidation-and-reporting/` |
+| Finance systems, data, integrations, UX, and AI governance | `skills/14-systems-integration-and-data/`, `skills/16-ux-and-presentation/`, and `skills/17-ai-automation-and-emerging/` |
+
 ## Start here
 
 When finance or accounting scope is detected:
