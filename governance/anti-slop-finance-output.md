@@ -68,4 +68,24 @@ Do not remove repeated ledger lines, source keys, reconciliation fields, or cont
 they preserve auditability. Record the functional reason. Cut narrative repetition that adds no new
 financial evidence or decision.
 
+### Impeccable-derived AS overlay
+
+Apply AS1-AS7 to dashboards, board packs, presentations, and rendered finance outputs. In finance
+narrative use AS1, AS3, AS5, and AS6; mark visual checks `not_applicable` when no rendered artifact
+is in scope.
+
+| ID | Finance overlay test |
+|---|---|
+| AS1 | Is the reporting layout, colour, type, or copy pattern justified by the entity and decision? |
+| AS2 | Do badges, hero metrics, chips, or section numbers clarify a control/result or decorate it? |
+| AS3 | Do repeated tables/cards distinguish balances, movements, and controls rather than clone a template? |
+| AS4 | Does motion, glow, or gradient communicate a real changing status or control state? |
+| AS5 | Are examples, assets, and figures tied to entity, period, source key, and reporting basis? |
+| AS6 | Are buzzwords, em-dash cadence, aphoristic contrasts, and theatrical framing absent from judgement? |
+| AS7 | Is the rendered output readable, contrasted, complete, and free of hidden or clipped evidence? |
+
+Purple gradients, glassmorphism, neon glow, AI-beige defaults, decorative editorial scaffolding,
+and decorative motion are no-ship choices for visual finance outputs. Preserve repeated ledger
+lines, source keys, reconciliation fields, and control assertions when they preserve auditability.
+
 Use `docs/quality-gates/world-class-finance-release-gate.md` before marking any finance artefact released.
