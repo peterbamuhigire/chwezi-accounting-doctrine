@@ -118,5 +118,6 @@ technology, control, and lifecycle claims; quarantine unsupported claims as
 - [Local adoption plan](../../../docs/continuous-improvement/kaizen-adoption-2026-08.md)
 - Portfolio standard: resolve `digital-research-skills` through the global engine-routing table and read its `docs/continuous-improvement/portfolio-kaizen-standard-2026-08.md`.
 - [Book-driven value, cash, and working capital](../../../doctrine/references/book-driven-value-cash-and-working-capital.md) - durable finance synthesis and current IFRS/source gate.
+- [Book-driven Kaizen Wave 3](references/book-driven-kaizen-wave-3-2026-09-02.md) - metric lineage, exception evidence, change control, segregation, approval, and automation rollback.
 - `skills/06-close-consolidation-and-reporting/finance-module-audit/`
 - `governance/finance-accounting-quality-gate.md`
