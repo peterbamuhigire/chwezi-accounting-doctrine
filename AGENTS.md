@@ -70,3 +70,8 @@ Route current or uncertain external claims through the Digital Research Engine.
 Route visual and presentation authority to the Design System Engine. Keep
 accounting content, ledger invariants, source-state semantics, and finance
 control evidence in this repository.
+
+For human-facing finance prose, apply Digital Research's
+`docs/continuous-improvement/machine-errors-editorial-gate-2026-09-03.md` and record ME1-ME7
+findings or documented accounting exceptions before release. Missing source, reviewer, or rendered
+evidence remains `NOT ASSESSED`.

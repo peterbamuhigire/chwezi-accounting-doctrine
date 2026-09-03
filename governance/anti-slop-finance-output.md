@@ -49,4 +49,23 @@ Chwezi standard:
 
 ## Release Gate
 
+## Machine-error editorial gate (ME1-ME7)
+
+Apply Digital Research's dated machine-error gate to finance narratives, control explanations,
+management commentary, and audit findings:
+
+| ID | Finance adaptation |
+|---|---|
+| ME1 | Does the sentence add a different balance, variance, control result, or decision? |
+| ME2 | Is a balanced comparison supported by the accounting basis, or is it decorative symmetry? |
+| ME3 | Can the reviewer act from the existing note without another restatement? |
+| ME4 | Does the wording exceed the evidence, period, reporting basis, or reviewer state? |
+| ME5 | Is the example tied to the entity, account, period, source key, or journal? |
+| ME6 | Has the same advisory phrase become a repeated finance-reporting mannerism? |
+| ME7 | Does the paragraph add a reconciliation result, control judgement, assumption, or release consequence? |
+
+Do not remove repeated ledger lines, source keys, reconciliation fields, or control assertions when
+they preserve auditability. Record the functional reason. Cut narrative repetition that adds no new
+financial evidence or decision.
+
 Use `docs/quality-gates/world-class-finance-release-gate.md` before marking any finance artefact released.
