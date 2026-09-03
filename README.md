@@ -1,6 +1,6 @@
 # Chwezi Accounting and Finance Doctrine
 
-This engine provides the canonical accounting and finance doctrine for the Chwezi skill-engine portfolio. It governs the accounting concepts, reporting bases, controls, evidence requirements, and finance-system patterns needed when work touches money, financial reporting, or statutory outputs.
+This engine provides the canonical accounting and finance doctrine for the Chwezi skill-engine portfolio. It turns finance-touching work into bounded, reconciled, source-traceable decisions and controls, covering reporting bases, ledgers, statutory outputs, evidence, approvals, exceptions, and finance-system patterns without allowing polished presentation to conceal an unresolved accounting or control detail.
 
 Accountants, controllers, auditors, finance-system teams, and other product or delivery engines use it for ledgers and subledgers, IFRS, IFRS for SMEs, IPSAS, tax and statutory processes, treasury, budgeting, reconciliations, close, reporting, migration, audit evidence, controls, and finance UX. It also gives non-finance teams a route for handling finance-touching websites, software, proposals, business plans, dashboards, databases, and runbooks.
 

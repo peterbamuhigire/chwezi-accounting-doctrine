@@ -50,3 +50,27 @@ Chwezi standard:
 ## Release Gate
 
 Use `docs/quality-gates/world-class-finance-release-gate.md` before marking any finance artefact released.
+
+## Machine-error and visual-overlay coverage
+
+Apply the shared editorial gate to every finance output and record the result:
+
+| ID | Finance check |
+|---|---|
+| ME1 | Does the paragraph add a transaction, control, exception, decision, or evidence item? |
+| ME2 | Is repeated structure required by the ledger, reconciliation, or sign-off model? |
+| ME3 | Can the controller act without another restatement? |
+| ME4 | Does the assertion stay within the source, calculation, framework, and review evidence? |
+| ME5 | Is the example tied to an entity, period, account, document, or source key? |
+| ME6 | Has generic advisory language spread across the report or dashboard? |
+| ME7 | Does the section change a posting, control, reporting, release, or recovery decision? |
+| AS1 | Is the presentation choice justified by the finance task and reporting audience? |
+| AS2 | Do labels, badges, metrics, and summary cards clarify a control or decision? |
+| AS3 | Do repeated tables distinguish accounts, periods, states, or exceptions? |
+| AS4 | Does any motion or visual emphasis communicate a finance state or task? |
+| AS5 | Are account names, values, examples, and assets real, test-labelled, or traceable? |
+| AS6 | Is the language free of inflated claims, filler, and decorative framing? |
+| AS7 | Is the rendered output readable, complete, accessible, and free of clipping? |
+
+For text-only finance outputs, AS2, AS4, and AS7 may be recorded as
+`not_applicable`; an unavailable render or reviewer check remains `NOT_ASSESSED`.
