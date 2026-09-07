@@ -263,3 +263,15 @@ Last reviewed: 2026-08-04. Next review due: 2026-11-04.
 
 Any work affecting typography, colour, layout, grid, visual identity, UI screens, or document presentation must also route to the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>. Read its README and doctrine, and load only the relevant skills. Content, accounting structure, and control evidence remain governed by this engine; visual presentation is governed by the design engine.
 <!-- /design-system-skills:trigger -->
+
+## September 2026 Kaizen execution update
+
+The first bounded accounting wave adds a synthetic source-to-report fixture
+and `tools/validate_source_to_report.py`. It checks source-to-journal lineage,
+period state, duplicate handling, correction history and reconciliation fields;
+the focused suite passes 6 tests. Corrections preserve the original posting
+and use an authorised compensating or reversal route; only disposable
+migration targets may be reset during a lab exercise. This is fixture evidence,
+not statutory, audit, tax, client-ledger or professional acceptance. The next
+step is controller re-performance of a named synthetic batch before any wider
+close, migration or automation experiment.

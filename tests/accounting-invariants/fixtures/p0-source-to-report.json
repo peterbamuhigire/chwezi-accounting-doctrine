@@ -1,0 +1,7 @@
+{
+  "fixture_label": "FICTIONAL TEST DATA",
+  "sources": [{"id": "SRC-001", "period": "2026-08"}],
+  "journals": [{"id": "JRN-001", "source_id": "SRC-001", "lines": [{"account": "cash", "debit": 100, "credit": 0}, {"account": "sales", "debit": 0, "credit": 100}]}],
+  "controller_review": {"role": "controller", "decision": "accepted", "date": "2026-09-07"},
+  "report_total": 100
+}
