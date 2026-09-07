@@ -20,6 +20,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Start here
 
+For multi-phase work, read the dated [runtime-agnostic orchestration contract](docs/operations/runtime-agnostic-orchestration-2026-09-07.md). It defines bounded packages, accounting checkpoints, context hygiene, least agency, and sanitised handling of imported content for Claude and Codex without changing either runtime's capabilities.
+
 When finance or accounting scope is detected:
 
 1. Read this README.
