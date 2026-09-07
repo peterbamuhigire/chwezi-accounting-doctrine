@@ -52,9 +52,9 @@ Each consumer engine records its adopted doctrine version in `<engine>/doctrine/
 - Affected engine files
 - Unresolved gaps
 
-## Mirror sync
+## Canonical-reference adoption
 
-When this master tree changes, the mirror script at `integration/mirror.ps1` copies the changed files to every consumer engine. The script defaults to the repository root and can be pointed at another source with `-Master`. After the sync, the adoption record is updated.
+The mirror model is retired. Consumers resolve this engine through the global routing table and read the canonical files in place. On a version change, inspect affected contracts, update the consumer's adoption record and run its gates. Do not run historical mirror tooling or copy doctrine files unless the user explicitly requests a separate migration.
 
 ## Review cadence
 

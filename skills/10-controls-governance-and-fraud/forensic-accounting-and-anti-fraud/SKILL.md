@@ -1,6 +1,6 @@
 ﻿---
 name: forensic-accounting-and-anti-fraud
-description: Use when scoping anti-fraud controls and forensic analytics: red-flag library, Benford analysis, journal-entry testing, vendor-employee match, and incident-response playbook.
+description: "Use when scoping anti-fraud controls and forensic analytics: red-flag library, Benford analysis, journal-entry testing, vendor-employee match, and incident-response playbook."
 status: active
 metadata:
   portable: true

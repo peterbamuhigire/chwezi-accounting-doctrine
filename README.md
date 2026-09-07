@@ -202,6 +202,9 @@ The <a href="https://github.com/peterbamuhigire/business-plan-skills" target="_b
 
 Run the doctrine gate from the repository root:
 
+The parser check requires Python with PyYAML; missing tooling fails the gate.
+Latest repair and evidence limits: [2026-09-06 Kaizen](docs/audits/2026-09-06-kaizen.md).
+
 ```powershell
 .\tools\validate-doctrine.ps1
 ```
@@ -230,7 +233,7 @@ Release decisions are `pass`, `pass-with-caveats`, or `fail`. A passing validato
 chwezi-accounting-doctrine/
 |-- README.md
 |-- doctrine/                         # canonical doctrine, references, source registers, examples
-|-- skills/                           # 103 active accounting and finance skills
+|-- skills/                           # Active accounting and finance skills; discover from filesystem
 |-- governance/                       # quality gates, referencing rules, anti-patterns, backlog
 |-- docs/                             # router map, source registers, release gates, Kaizen records
 |-- examples/                         # reproducible evidence and transaction packs

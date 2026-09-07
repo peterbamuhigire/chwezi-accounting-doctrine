@@ -1,6 +1,6 @@
 ﻿---
 name: fintech-and-payments-pack
-description: Use for fintechs, mobile-money operators, agents, and PSPs: float accounts, trust accounts, settlement reconciliation, scheme/interchange fees, and customer-money safeguarding.
+description: "Use for fintechs, mobile-money operators, agents, and PSPs: float accounts, trust accounts, settlement reconciliation, scheme/interchange fees, and customer-money safeguarding."
 status: active
 metadata:
   portable: true

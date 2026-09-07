@@ -1,6 +1,6 @@
 ﻿---
 name: finance-mobile-and-offline-patterns
-description: Use when shipping finance flows on mobile or in low-bandwidth/offline settings: deferred posting queues, conflict resolution, evidence capture, and reconciliation.
+description: "Use when shipping finance flows on mobile or in low-bandwidth/offline settings: deferred posting queues, conflict resolution, evidence capture, and reconciliation."
 status: active
 metadata:
   portable: true

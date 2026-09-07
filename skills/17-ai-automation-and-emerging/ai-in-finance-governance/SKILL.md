@@ -1,6 +1,6 @@
 ﻿---
 name: ai-in-finance-governance
-description: Use when applying AI/LLM features to finance workflows (reconciliation suggestions, narrative generation, coding hints): model registry, human-in-the-loop checkpoints, evaluation, and audit trail.
+description: "Use when applying AI/LLM features to finance workflows (reconciliation suggestions, narrative generation, coding hints): model registry, human-in-the-loop checkpoints, evaluation, and audit trail."
 status: active
 metadata:
   portable: true

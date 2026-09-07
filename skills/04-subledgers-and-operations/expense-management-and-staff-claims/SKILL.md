@@ -1,6 +1,6 @@
 ﻿---
 name: expense-management-and-staff-claims
-description: Use when designing employee expense, advance, and claim workflows: receipt capture, mileage, per diem, VAT recovery, multi-currency, approval, and reimbursement posting.
+description: "Use when designing employee expense, advance, and claim workflows: receipt capture, mileage, per diem, VAT recovery, multi-currency, approval, and reimbursement posting."
 status: active
 metadata:
   portable: true

@@ -1,6 +1,6 @@
 ﻿---
 name: ifrs-segment-reporting-ifrs8
-description: Use when an entity has publicly traded debt/equity or chooses to disclose operating segments under IFRS 8: chief operating decision maker identification, aggregation criteria, and reconciliations.
+description: "Use when an entity has publicly traded debt/equity or chooses to disclose operating segments under IFRS 8: chief operating decision maker identification, aggregation criteria, and reconciliations."
 status: active
 metadata:
   portable: true

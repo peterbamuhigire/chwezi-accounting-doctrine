@@ -1,6 +1,6 @@
 ﻿---
 name: project-and-contract-accounting
-description: Use when revenue and cost are recognised over time (POC) or at a point in time under IFRS 15: performance obligations, input vs output methods, WIP, and contract assets/liabilities.
+description: "Use when revenue and cost are recognised over time (POC) or at a point in time under IFRS 15: performance obligations, input vs output methods, WIP, and contract assets/liabilities."
 status: active
 metadata:
   portable: true

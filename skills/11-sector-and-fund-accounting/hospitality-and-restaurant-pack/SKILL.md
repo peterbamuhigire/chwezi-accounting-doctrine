@@ -1,6 +1,6 @@
 ﻿---
 name: hospitality-and-restaurant-pack
-description: Use for hotels, lodges, and restaurants: room nights, package allocations, F&B recipe costing, tips and service-charge handling, and tour-operator commissions.
+description: "Use for hotels, lodges, and restaurants: room nights, package allocations, F&B recipe costing, tips and service-charge handling, and tour-operator commissions."
 status: active
 metadata:
   portable: true

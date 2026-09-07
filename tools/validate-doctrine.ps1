@@ -15,6 +15,14 @@ function Resolve-DoctrineRepoRoot {
 
 function Get-ValidationState {
   param([object[]]$Results)
+  if (-not $Results -or @($Results).Count -eq 0) { return 'fail' }
+  foreach ($result in $Results) {
+    if ($null -eq $result -or $result.state -isnot [string] -or
+        $result.state -cnotin @('pass', 'pass-with-caveats', 'fail') -or
+        $result.exit_code -isnot [int] -or $result.exit_code -ne 0) {
+      return 'fail'
+    }
+  }
   if ($Results | Where-Object { $_.state -eq 'fail' }) { return 'fail' }
   if ($Results | Where-Object { $_.state -eq 'pass-with-caveats' }) { return 'pass-with-caveats' }
   return 'pass'
@@ -32,6 +40,7 @@ $root = Resolve-DoctrineRepoRoot $RepoRoot
 $checks = @(
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-mojibake.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-skill-contracts.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-frontmatter-yaml.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-advanced-ifrs-readiness.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-source-register.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-links.ps1'); arguments = @() },
@@ -39,7 +48,8 @@ $checks = @(
   [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'update-router-map.ps1'); arguments = @('-Check') },
   [pscustomobject]@{ path = (Join-Path $root 'tests\accounting-invariants\scripts\Test-AccountingInvariants.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $root 'tests\router-map\scripts\Test-RouterMapNegativeControls.ps1'); arguments = @() },
-  [pscustomobject]@{ path = (Join-Path $root 'tests\source-register\scripts\Test-SourceRegisterNegativeControls.ps1'); arguments = @() }
+  [pscustomobject]@{ path = (Join-Path $root 'tests\source-register\scripts\Test-SourceRegisterNegativeControls.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\validation-state\scripts\Test-ValidationStateNegativeControls.ps1'); arguments = @() }
 )
 $results = New-Object System.Collections.ArrayList
 $psExe = Get-PowerShellExe

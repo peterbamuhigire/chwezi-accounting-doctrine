@@ -1,6 +1,6 @@
 ﻿---
 name: ifrs-business-combinations-ifrs3
-description: Use when accounting for business combinations under IFRS 3 / IFRS for SMEs Section 19: acquisition method, identifiable assets/liabilities, goodwill, NCI measurement, and bargain purchases.
+description: "Use when accounting for business combinations under IFRS 3 / IFRS for SMEs Section 19: acquisition method, identifiable assets/liabilities, goodwill, NCI measurement, and bargain purchases."
 status: active
 metadata:
   portable: true

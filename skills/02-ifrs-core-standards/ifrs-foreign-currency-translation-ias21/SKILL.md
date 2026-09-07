@@ -1,6 +1,6 @@
 ﻿---
 name: ifrs-foreign-currency-translation-ias21
-description: Use when translating foreign-currency transactions and foreign operations under IAS 21 / IFRS for SMEs Section 30: spot vs average rates, monetary vs non-monetary items, and CTA reserve treatment.
+description: "Use when translating foreign-currency transactions and foreign operations under IAS 21 / IFRS for SMEs Section 30: spot vs average rates, monetary vs non-monetary items, and CTA reserve treatment."
 status: active
 metadata:
   portable: true

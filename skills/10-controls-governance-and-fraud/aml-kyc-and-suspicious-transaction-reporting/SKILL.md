@@ -1,6 +1,6 @@
 ﻿---
 name: aml-kyc-and-suspicious-transaction-reporting
-description: Use when finance touches AML/CFT scope: customer due diligence, sanctions screening, suspicious-transaction triggers, regulator reporting, and record-keeping.
+description: "Use when finance touches AML/CFT scope: customer due diligence, sanctions screening, suspicious-transaction triggers, regulator reporting, and record-keeping."
 status: active
 metadata:
   portable: true

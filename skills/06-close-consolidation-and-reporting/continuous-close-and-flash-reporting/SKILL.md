@@ -1,6 +1,6 @@
 ﻿---
 name: continuous-close-and-flash-reporting
-description: Use when designing a continuous-close cadence: subledger lock-by-day-N, flash P&L, sub-process completion telemetry, and exception escalation.
+description: "Use when designing a continuous-close cadence: subledger lock-by-day-N, flash P&L, sub-process completion telemetry, and exception escalation."
 status: active
 metadata:
   portable: true

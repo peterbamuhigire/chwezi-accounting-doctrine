@@ -1,6 +1,6 @@
 ﻿---
 name: ifrs-share-based-payment-ifrs2
-description: Use when recognising equity-settled or cash-settled share-based payments under IFRS 2 / IFRS for SMEs Section 26: grant-date fair value, vesting conditions, modifications, and cancellations.
+description: "Use when recognising equity-settled or cash-settled share-based payments under IFRS 2 / IFRS for SMEs Section 26: grant-date fair value, vesting conditions, modifications, and cancellations."
 status: active
 metadata:
   portable: true

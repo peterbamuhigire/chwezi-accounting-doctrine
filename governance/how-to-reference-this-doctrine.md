@@ -1,6 +1,19 @@
 ﻿# How to Reference This Doctrine
 
-Each consumer engine references the doctrine in a slightly different way. This file gives the exact pattern.
+## Active contract: reference in place
+
+The historical mirror instructions below are superseded and must not be
+executed. Resolve `chwezi-accounting-doctrine` from the user's canonical engine
+table (`C:/wamp64/www/chwezi-accounting-doctrine` for this portfolio), then read
+`README.md`, `doctrine/accounting-finance-doctrine.md`, the relevant specialist
+and `governance/finance-accounting-quality-gate.md` directly in that checkout.
+Consumer projects record adopted version, scope, owner, reviewer and unresolved
+gaps; they do not copy the doctrine or skills. Revalidate affected consumer
+outputs when a governing contract changes. The financial trigger conditions
+and consumer-specific quality obligations below still apply; mirrored layouts
+and sync/commit instructions are retained solely as migration history.
+
+## Historical mirror reference (inactive)
 
 ## Common Pattern Across All Four Engines
 

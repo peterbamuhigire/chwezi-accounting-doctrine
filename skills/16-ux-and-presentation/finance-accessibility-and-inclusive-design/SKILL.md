@@ -1,6 +1,6 @@
 ﻿---
 name: finance-accessibility-and-inclusive-design
-description: Use when ensuring finance UI meets accessibility standards: keyboard parity, screen-reader semantics for ledger tables, colour-independent semantic states, and localisation/RTL.
+description: "Use when ensuring finance UI meets accessibility standards: keyboard parity, screen-reader semantics for ledger tables, colour-independent semantic states, and localisation/RTL."
 status: active
 metadata:
   portable: true

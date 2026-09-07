@@ -1,6 +1,6 @@
 ﻿---
 name: ifrs-intangible-assets-ias38
-description: Use when recognising and measuring intangible assets under IAS 38 / IFRS for SMEs Section 18: research vs development phase, internally generated intangibles, useful-life assessment, and amortisation.
+description: "Use when recognising and measuring intangible assets under IAS 38 / IFRS for SMEs Section 18: research vs development phase, internally generated intangibles, useful-life assessment, and amortisation."
 status: active
 metadata:
   portable: true

@@ -177,7 +177,7 @@ A controlled glossary is in `references/terminology-glossary.md`. Use these term
 
 ## 13. Versioning and change control
 
-This doctrine is versioned with semver. The current version is at the top of this file. Every breaking change requires a major-version bump, a CHANGELOG entry, a deprecation note in `integration/deprecation-list.md`, and a mirror sync to every consumer engine. See `references/versioning-and-changelog.md`.
+This doctrine is versioned with semver. The current version is at the top of this file. Every breaking change requires a major-version bump, a CHANGELOG entry, a deprecation note in `integration/deprecation-list.md`, and a reviewed adoption update in affected consumers. Consumers reference this canonical checkout; mirror sync is retired. See `references/versioning-and-changelog.md`.
 
 Every consumer engine adoption records: engine name, doctrine version adopted, adoption date, owner, reviewer, affected files, and any unresolved gaps.
 

@@ -1,6 +1,6 @@
 ﻿---
 name: chart-of-accounts-design-and-governance
-description: Use when designing, reviewing, or governing the Chart of Accounts: account taxonomy, normal-balance enforcement, control-account ownership, dimension requirements, direct-posting permissions, evidence requirements, and CoA change control.
+description: "Use when designing, reviewing, or governing the Chart of Accounts: account taxonomy, normal-balance enforcement, control-account ownership, dimension requirements, direct-posting permissions, evidence requirements, and CoA change control."
 status: active
 metadata:
   portable: true

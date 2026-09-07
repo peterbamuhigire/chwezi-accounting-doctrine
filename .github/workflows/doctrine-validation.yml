@@ -18,9 +18,22 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run validation harness
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install parser dependency and test it
         shell: powershell
         run: |
-          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools\validate-doctrine.ps1 -ReportPath doctrine-validation-report.json
+          python -m pip install pyyaml
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s tests -p 'test_*.py'
+          exit $LASTEXITCODE
+
+      - name: Run strict validation harness
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools\validate-doctrine.ps1 -Strict -ReportPath doctrine-validation-report.json
 
       - name: Upload validation report
         uses: actions/upload-artifact@v4

@@ -1,6 +1,6 @@
 ﻿---
 name: finance-cybersecurity-controls
-description: Use when applying cybersecurity controls to finance systems: identity, MFA, privileged access for posting/approval, secret rotation, and payment-system hardening.
+description: "Use when applying cybersecurity controls to finance systems: identity, MFA, privileged access for posting/approval, secret rotation, and payment-system hardening."
 status: active
 metadata:
   portable: true

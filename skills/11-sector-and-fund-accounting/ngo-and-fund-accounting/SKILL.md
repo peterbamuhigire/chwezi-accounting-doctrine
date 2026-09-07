@@ -1,6 +1,6 @@
 ﻿---
 name: ngo-and-fund-accounting
-description: Use for NGO/not-for-profit accounting: donor-restricted vs unrestricted funds, project budgets, multi-currency grants, IPSAS/IFRS choice, and donor-specific reporting.
+description: "Use for NGO/not-for-profit accounting: donor-restricted vs unrestricted funds, project budgets, multi-currency grants, IPSAS/IFRS choice, and donor-specific reporting."
 status: active
 metadata:
   portable: true

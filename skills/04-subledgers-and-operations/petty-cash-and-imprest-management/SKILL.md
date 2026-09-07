@@ -1,6 +1,6 @@
 ﻿---
 name: petty-cash-and-imprest-management
-description: Use when designing petty cash and imprest float controls: float size, replenishment, custodian rotation, surprise counts, evidence requirements, and ledger postings.
+description: "Use when designing petty cash and imprest float controls: float size, replenishment, custodian rotation, surprise counts, evidence requirements, and ledger postings."
 status: active
 metadata:
   portable: true

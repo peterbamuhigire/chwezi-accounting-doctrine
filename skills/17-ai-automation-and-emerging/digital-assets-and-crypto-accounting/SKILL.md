@@ -1,6 +1,6 @@
 ﻿---
 name: digital-assets-and-crypto-accounting
-description: Use when an entity holds or transacts in digital assets: classification (IAS 38 vs inventory vs financial instrument), measurement, custody, and disclosure.
+description: "Use when an entity holds or transacts in digital assets: classification (IAS 38 vs inventory vs financial instrument), measurement, custody, and disclosure."
 status: active
 metadata:
   portable: true

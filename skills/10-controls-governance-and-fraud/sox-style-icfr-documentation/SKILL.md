@@ -1,6 +1,6 @@
 ﻿---
 name: sox-style-icfr-documentation
-description: Use when an entity needs SOX-style ICFR-equivalent documentation: process narratives, risk-control matrices, walkthroughs, and design/operating-effectiveness testing.
+description: "Use when an entity needs SOX-style ICFR-equivalent documentation: process narratives, risk-control matrices, walkthroughs, and design/operating-effectiveness testing."
 status: active
 metadata:
   portable: true

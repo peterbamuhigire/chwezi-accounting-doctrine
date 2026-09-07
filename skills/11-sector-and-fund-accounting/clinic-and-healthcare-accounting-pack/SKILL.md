@@ -1,6 +1,6 @@
 ﻿---
 name: clinic-and-healthcare-accounting-pack
-description: Use for clinics, hospitals, and health-insurance billing: patient accounts, payer mix (cash/insurance/NHIF/HMO), claim adjudication, and revenue recognition under IFRS 15.
+description: "Use for clinics, hospitals, and health-insurance billing: patient accounts, payer mix (cash/insurance/NHIF/HMO), claim adjudication, and revenue recognition under IFRS 15."
 status: active
 metadata:
   portable: true

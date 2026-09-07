@@ -1,6 +1,6 @@
 ﻿---
 name: government-procurement-and-fiscal-controls
-description: Use when finance interfaces with public procurement and fiscal controls: PPDA processes, vote books, commitment accounting, and treasury single account flows.
+description: "Use when finance interfaces with public procurement and fiscal controls: PPDA processes, vote books, commitment accounting, and treasury single account flows."
 status: active
 metadata:
   portable: true

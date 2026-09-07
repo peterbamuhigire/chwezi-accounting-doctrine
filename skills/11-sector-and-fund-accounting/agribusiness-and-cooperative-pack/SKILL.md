@@ -1,6 +1,6 @@
 ﻿---
 name: agribusiness-and-cooperative-pack
-description: Use for agribusiness, smallholder out-grower schemes, and cooperatives: biological assets (IAS 41), member equity, patronage refunds, and crop-cycle costing.
+description: "Use for agribusiness, smallholder out-grower schemes, and cooperatives: biological assets (IAS 41), member equity, patronage refunds, and crop-cycle costing."
 status: active
 metadata:
   portable: true

@@ -1,6 +1,6 @@
 ﻿---
 name: professional-services-time-and-materials
-description: Use for time-and-materials and fixed-fee professional services: utilisation, realisation, WIP at standard vs actual rates, and unbilled receivables.
+description: "Use for time-and-materials and fixed-fee professional services: utilisation, realisation, WIP at standard vs actual rates, and unbilled receivables."
 status: active
 metadata:
   portable: true

@@ -1,6 +1,6 @@
 ﻿---
 name: bank-feed-and-payment-gateway-integration
-description: Use when integrating bank feeds, payment gateways, and mobile-money APIs: feed contracts, schema drift, replay, deduplication, and posting safety.
+description: "Use when integrating bank feeds, payment gateways, and mobile-money APIs: feed contracts, schema drift, replay, deduplication, and posting safety."
 status: active
 metadata:
   portable: true

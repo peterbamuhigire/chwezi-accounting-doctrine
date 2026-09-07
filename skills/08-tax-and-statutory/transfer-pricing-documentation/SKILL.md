@@ -1,6 +1,6 @@
 ﻿---
 name: transfer-pricing-documentation
-description: Use when documenting related-party transactions for transfer-pricing purposes: master file, local file, CbC reporting thresholds, and benchmarking evidence.
+description: "Use when documenting related-party transactions for transfer-pricing purposes: master file, local file, CbC reporting thresholds, and benchmarking evidence."
 status: active
 metadata:
   portable: true

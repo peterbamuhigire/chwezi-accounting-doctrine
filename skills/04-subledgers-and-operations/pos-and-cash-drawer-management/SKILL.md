@@ -1,6 +1,6 @@
 ﻿---
 name: pos-and-cash-drawer-management
-description: Use when designing point-of-sale cash-drawer flows: opening float, X/Z reads, blind cash-up, variance triage, till-to-bank, and POS-to-GL reconciliation.
+description: "Use when designing point-of-sale cash-drawer flows: opening float, X/Z reads, blind cash-up, variance triage, till-to-bank, and POS-to-GL reconciliation."
 status: active
 metadata:
   portable: true

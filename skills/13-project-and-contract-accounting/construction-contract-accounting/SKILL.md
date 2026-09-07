@@ -1,6 +1,6 @@
 ﻿---
 name: construction-contract-accounting
-description: Use for construction-style contracts: retentions, variations, claims, liquidated damages, advance payments, milestone certificates, and subcontractor accruals.
+description: "Use for construction-style contracts: retentions, variations, claims, liquidated damages, advance payments, milestone certificates, and subcontractor accruals."
 status: active
 metadata:
   portable: true

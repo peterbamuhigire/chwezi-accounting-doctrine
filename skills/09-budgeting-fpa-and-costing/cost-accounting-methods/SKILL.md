@@ -1,6 +1,6 @@
 ﻿---
 name: cost-accounting-methods
-description: Use when selecting and applying cost-accounting methods: standard costing, job-order, process, ABC, throughput, and absorption vs marginal costing.
+description: "Use when selecting and applying cost-accounting methods: standard costing, job-order, process, ABC, throughput, and absorption vs marginal costing."
 status: active
 metadata:
   portable: true

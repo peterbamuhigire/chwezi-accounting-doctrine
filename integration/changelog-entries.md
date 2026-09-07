@@ -1,5 +1,16 @@
 # Changelog Entries
 
+## Unreleased local maintenance — 2026-09-06
+
+Fail-closed aggregate results and actual YAML frontmatter parsing now run in
+the strict gate. Quoted 54 invalid description scalars without changing domain
+wording. Active adoption references use the canonical engine in place; copying
+is not the active contract. See [Kaizen evidence](../docs/audits/2026-09-06-kaizen.md).
+No ledger invariant, statutory rate or doctrine version was changed.
+
+The entries below are historical adoption templates, not instructions to mirror
+the engine into consumers.
+
 Per-engine changelog entries to be pasted into each engine's `CHANGELOG.md` at adoption.
 
 ## Common entry (paste into every engine's CHANGELOG)

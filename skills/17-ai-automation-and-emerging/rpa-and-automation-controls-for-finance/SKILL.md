@@ -1,6 +1,6 @@
 ﻿---
 name: rpa-and-automation-controls-for-finance
-description: Use when designing RPA bots and scheduled automations that touch postings, approvals, or filings: bot identity, segregation-of-duties, kill-switch, and exception routing.
+description: "Use when designing RPA bots and scheduled automations that touch postings, approvals, or filings: bot identity, segregation-of-duties, kill-switch, and exception routing."
 status: active
 metadata:
   portable: true

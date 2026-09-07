@@ -1,6 +1,6 @@
 ﻿---
 name: ipsas-public-sector-overlay
-description: Use when an entity reports under IPSAS (accrual or cash basis): IPSAS-to-IFRS deltas, public-sector revenue (IPSAS 23/47), social benefits, and budget reporting (IPSAS 24).
+description: "Use when an entity reports under IPSAS (accrual or cash basis): IPSAS-to-IFRS deltas, public-sector revenue (IPSAS 23/47), social benefits, and budget reporting (IPSAS 24)."
 status: active
 metadata:
   portable: true

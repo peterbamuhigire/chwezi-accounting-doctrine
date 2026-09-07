@@ -130,7 +130,7 @@ Run the gate before final assembly of every business plan. Country context block
 
 ### Cross-cutting — `finance-module-audit` skill
 
-The `finance-module-audit` skill is the standard implementation harness for the gate against software systems. It produces the finding register, scorecard, and master plan. See `../skills/<engine>/skills/finance-module-audit/SKILL.md` after mirror.
+The `finance-module-audit` skill is the standard implementation harness for the gate against software systems. It produces the finding register, scorecard, and master plan. Read the canonical [finance-module-audit skill](../skills/06-close-consolidation-and-reporting/finance-module-audit/SKILL.md) in this checkout; no mirror is required.
 
 ## Finding register format
 
