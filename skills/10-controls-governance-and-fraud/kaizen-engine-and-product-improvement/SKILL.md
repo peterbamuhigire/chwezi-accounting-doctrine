@@ -107,11 +107,11 @@ If a reconciliation workaround removes a repeated manual step but weakens the au
 
 ## Mandatory Digital Research currentness gate
 
-Every Kaizen cycle must begin with `digital-research-skills` source evaluation
+Every Kaizen cycle must begin with the Digital Research Engine source evaluation
 and source verification. Record scope, dates, freshness class, support status,
 uncertainty, and review date for current IFRS, tax, statutory, regulatory,
 technology, control, and lifecycle claims; quarantine unsupported claims as
-`NOT_ASSESSED`. Apply the [portfolio Kaizen currentness gate](../../../../digital-research-skills/docs/continuous-improvement/kaizen-currentness-gate.md).
+`NOT_ASSESSED`. Apply the [portfolio Kaizen currentness gate](https://github.com/peterbamuhigire/digital-research-skills/blob/main/docs/continuous-improvement/kaizen-currentness-gate.md).
 
 ## References
 

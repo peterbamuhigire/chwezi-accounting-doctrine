@@ -15,7 +15,7 @@ metadata:
 <!-- dual-compat-start -->
 ## Use When
 
-Use when a finance, accounting, reporting, controls, systems, or sector workflow needs sector-specific source events, controls, reporting views, tax touchpoints, and accounting classifications.
+Use when a finance, accounting, reporting, controls, systems, or sector workflow needs sector-specific source events, controls, reporting views, tax touchpoints, and accounting classifications for hotels, resorts, lodges, inns, guest houses, restaurants, bars, catering, or venues.
 
 ## Do Not Use When
 
@@ -85,6 +85,29 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 6. Reconcile operational records to the GL control account before reporting, settlement, close sign-off, or external disclosure.
 7. Maintain an exception register for missing evidence, stale source-register values, unsupported framework assumptions, unresolved estimates, and review blockers.
 8. Do not promote illustrative examples, assumed facts, or generic rates into client output.
+
+## Hospitality operating overlay
+
+Model rooms/accommodation, restaurant, bar, events/banquets, spa or other
+ancillary activities as explicit revenue centres and cost centres. Reconcile
+reservation/stay/folio events, POS orders/bills, deposits, refunds, discounts,
+tips/service charges, commissions, inventory issues, recipes/yield/waste,
+payroll, cash drawers, payment settlements and city-ledger balances to the
+posting/reporting layer. A room charge posted from POS must be traceable to the
+guest folio, outlet transaction, approval, tax state and final settlement.
+
+For daily close and night audit, require an evidence pack tying occupancy and
+room revenue, covers and F&B revenue, event revenue, tax/fiscal output, cash,
+mobile/card settlement, receivables, inventory movements and exceptions to the
+same business date. Do not use ADR, RevPAR, food cost, prime cost, margin,
+commission or tax percentages as universal targets; require source, period,
+format, jurisdiction and reviewer approval. Route Uganda EFRIS and privacy
+claims to verified current source registers before release.
+
+For software or system design, require idempotent source events, append-only
+posted history, reversal rules, tenant/property/outlet dimensions, period
+controls, segregation of duties and a reconciliation owner. Missing live
+parity, provider, recovery or UAT evidence remains `NOT_ASSESSED`.
 
 ## Acceptance Evidence
 
