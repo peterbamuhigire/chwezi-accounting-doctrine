@@ -20,6 +20,14 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Start here
 
+## Prompt-generation capability — September 2026
+
+Finance-touching work can now be handed to an AI with prompts that state the
+reporting basis, period, evidence, reconciliations, controls, approvals,
+uncertainty, and review gate through the local [domain prompt
+contract](docs/ai-prompting/domain-prompt-compilation-contract.md). The copy
+remains available in a standalone fork.
+
 For multi-phase work, read the dated [runtime-agnostic orchestration contract](docs/operations/runtime-agnostic-orchestration-2026-09-07.md). It defines bounded packages, accounting checkpoints, context hygiene, least agency, and sanitised handling of imported content for Claude and Codex without changing either runtime's capabilities.
 
 When finance or accounting scope is detected:
@@ -277,3 +285,7 @@ migration targets may be reset during a lab exercise. This is fixture evidence,
 not statutory, audit, tax, client-ledger or professional acceptance. The next
 step is controller re-performance of a named synthetic batch before any wider
 close, migration or automation experiment.
+
+## DOMAIN PROMPT GENERATION CONTRACT
+
+For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md). Generate a ready-to-paste finance prompt with entity, period, jurisdiction, reporting basis, source documents, accounting question, treatment, controls, audit trail, reconciliation, reviewer, and acceptance checks. Never invent rates, standards, statutory values, or assurance. **Ready-to-paste prompt:** include source/period assumptions and NOT ASSESSED gaps. **Failure action:** stop and obtain the missing source or reviewer, or revise one treatment field.
