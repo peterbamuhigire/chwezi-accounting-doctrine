@@ -1,4 +1,4 @@
-﻿---
+---
 name: indirect-tax-vat-mechanics
 description: "Use when designing VAT/GST mechanics: place of supply, reverse charge, mixed supplies, input VAT recovery, partial exemption, and adjustments."
 status: active

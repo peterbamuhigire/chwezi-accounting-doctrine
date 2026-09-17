@@ -1,4 +1,4 @@
-﻿---
+---
 name: budgeting-and-rolling-forecasts
 description: Use when designing annual budgets, rolling forecasts, driver-based planning, top-down/bottom-up reconciliation, and budget-vs-actual reporting.
 status: active

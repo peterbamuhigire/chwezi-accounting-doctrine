@@ -1,4 +1,4 @@
-﻿---
+---
 name: school-and-education-accounting-pack
 description: "Use for schools and higher-education institutions: fee billing, scholarships and bursaries, term/semester accruals, capitation grants, and parent statements."
 status: active

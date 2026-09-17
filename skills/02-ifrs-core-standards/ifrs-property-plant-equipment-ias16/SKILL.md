@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-property-plant-equipment-ias16
 description: "Use when accounting for PPE under IAS 16 / IFRS for SMEs Section 17: component depreciation, revaluation model vs cost model, subsequent costs, derecognition, and impairment interaction."
 status: active

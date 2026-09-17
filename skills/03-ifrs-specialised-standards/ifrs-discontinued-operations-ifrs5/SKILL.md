@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-discontinued-operations-ifrs5
 description: Use when classifying non-current assets or disposal groups as held-for-sale and presenting discontinued operations under IFRS 5.
 status: active

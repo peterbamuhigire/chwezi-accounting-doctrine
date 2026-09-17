@@ -1,4 +1,4 @@
-﻿---
+---
 name: period-locking-and-data-immutability
 description: Use when designing period state machines (open, soft-closed, hard-closed, reopened, archived), immutability guarantees on posted journals, and audit-evidence retention for finance data.
 status: active

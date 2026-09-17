@@ -1,4 +1,4 @@
-﻿---
+---
 name: banking-facilities-and-covenants
 description: Use when tracking debt facilities, drawdowns, repayments, interest accrual, covenant calculations, and covenant-breach disclosure.
 status: active

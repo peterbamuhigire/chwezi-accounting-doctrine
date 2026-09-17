@@ -1,4 +1,4 @@
-﻿---
+---
 name: finance-data-privacy-and-retention
 description: Use when classifying finance data (PII, financial, statutory) and setting retention, lawful basis, cross-border transfer, and right-to-erasure rules consistent with statutory retention minima.
 status: active

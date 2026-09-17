@@ -1,4 +1,4 @@
-﻿---
+---
 name: notes-and-disclosure-pack
 description: "Use when assembling notes to the financial statements: significant accounting policies, judgements and estimates, standards-issued-not-effective, and standard-specific quantitative disclosures."
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: retail-and-pos-accounting-pack
 description: "Use for multi-outlet and omnichannel retail accounting: SKU master, POS/day-end, cash drawer, card/mobile-money settlement, inventory costing, markdowns, promotions, refunds, returns disposition, gift cards, loyalty, shrinkage, vendor funding, private label landed cost, planogram/space profitability, and retail KPI/WBR reporting."
 status: active

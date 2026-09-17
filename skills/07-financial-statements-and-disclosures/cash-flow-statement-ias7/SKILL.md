@@ -1,4 +1,4 @@
-﻿---
+---
 name: cash-flow-statement-ias7
 description: "Use when preparing the statement of cash flows under IAS 7 / IFRS for SMEs Section 7: operating activities (direct vs indirect), investing, financing, non-cash transactions, and reconciliations."
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-borrowing-costs-ias23
 description: "Use when capitalising borrowing costs on qualifying assets under IAS 23 / IFRS for SMEs Section 25: capitalisation rate, commencement, suspension, and cessation rules."
 status: active

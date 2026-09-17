@@ -1,4 +1,4 @@
-﻿---
+---
 name: going-concern-and-viability-assessment
 description: "Use when documenting going-concern and (where applicable) longer-term viability assessments: assumptions, sensitivities, mitigations, and emphasis-of-matter triggers."
 status: active

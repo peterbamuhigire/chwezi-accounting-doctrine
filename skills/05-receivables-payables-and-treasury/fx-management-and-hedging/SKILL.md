@@ -1,4 +1,4 @@
-﻿---
+---
 name: fx-management-and-hedging
 description: "Use when managing FX exposure: natural hedging, forward contracts, hedge documentation, hedge effectiveness, and hedge-accounting eligibility under IFRS 9."
 status: active

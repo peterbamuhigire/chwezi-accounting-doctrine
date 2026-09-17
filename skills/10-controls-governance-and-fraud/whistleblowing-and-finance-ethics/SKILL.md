@@ -1,4 +1,4 @@
-﻿---
+---
 name: whistleblowing-and-finance-ethics
 description: Use when designing whistleblowing intake, finance-ethics escalation, conflict-of-interest registers, and code-of-conduct attestation flows.
 status: active

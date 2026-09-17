@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-accounting-policies-changes-errors-ias8
 description: Use when adopting or changing accounting policies, accounting for changes in estimates, and correcting prior-period errors under IAS 8 / IFRS for SMEs Section 10.
 status: active

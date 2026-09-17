@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-insurance-contracts-ifrs17
 description: "Use when an entity issues insurance or reinsurance contracts in scope of IFRS 17: GMM/PAA/VFA measurement models, CSM mechanics, and presentation."
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: real-estate-and-property-pack
 description: "Use for property developers and landlords: deposits, lease incentives, service-charge accounting, IAS 40 vs IAS 16 vs IAS 2 classification, and developer revenue."
 status: active

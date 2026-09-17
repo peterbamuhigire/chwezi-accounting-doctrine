@@ -1,4 +1,4 @@
-﻿---
+---
 name: erp-and-finance-system-integration-patterns
 description: "Use when integrating Chwezi finance modules with external ERPs or SaaS finance systems: master-data sync, event vs batch, idempotency, and reconciliation watchers."
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: cash-flow-forecasting-and-treasury
 description: Use when building 13-week and longer cash-flow forecasts, cash-position dashboards, sweep rules, bank-account hierarchy, and intercompany cash pooling.
 status: active

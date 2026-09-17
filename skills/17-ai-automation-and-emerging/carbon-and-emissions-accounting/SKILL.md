@@ -1,4 +1,4 @@
-﻿---
+---
 name: carbon-and-emissions-accounting
 description: Use when an entity accounts for carbon allowances, offsets, and Scope 1/2/3 emissions data feeding sustainability disclosures and internal carbon-pricing schemes.
 status: active

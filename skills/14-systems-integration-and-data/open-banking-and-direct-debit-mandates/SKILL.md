@@ -1,4 +1,4 @@
-﻿---
+---
 name: open-banking-and-direct-debit-mandates
 description: Use when working with open-banking aggregators, direct-debit mandates (where available), and recurring-payment authorisations.
 status: active

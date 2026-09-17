@@ -1,4 +1,4 @@
-﻿---
+---
 name: accounts-payable-and-supplier-management
 description: Use when designing supplier master data, three-way match (PO/GRN/invoice), payment runs, supplier statements reconciliation, and AP-to-control tie-out.
 status: active

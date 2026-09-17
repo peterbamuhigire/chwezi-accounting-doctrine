@@ -1,4 +1,4 @@
-﻿---
+---
 name: integrated-and-sustainability-reporting-s1-s2
 description: "Use when preparing sustainability-related financial disclosures under IFRS S1 and climate-related disclosures under IFRS S2: governance, strategy, risk management, metrics, and assurance posture."
 status: active

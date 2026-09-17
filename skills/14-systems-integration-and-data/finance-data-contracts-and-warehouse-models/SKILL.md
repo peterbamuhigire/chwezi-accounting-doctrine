@@ -1,4 +1,4 @@
-﻿---
+---
 name: finance-data-contracts-and-warehouse-models
 description: "Use when shipping finance data to BI/warehouse: conformed dimensions, slowly changing dimensions for CoA, partition keys, and reconciliation back to the GL."
 status: active

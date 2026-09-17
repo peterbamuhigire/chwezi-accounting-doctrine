@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-employee-benefits-ias19
 description: Use for short-term, post-employment (defined contribution and defined benefit), other long-term, and termination benefits under IAS 19 / IFRS for SMEs Section 28, including actuarial assumptions and remeasurements.
 status: active

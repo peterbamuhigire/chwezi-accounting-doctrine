@@ -1,4 +1,4 @@
-﻿---
+---
 name: business-continuity-and-disaster-recovery-finance
 description: "Use when planning continuity and disaster recovery for finance operations: RPO/RTO per finance system, payroll fallback, bank-payment fallback, and tabletop exercises."
 status: active

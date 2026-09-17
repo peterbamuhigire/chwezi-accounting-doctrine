@@ -1,4 +1,4 @@
-﻿---
+---
 name: pricing-discounts-rebates-and-refunds
 description: Use when designing pricing, discount, rebate, refund, and chargeback mechanics with accounting recognition under IFRS 15 / IFRS for SMEs Section 23.
 status: active

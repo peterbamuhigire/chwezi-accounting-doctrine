@@ -1,4 +1,4 @@
-﻿---
+---
 name: financial-statements-preparation
 description: Use when assembling the four primary statements (SoFP, SoPL/OCI, SoCE, SoCF) including IFRS 18 presentation categories, comparatives, restatements, and rounding policy.
 status: active

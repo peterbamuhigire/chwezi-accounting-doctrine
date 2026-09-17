@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-associates-and-joint-arrangements
 description: "Use when applying IAS 28 / IFRS 11 / IFRS for SMEs Sections 14 and 15: equity method, joint operations vs joint ventures, and significant influence assessment."
 status: active

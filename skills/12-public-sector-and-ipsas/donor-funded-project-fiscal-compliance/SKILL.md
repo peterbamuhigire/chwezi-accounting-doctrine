@@ -1,4 +1,4 @@
-﻿---
+---
 name: donor-funded-project-fiscal-compliance
 description: Use when managing donor-funded projects with eligibility, ineligible-cost recovery, audit-clause compliance, and donor-specific reporting templates.
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: functional-and-presentation-currency
 description: Use when determining functional currency, presentation currency, translation method, and remeasurement/translation gain-loss treatment under IAS 21 / IFRS for SMEs Section 30.
 status: active

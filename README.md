@@ -20,6 +20,8 @@ Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
 
 ## Start here
 
+The numbered read-order steps for this engine are listed under "Prompt-generation capability" below: read this README, then the doctrine, then the quality gate, then the matching `SKILL.md`, then the source register.
+
 ## Prompt-generation capability — 2026-09-17
 
 This release adds evidence-first candidate testing, failure-slice review, and explicit `NOT_ASSESSED` handling for volatile prompt claims.

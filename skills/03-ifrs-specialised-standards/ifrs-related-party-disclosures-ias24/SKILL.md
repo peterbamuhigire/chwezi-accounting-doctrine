@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-related-party-disclosures-ias24
 description: Use when identifying related parties and disclosing transactions, outstanding balances, and key management personnel compensation under IAS 24 / IFRS for SMEs Section 33.
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-earnings-per-share-ias33
 description: Use when computing and presenting basic and diluted EPS under IAS 33 for entities with publicly traded ordinary shares or in process of issuance.
 status: active

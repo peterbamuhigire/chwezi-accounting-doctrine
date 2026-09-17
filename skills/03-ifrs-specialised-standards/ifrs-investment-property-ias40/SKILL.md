@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-investment-property-ias40
 description: "Use when classifying and measuring investment property under IAS 40 / IFRS for SMEs Section 16: cost vs fair-value model, transfers, and disclosure."
 status: active

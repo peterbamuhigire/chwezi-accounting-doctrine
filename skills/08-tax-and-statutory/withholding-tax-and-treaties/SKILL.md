@@ -1,4 +1,4 @@
-﻿---
+---
 name: withholding-tax-and-treaties
 description: "Use when applying withholding tax: domestic rates, double-tax-treaty relief, withholding certificates, and supplier gross-up."
 status: active

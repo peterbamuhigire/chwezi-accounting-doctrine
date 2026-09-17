@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-fair-value-measurement-ifrs13
 description: "Use when measuring or disclosing fair value under IFRS 13: valuation techniques, fair-value hierarchy (Level 1/2/3), highest-and-best-use, and required disclosures."
 status: active

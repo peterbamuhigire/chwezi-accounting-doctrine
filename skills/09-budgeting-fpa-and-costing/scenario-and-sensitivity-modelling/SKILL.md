@@ -1,4 +1,4 @@
-﻿---
+---
 name: scenario-and-sensitivity-modelling
 description: "Use when running scenario, sensitivity, and stress modelling for finance plans: assumption catalogue, scenario governance, and reportable ranges."
 status: active

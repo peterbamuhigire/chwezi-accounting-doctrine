@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-first-time-adoption-ifrs1
 description: "Use when an entity prepares its first IFRS or IFRS for SMEs financial statements: opening IFRS statement of financial position, mandatory exceptions, optional exemptions, and reconciliations."
 status: active

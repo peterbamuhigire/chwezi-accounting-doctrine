@@ -1,4 +1,4 @@
-﻿---
+---
 name: ifrs-events-after-reporting-period-ias10
 description: Use when distinguishing adjusting vs non-adjusting events after the reporting period under IAS 10 / IFRS for SMEs Section 32, including going-concern reassessment.
 status: active

@@ -1,4 +1,4 @@
-﻿---
+---
 name: variance-analysis-and-kpi-reporting
 description: Use when designing variance reports (price/volume/mix/efficiency), KPI cascades, contribution margin analysis, and management commentary.
 status: active

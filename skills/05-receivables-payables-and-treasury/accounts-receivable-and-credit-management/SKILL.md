@@ -1,4 +1,4 @@
-﻿---
+---
 name: accounts-receivable-and-credit-management
 description: Use when designing customer credit limits, invoicing, aging, dunning, write-off, ECL on trade receivables (IFRS 9 simplified), and AR-to-control tie-out.
 status: active
