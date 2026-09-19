@@ -43,7 +43,9 @@ Decision memo, configured policy, posting/reporting map, reconciliation evidence
 
 ## References
 
-Load references/source-basis.md, references/implementation-rules.md, and the canonical doctrine references before applying this skill.
+Load references/source-basis.md, references/implementation-rules.md,
+examples/rolling-forecast-cash-bridge-fixture.md, and the canonical doctrine
+references before applying this skill.
 <!-- dual-compat-end -->
 
 ## Prerequisites
@@ -109,6 +111,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - references/source-basis.md
 - references/implementation-rules.md
 - examples/worked-example.md
+- examples/rolling-forecast-cash-bridge-fixture.md
 - examples/uganda-worked-example.md
 
 ## Review Metadata

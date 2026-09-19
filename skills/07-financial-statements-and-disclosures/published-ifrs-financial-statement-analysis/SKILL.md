@@ -150,6 +150,7 @@ Use only when definitions are comparable and disclose the formula:
 ## Files
 
 - `references/analysis-metric-and-risk-workpaper.md`
+- `references/financial-intelligence-statement-ratio-workpaper.md`
 - `references/audience-advice-matrix.md`
 - `examples/published-statement-review.md`
 - `../../../doctrine/references/book-driven-value-cash-and-working-capital.md` - cash, valuation, working capital, and currentness boundary.

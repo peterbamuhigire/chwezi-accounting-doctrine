@@ -106,6 +106,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 
 - references/source-basis.md
 - references/implementation-rules.md
+- references/working-capital-lever-register.md
 - examples/worked-example.md
 
 ## Review Metadata

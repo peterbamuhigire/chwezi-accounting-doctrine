@@ -290,6 +290,13 @@ not statutory, audit, tax, client-ledger or professional acceptance. The next
 step is controller re-performance of a named synthetic batch before any wider
 close, migration or automation experiment.
 
+The Phase 1 evidence wave adds the finance-AI forecast evidence contract,
+rolling forecast/cash bridge fixture, financial-intelligence statement/ratio
+workpaper, and working-capital lever register in
+[`docs/kaizen/phase-1-finance.md`](docs/kaizen/phase-1-finance.md). These are
+test-labelled, reviewer-routed doctrine artefacts; they preserve deterministic
+math and block unsupported tax, statutory, exchange-rate, or IFRS claims.
+
 ## DOMAIN PROMPT GENERATION CONTRACT
 
 For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md). Generate a ready-to-paste finance prompt with entity, period, jurisdiction, reporting basis, source documents, accounting question, treatment, controls, audit trail, reconciliation, reviewer, and acceptance checks. Never invent rates, standards, statutory values, or assurance. **Ready-to-paste prompt:** include source/period assumptions and NOT ASSESSED gaps. **Failure action:** stop and obtain the missing source or reviewer, or revise one treatment field.

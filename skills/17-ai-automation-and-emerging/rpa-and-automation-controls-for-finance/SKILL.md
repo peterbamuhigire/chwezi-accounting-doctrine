@@ -43,7 +43,9 @@ Decision memo, configured policy, posting/reporting map, reconciliation evidence
 
 ## References
 
-Load references/source-basis.md, references/implementation-rules.md, and the canonical doctrine references before applying this skill.
+Load references/source-basis.md, references/implementation-rules.md,
+references/finance-ai-forecast-evidence-contract.md, and the canonical doctrine
+references before applying this skill.
 <!-- dual-compat-end -->
 
 ## Prerequisites
@@ -106,6 +108,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 
 - references/source-basis.md
 - references/implementation-rules.md
+- references/finance-ai-forecast-evidence-contract.md
 - examples/worked-example.md
 
 ## Review Metadata
