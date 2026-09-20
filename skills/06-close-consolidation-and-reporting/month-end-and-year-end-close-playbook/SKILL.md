@@ -101,6 +101,56 @@ Grouped by area. The exact list is configurable per entity; the categories are n
 - Audit-request tracking: every auditor request logged with respondent, evidence, status, due date.
 - Final report freeze: financial statements signed by directors; subsequent corrections become prior-period adjustments under Section 10 / IAS 8.
 
+## Mechanical vs judgment gate
+
+Close tasks fail in two different ways, and a checklist that treats them as
+one kind of item hides risk. A **mechanical check** has a deterministic,
+machine-verifiable answer — it either ties out or it does not, and closing
+the task means confirming the tie-out, not forming a view. A **judgment
+call** requires professional accounting judgement — the correct treatment
+depends on facts, estimates, or standard interpretation, and "the numbers
+match" is not sufficient evidence that the task is done correctly. Marking a
+judgment call complete because the mechanical sub-check passed is a release
+risk this table exists to prevent.
+
+Apply this classification to the standard close task list above:
+
+| Close task | Check type | What "done" actually requires |
+|---|---|---|
+| Bank / Mobile Money / POS / Card Acquirer reconciliation | Mechanical | Statement balance ties to GL balance; unmatched items are zero or individually evidenced. No treatment decision. |
+| AR / AP control tie-out | Mechanical | Control account balance equals subledger total. |
+| Inventory tie-out (control vs subledger) | Mechanical | Control account balance equals inventory subledger total. |
+| Tax control accounts tie to return data | Mechanical | Control account balance equals the return schedule total. |
+| Trial balance | Mechanical | Debits equal credits; no unposted suspense balance. |
+| Petty cash / Cash on hand count | Mechanical | Physical count equals recorded balance, or variance is logged as an exception. |
+| GRNI clearing, outstanding journals approved | Mechanical | Queue is empty or every remaining item has a named owner and due date. |
+| Accruals and prepayments | Judgment | Whether an obligation or benefit exists, and its estimated amount, is an accounting judgement — not just "the accrual account has a balance." |
+| Depreciation | Mixed | The calculation run is mechanical (rate × base); the useful life, residual value, and method are judgement, reviewed at least annually. |
+| FX revaluation | Mixed | Applying the period-end rate is mechanical; whether a balance is monetary (subject to IAS 21 retranslation) is judgement. |
+| Inventory NRV write-downs (Section 13 / IAS 2) | Judgment | Requires an estimate of net realisable value — never a mechanical formula alone. |
+| Provisions and contingencies review (Section 21 / IAS 37) | Judgment | Recognition depends on probability and reliable estimation of an obligation — a professional judgement call, escalated to Controller. |
+| Doubtful-debt allowance (Section 11 / IFRS 9 simplified) | Mixed | An expected-loss model run is mechanical; the loss-rate assumptions and any overlay for known problem accounts are judgement. |
+| Tax provision (Section 29 / IAS 12) | Judgment | Current and deferred tax positions require interpretation of tax law and recognition criteria — always routed to the Tax Reviewer, never closed on a mechanical calculation alone. |
+| Reviewer sign-off (Controller) | Judgment | Sign-off is the point where mechanical evidence is weighed against professional judgement before release; it is never itself a mechanical check. |
+
+Rules that follow from this table:
+
+1. A mechanical check that fails is `fail` outright — there is no professional
+   judgement that overrides an unreconciled control account. Do not route a
+   failed mechanical check to "Controller judgement" as a way to close it;
+   fix the underlying discrepancy or log it as an evidenced exception.
+2. A judgment-call task cannot be marked `pass` on mechanical evidence alone
+   (e.g. "the provisions account has a balance" is not evidence that the
+   provision is correctly recognised and measured). It requires the named
+   reviewer's recorded rationale, not just a tie-out.
+3. Where evidence for a judgment call is missing — no documented rationale,
+   no named reviewer — the task is `NOT ASSESSED`, per this engine's general
+   missing-evidence rule (`rules/common/core.md`), not defaulted to pass
+   because the mechanical sub-checks were clean.
+4. `Mixed` tasks must record both: the mechanical run's tie-out evidence and
+   the judgement reviewer's sign-off on the assumptions. Passing one without
+   the other is a partial close, not a complete one.
+
 ## Period-state transitions
 
 | From | To | Permitted by |

@@ -82,6 +82,7 @@ Load the required references and examples listed below before implementation or 
 6. Caveats must name the affected figures, decisions, source states, and reviewer action needed.
 7. Reject output that contains final statutory values without source-register support.
 8. Use `draft`, `review-ready`, `approved-with-caveats`, or `final` status consistently in output metadata.
+9. For financial statements, disclosure notes, statutory filings, or any figure going to a client, lender, donor, regulator, or board in `final` or `approved-with-caveats` status, run `references/dual-independent-review-protocol.md` in addition to the standard reviewer-matrix chain: two independent reviewers, no shared context, both must PASS, fresh reviewers each re-review round, escalate after three rounds without convergence.
 
 ## Acceptance Evidence
 
@@ -104,6 +105,7 @@ Load the required references and examples listed below before implementation or 
 ## Required References
 
 - `references/reviewer-matrix.md`
+- `references/dual-independent-review-protocol.md` (client-facing figures and disclosures)
 - `references/plain-language-output-pattern.md`
 - `references/quality-and-ethics-gates.md`
 - `finance-ux-for-non-accountants/SKILL.md`

@@ -1,0 +1,21 @@
+{
+  "name": "chwezi-accounting",
+  "owner": { "name": "Peter Bamuhigire", "email": "peter.bamuhigire@gmail.com" },
+  "metadata": { "description": "Chwezi accounting doctrine engine — bookkeeping, IFRS/IAS standards, financial statements, tax/statutory compliance, close/consolidation, and controls" },
+  "plugins": [
+    {
+      "name": "accounting",
+      "source": "./",
+      "description": "108 skills covering finance and accounting doctrine: bookkeeping, IFRS/IAS standards, financial statements, tax/statutory work, close and consolidation, and controls",
+      "version": "1.0.0",
+      "author": { "name": "Peter Bamuhigire" },
+      "homepage": "https://github.com/chwezi/chwezi-accounting-doctrine",
+      "repository": "https://github.com/chwezi/chwezi-accounting-doctrine",
+      "license": "MIT",
+      "keywords": ["accounting", "finance", "ifrs", "bookkeeping", "tax"],
+      "category": "finance",
+      "tags": ["accounting", "finance", "ifrs"],
+      "strict": false
+    }
+  ]
+}
