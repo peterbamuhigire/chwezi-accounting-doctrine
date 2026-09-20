@@ -18,7 +18,18 @@ cd chwezi-accounting-doctrine
 .\install.ps1 -scope project      # Windows PowerShell
 ```
 
-(`chwezi-accounting` is the marketplace name and `accounting` the plugin name declared in `.claude-plugin/marketplace.json`; both installers delegate to the vendored `scripts/install-engine.js` and accept `--scope user|project`.) This engine is cross-cutting finance doctrine that other engines lean on rather than duplicate: `governance/how-to-reference-this-doctrine.md` states explicitly, in its own frontmatter, `applies-to: skills-web-dev, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts` — confirming **business-plan-skills** and **srs-skills** as two real, named consumer sisters (for financial projections/investor readiness and for finance-touching requirements/architecture documentation, respectively). Both are independent, optional installs; this engine's "Consumer engines" section below names the full list, which also includes `social-media-skills` for pricing/ROI questions. A third, cross-cutting sister confirmed in this engine's own README is the **Digital Research Engine** (`digital-research-engine`), mandatory for any current, uncertain, statutory, tax, exchange-rate, or standards claim — never optional the way a domain-consumer engine is, but likewise never bundled or mirrored in.
+(`chwezi-accounting` is the marketplace name and `accounting` the plugin name declared in `.claude-plugin/marketplace.json`; both installers delegate to the vendored `scripts/install-engine.js` and accept `--scope user|project`.) This engine is cross-cutting finance doctrine that other engines lean on rather than duplicate: `governance/how-to-reference-this-doctrine.md` states explicitly, in its own frontmatter, `applies-to: chwezi-dev-engine, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts` — confirming **business-plan-skills** and **srs-skills** as two real, named consumer sisters (for financial projections/investor readiness and for finance-touching requirements/architecture documentation, respectively). Both are independent, optional installs; this engine's "Consumer engines" section below names the full list, which also includes `social-media-skills` for pricing/ROI questions. A third, cross-cutting sister confirmed in this engine's own README is the **Digital Research Engine** (`digital-research-engine`), mandatory for any current, uncertain, statutory, tax, exchange-rate, or standards claim — never optional the way a domain-consumer engine is, but likewise never bundled or mirrored in.
+
+## Content integrity
+
+This repository contains no client names, client data, or project-specific
+work product; it is a general-purpose finance and accounting doctrine engine
+with no client- or project-scoped directories to exclude. Users installing
+this engine should still exercise their own due diligence — you can ask
+Claude Code or Codex to run a security scan of this engine, its skills, and
+its reference files before relying on it in a sensitive environment (for
+example: "scan this repository for hardcoded secrets, personal paths, or
+unexpected network calls").
 
 ## Capability map
 

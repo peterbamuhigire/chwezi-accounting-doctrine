@@ -65,7 +65,7 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
-| D-01 | skills-web-dev (Chwezi product code, where applicable) | grep `INSERT INTO journal_lines`, `UPDATE journal_lines`, `DELETE FROM journal_lines` | blocker | Route through posting service. |
+| D-01 | chwezi-dev-engine (Chwezi product code, where applicable) | grep `INSERT INTO journal_lines`, `UPDATE journal_lines`, `DELETE FROM journal_lines` | blocker | Route through posting service. |
 | D-02 | srs-skills | Any SRS example showing direct ledger writes | blocker | Replace example with a posting-service call. |
 
 ### Status taxonomy
@@ -86,19 +86,19 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
-| P-01 | skills-web-dev | Any report page in finance scope | major | Add print stylesheet per `print-fidelity.md`. |
+| P-01 | chwezi-dev-engine | Any report page in finance scope | major | Add print stylesheet per `print-fidelity.md`. |
 
 ### Drilldown
 
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
-| K-01 | skills-web-dev | Any dashboard tile / summary card | major | Add drilldown affordance; click to source. |
+| K-01 | chwezi-dev-engine | Any dashboard tile / summary card | major | Add drilldown affordance; click to source. |
 
 ### Disclosures as modals
 
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
-| M-01 | skills-web-dev | Modal compliance disclosures | minor | Move into the relevant field's helper text or adjacent panel. |
+| M-01 | chwezi-dev-engine | Modal compliance disclosures | minor | Move into the relevant field's helper text or adjacent panel. |
 
 ## Workflow
 

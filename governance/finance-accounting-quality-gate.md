@@ -100,7 +100,7 @@ A finding in any of these categories returns `fail`:
 
 ## How to invoke the gate
 
-### Consumer engine — software (skills-web-dev)
+### Consumer engine — software (chwezi-dev-engine)
 
 ```
 1. Load doctrine/accounting-finance-doctrine.md.

@@ -2,7 +2,7 @@
 name: accounting-finance-doctrine
 version: 1.1.0
 status: pass-with-caveats
-applies-to: skills-web-dev, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts.
+applies-to: chwezi-dev-engine, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts.
 owner: Chwezi Core Systems finance/accounting doctrine owner.
 ---
 
