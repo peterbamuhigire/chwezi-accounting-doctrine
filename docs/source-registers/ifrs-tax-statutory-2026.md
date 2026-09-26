@@ -8,6 +8,8 @@ Reviewer of this register: Builder verification pass; named human reviewer requi
 
 This register is the root-level source map for standards and statutory facts used by Chwezi finance outputs. Final statutory output must still consume machine-readable entries from `doctrine/source-register/` or a release snapshot derived from this file. If a source conflict exists, the controlling rule is: block final values, state the conflict, and route to a named reviewer.
 
+**Freshness notice (2026-09-26):** this broad register remains last reviewed 2026-07-08, and its scheduled August review has passed. The scoped PAYE/LST follow-up below supersedes those two rows for current status only. Other entries have not been refreshed by the follow-up and remain subject to their stated gates; this notice does not renew the whole register.
+
 ## Usage States
 
 | State | Meaning | Final-output use |
@@ -53,3 +55,21 @@ This register is the root-level source map for standards and statutory facts use
 3. When URA live guidance and 2026 amendment materials conflict, the final output must be blocked until the Gazette/assented Act/URA post-budget handbook is reviewed.
 4. Source values must appear in examples only as illustrative values tied to source keys, not as permanent constants embedded in skill logic.
 5. Every final pack must include: source key, source URL or archive path, checked date, reviewer, next review date, and caveat state.
+
+## Scoped Source-Currentness Follow-up — 2026-09-26
+
+This append-only update refreshes only PAYE and employee Local Service Tax (LST). The July 2026 baseline rows remain as historical evidence and must be read with this section.
+
+### PAYE
+
+URA's 2026-09-07 notice says its resident PAYE return schedule changed with effect from 2026-07-01 and advises employers to amend affected July/August 2026 returns. URA's 2026-09-23 notice says the Income Tax (Amendment) Act, 2026 was assented to with that commencement date. Current URA PAYE and employment-income pages display the FY2026/27 monthly schedules. These official regulator sources supersede the July 2026 table above as a description of the current URA-published schedule.
+
+The exact enacted Act text was not obtained in the September review, and a named Uganda tax reviewer plus source archive remain required. The machine-readable `UG-PAYE-RATES` entry is therefore **draft**; final PAYE payroll and returns remain blocked. The previous schedule is retained as historical in `doctrine/source-register/uganda/paye.yaml`.
+
+### Local Service Tax
+
+The July 2026 review classified LST as `blocked-pending-review` because no controlling current local-government schedule was verified. The machine-readable row introduced on 2026-08-18 changed this to `verified-current` and supplied `effective_from: 2026-01-01`, but the row's cited sources do not support that effective date. The accessible KCCA FAQ PDF is dated 2017 and contains conflicting gross/net and PAYE-order descriptions; the current KCCA eCitie page links to an FAQ download that could not be fetched in this review. Direct retrieval of the cited ULII Act PDF also failed, so search-index extracts were not used as support.
+
+The machine-readable `UG-LST-RATES` entry is **draft**. Its current effective period, local applicability, and calculation base remain **NOT_ASSESSED**; no final payroll may rely on it. A named local-government tax reviewer must reconcile the exact Act, applicable municipal guidance and archived evidence before promotion.
+
+This follow-up does not refresh the rest of the source register or constitute a professional tax opinion.

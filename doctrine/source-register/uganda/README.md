@@ -1,6 +1,6 @@
 # Uganda Source Register Seed Pack
 
-Uganda entries have different states. The NSSF entry is the sole verified-current exception identified in the source-register overview. PAYE is **draft** after the 2026 amendment was announced: the superseded historical schedule is retained separately, while the current URA-published schedule awaits independent country-tax review and an archived source snapshot. Neither PAYE entry supports final output. VAT, WHT, income-tax, EFRIS, exchange-rate, and other unverified statutory entries remain blocked for final use.
+Uganda entries have different states. The NSSF entry is the sole verified-current exception identified in the source-register overview. PAYE is **draft** after the 2026 amendment was announced: the superseded historical schedule is retained separately, while the current URA-published schedule awaits independent country-tax review and an archived source snapshot. LST is **draft** because the effective date and gross/net calculation base are not resolved by the accessible current authority material. Neither PAYE nor LST supports final output. VAT, WHT, income-tax, EFRIS, exchange-rate, and other unverified statutory entries remain blocked for final use.
 
 ## Seed Authorities From Uplift Report
 
@@ -8,6 +8,7 @@ Uganda entries have different states. The NSSF entry is the sole verified-curren
 |---|---|---|
 | VAT, WHT, income tax | URA Taxation Handbook FY 2024-25: https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf | Historical/draft source seed; not current evidence for post-amendment tax periods. |
 | PAYE | URA PAYE rates: https://ura.go.ug/en/domestic-taxes/paye-rates/; URA 2026 amendment notices: https://ura.go.ug/en/changes-to-paye-return-form-following-the-income-tax-amendment-act-2026/ and https://ura.go.ug/en/effective-date-of-the-income-tax-amendment-act-2026-and-the-excise-duty-amendment-act-2026/ | The authority pages show a schedule effective 2026-07-01 and direct July/August return review. Current register entry is draft pending statutory reviewer reconciliation and source archiving. |
+| LST | Local Governments (Amendment) (No. 2) Act, 2008; KCCA Local Service Tax FAQ: https://kcca.go.ug/uDocs/Local_Service_Tax_FAQs.pdf; current KCCA eCitie page links to its LST FAQ. | Current register entry is draft. The exact effective period and gross/net calculation base need statutory and local-authority reconciliation; final payroll use is blocked. |
 | EFRIS | URA EFRIS Handbook FY 2024-25: https://ura.go.ug/storage/2025/01/THE-EFRIS-HANDBOOK-2024-25-2.pdf | Draft e-invoicing evidence seed; current platform rules require review. |
 | NSSF | NSSF Uganda membership page: https://www.nssfug.org/about-us/membership/ | One bounded membership/contribution entry is verified-current through 2026-11-16; benefit, amnesty, penalty, arrears, and classification cases remain outside its scope. |
 | Uganda reporting framework | IFAC Uganda profile: https://www.ifac.org/about-ifac/membership/profile/uganda | Institutional source seed; not final jurisdictional framework verification. |
