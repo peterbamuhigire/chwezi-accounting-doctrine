@@ -22,18 +22,18 @@
   value_or_rule: "Trigger IFRS 18 presentation and disclosure review for annual periods beginning on or after 2027-01-01 or an approved early-application period; review operating profit, profit before financing and income taxes, MPMs, and aggregation/disaggregation."
   source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/"
   source_tier: 1
-  date_accessed_utc: "2026-08-27T00:00:00Z"
-  verifier: "Digital Research source-evaluation and verification pass 2026-08-27; named human IFRS reviewer pending"
+  date_accessed_utc: "2026-09-26T20:44:24Z"
+  verifier: "Official IFRS Foundation page rechecked 2026-09-26 under the Digital Research source-evaluation/currentness gate; independent human IFRS review pending"
   output_affected:
     - primary-financial-statements
     - mpm-disclosures
     - issued-not-effective-disclosures
     - consolidated-statement-review
   effective_from: "2027-01-01"
-  expires_or_recheck_due: "2026-12-31"
+  expires_or_recheck_due: "2026-10-26"
   state: draft
   archive_snapshot: "capture-required-before-release"
-  notes: "The official page also lists active implementation projects. Recheck live projects and issued amendments before each client release."
+  notes: "Rechecked the official effective-date and project information on 2026-09-26. The page still lists active implementation projects; review them and issued amendments before each client release. No archive captured; named human IFRS review remains pending."
 
 - id: IF-IFRS9-FINANCIAL-INSTRUMENTS
   topic: IFRS 9 Financial Instruments
