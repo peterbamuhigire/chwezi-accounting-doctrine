@@ -8,7 +8,7 @@ Reviewer of this register: Builder verification pass; named human reviewer requi
 
 This register is the root-level source map for standards and statutory facts used by Chwezi finance outputs. Final statutory output must still consume machine-readable entries from `doctrine/source-register/` or a release snapshot derived from this file. If a source conflict exists, the controlling rule is: block final values, state the conflict, and route to a named reviewer.
 
-**Freshness notice (2026-09-26):** this broad register remains last reviewed 2026-07-08, and its scheduled August review has passed. The scoped PAYE/LST follow-up below supersedes those two rows for current status only. Other entries have not been refreshed by the follow-up and remain subject to their stated gates; this notice does not renew the whole register.
+**Freshness notice (2026-09-26):** this broad register remains last reviewed 2026-07-08, and its scheduled August review has passed. The scoped PAYE/WHT/LST follow-up below refreshes only those surfaces for current status; other entries have not been refreshed and remain subject to their stated gates. This notice does not renew the whole register.
 
 ## Usage States
 
@@ -58,13 +58,17 @@ This register is the root-level source map for standards and statutory facts use
 
 ## Scoped Source-Currentness Follow-up — 2026-09-26
 
-This append-only update refreshes only PAYE and employee Local Service Tax (LST). The July 2026 baseline rows remain as historical evidence and must be read with this section.
+This append-only update refreshes only PAYE, withholding tax (WHT), and employee Local Service Tax (LST). The July 2026 baseline rows remain as historical evidence and must be read with this section.
 
 ### PAYE
 
 URA's 2026-09-07 notice says its resident PAYE return schedule changed with effect from 2026-07-01 and advises employers to amend affected July/August 2026 returns. URA's 2026-09-23 notice says the Income Tax (Amendment) Act, 2026 was assented to with that commencement date. Current URA PAYE and employment-income pages display the FY2026/27 monthly schedules. These official regulator sources supersede the July 2026 table above as a description of the current URA-published schedule.
 
 The exact enacted Act text was not obtained in the September review, and a named Uganda tax reviewer plus source archive remain required. The machine-readable `UG-PAYE-RATES` entry is therefore **draft**; final PAYE payroll and returns remain blocked. The previous schedule is retained as historical in `doctrine/source-register/uganda/paye.yaml`.
+
+### Withholding Tax
+
+URA's 2026-09-23 effective-date notice lists WHT returns among those that may need review after the Income Tax (Amendment) Act 2026. The current [URA WHT page](https://ura.go.ug/en/witholding-tax/) was identified but the direct page fetch timed out on 2026-09-26. No rate, transaction category, or effective-period claim has been inferred from the search result. The machine-readable `UG-WHT-RATES` entry remains **draft**; transaction-specific rates and statutory effects remain **NOT_ASSESSED**, so final WHT output stays blocked.
 
 ### Local Service Tax
 
