@@ -12,7 +12,7 @@
     - wht-return-pack
     - tax-control-reconciliation
   effective_from: "pending-review"
-  expires_or_recheck_due: "2026-09-26"
+  expires_or_recheck_due: "2026-10-27"
   state: draft
   archive_snapshot: "NOT_CAPTURED; the direct fetch of URA's current WHT page timed out during the 2026-09-26 check."
-  notes: "Draft source lead only. The official URA FY2026/27 tax-amendments guide (published page dated 2026-06-23) summarizes several proposed WHT categories; its page 9 exemption for land-based casino winnings was reported removed on reconsideration by Parliament on 2026-08-04. The guide is not the authenticated post-reconsideration Act, and the current URA WHT page direct fetch timed out. No transaction-specific rate is promoted from this guide. Final WHT use remains blocked until the enacted provisions/current authority guidance are reconciled, a named tax reviewer confirms each applicable transaction category and period, and exact source evidence is archived."
+  notes: "Draft source lead only. The official URA FY2026/27 tax-amendments guide (published page dated 2026-06-23) summarizes several proposed WHT categories; its page 9 exemption for land-based casino winnings was reported removed on reconsideration by Parliament on 2026-08-04. The guide is not the authenticated post-reconsideration Act, and the current URA WHT page direct fetch timed out. No transaction-specific rate is promoted from this guide. Final WHT use remains blocked until the enacted provisions/current authority guidance are reconciled, a named tax reviewer confirms each applicable transaction category and period, and exact source evidence is archived; recheck by 2026-10-27 or sooner if the law/authority guidance changes."
