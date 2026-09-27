@@ -2,10 +2,10 @@
   topic: Uganda Local Service Tax employee wage bands and collection schedule; current application pending review
   jurisdiction: UG
   value_or_rule: "Historical/reference material lists employee LST wage bands beginning above UGX 100,000, annual amounts up to UGX 100,000, and collection in four equal instalments during the first four months of the financial year. Current statutory applicability and the exact gross/net calculation base are NOT_ASSESSED; do not use these values in final payroll until a named local-government tax reviewer resolves the source conflict."
-  source_url_or_doc: "https://ulii.org/en/akn/ug/act/2008/8/eng@2008-07-07; https://kcca.go.ug/uDocs/Local_Service_Tax_FAQs.pdf; https://ecitie2.kcca.go.ug/portal/revenue-sources-local-service-tax/"
+  source_url_or_doc: "https://ulii.org/en/akn/ug/act/2008/8/eng@2008-07-07; https://kcca.go.ug/uDocs/Local_Service_Tax_FAQs.pdf; https://ecitie2.kcca.go.ug/portal/revenue-sources-local-service-tax/; https://ura.go.ug/en/tax-amendments-for-fy-2026-2027/"
   source_tier: 1
-  date_accessed_utc: "2026-09-26T19:30:23Z"
-  verifier: "Codex scoped source review 2026-09-26; independent Uganda local-government tax reviewer NOT_ASSESSED"
+  date_accessed_utc: "2026-09-27T04:08:33Z"
+  verifier: "Codex scoped source review including official URA FY2026/27 guide 2026-09-27; independent Uganda local-government tax reviewer NOT_ASSESSED"
   output_affected:
     - payroll-gross-to-net
     - local-service-tax-schedule
@@ -14,4 +14,4 @@
   expires_or_recheck_due: "2026-09-26"
   state: draft
   archive_snapshot: "NOT_CAPTURED for the current-law review. The accessible KCCA FAQ PDF is dated 2017; the KCCA portal's current linked FAQ download returned an unsupported content-type, and direct retrieval of the ULII Act PDF returned 403."
-  notes: "The entry was introduced in commit 4d53963 as verified-current with effective_from 2026-01-01, but the supporting URLs do not evidence that date. The root statutory register (docs/source-registers/ifrs-tax-statutory-2026.md, checked 2026-07-08) and its research-verification manifest classify current LST use as blocked pending a current local-government source. The KCCA FAQ directly states that 'take-home salary' means gross, then describes an example where LST is computed using the full 420,000 salary before the available amount for PAYE is reduced to 390,000; another section says PAYE is considered first. The exact Act text was not retrieved during this review. Preserve the earlier band table as a lead only. Final payroll stays blocked until the current applicable Act and local-authority instructions, effective period, gross/net base, municipality scope and an archived source are independently reconciled."
+  notes: "The entry was introduced in commit 4d53963 as verified-current with effective_from 2026-01-01, but the supporting URLs do not evidence that date. The root statutory register (docs/source-registers/ifrs-tax-statutory-2026.md, checked 2026-07-08) and its research-verification manifest classify current LST use as blocked pending a current local-government source. The KCCA FAQ directly states that 'take-home salary' means gross, then describes an example where LST is computed using the full 420,000 salary before the available amount for PAYE is reduced to 390,000; another section says PAYE is considered first. The official URA FY2026/27 tax-amendments guide contains no LST provision or schedule and does not close this source gap. The exact Local Governments Act text was not retrieved during this review. Preserve the earlier band table as a lead only. Final payroll stays blocked until the current applicable Act and local-authority instructions, effective period, gross/net base, municipality scope and an archived source are independently reconciled."
