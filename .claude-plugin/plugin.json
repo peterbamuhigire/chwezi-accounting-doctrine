@@ -1,4 +1,5 @@
 {
+  "name": "accounting",
   "version": "1.0.0",
   "skills": [
     "./skills/01-foundations/chart-of-accounts-design-and-governance/",
