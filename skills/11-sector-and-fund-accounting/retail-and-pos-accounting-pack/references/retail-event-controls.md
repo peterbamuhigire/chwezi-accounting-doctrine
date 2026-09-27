@@ -68,7 +68,28 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** A refund with no original transaction link, no return inspection, or no stock disposition.
 
-### 3. Markdown and Net Realisable Value Review
+### 3. Partial Refund After the Original Period Is Locked
+
+**Given** an original POS sale has been posted and its accounting period is locked, and a later return is approved for only part of that sale.
+
+**When** the partial refund and related stock disposition are prepared.
+
+**Then** the workflow must:
+
+1. preserve the original posted sale and its close evidence; do not edit, delete, backdate, or silently repost the original transaction;
+2. link the return and proposed adjustment to the original receipt/transaction and affected line items, and retain returned quantity, reason, inspection, disposition, approver, and source evidence;
+3. route any required period reopen or adjusting entry through the organisation's approved period-control process and applicable accounting policy; do not bypass a lock or choose a posting period by assumption;
+4. obtain current-source and reviewer confirmation for any tax correction or reporting-period treatment before posting; this fixture does not prescribe a tax code, rate, account, journal, date, or statutory outcome;
+5. issue only the approved partial refund through the authorised posting and tender/refund process, and retain provider or cash-disbursement evidence;
+6. enforce idempotency across retries so an interrupted or replayed request cannot create a second refund or adjustment;
+7. reconcile the original sale, approved return, stock disposition, adjustment posting, refund tender/settlement, and affected control-account/report outputs; and
+8. retain an audit trail that identifies the original event, adjustment, actor, reason, approvals, period route, evidence, and reconciliation result.
+
+**Blocked output:** A changed original journal, an unapproved posting into a locked period, a guessed tax or period treatment, a refund without an approved original-sale link, a duplicated refund on retry, or a close/reconciliation presented as complete without supporting settlement evidence.
+
+This is a control acceptance case, not an accounting-policy conclusion. Actual account mapping, adjustment date, tax treatment, period route, refund rights, and statutory presentation remain entity-, framework-, contract-, and jurisdiction-specific reviewer decisions.
+
+### 4. Markdown and Net Realisable Value Review
 
 **Given** a markdown event reduces the selling price of aged or seasonal stock.
 
@@ -83,7 +104,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** A markdown treated only as a display-price change with no event log or margin reporting.
 
-### 4. Promotion, Coupon, and Manual Discount
+### 5. Promotion, Coupon, and Manual Discount
 
 **Given** a promotion or coupon can combine with another offer.
 
@@ -99,7 +120,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Manual discounts above threshold without approver, reason, and cashier/transaction evidence.
 
-### 5. Gift Card, Store Credit, and Customer Wallet
+### 6. Gift Card, Store Credit, and Customer Wallet
 
 **Given** value is issued to a customer for later redemption.
 
@@ -109,7 +130,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Gift cards or store credits recorded only as sales at issuance without policy review.
 
-### 6. Loyalty Points and Rewards
+### 7. Loyalty Points and Rewards
 
 **Given** the retail programme issues points, vouchers, rewards, or tier benefits.
 
@@ -125,7 +146,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Loyalty liabilities, breakage, or reward cost treatment asserted without reviewer route.
 
-### 7. Vendor Funding, Rebates, and Trade Spend
+### 8. Vendor Funding, Rebates, and Trade Spend
 
 **Given** a vendor agreement includes allowances, rebates, co-op funding, scanbacks, or promotional support.
 
@@ -142,7 +163,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Supplier income or receivable recorded from an unsupported spreadsheet estimate.
 
-### 8. Shrink, Stock Count, and Loss Prevention
+### 9. Shrink, Stock Count, and Loss Prevention
 
 **Given** a stock count or investigation identifies a variance.
 
@@ -162,7 +183,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Automatic stock write-off from a count variance without approval and evidence.
 
-### 9. Private Label Landed Cost
+### 10. Private Label Landed Cost
 
 **Given** private-label inventory includes product cost, freight, duty, packaging, inspection, wastage, or rework.
 
@@ -172,7 +193,7 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 **Blocked output:** Private-label margin reporting that ignores freight, duty, packaging, or quality/rework cost where material.
 
-### 10. Retail KPI Dashboard and Weekly Business Review
+### 11. Retail KPI Dashboard and Weekly Business Review
 
 **Given** a dashboard displays sales, margin, markdown, return, shrink, vendor recovery, stock cover, or POS settlement metrics.
 
@@ -205,4 +226,4 @@ Every retail event that can affect accounting, margin, inventory, customer balan
 
 The retail/POS pack can be used for internal doctrine, proposals, SRS, business plans, and implementation design after this reference is loaded. Client-facing statutory, tax, audit, or accounting-policy conclusions remain blocked until current-source verification and named reviewer sign-off are recorded.
 
-Last reviewed: 2026-06-25. Next review due: 2026-11-25.
+Last reviewed: 2026-09-27. Next review due: 2026-12-27.
