@@ -1,322 +1,46 @@
-# Chwezi Accounting and Finance Doctrine
+# Chwezi Accounting Doctrine
 
-`chwezi-accounting-doctrine` is a 108-skill canonical accounting and finance doctrine engine for the Chwezi skill-engine portfolio. It turns finance-touching work into bounded, reconciled, source-traceable decisions and controls, covering reporting bases, ledgers, statutory outputs, evidence, approvals, exceptions, and finance-system patterns, without allowing polished presentation to conceal an unresolved accounting or control detail. Accountants, controllers, auditors, finance-system teams, and other product or delivery engines use it for ledgers and subledgers, IFRS, IFRS for SMEs, IPSAS, tax and statutory processes, treasury, budgeting, reconciliations, close, reporting, migration, audit evidence, controls, and finance UX; it also gives non-finance teams a route for handling finance-touching websites, software, proposals, business plans, dashboards, databases, and runbooks. Concrete use cases: fixing a reporting basis and building an IFRS for SMEs financial-statement pack (`skills/01-foundations/`, `skills/02-ifrs-core-standards/`, `skills/07-financial-statements-and-disclosures/`), reconciling a bank/mobile-money subledger before month-end close (`skills/04-subledgers-and-operations/`, `skills/06-close-consolidation-and-reporting/`), building a Uganda VAT/PAYE/EFRIS-compliant statutory pack (`skills/08-tax-and-statutory/`), running a segregation-of-duties and fraud-control review with dual-independent review (`skills/10-controls-governance-and-fraud/`), or auditing a finance-touching SRS/business-plan/dashboard for an unresolved control gap. It provides shared rules and review paths that help teams preserve balanced postings, immutable posted history, source traceability, reconciliations, segregation of duties, and qualified reporting decisions. It is not a substitute for an accountant, auditor, tax adviser, lawyer, regulator, or standard-setter; current and uncertain statutory, tax, exchange-rate, and standards claims must be verified through the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> and the applicable source register.
+Chwezi Accounting Doctrine is a finance and accounting skills engine for applying accounting policy, standards, controls, and operating practice in professional work and finance software. Its doctrine routes by transaction and reporting question across IFRS and IFRS for SMEs, specialised standards, IPSAS, tax and statutory work, subledgers, reporting, sector accounting, integrations, security, and automation.
 
-Acknowledgement: Shared by Peter Bamuhigire, techguypeter.com, +256 784 464178.
+The engine serves accountants, finance teams, reviewers, consultants, and product/engineering teams whose work affects money, inventory, payroll, tax, grants, banking, or accounting records. It produces accounting analyses, policy and control procedures, reconciliations, reporting requirements, implementation guidance, and review evidence. It requires an explicit reporting basis, current support for jurisdiction-dependent values, traceable evidence and approval, and reversible corrections to posted history; missing verification remains `NOT ASSESSED` under the finance quality gate.
 
-Install it as a native Claude Code plugin, or npm-free from a clone:
+## Installation
 
-```
-# Native Claude Code plugin
-/plugin marketplace add https://github.com/peterbamuhigire/chwezi-accounting-doctrine
+For Claude Code, install the Accounting plugin from its marketplace:
+
+```text
+/plugin marketplace add peterbamuhigire/chwezi-accounting-doctrine
 /plugin install accounting@chwezi-accounting
+```
 
-# npm-free, from a clone
+For a local clone, run the included installer with Node.js 18 or later:
+
+```sh
 git clone https://github.com/peterbamuhigire/chwezi-accounting-doctrine
 cd chwezi-accounting-doctrine
-./install.sh --scope project      # macOS/Linux/Git Bash
-.\install.ps1 -scope project      # Windows PowerShell
+./install.sh --scope project
 ```
 
-(`chwezi-accounting` is the marketplace name and `accounting` the plugin name declared in `.claude-plugin/marketplace.json`; both installers delegate to the vendored `scripts/install-engine.js` and accept `--scope user|project`.) This engine is cross-cutting finance doctrine that other engines lean on rather than duplicate: `governance/how-to-reference-this-doctrine.md` states explicitly, in its own frontmatter, `applies-to: chwezi-dev-engine, srs-skills, proposal-skills, business-plan-skills, and any consumer engine that generates finance- or accounting-touching artefacts` — confirming **business-plan-skills** and **srs-skills** as two real, named consumer sisters (for financial projections/investor readiness and for finance-touching requirements/architecture documentation, respectively). Both are independent, optional installs; this engine's "Consumer engines" section below names the full list, which also includes `social-media-skills` for pricing/ROI questions. A third, cross-cutting sister confirmed in this engine's own README is the **Digital Research Engine** (`digital-research-engine`), mandatory for any current, uncertain, statutory, tax, exchange-rate, or standards claim — never optional the way a domain-consumer engine is, but likewise never bundled or mirrored in.
+On Windows PowerShell, run `./install.ps1 -scope project`. The wrappers expose scope and dry-run options; consult their help before installing. This engine is independently installable. Other Chwezi engines route finance questions here when relevant.
 
-## Content integrity
+## Skills
 
-This repository contains no client names, client data, or project-specific
-work product; it is a general-purpose finance and accounting doctrine engine
-with no client- or project-scoped directories to exclude. Users installing
-this engine should still exercise their own due diligence — you can ask
-Claude Code or Codex to run a security scan of this engine, its skills, and
-its reference files before relying on it in a sensitive environment (for
-example: "scan this repository for hardcoded secrets, personal paths, or
-unexpected network calls").
-
-## Capability map
-
-| Category | SKILL.md files | Coverage |
+| Category | Skill routes | Coverage |
 |---|---|---|
-| `03-ifrs-specialised-standards/` | 19 | IFRS 18, impairment, agriculture, grants, deferred tax, provisions, business combinations, disclosures, specialist IAS/IFRS |
-| `02-ifrs-core-standards/` | 10 | Conceptual Framework, revenue, leases, financial instruments, IFRS for SMEs, PPE, intangibles, employee benefits, borrowing costs, FX |
-| `06-close-consolidation-and-reporting/` | 8 | Close, continuous close, advanced consolidation, migration, audit PBC, reporting packs, finance-module audits |
-| `10-controls-governance-and-fraud/` | 8 | Controls, SoD, audit quality, fraud, AML, whistleblowing, ICFR, conformance, Kaizen |
-| `11-sector-and-fund-accounting/` | 8 | NGO, schools, clinics, retail, agribusiness, hospitality, property, fintech |
-| `04-subledgers-and-operations/` | 7 | Bank/mobile-money reconciliation, fixed assets, inventory, payroll, petty cash, POS, expenses |
-| `07-financial-statements-and-disclosures/` | 6 | Primary statements, cash flow, published-statement analysis, notes, going concern, disclosure support |
-| `08-tax-and-statutory/` | 6 | Source registers, VAT/WHT, transfer pricing, e-invoicing, statutory packs |
-| `01-foundations/` | 5 | CoA, ledger core, dimensions, currency, period locks, immutability |
-| `05-receivables-payables-and-treasury/` | 5 | AR, AP, treasury, FX, hedging, facilities, covenants |
-| `09-budgeting-fpa-and-costing/` | 5 | Budgets, forecasts, variance, KPIs, costing, pricing |
-| `14-systems-integration-and-data/` | 4 | ERP, bank feeds, data contracts, open banking |
-| `16-ux-and-presentation/` | 4 | Finance UI, non-accountant UX, accessibility, mobile, offline, print fidelity |
-| `17-ai-automation-and-emerging/` | 4 | RPA, AI governance, digital assets, carbon accounting |
-| `12-public-sector-and-ipsas/` | 3 | IPSAS, public procurement, donor fiscal compliance, public-sector overlays |
-| `13-project-and-contract-accounting/` | 3 | POC/WIP, construction, professional-services contracts |
-| `15-security-privacy-and-continuity/` | 3 | Finance cybersecurity, privacy, business continuity, disaster recovery |
+| Foundations and IFRS | [`01-foundations/`](skills/01-foundations/), [`02-ifrs-core-standards/`](skills/02-ifrs-core-standards/), [`03-ifrs-specialised-standards/`](skills/03-ifrs-specialised-standards/) | Chart of accounts, ledger architecture, dimensions and currency; IFRS core and specialised standards, including IFRS for SMEs. |
+| Subledgers and treasury | [`04-subledgers-and-operations/`](skills/04-subledgers-and-operations/), [`05-receivables-payables-and-treasury/`](skills/05-receivables-payables-and-treasury/) | Assets, inventory, payroll, POS and cash, expenses, bank/mobile-money reconciliation, receivables, payables, cash flow, and FX. |
+| Close and reporting | [`06-close-consolidation-and-reporting/`](skills/06-close-consolidation-and-reporting/), [`07-financial-statements-and-disclosures/`](skills/07-financial-statements-and-disclosures/) | Period close, consolidation, audit evidence, financial statements, disclosures, and reporting packs. |
+| Tax and planning | [`08-tax-and-statutory/`](skills/08-tax-and-statutory/), [`09-budgeting-fpa-and-costing/`](skills/09-budgeting-fpa-and-costing/) | Tax and statutory obligations, budgeting, FP&A, costing, and pricing-related accounting. |
+| Controls and sector accounting | [`10-controls-governance-and-fraud/`](skills/10-controls-governance-and-fraud/), [`11-sector-and-fund-accounting/`](skills/11-sector-and-fund-accounting/), [`12-public-sector-and-ipsas/`](skills/12-public-sector-and-ipsas/), [`13-project-and-contract-accounting/`](skills/13-project-and-contract-accounting/) | Governance, fraud controls, public-sector and fund accounting, industry packs, and project/contract accounting. |
+| Systems and emerging practice | [`14-systems-integration-and-data/`](skills/14-systems-integration-and-data/), [`15-security-privacy-and-continuity/`](skills/15-security-privacy-and-continuity/), [`16-ux-and-presentation/`](skills/16-ux-and-presentation/), [`17-ai-automation-and-emerging/`](skills/17-ai-automation-and-emerging/) | Finance data, ERP and payment integration, security, privacy, continuity, accessible presentation, AI, automation, crypto, and carbon accounting. |
 
-108 `SKILL.md` files across 17 numbered groups under `skills/<group>/<skill-name>/SKILL.md` (verified 2026-09-20 by direct count).
+The category counts total 108 discovered skill files. Use the [router map](docs/router-map.md) to select current entries from the [skills directory](skills/); apply the [finance and accounting quality gate](governance/finance-accounting-quality-gate.md) whenever the work has finance scope.
 
 ## References
 
-- Mustafa, A. et al. *Everything Claude Code (ECC)*. GitHub: affaan-m/ECC, 2026. — This engine adapts one ECC skill by name: `skills/10-controls-governance-and-fraud/engagement-quality-and-plain-language-output/references/dual-independent-review-protocol.md` is "adapted from the `santa-method` skill (`skills/santa-method/SKILL.md`, metadata origin: Ronald Skelton — Founder, RapportScore.ai) in the Engineering Context Compiler (ECC) repository," imported because the underlying failure mode — a single reviewer sharing the preparer's blind spots — is the same one accounting review chains exist to control. The file is explicit that ECC's contribution is only "the independence and convergence mechanics," not accounting content ("ECC has none"), and that ECC's Pattern C batch-sampling shortcut is deliberately *not* imported for statutory filings or board-level disclosures — only the reviewer-independence mechanics were adopted. `docs/operations/runtime-agnostic-orchestration-2026-09-07.md` also references ECC for its bounded-package/context-hygiene orchestration contract.
-- The book-derived capability table already in this README (Book-derived capabilities adopted, below) cites thirteen named sources by title — LEAN: Ultimate Collection, Kaizen and the Art of Creative Thinking, Applying the Kaizen in Africa, Facility Move Playbook, Agile Processes in Software Engineering and XP 2026, Platform Enterprise, Designing for AI, Leveling Up as a Tech Lead, MSC Software Magazine, The Nonprofit Guide to Strategic Planning, Paid for Your Perspective, Digital Storytelling and Video Game Storytelling, and AI for Game Developers — used explicitly as sources of improvement patterns, never as authority for current IFRS, tax, statutory, or regulatory facts.
-
-## Start here
-
-The numbered read-order steps for this engine are listed under "Prompt-generation capability" below: read this README, then the doctrine, then the quality gate, then the matching `SKILL.md`, then the source register.
-
-## Prompt-generation capability — 2026-09-17
-
-This release adds evidence-first candidate testing, failure-slice review, and explicit `NOT_ASSESSED` handling for volatile prompt claims.
-
-Finance-touching work can now be handed to an AI with prompts that state the
-reporting basis, period, evidence, reconciliations, controls, approvals,
-uncertainty, and review gate through the local [domain prompt
-contract](docs/ai-prompting/domain-prompt-compilation-contract.md). The copy
-remains available in a standalone fork.
-
-For multi-phase work, read the dated [runtime-agnostic orchestration contract](docs/operations/runtime-agnostic-orchestration-2026-09-07.md). It defines bounded packages, accounting checkpoints, context hygiene, least agency, and sanitised handling of imported content for Claude and Codex without changing either runtime's capabilities.
-
-When finance or accounting scope is detected:
-
-1. Read this README.
-2. Read `doctrine/accounting-finance-doctrine.md`.
-3. Read `governance/finance-accounting-quality-gate.md` when producing or releasing an artefact.
-4. Load the applicable source register and specialist `skills/**/SKILL.md` files.
-5. Load the Kaizen skill for an engine audit, product audit, or book-driven improvement:
-   `skills/10-controls-governance-and-fraud/kaizen-engine-and-product-improvement/SKILL.md`.
-6. Route current, uncertain, statutory, regulatory, tax, exchange-rate, or standards claims through the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>.
-
-For electronic fiscal taxing, load `skills/08-tax-and-statutory/electronic-fiscal-taxing/SKILL.md` and its jurisdiction reference. The older `e-invoicing-and-fiscal-device-integration` skill remains a compatibility route for existing callers.
-
-Do not rely on native skill discovery. Resolve the canonical engine path from the project `AGENTS.md` or global engine-routing table, then read the matching files directly.
-
-## What this engine governs
-
-This doctrine applies whenever a workflow touches the Chart of Accounts, subledgers, postings, rates, reconciliations, approvals, financial reports, statutory returns, audit evidence, or money movement. This includes:
-
-- General ledger, Chart of Accounts, dimensions, currencies, periods, journals, reversals, and control accounts.
-- IFRS, IFRS for SMEs, IAS/IFRS specialist standards, financial statements, disclosures, and reporting-basis transitions.
-- IPSAS, public-sector finance, donor-funded projects, procurement, and fiscal controls.
-- Sales, purchases, inventory, POS, cash drawers, bank and mobile money, payroll, grants, assets, leases, treasury, AR, AP, and tax.
-- Budgets, forecasts, costing, variance analysis, management reporting, and financial planning.
-- Month-end/year-end close, consolidation, intercompany, migration, opening balances, audit PBC, evidence packs, and reporting releases.
-- Internal controls, segregation of duties, anti-fraud, AML/KYC, whistleblowing, ICFR, cybersecurity, continuity, and finance integrations.
-- Finance UX for non-accountants, ledger UX, accessibility, low-bandwidth/offline workflows, print fidelity, and AI/RPA governance.
-
-The engine serves both accounting professionals and other skill engines producing finance-touching websites, software, SRS documents, proposals, business plans, dashboards, databases, mobile/desktop applications, and operational runbooks.
-
-## Core doctrine
-
-### Reporting-basis hierarchy
-
-Every accounting artefact names its reporting basis: IFRS, IFRS for SMEs, IPSAS, local statutory basis, client-specific basis, or not applicable.
-
-- IFRS for SMEs is the practical default for typical SMEs, schools, clinics, NGOs, retail, agribusiness, and hospitality clients unless another basis is required.
-- Full IFRS applies where public-interest status, financing covenants, donor requirements, regulation, or client policy requires it.
-- IPSAS applies to public-sector or public-finance scope after the applicable jurisdictional overlay is identified.
-- Local statutory, tax, payroll, filing, regulator, and exchange-rate rules require current-source verification.
-- Complex judgement, statutory sign-off, tax positions, audit positions, and final reporting require the appropriate professional reviewer.
-
-The doctrine is not a substitute for an accountant, auditor, tax adviser, lawyer, regulator, or standard-setter. It does not certify compliance by itself.
-
-### Ledger and control invariants
-
-Every money-touching implementation must preserve:
-
-- Approved posting services as the only journal-entry boundary.
-- Balanced double entry by currency.
-- Immutable posted history; corrections use linked reversal or correction postings.
-- Period locks and approved adjustment paths.
-- Idempotent mutating commands and duplicate-event rejection/quarantine.
-- Source-document, actor, reviewer, approval, and system audit trails.
-- Control-account tie-outs to subledgers at close and migration.
-- CoA mappings, dimensions, permissions, evidence pointers, and drilldown from report to source.
-- Segregation of duties between preparation, approval, posting, reconciliation, and review.
-- Separation of net, tax, and gross amounts for VAT-inclusive transactions.
-
-Forbidden patterns include direct writes to journal tables, single-sided effects, destructive editing of posted history, unverified statutory values, stale exchange rates, migration without tie-out sign-off, and reports that cannot drill into their evidence.
-
-## The Kaizen operating contract
-
-For a ready-to-run product or project operation, use [`prompts/full-kaizen-operation.md`](prompts/full-kaizen-operation.md).
-
-Continuous improvement applies to this doctrine, every skill, and every product produced from the engine. Improvement must remove waste and uncertainty without weakening accounting invariants, controls, segregation of duties, source verification, privacy, or reviewer accountability.
-
-### Required cycle
-
-`Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure`
-
-1. Observe the failure, delay, exception, user friction, audit finding, control weakness, or evidence gap.
-2. Baseline the current process, score, population, cycle time, error rate, control state, and evidence quality.
-3. Select one bounded improvement with a named owner, hypothesis, risk, and rollback.
-4. Experiment in a safe, reversible scope; never bypass a control merely to measure speed.
-5. Check accounting correctness, control effectiveness, reviewer experience, source currency, usability, and unintended effects.
-6. Standardise only when acceptance evidence is complete; update the doctrine, skill, reference, fixture, test, or template.
-7. Teach the change through the skill, example, runbook, release note, and reviewer route.
-8. Re-measure and schedule the next review; a closed item without follow-up evidence is not continuous improvement.
-
-### Audit and remediation rules
-
-The portfolio score is deliberately hard-capped:
-
-```text
-capped_audit_score = min(raw_audit_score, 65)
-```
-
-The cap is a reporting ceiling, not permission to waive a blocker. Every audit must identify blockers separately. The remediation plan must target 95/100 and contain:
-
-- Current baseline and gap to target.
-- Root cause and affected control/product outcome.
-- Proposed change and testable improvement hypothesis.
-- Owner, due date, dependencies, and risk.
-- Acceptance evidence and independent review route.
-- Rollback/recovery procedure.
-- Residual-risk owner and next re-audit date.
-
-The accounting audit covers correctness, completeness, cut-off, framework fit, source currency, reconciliation, close, reporting, controls, SoD, audit evidence, privacy/security, explainability, accessibility, operational continuity, handoff, and residual risk.
-
-### Product audits
-
-The same contract applies to any finance-touching product: website, web app, mobile app, desktop app, ERP/POS, database, API, dashboard, proposal, business plan, SRS, architecture, design, report, tax-return pack, close pack, or runbook.
-
-Audit the product from source evidence, not screenshots or claims alone. Trace money flows from source event through posting, subledger, control account, report, statutory output, evidence pack, and reviewer sign-off. Test happy paths, exceptions, reversals, stale sources, duplicate submissions, period locks, migration, permissions, reconciliation, print/export, accessibility, and recovery.
-
-For finance-system changes, apply the Facility Move pattern: charter and decision rights, current-state inventory, readiness and continuity risks, target state, integrated cutover plan, rehearsals, rollback, stabilisation, closeout, and lessons learned.
-
-## Book-derived capabilities adopted
-
-The August 2026 book intake was used as a source of improvement patterns, not as authority for current IFRS, tax, statutory, or regulatory facts. Current claims still require the source register and Digital Research verification.
-
-| Book or source | Accounting-engine capability adopted |
-|---|---|
-| LEAN: Ultimate Collection | Build-Measure-Learn, validated learning, innovation accounting, KPI discipline, waste/value analysis, DMAIC, Kanban, and experiment records. |
-| Kaizen and the Art of Creative Thinking | Small-step problem solving, standard work, observation, practical experimentation, and making improvement visible to the people doing the work. |
-| Applying the Kaizen in Africa | Participatory improvement, PDCA, 5S, muda reduction, QC Story, QCC-style ownership, 7 QC tools, on-site observation, management commitment, and institutionalisation. |
-| Facility Move Playbook | Finance-system readiness, asset/data/process inventory, continuity, cutover, rehearsal, rollback, stabilisation, and lessons-learned controls for ERP and reporting changes. |
-| Agile Processes in Software Engineering and XP 2026 | Evidence-led retrospectives, hypothesis engineering, decision rights, small experiments, independent evaluation, and feedback-driven delivery. |
-| Platform Enterprise | Platform-as-product ownership, consumer feedback, cognitive-load reduction, sociotechnical design, sustainable maintenance, technical-debt visibility, and clear ownership. |
-| Designing for AI | Problem-first AI selection, separation of human/system/model/input/output concerns, transparency, user control, correction, contestability, drift detection, and rollback for finance AI/RPA. |
-| Leveling Up as a Tech Lead | Role clarity, ownership transfer, transparent communication, implement-reflect-adjust loops, trust, and non-blaming learning culture for finance-system teams. |
-| MSC Software Magazine | Model/data lineage, assumptions, independent verification, simulation-to-test correlation, error visibility, and production decision evidence. |
-| The Nonprofit Guide to Strategic Planning | Governance, stakeholder readiness, baseline analysis, external scan, options/trade-offs, resource implications, implementation cadence, KPI dashboards, and refresh triggers for NGO finance plans. |
-| Paid for Your Perspective | Expert-positioning boundaries, buyer needs, preparation, compliance screening, knowledge-product discipline, and explicit professional-review limits. |
-| Digital Storytelling and Video Game Storytelling | Used only as transferable patterns for clear evidence narratives, user journeys, branch/rejoin logic, and cross-disciplinary communication; not as accounting authority. |
-| AI for Game Developers | Used only as a transferable pattern for deterministic fallbacks, state-machine reasoning, instrumentation, and recovery in finance automation; dated APIs are not adopted. |
-| Dynamic Characters and Anatomy for Artists | Routed to design/game engines. No accounting doctrine or financial claim is derived from these books. Anatomy extraction was not usable. |
-
-The detailed portfolio study and provenance limits are maintained in the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a>. The local accounting adoption record is `docs/continuous-improvement/kaizen-adoption-2026-08.md`.
-
-## September 2026 book-driven Kaizen wave
-
-See [`docs/continuous-improvement/book-driven-kaizen-2026-09-01.md`](docs/continuous-improvement/book-driven-kaizen-2026-09-01.md) for maintenance reliability, AI data lineage, and civil-society finance resilience references.
-
-## Skill catalogue
-
-See the Capability map above for the full per-group `SKILL.md` breakdown. Read only the relevant `SKILL.md` files for the task. The generated inventory is available at `docs/router-map.md`.
-
-The advanced IFRS route is summarized in `docs/advanced-ifrs-capability-matrix.md` and checked by `tools/check-advanced-ifrs-readiness.ps1`.
-
-## Operating routes
-
-### Digital Research
-
-Use the <a href="https://github.com/peterbamuhigire/digital-research-skills" target="_blank" rel="noopener noreferrer">Digital Research Engine</a> for current or uncertain claims, literature review, source evaluation, due diligence, regulatory research, source freshness, and evidence verification. Historical books and early-release material may provide improvement hypotheses but cannot establish current compliance.
-
-For advanced IFRS work, use the Conceptual Framework and IFRS 18 routes first, then the applicable transaction, consolidation, disclosure, and published-statement analysis routes. Current-standard conclusions remain source-register and reviewer gated.
-
-### Design system
-
-When the financial artefact has material visual, UX, typography, layout, accessibility, or presentation requirements, consult the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a> in addition to this engine. Accounting content and controls remain here; visual design authority remains with the design engine.
-
-### Consumer engines
-
-The <a href="https://github.com/peterbamuhigire/business-plan-skills" target="_blank" rel="noopener noreferrer">Business Plan</a>, <a href="https://github.com/peterbamuhigire/proposal-skills" target="_blank" rel="noopener noreferrer">Proposal</a>, <a href="https://github.com/peterbamuhigire/srs-skills" target="_blank" rel="noopener noreferrer">SRS</a>, <a href="https://github.com/peterbamuhigire/website-skills" target="_blank" rel="noopener noreferrer">Website</a>, <a href="https://github.com/peterbamuhigire/social-media-skills" target="_blank" rel="noopener noreferrer">Social Media</a>, <a href="https://github.com/peterbamuhigire/chwezi-dev-engine" target="_blank" rel="noopener noreferrer">software-development</a>, and <a href="https://github.com/peterbamuhigire/linux-skills" target="_blank" rel="noopener noreferrer">Linux</a> engines route finance scope here. They must not create local finance mirrors or invent accounting, IFRS, IPSAS, tax, statutory, or exchange-rate rules.
-
-## Validation and release
-
-Run the doctrine gate from the repository root:
-
-The parser check requires Python with PyYAML; missing tooling fails the gate.
-Latest repair and evidence limits: [2026-09-06 Kaizen](docs/audits/2026-09-06-kaizen.md).
-
-```powershell
-.\tools\validate-doctrine.ps1
-```
-
-Run the additional quality checks when applicable:
-
-```powershell
-.\scripts\fix-frontmatter-report.ps1 -Strict
-.\tests\accounting-invariants\scripts\Test-AccountingInvariants.ps1
-.\tools\invoke-doctrine-conformance-scan.ps1 -TargetPath "C:\path\to\target" -OutputPath ".\docs\conformance-scan.md"
-```
-
-For release-grade finance output also use:
-
-- `governance/finance-accounting-quality-gate.md`
-- `docs/quality-gates/world-class-finance-release-gate.md`
-- `governance/anti-slop-finance-output.md`
-- the applicable jurisdiction source register under `doctrine/source-register/`
-- independent controller, tax, audit, or professional review where required
-
-Release decisions are `pass`, `pass-with-caveats`, or `fail`. A passing validator does not replace professional review or current-source verification.
-
-## Repository map
-
-```text
-chwezi-accounting-doctrine/
-|-- README.md
-|-- doctrine/                         # canonical doctrine, references, source registers, examples
-|-- skills/                           # Active accounting and finance skills; discover from filesystem
-|-- governance/                       # quality gates, referencing rules, anti-patterns, backlog
-|-- docs/                             # router map, source registers, release gates, Kaizen records
-|-- examples/                         # reproducible evidence and transaction packs
-|-- templates/                        # sector and reporting artefact templates
-|-- tests/accounting-invariants/      # machine-readable accounting invariant tests
-|-- tools/                            # validation, conformance scan, and maintenance scripts
-|-- scripts/                          # repository maintenance and reporting checks
-`-- integration/                      # historical mirror tooling and integration records
-```
-
-The old mirror model is retired. Consumer engines reference this repository through the canonical routing table; do not copy or mirror doctrine files into them.
-
-## Source and jurisdiction limitations
-
-- The doctrine is not the authoritative text of IFRS, IFRS for SMEs, IPSAS, tax law, or any regulator's rules.
-- Authoritative IFRS Foundation text and current effective dates require re-verification before final client output.
-- Current Uganda VAT, PAYE, WHT, NSSF, exchange-rate, EFRIS, URA, URSB, and ICPAU claims remain source-register verification targets.
-- Country extensions for Kenya, Rwanda, Tanzania, and South Africa are structured overlays, not blanket legal advice.
-- Historical books, 2019 material, early-release books, incomplete extractions, and unreadable conversions are labelled and cannot establish current facts.
-- No client facts, reviewer names, statutory rates, or regulatory approvals may be fabricated.
-- Where evidence is missing, return a qualified result, mark the dimension unassessed, block certification, and state the narrowest safe next step.
-
-Last reviewed: 2026-08-04. Next review due: 2026-11-04.
-
-<!-- design-system-skills:trigger v1 -->
-### Design and presentation trigger
-
-Any work affecting typography, colour, layout, grid, visual identity, UI screens, or document presentation must also route to the <a href="https://github.com/peterbamuhigire/design-system-skills" target="_blank" rel="noopener noreferrer">Design System Skills Engine</a>. Read its README and doctrine, and load only the relevant skills. Content, accounting structure, and control evidence remain governed by this engine; visual presentation is governed by the design engine.
-<!-- /design-system-skills:trigger -->
-
-## September 2026 Kaizen execution update
-
-The first bounded accounting wave adds a synthetic source-to-report fixture
-and `tools/validate_source_to_report.py`. It checks source-to-journal lineage,
-period state, duplicate handling, correction history and reconciliation fields;
-the focused suite passes 6 tests. Corrections preserve the original posting
-and use an authorised compensating or reversal route; only disposable
-migration targets may be reset during a lab exercise. This is fixture evidence,
-not statutory, audit, tax, client-ledger or professional acceptance. The next
-step is controller re-performance of a named synthetic batch before any wider
-close, migration or automation experiment.
-
-The Phase 1 evidence wave adds the finance-AI forecast evidence contract,
-rolling forecast/cash bridge fixture, financial-intelligence statement/ratio
-workpaper, and working-capital lever register in
-[`docs/kaizen/phase-1-finance.md`](docs/kaizen/phase-1-finance.md). These are
-test-labelled, reviewer-routed doctrine artefacts; they preserve deterministic
-math and block unsupported tax, statutory, exchange-rate, or IFRS claims.
-
-## DOMAIN PROMPT GENERATION CONTRACT
-
-For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md). Generate a ready-to-paste finance prompt with entity, period, jurisdiction, reporting basis, source documents, accounting question, treatment, controls, audit trail, reconciliation, reviewer, and acceptance checks. Never invent rates, standards, statutory values, or assurance. **Ready-to-paste prompt:** include source/period assumptions and NOT ASSESSED gaps. **Failure action:** stop and obtain the missing source or reviewer, or revise one treatment field.
+- [Chwezi Accounting Doctrine source repository](https://github.com/peterbamuhigire/chwezi-accounting-doctrine)
+- [Accounting and finance doctrine](doctrine/accounting-finance-doctrine.md)
+- [Finance and accounting quality gate](governance/finance-accounting-quality-gate.md)
+- [Skill router map](docs/router-map.md)
+- [Repository operating guide](AGENTS.md)
+- [Installer scripts](install.sh), [Windows installer](install.ps1)
