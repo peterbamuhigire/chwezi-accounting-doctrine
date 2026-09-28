@@ -20,7 +20,7 @@ The Chwezi finance/accounting design system. This is the single source of design
 
 | Token | Value | Use |
 |---|---|---|
-| `font-sans` | One sans-serif family with tabular numerals. Suggested: Inter, IBM Plex Sans, or system stack. | Body, labels, UI chrome. |
+| `font-sans` | One sans-serif family with tabular numerals. Suggested: Public Sans with `font-variant-numeric: tabular-nums`, chosen via the design engine; never a face banned by its `ai-slop-banned-fonts.md`, and never a bare system stack alone. | Body, labels, UI chrome. |
 | `font-mono` | One monospaced family with tabular numerals. | Account codes, journal IDs, idempotency keys, hash references. |
 | `numerals` | `tabular-nums` everywhere money appears. | All ledger surfaces, reports, prints. |
 | `scale-1` … `scale-7` | 11 / 12 / 14 / 16 / 18 / 24 / 32 (px). | Type scale. Max 7 steps. |
