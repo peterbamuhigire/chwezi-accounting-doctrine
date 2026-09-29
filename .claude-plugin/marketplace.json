@@ -7,7 +7,7 @@
       "name": "accounting",
       "source": "./",
       "description": "108 skills covering finance and accounting doctrine: bookkeeping, IFRS/IAS standards, financial statements, tax/statutory work, close and consolidation, and controls",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": { "name": "Peter Bamuhigire" },
       "homepage": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine",
       "repository": "https://github.com/peterbamuhigire/chwezi-accounting-doctrine",

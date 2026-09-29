@@ -2,6 +2,7 @@ schema_version: "1.0"
 engine_id: chwezi-accounting-doctrine
 display_name: Chwezi Accounting Doctrine
 contract_version: "1.0"
+version: "1.1.0"
 router:
   path: AGENTS.md
 skills:
@@ -24,3 +25,10 @@ source_of_truth:
   router: AGENTS.md
   skills: skills/**/SKILL.md
   references: references/**
+invariants:
+  - id: book-extraction-ban
+    phrase: "Book extractions, book summaries and chapter-by-chapter notes must never be stored in this"
+  - id: not-assessed
+    phrase: "Missing source, reviewer, reconciliation, control, audit-trail, or runtime evidence is `NOT ASSESSED`, never a pass."
+invariant_exemptions:
+  british-english: "No British English output rule exists in this engine's router (AGENTS.md, README.md, rules/); adding one is new doctrine outside M10-02 scope. Recorded for the orchestrator."

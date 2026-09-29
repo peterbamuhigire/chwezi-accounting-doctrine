@@ -31,6 +31,15 @@ See `.skills-engine/engine-manifest.yaml` for the declarative contract used by t
 
 The package may read the router, discover skills, inspect Git, and run only declared checks. Missing evidence is NOT ASSESSED; writes, pulls, publication, submissions, ledger/filing changes, deployment, or control changes require explicit approval.
 
+## Never store book extractions
+
+Book extractions, book summaries and chapter-by-chapter notes must never be stored in this
+repository (no `book-extractions/`, `extracted-books/` or `book-study/` folder, no `*-extraction.md`
+book digests). Knowledge from books enters only as paraphrased, task-oriented skill content and
+`references/` files (procedures, checklists, decision rules) with a short citation (Author (Year)
+*Title*, Publisher). Verbatim quotations stay rare and under 25 words. The portfolio check
+`chwezi-engine-agents/scripts/validate-no-book-extractions.py` fails if an extraction folder appears.
+
 ## Rules
 
 Always-on cross-cutting principles live in `rules/` — see `rules/README.md`.
@@ -102,6 +111,26 @@ Route current or uncertain external claims through the Digital Research Engine.
 Route visual and presentation authority to the Design System Engine. Keep
 accounting content, ledger invariants, source-state semantics, and finance
 control evidence in this repository.
+
+<!-- design-system-skills:trigger v2 -->
+### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
+
+Any work touching how an artifact LOOKS — font/typeface choice, type scale, colour, layout/grid,
+visual identity, web/desktop/mobile UI screens, or the visual formatting of a DOCX/PPTX/PDF/XLSX
+— routes to the **`design-system-skills`** engine, the single home for ALL design/UI/UX skills
+and the anti-AI-slop doctrine.
+
+**Resolve its location on THIS device from the active runner's global engine-routing table or
+`AGENTS.md`** — never assume an absolute path; it varies per machine. Then read its
+`README.md` → `doctrine/design-doctrine.md` → glob `skills/**/SKILL.md` fresh and route by
+frontmatter (read SKILL.md directly, not via the Skill tool). Content and structure stay in THIS
+engine; presentation comes from design-system-skills. Hard rule: never use a banned AI-slop font
+as primary type — hard ban: Inter, Geist, Roboto, Open Sans, Lato, Arial, Fraunces, IBM Plex (all
+faces); secondary ban: Space Grotesk, Instrument Serif, Poppins, Montserrat, Nunito, Nunito Sans;
+Roboto Mono and IBM Plex Mono are banned as monospace choices; Source Sans 3 only as a paired
+body face; no bare system stacks alone. State the chosen typeface and reason before producing
+any artifact.
+<!-- /design-system-skills:trigger -->
 
 ## PORTFOLIO CRAFT CONTRACT
 
