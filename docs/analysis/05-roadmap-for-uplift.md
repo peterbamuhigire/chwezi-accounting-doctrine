@@ -3,7 +3,7 @@
 This roadmap was the original sequence for turning the 76 gap-stubs into release-grade skills. On 2026-05-25, the gap-closure pass converted all 76 stubs to active doctrine skills with source-basis references, implementation rules, and worked examples. The 2026-08-27 advanced IFRS wave added the Conceptual Framework, IFRS 18, deeper core-standard, consolidation, and published-statement analysis routes. The remaining roadmap is now a reviewer-signoff and depth-expansion plan, not a stub-remediation plan. Sequencing is driven by:
 
 1. **Dependency chain** — foundational skills first, derivative skills later.
-2. **Consumer-engine demand** — what `proposal-skills`, `srs-skills`, `business-plan-skills`, and `web-dev` will hit first on real client work.
+2. **Consumer-engine demand** — what `proposal-skills`, `chwezi-sdlc-documentation`, `business-plan-skills`, and `web-dev` will hit first on real client work.
 3. **Reviewer concentration** — group work that needs the same reviewer to minimise context-switching.
 4. **Score uplift per unit of effort** — pillars with `0` scores yield the largest jumps.
 

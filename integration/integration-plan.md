@@ -7,7 +7,7 @@ How the new doctrine, skills, governance, and the rewritten `finance-module-audi
 | Engine | Path | Doctrine destination | Skills destination |
 |---|---|---|---|
 | skills-web-dev | `C:\Users\Peter\.claude\skills` | `_doctrine/` | `skills/` (alongside existing skills, including the updated `finance-module-audit`) |
-| srs-skills | `C:\wamp64\www\srs-skills` | `doctrine/` | `skills/finance/` |
+| chwezi-sdlc-documentation | `C:\wamp64\www\chwezi-sdlc-documentation` | `doctrine/` | `skills/finance/` |
 | proposal-skills | `C:\wamp64\www\proposal-skills` | `doctrine/` | `skills/finance/` |
 | business-plan-skills | `C:\wamp64\www\business-plan-skills` | `doctrine/` | `skills/finance/` |
 
@@ -16,7 +16,7 @@ The `finance-module-audit` skill lives inside `skills-web-dev` (at `C:\Users\Pet
 ## Adoption order
 
 1. **skills-web-dev** first (the runtime engine; auto-run trigger lives here).
-2. **srs-skills** next (the implementation specifications driven by the doctrine).
+2. **chwezi-sdlc-documentation** next (the implementation specifications driven by the doctrine).
 3. **proposal-skills** (consumes the SRS acceptance criteria).
 4. **business-plan-skills** (consumes the country-context + tax + framework decisions).
 
@@ -42,7 +42,7 @@ Engine-specific reference files to be added directly into each engine (not part 
 - `skills/_chwezi-finance-engine-skeletons/php-mysql/` — copy-paste skeletons: posting service, journal table DDL, period state machine, idempotency keys, audit-log table, posting tests.
 - `skills/_chwezi-finance-engine-skeletons/reviewer-checklist.md` — PR review checklist that rejects direct `journal_lines` writes.
 
-### srs-skills
+### chwezi-sdlc-documentation
 
 - `skills/finance/requirement-id-library/` — reusable requirement IDs for ledger integrity, period close, tax handling, report generation, audit export, migration / opening balances, reconciliation.
 - `skills/finance/acceptance-criteria-templates/` — templates aligned to the requirement-ID library.
@@ -61,7 +61,7 @@ Engine-specific reference files to be added directly into each engine (not part 
 
 | Item | Replacement |
 |---|---|
-| Any existing LIFO references in srs-skills `inventory-management` and `modular-saas-architecture/module-config-example.php` | Convert to FIFO / weighted average; mark legacy LIFO data as `non-IFRS — do not apply unless explicitly requested`. |
+| Any existing LIFO references in chwezi-sdlc-documentation `inventory-management` and `modular-saas-architecture/module-config-example.php` | Convert to FIFO / weighted average; mark legacy LIFO data as `non-IFRS — do not apply unless explicitly requested`. |
 | Hardcoded Uganda VAT / PAYE / NSSF / WHT / EFRIS values in `business-plan-skills/country-context/uganda/SKILL.md` | Convert to source-register-referenced verification-gated values. |
 | US-GAAP-only language in any engine | Mark non-IFRS overlay. |
 | Vendor-replacement language in proposal-skills | Pair with caveats and acceptance criteria. |

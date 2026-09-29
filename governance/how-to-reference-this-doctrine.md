@@ -86,7 +86,7 @@ For Codex specifically: include this block in any system prompt that operates in
 - Finance skills mirrored to `skills/`.
 - Existing finance skills are updated to reference the doctrine at the mirrored path.
 
-### `srs-skills` At `C:\wamp64\www\srs-skills`
+### `chwezi-sdlc-documentation` At `C:\wamp64\www\chwezi-sdlc-documentation`
 
 - Doctrine mirrored to `doctrine/`.
 - Finance skills mirrored to `skills/finance/`.

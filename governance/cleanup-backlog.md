@@ -25,8 +25,8 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 | # | Engine | File | Lines | Severity | Proposed replacement |
 |---|---|---|---|---|---|
 | L-01 | business-plan-skills | `skills/industry-guides/restaurant/references/cost-controls-advanced.md` | TBD | blocker | Remove LIFO; rewrite section to use FIFO / weighted average, with note "LIFO not permitted under IFRS or IFRS for SMEs". |
-| L-02 | srs-skills | `skills/skills/inventory-management/SKILL.md` lines around `:326`, `:329`, `:343`, `:384` (from research) | TBD | blocker | Replace LIFO references with FIFO / weighted average; mark legacy LIFO data as "non-IFRS — do not apply unless explicitly requested". |
-| L-03 | srs-skills | `skills/skills/modular-saas-architecture/examples/module-config-example.php:230` (from research) | 230 | blocker | Remove LIFO from selectable config; if retained, gate behind a non-IFRS jurisdiction profile. |
+| L-02 | chwezi-sdlc-documentation | `skills/skills/inventory-management/SKILL.md` lines around `:326`, `:329`, `:343`, `:384` (from research) | TBD | blocker | Replace LIFO references with FIFO / weighted average; mark legacy LIFO data as "non-IFRS — do not apply unless explicitly requested". |
+| L-03 | chwezi-sdlc-documentation | `skills/skills/modular-saas-architecture/examples/module-config-example.php:230` (from research) | 230 | blocker | Remove LIFO from selectable config; if retained, gate behind a non-IFRS jurisdiction profile. |
 | L-04 | all engines | grep `\bLIFO\b` | various | blocker / major | Per occurrence: keep if in a "non-IFRS" or "legacy" context; remove if in an IFRS-compliant default. |
 
 ### US GAAP
@@ -44,7 +44,7 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 | H-02 | business-plan-skills | `country-context/uganda/SKILL.md:124`-`:134` (from research) | blocker | Convert Uganda VAT / PAYE / NSSF / WHT / EFRIS / tax-band content to verification-gated assumptions with `state: draft` until verified. |
 | H-03 | business-plan-skills | `country-context/tanzania/SKILL.md:175`-`:178`, `:196`, `:378`-`:387` | high | Use as template for the country-context verification-gap pattern. |
 | H-04 | all engines | grep for currency values, rates, percentages in code and copy | blocker / major | Per occurrence: confirm it is illustrative ("planning default — verify before final output") or convert to source-register reference. |
-| H-05 | srs-skills | Design lines referencing `tax_rates`, `exchange_rates` tables | high | Add current-rate verification owner field; document recheck cadence. |
+| H-05 | chwezi-sdlc-documentation | Design lines referencing `tax_rates`, `exchange_rates` tables | high | Add current-rate verification owner field; document recheck cadence. |
 
 ### Stale exchange rates
 
@@ -66,7 +66,7 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
 | D-01 | chwezi-dev-engine (Chwezi product code, where applicable) | grep `INSERT INTO journal_lines`, `UPDATE journal_lines`, `DELETE FROM journal_lines` | blocker | Route through posting service. |
-| D-02 | srs-skills | Any SRS example showing direct ledger writes | blocker | Replace example with a posting-service call. |
+| D-02 | chwezi-sdlc-documentation | Any SRS example showing direct ledger writes | blocker | Replace example with a posting-service call. |
 
 ### Status taxonomy
 
@@ -79,7 +79,7 @@ Cross-engine remediation backlog. Findings are not auto-applied. Each item carri
 
 | # | Engine | File | Severity | Action |
 |---|---|---|---|---|
-| V-01 | srs-skills | Finance required-review file | major | Add Accountant, Controller, CFO / finance lead, Tax reviewer to the role list. |
+| V-01 | chwezi-sdlc-documentation | Finance required-review file | major | Add Accountant, Controller, CFO / finance lead, Tax reviewer to the role list. |
 | V-02 | all engines | Audit-log schema | major | Confirm reviewer role recorded on every approval action. |
 
 ### Print stylesheet

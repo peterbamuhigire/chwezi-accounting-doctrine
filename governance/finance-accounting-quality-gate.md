@@ -116,7 +116,7 @@ A finding in any of these categories returns `fail`:
 7. Else → state = pass.
 ```
 
-### Consumer engine — SRS (srs-skills)
+### Consumer engine — SRS (chwezi-sdlc-documentation)
 
 Insert the gate as a generation-time check in SRS / SDS / test-plan outputs. Every requirement that touches finance scope carries a `gate-state` attribute and a finding register appendix.
 
