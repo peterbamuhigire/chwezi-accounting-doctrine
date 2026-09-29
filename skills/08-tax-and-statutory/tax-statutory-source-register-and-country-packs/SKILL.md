@@ -82,6 +82,7 @@ Load the required references and examples listed below before implementation or 
 6. EFRIS, eTIMS, and equivalent e-invoicing rules are country-specific statutory surfaces, not generic invoice settings.
 7. Exchange-rate values used in final postings require a source entry for the rate type and date.
 8. When source evidence conflicts, block final output and route to a named reviewer.
+9. Check an entry at the moment of use with `python tools/source_register_lookup.py --jurisdiction <CC> --register <stem> --date <YYYY-MM-DD> --json` (read-only); exit 3 means found but refused for final output.
 
 ## Acceptance Evidence
 

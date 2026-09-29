@@ -77,6 +77,7 @@ Load the required references and examples listed below before implementation or 
 1. Payroll posting starts from approved gross-to-net payroll events, not manual GL entry.
 2. Employee deductions and employer contributions are separate lines and separate liability or expense mappings.
 3. Statutory deductions by country require verified source-register entries for final output.
+   Check each rate with `python tools/source_register_lookup.py --jurisdiction <CC> --register <stem> --date <payroll period date> --json`; exit 3 is a hard stop for final payroll and statutory returns.
 4. Draft payroll simulations may use planning placeholders only when visibly caveated.
 5. Net pay posts to payroll clearing until bank or mobile-money payment evidence clears it.
 6. Payroll liabilities remain open until statutory payment evidence and return schedule tie out.
