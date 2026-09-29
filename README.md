@@ -23,7 +23,7 @@ cd chwezi-accounting-doctrine
 
 On Windows PowerShell, run `./install.ps1 -scope project`. The wrappers expose scope and dry-run options; consult their help before installing. This engine is independently installable. Other Chwezi engines route finance questions here when relevant.
 
-## Skills
+## Capabilities
 
 | Category | Skill routes | Coverage |
 |---|---|---|
@@ -36,11 +36,16 @@ On Windows PowerShell, run `./install.ps1 -scope project`. The wrappers expose s
 
 The category counts total 108 discovered skill files. Use the [router map](docs/router-map.md) to select current entries from the [skills directory](skills/); apply the [finance and accounting quality gate](governance/finance-accounting-quality-gate.md) whenever the work has finance scope.
 
+## DOMAIN PROMPT GENERATION CONTRACT
+
+For a prompt handoff, read the local [domain prompt contract](docs/ai-prompting/domain-prompt-compilation-contract.md). Generate a ready-to-paste finance prompt with entity, period, jurisdiction, reporting basis, source documents, accounting question, treatment, controls, audit trail, reconciliation, reviewer, and acceptance checks. Never invent rates, standards, statutory values, or assurance. **Ready-to-paste prompt:** include source/period assumptions and NOT ASSESSED gaps. **Failure action:** stop and obtain the missing source or reviewer, or revise one treatment field.
+
 ## References
 
 - [Chwezi Accounting Doctrine source repository](https://github.com/peterbamuhigire/chwezi-accounting-doctrine)
 - [Accounting and finance doctrine](doctrine/accounting-finance-doctrine.md)
 - [Finance and accounting quality gate](governance/finance-accounting-quality-gate.md)
 - [Skill router map](docs/router-map.md)
+- [Runtime-agnostic orchestration contract](docs/operations/runtime-agnostic-orchestration-2026-09-07.md) for multi-phase work: bounded packages, accounting checkpoints, context hygiene, and sanitised handling of imported content
 - [Repository operating guide](AGENTS.md)
 - [Installer scripts](install.sh), [Windows installer](install.ps1)
