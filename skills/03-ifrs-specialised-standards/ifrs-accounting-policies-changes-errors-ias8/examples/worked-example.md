@@ -53,7 +53,7 @@ fixture assumptions, not client facts or a general capitalisation threshold.
 | Corrected posting | Property, plant and equipment 100,000 | Cash 100,000 | Same open period; link to the reversal and original. |
 | Current-period profit normalisation | Repairs expense 100,000 | Opening retained earnings 100,000 | Same open period; use only after controller approval of the adjustment mapping. |
 
-Each journal balances. The two open-period correction journals net to debit
+Each journal balances. The three open-period journals together net to debit
 property, plant and equipment and credit opening retained earnings; the
 normalisation prevents the correction from appearing as current-period profit.
 The original journal is not updated or deleted. The posting sequence follows
@@ -76,10 +76,13 @@ materiality conclusion are not established by this fixture and remain
 NOT_ASSESSED.
 
 **Negative control:** if the original entry is edited or deleted, the posting
-period is locked without an approved adjustment route, either open-period
-journal is unbalanced, or the comparative restatement assessment is missing,
+period is locked without an approved adjustment route, any open-period journal
+is unbalanced, or the comparative restatement assessment is missing,
 the example does not pass. The workflow is a controlled implementation
 illustration; it does not claim that IFRS prescribes Chwezi's posting-service
 operations.
 
-Last reviewed: 2026-05-25.
+The generic worked-example body was last reviewed on 2026-05-25. The focused
+Section 10 addendum's source and arithmetic were checked on 2026-10-29; its
+excluded tax, depreciation, impairment, presentation and materiality conclusions
+remain `NOT_ASSESSED`.

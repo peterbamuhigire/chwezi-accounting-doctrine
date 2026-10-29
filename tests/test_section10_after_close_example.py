@@ -15,6 +15,8 @@ class Section10AfterCloseExampleTests(unittest.TestCase):
         self.assertIn("paragraphs 10.19–10.23", text)
         self.assertIn("materiality assessment", text)
         self.assertIn("financial-statement treatment is distinct", text)
+        self.assertIn("three open-period journals together net", text)
+        self.assertIn("any open-period journal", text)
 
         rows = [
             line for line in text.splitlines()
