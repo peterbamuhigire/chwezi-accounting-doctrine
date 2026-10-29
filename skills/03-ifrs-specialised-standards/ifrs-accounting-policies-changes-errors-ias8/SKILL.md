@@ -1,6 +1,6 @@
 ---
 name: ifrs-accounting-policies-changes-errors-ias8
-description: Use when adopting or changing accounting policies, accounting for changes in estimates, and correcting prior-period errors under IAS 8 / IFRS for SMEs Section 10.
+description: Use when adopting or changing accounting policies, accounting for changes in estimates, and correcting prior-period errors under IAS 8 / IFRS for SMEs Section 10, including material errors discovered after close.
 status: active
 metadata:
   portable: true
@@ -54,6 +54,7 @@ Load references/source-basis.md, references/implementation-rules.md, and the can
 - Read references/source-basis.md.
 - Read references/implementation-rules.md.
 - Confirm framework, jurisdiction, functional currency, reporting period, entity type, and reviewer route.
+- For an error found after close, also read [the focused worked example](examples/worked-example.md) and [the canonical reversal pattern](../../../doctrine/examples/reversal-pattern.md); keep the ledger correction sequence distinct from the reporting-period restatement assessment.
 
 ## Inputs
 
