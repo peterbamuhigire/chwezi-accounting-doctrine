@@ -1,0 +1,12 @@
+{
+  "name": "chwezi-accounting-doctrine-local",
+  "plugins": [
+    {
+      "name": "accounting",
+      "source": {
+        "source": "local",
+        "path": "./"
+      }
+    }
+  ]
+}

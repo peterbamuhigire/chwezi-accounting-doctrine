@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-29 - Finance engine Kaizen
+
+- Extended the strict text-integrity scan to reject forbidden C0 controls and
+  DEL in configured text files while allowing tabs; restored the matching
+  damaged data-contract row in 74 skill references.
+- Added a focused after-close material-error example separating the Chwezi
+  immutable-ledger correction sequence from IFRS for SMEs Section 10
+  retrospective restatement, with a balance and content acceptance test.
+- Added Codex compatibility and local marketplace metadata, expanded Claude
+  plugin metadata, and registered discovery, negative-control and 5,000-file
+  package/full-checkout guards. Public marketplace acceptance is not claimed.
+- Kept tax schedules that lack current primary-source/reviewer evidence blocked
+  from final statutory output.
+
 ## 2026-08-27 - Advanced IFRS research and review capability
 
 - Added Conceptual Framework and IFRS 18 routes, including materiality,

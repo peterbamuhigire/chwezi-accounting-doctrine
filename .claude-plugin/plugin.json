@@ -1,6 +1,11 @@
 {
   "name": "accounting",
   "version": "1.1.0",
+  "description": "Accounting and finance doctrine skills covering bookkeeping, IFRS/IAS, statutory source controls, close, reporting and review.",
+  "author": {
+    "name": "Peter Bamuhigire",
+    "email": "peter.bamuhigire@gmail.com"
+  },
   "skills": [
     "./skills/01-foundations/chart-of-accounts-design-and-governance/",
     "./skills/01-foundations/functional-and-presentation-currency/",

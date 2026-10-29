@@ -50,7 +50,11 @@ $checks = @(
   [pscustomobject]@{ path = (Join-Path $root 'tests\router-map\scripts\Test-RouterMapNegativeControls.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $root 'tests\source-register\scripts\Test-SourceRegisterNegativeControls.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $root 'tests\validation-state\scripts\Test-ValidationStateNegativeControls.ps1'); arguments = @() },
-  [pscustomobject]@{ path = (Join-Path $root 'tests\mojibake\scripts\Test-MojibakeControlCharacterNegative.ps1'); arguments = @() }
+  [pscustomobject]@{ path = (Join-Path $root 'tests\mojibake\scripts\Test-MojibakeControlCharacterNegative.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-package-file-count.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\package-file-count\scripts\Test-PackageFileCountNegative.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $PSScriptRoot 'check-plugin-packaging.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\plugin-packaging\scripts\Test-PluginPackagingNegative.ps1'); arguments = @() }
 )
 $results = New-Object System.Collections.ArrayList
 $psExe = Get-PowerShellExe

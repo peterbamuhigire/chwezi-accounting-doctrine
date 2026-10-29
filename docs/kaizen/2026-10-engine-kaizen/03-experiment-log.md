@@ -104,4 +104,39 @@ The text and arithmetic acceptance checks pass. Retained. A true external-model
 routing precision score and a 3-positive/2-negative skill-specific routing
 fixture remain `NOT_ASSESSED`; this cycle has not claimed either.
 
-**Commit:** to be recorded after the separate A1 commit is created.
+**Commit:** `dba156a` (`fix(accounting): clarify after-close Section 10 corrections`).
+
+## A4 — local Claude and Codex marketplace packaging checks
+
+**Hypothesis.** A repository-local structural check can catch incomplete Claude
+and Codex marketplace metadata, missing skill discovery roots, and a package or
+checkout that exceeds the 5,000-file cap without altering existing Claude hook
+settings.
+
+**Change retained.** The Claude manifest now has a factual description and
+author. A compatibility `.codex-plugin/plugin.json` and a local
+`.agents/plugins/marketplace.json` point to the skills directory. The
+packaging check compares the Codex root and Claude explicit skill paths to all
+active skill directories and validates both local catalog entries. The
+independent file-count check reports full-checkout and package-oriented counts
+and fails over the configured limit. Two disposable negative fixtures test a
+missing skill root and over-limit counts. The host-specific metadata decision
+is supported by official documentation reviewed for this cycle.
+
+**Verification.** The disposable PowerShell 7 strict gate reports 17/17
+checks passed, including 108 active skill directories resolved for both hosts,
+both packaging and file-count negative controls, and counts of 1,063
+full-checkout and 759 package-oriented file entries against the 5,000-entry
+ceiling. Claude CLI manifest checks passed without manifest errors or warnings;
+strict plugin-directory mode exits 1 for the nonblocking icon and root
+`CLAUDE.md` warnings. The existing Claude hook settings are unchanged. The
+root agent's isolated Codex/Claude install lab is established, but its rerun
+against this final integrated tree is pending; native install acceptance is
+therefore `NOT_ASSESSED` at this record. Public listing acceptance is also
+`NOT_ASSESSED`.
+
+**Measure and decision.** Retain the deterministic local checks: all active
+skill paths resolve in both manifests and failure-path fixtures reject the
+missing-root and over-limit cases. No public acceptance claim is made.
+
+**Commit:** to be recorded after the separate A4 commit is created.
