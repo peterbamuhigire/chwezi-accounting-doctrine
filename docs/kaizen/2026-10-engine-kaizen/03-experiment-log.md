@@ -117,7 +117,7 @@ skills. The Python test validates labels, IDs and target discoverability in
 precision@1 remain `NOT_ASSESSED`.
 
 **Verification:** both new fixture tests pass as part of the final Python
-suite. **Commit:** to be recorded after the separate fixture commit is created.
+suite. **Commit:** `59ef4c0` (`test(accounting): add Section 10 routing fixtures`).
 
 ## A4 — local Claude and Codex marketplace packaging checks
 
@@ -138,9 +138,9 @@ is supported by official documentation reviewed for this cycle.
 
 **Verification.** The disposable PowerShell 7 strict gate reports 17/17
 checks passed, including 108 active skill directories resolved for both hosts,
-both packaging and file-count negative controls, and counts of 1,063
-full-checkout and 759 package-oriented file entries against the 5,000-entry
-ceiling. Claude CLI manifest checks passed without manifest errors or warnings;
+both packaging and file-count negative controls, and counts of 1,141
+full-checkout and 764 package-oriented file entries against the 5,000-entry
+ceiling at that snapshot (full count includes Git objects). Claude CLI manifest checks passed without manifest errors or warnings;
 strict plugin-directory mode exits 1 for the nonblocking icon and root
 `CLAUDE.md` warnings. The existing Claude hook settings are unchanged. The
 root agent's isolated Codex/Claude install lab is established, but its rerun
@@ -152,4 +152,4 @@ therefore `NOT_ASSESSED` at this record. Public listing acceptance is also
 skill paths resolve in both manifests and failure-path fixtures reject the
 missing-root and over-limit cases. No public acceptance claim is made.
 
-**Commit:** to be recorded after the separate A4 commit is created.
+**Commit:** `3abc9b8` (`feat(accounting): add Codex local marketplace packaging`).
