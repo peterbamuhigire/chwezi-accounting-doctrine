@@ -101,10 +101,23 @@ broken. No paid model run or client evidence was used.
 **Measure and decision.** The formerly generic example now covers the observed
 closed-period error case and calls out the required ledger/reporting split.
 The text and arithmetic acceptance checks pass. Retained. A true external-model
-routing precision score and a 3-positive/2-negative skill-specific routing
-fixture remain `NOT_ASSESSED`; this cycle has not claimed either.
+routing precision score remains `NOT_ASSESSED`; the expected-label fixture is
+not a router execution. The three positive and two negative labelled examples
+are checked for fixture integrity in a follow-up test.
 
 **Commit:** `dba156a` (`fix(accounting): clarify after-close Section 10 corrections`).
+**Routing-fixture follow-up:** recorded in the separate test commit below.
+
+## A1 routing-fixture follow-up
+
+Added a five-case expected-label fixture for the touched Section 10 skill: three
+positive after-close error queries and two negative queries routed to other
+skills. The Python test validates labels, IDs and target discoverability in
+`docs/router-map.md`. It does not invoke a model or router; query execution and
+precision@1 remain `NOT_ASSESSED`.
+
+**Verification:** both new fixture tests pass as part of the final Python
+suite. **Commit:** to be recorded after the separate fixture commit is created.
 
 ## A4 — local Claude and Codex marketplace packaging checks
 

@@ -1,0 +1,36 @@
+{
+  "fixture_id": "ifrs-accounting-policies-changes-errors-ias8-after-close",
+  "status": "expected-labels-only; not a router execution or precision benchmark",
+  "cases": [
+    {
+      "id": "positive-material-error-after-close",
+      "label": "positive",
+      "query": "A material prior-period posting error was found after the reporting period closed. How should the ledger correction and comparative statements be handled?",
+      "expected_skill": "ifrs-accounting-policies-changes-errors-ias8"
+    },
+    {
+      "id": "positive-closed-period-correction",
+      "label": "positive",
+      "query": "The prior year is locked and an accounting error was found. Which IFRS for SMEs Section 10 correction guidance applies?",
+      "expected_skill": "ifrs-accounting-policies-changes-errors-ias8"
+    },
+    {
+      "id": "positive-comparative-restatement",
+      "label": "positive",
+      "query": "Assess retrospective comparative restatement for a material prior-period error discovered after close under Section 10.",
+      "expected_skill": "ifrs-accounting-policies-changes-errors-ias8"
+    },
+    {
+      "id": "negative-mobile-money-reconciliation",
+      "label": "negative",
+      "query": "Match mobile-money settlements to the provider statement and reconcile the clearing balance.",
+      "expected_skill": "bank-and-mobile-money-reconciliation"
+    },
+    {
+      "id": "negative-chart-of-accounts-design",
+      "label": "negative",
+      "query": "Design account-code segments and approval controls for a new chart of accounts.",
+      "expected_skill": "chart-of-accounts-design-and-governance"
+    }
+  ]
+}
