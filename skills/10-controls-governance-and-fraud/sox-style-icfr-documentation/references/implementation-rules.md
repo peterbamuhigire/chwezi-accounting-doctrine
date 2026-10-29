@@ -27,7 +27,7 @@ This skill covers preventive, detective, corrective, and assurance controls over
 
 ## Data Contract
 
-Minimum fields: entity_id, period_id, ramework, jurisdiction, unctional_currency, source_id, source_document_ref, event_date, posting_date, ccount_code, dimension_set, mount, currency, evidence_ref, policy_ref, judgement_ref, eview_status, exception_status.
+Minimum fields: entity_id, period_id, framework, jurisdiction, functional_currency, source_id, source_document_ref, event_date, posting_date, account_code, dimension_set, amount, currency, evidence_ref, policy_ref, judgement_ref, eview_status, exception_status.
 
 ## Rejection Rules
 

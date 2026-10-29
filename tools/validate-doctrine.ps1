@@ -49,7 +49,8 @@ $checks = @(
   [pscustomobject]@{ path = (Join-Path $root 'tests\accounting-invariants\scripts\Test-AccountingInvariants.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $root 'tests\router-map\scripts\Test-RouterMapNegativeControls.ps1'); arguments = @() },
   [pscustomobject]@{ path = (Join-Path $root 'tests\source-register\scripts\Test-SourceRegisterNegativeControls.ps1'); arguments = @() },
-  [pscustomobject]@{ path = (Join-Path $root 'tests\validation-state\scripts\Test-ValidationStateNegativeControls.ps1'); arguments = @() }
+  [pscustomobject]@{ path = (Join-Path $root 'tests\validation-state\scripts\Test-ValidationStateNegativeControls.ps1'); arguments = @() },
+  [pscustomobject]@{ path = (Join-Path $root 'tests\mojibake\scripts\Test-MojibakeControlCharacterNegative.ps1'); arguments = @() }
 )
 $results = New-Object System.Collections.ArrayList
 $psExe = Get-PowerShellExe

@@ -59,6 +59,8 @@ $excludeDirs = @('\.git\', '\node_modules\', '\vendor\', '\.venv\', '\dist\', '\
 $findings = New-Object System.Collections.ArrayList
 $filesScanned = 0
 $matches = 0
+$controlMatches = 0
+$forbiddenControlPattern = '[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]'
 
 Get-ChildItem -Path $root -Recurse -File | Where-Object {
   $path = $_.FullName
@@ -70,6 +72,14 @@ Get-ChildItem -Path $root -Recurse -File | Where-Object {
   $lineNumber = 0
   foreach ($line in Get-Content -LiteralPath $file.FullName -Encoding UTF8) {
     $lineNumber++
+    if ([regex]::IsMatch($line, $forbiddenControlPattern)) {
+      $controlMatches++
+      if ($findings.Count -lt 200) {
+        $severity = 'medium'
+        if ($Strict) { $severity = 'high' }
+        [void]$findings.Add((New-Finding $severity 'MOJIBAKE-003' 'Forbidden C0 control or DEL character found in text.' $relative $lineNumber))
+      }
+    }
     foreach ($pattern in $patterns) {
       if ($line.Contains($pattern)) {
         $matches++
@@ -95,6 +105,7 @@ $result = [pscustomobject]@{
   summary = [pscustomobject]@{
     files_scanned = $filesScanned
     mojibake_matches = $matches
+    control_character_matches = $controlMatches
     strict = [bool]$Strict
   }
   findings = @($findings)
