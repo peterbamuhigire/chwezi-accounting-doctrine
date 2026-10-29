@@ -6,6 +6,16 @@ param(
 
 $ErrorActionPreference = 'Stop'
 if ($MaximumFiles -lt 1) { throw 'MaximumFiles must be a positive integer.' }
+if ($MaximumFiles -gt 5000) {
+  $report = [pscustomobject]@{
+    check = 'package-file-count'
+    state = 'fail'
+    summary = [pscustomobject]@{ maximum_files = $MaximumFiles; hard_maximum_files = 5000 }
+    findings = @([pscustomobject]@{ severity = 'high'; code = 'PACKAGE-000'; message = "MaximumFiles cannot exceed the hard cap of 5000 (received $MaximumFiles)." })
+  }
+  $report | ConvertTo-Json -Depth 6
+  exit 1
+}
 if ($RepoRoot) { $root = (Resolve-Path $RepoRoot).Path } else { $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }
 
 $excludedPackageDirectories = @('.git', '.cache', 'cache', '__pycache__', 'node_modules', '.venv', 'venv')

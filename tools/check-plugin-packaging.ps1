@@ -8,7 +8,12 @@ if ($RepoRoot) { $root = (Resolve-Path $RepoRoot).Path } else { $root = (Resolve
 $findings = New-Object System.Collections.ArrayList
 $codexPathCount = 0
 $claudePathCount = 0
-$activeSkillCount = @(Get-ChildItem -LiteralPath (Join-Path $root 'skills') -Filter 'SKILL.md' -Recurse -File).Count
+$pathComparer = [System.StringComparer]::Ordinal
+if ([System.IO.Path]::DirectorySeparatorChar -eq '\') { $pathComparer = [System.StringComparer]::OrdinalIgnoreCase }
+$activeSkillFiles = @(Get-ChildItem -LiteralPath (Join-Path $root 'skills') -Filter 'SKILL.md' -Recurse -File)
+$activeSkillPaths = [System.Collections.Generic.HashSet[string]]::new($pathComparer)
+foreach ($file in $activeSkillFiles) { [void]$activeSkillPaths.Add([System.IO.Path]::GetFullPath($file.DirectoryName).TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar)) }
+$activeSkillCount = $activeSkillPaths.Count
 
 function Read-JsonManifest {
   param([string]$Path, [string]$Code)
@@ -31,15 +36,44 @@ function Resolve-Directory {
   }
   $candidate = [System.IO.Path]::GetFullPath((Join-Path $root $RelativePath))
   $prefix = $root.TrimEnd([System.IO.Path]::DirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar
-  if (-not $candidate.StartsWith($prefix, [System.StringComparison]::OrdinalIgnoreCase) -and $candidate -ne $root) {
-    [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = $Code; message = "$Context path escapes the plugin root: $RelativePath" })
-    return $null
+  $isRoot = $pathComparer.Equals($candidate.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar), $root.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar))
+  if (-not $candidate.StartsWith($prefix, [System.StringComparison]::Ordinal) -and -not $isRoot) {
+    if ([System.IO.Path]::DirectorySeparatorChar -eq '\' -and -not $isRoot -and $candidate.StartsWith($prefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+      # Windows paths are case-insensitive; the comparison below handles this platform explicitly.
+    } else {
+      [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = $Code; message = "$Context path escapes the plugin root: $RelativePath" })
+      return $null
+    }
+  }
+  $relative = $candidate.Substring($root.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar).Length).TrimStart([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar)
+  $current = $root
+  foreach ($part in ($relative -split '[\\/]')) {
+    if (-not $part) { continue }
+    $current = Join-Path $current $part
+    $item = Get-Item -LiteralPath $current -Force -ErrorAction SilentlyContinue
+    if ($item -and ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) {
+      [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-013'; message = "$Context path traverses a symbolic link or reparse point: $RelativePath" })
+      return $null
+    }
   }
   if (-not (Test-Path -LiteralPath $candidate -PathType Container)) {
     [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = $Code; message = "$Context directory does not exist: $RelativePath" })
     return $null
   }
   return $candidate
+}
+
+function Add-PathSetFindings {
+  param([System.Collections.Generic.HashSet[string]]$Expected, [System.Collections.Generic.HashSet[string]]$Actual, [string]$Code, [string]$Context)
+  $missing = @($Expected | Where-Object { -not $Actual.Contains($_) } | Sort-Object)
+  $unexpected = @($Actual | Where-Object { -not $Expected.Contains($_) } | Sort-Object)
+  if ($missing.Count -gt 0 -or $unexpected.Count -gt 0) {
+    [void]$findings.Add([pscustomobject]@{
+      severity = 'high'
+      code = $Code
+      message = "$Context path set differs from active skill paths (missing=$($missing.Count); unexpected=$($unexpected.Count))."
+    })
+  }
 }
 
 $codex = Read-JsonManifest (Join-Path $root '.codex-plugin/plugin.json') 'PACKAGING-001'
@@ -56,10 +90,11 @@ if ($codex) {
   } else {
     $skillRoot = Resolve-Directory ([string]$codex.skills) 'PACKAGING-003' 'Codex skills'
     if ($skillRoot) {
-      $codexPathCount = @(Get-ChildItem -LiteralPath $skillRoot -Filter 'SKILL.md' -Recurse -File).Count
-      if ($codexPathCount -ne $activeSkillCount) {
-        [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-007'; message = "Codex discovery resolves $codexPathCount skill files; repository contains $activeSkillCount." })
-      }
+      $codexSkillFiles = @(Get-ChildItem -LiteralPath $skillRoot -Filter 'SKILL.md' -Recurse -File)
+      $codexPaths = [System.Collections.Generic.HashSet[string]]::new($pathComparer)
+      foreach ($file in $codexSkillFiles) { [void]$codexPaths.Add([System.IO.Path]::GetFullPath($file.DirectoryName).TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar)) }
+      $codexPathCount = $codexPaths.Count
+      Add-PathSetFindings $activeSkillPaths $codexPaths 'PACKAGING-007' 'Codex discovery'
     }
   }
 }
@@ -71,21 +106,20 @@ if ($claude) {
   if ($claude.skills -isnot [System.Array]) {
     [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-009'; message = 'Claude skills must be an array of plugin-root-relative directories.' })
   } else {
-    $seen = @{}
+    $seen = [System.Collections.Generic.HashSet[string]]::new($pathComparer)
     foreach ($entry in $claude.skills) {
       $skillPath = Resolve-Directory ([string]$entry) 'PACKAGING-009' 'Claude skill'
       if ($skillPath) {
         if (-not (Test-Path -LiteralPath (Join-Path $skillPath 'SKILL.md') -PathType Leaf)) {
           [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-009'; message = "Claude skill path has no SKILL.md: $entry" })
-        } elseif (-not $seen.ContainsKey($skillPath)) {
-          $seen[$skillPath] = $true
+        } elseif (-not $seen.Add([System.IO.Path]::GetFullPath($skillPath).TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar))) {
+          [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-014'; message = "Claude manifest lists a duplicate skill path: $entry" })
+        } else {
           $claudePathCount++
         }
       }
     }
-    if ($claudePathCount -ne $activeSkillCount) {
-      [void]$findings.Add([pscustomobject]@{ severity = 'high'; code = 'PACKAGING-010'; message = "Claude manifest resolves $claudePathCount distinct skill paths; repository contains $activeSkillCount." })
-    }
+    Add-PathSetFindings $activeSkillPaths $seen 'PACKAGING-010' 'Claude manifest'
   }
 }
 

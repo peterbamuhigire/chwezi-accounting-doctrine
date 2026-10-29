@@ -30,6 +30,12 @@ try {
   $codes = @($failReport.findings | ForEach-Object { $_.code })
   $failOk = $failExit -eq 1 -and $failReport.state -eq 'fail' -and $codes -contains 'PACKAGE-001' -and $codes -contains 'PACKAGE-002'
   [void]$results.Add([pscustomobject]@{ case = 'over-limit-fails-both-counts'; passed = $failOk; checker_exit = $failExit; findings = $codes })
+
+  $capOutput = & $checker -RepoRoot $fixture -MaximumFiles 5001 -Json
+  $capExit = $LASTEXITCODE
+  $capReport = ($capOutput -join "`n") | ConvertFrom-Json
+  $capOk = $capExit -eq 1 -and $capReport.state -eq 'fail' -and @($capReport.findings | Where-Object { $_.code -eq 'PACKAGE-000' }).Count -eq 1
+  [void]$results.Add([pscustomobject]@{ case = 'configured-limit-cannot-exceed-hard-cap'; passed = $capOk; checker_exit = $capExit; findings = @($capReport.findings | ForEach-Object { $_.code }) })
 } finally {
   if (Test-Path $fixture) { Remove-Item -LiteralPath $fixture -Recurse -Force }
 }
