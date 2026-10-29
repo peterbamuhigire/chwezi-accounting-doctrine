@@ -22,7 +22,8 @@ professional opinion.
   directory was absent. This is an observed path mismatch; no facts from the
   missing checkout are claimed.
 - No uncommitted policy files existed at start. The checkout was clean at
-  `ff33ff14`; the root agent also retained `/tmp/chwezi-portfolio-kaizen/pre-pull.json`.
+  `ff33ff14`; the portfolio root retained a pre-pull JSON inventory snapshot
+  outside this repository.
 - No canonical doctrine file was changed. No third-party model call, live tax
   filing, source contact, production posting, host PowerShell install, public
   submission, push, or PR was performed.

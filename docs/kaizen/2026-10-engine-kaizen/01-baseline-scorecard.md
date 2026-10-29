@@ -1,12 +1,24 @@
 # Chwezi Accounting Doctrine baseline — 2026-10-29
 
-## Freeze record
+## Baseline evidence snapshot and scoring correction
 
-This scorecard was frozen on branch `kaizen/2026-10` at baseline commit
-`ff33ff14` before implementation changes. The checkout was clean at start;
-there were no uncommitted policy files to preserve or exclude. The parent
-portfolio pre-pull snapshot is `/tmp/chwezi-portfolio-kaizen/pre-pull.json`.
-No change to the canonical accounting doctrine is included in this cycle.
+The pre-change repository state was `ff33ff14` on `kaizen/2026-10`; the
+checkout was clean at start, and the parent portfolio recorded its pre-pull
+inventory outside this repository. The scorecard itself was **not frozen
+before implementation**, as the prompt required. These baseline ratings were
+reconstructed after the experiments from the recorded pre-change files,
+validator output and practitioner observations. This is a process deviation;
+it prevents a claim that the ratings were contemporaneously frozen.
+
+The first post-cycle draft carried provisional baseline scores of 74, 72, 67,
+63, 42, 50, 70, 62, 52 and 84 (raw mean 63.6). Root review found that the high
+scores, especially above 65, were not supported by extraordinary or broad
+evidence and that the scores were too generous relative to unassessed product,
+accessibility, routing and reviewer evidence. I preserve those superseded
+ratings here as correction history, not as a measured freeze. The table below
+contains the corrected baseline reassessment; final scores are reassessed in
+`05-final-report.md`. Neither pass was an independent audit. No change to the
+canonical accounting doctrine is included in this cycle.
 
 The supplied prompt named `digital-research-engine`; that checkout/path was not
 present here. The matching Portfolio Kaizen Standard and Currentness Gate were
@@ -25,19 +37,18 @@ independently of this score.
 
 | Dimension | Raw /100 | Evidence inspected | Deficiency at baseline |
 |---|---:|---|---|
-| Doctrine | 74 | `doctrine/accounting-finance-doctrine.md`, ledger invariants, quality gate, 108-skill inventory | Accounting boundaries are documented, but the complete doctrine was not independently re-reviewed against each output family in this cycle. |
-| Taxonomy and routing | 72 | Root router, `docs/router-map.md`, 108 active skill paths, manifest lists 108 skill directories | No measured query set establishes routing precision@1; owned positive/negative routing fixture coverage is not demonstrated. |
-| Skill depth | 67 | Three task routes and selected skills/references read; 136 example files counted | Example presence is not equivalent to depth: only one example file has at least 100 lines, and domain-wide applicability was not independently measured. |
-| Applied proof | 63 | 20 Python unit tests pass; a disposable PowerShell 7 Linux-container run of the strict gate passed all 12 child checks, including 63 accounting assertions | No end-to-end model or client transaction pack was executed; Windows PowerShell 5.1 and client/controller acceptance were not assessed. |
-| Standards currency | 42 | Source-register inventory; official source review recorded in `00-scope-and-evidence.md` | 11 source records have elapsed recheck dates; several tax records remain draft or block final use; cross-jurisdiction current tax was not fully verified. |
-| Output readiness | 50 | Existing journal, EFRIS and payroll examples; observed route outcomes in `00-scope-and-evidence.md` | Statement and PBC output for the new scenario lacks an independently reviewed assembled pack. |
-| Accessibility and inclusion | 70 | Root accessibility/UX routes and inclusive-design route identified | No rendered or screen-reader check was performed in this cycle. |
-| Production and handoff | 62 | Installer, Claude plugin/marketplace files, Codex policy helper and CI definitions inspected | Install/use flows were not executed; no OpenAI portable package/marketplace metadata or 5,000-file guard exists at baseline. |
-| Hygiene | 52 | Repo file count, source-register dates, path scan, recent Kaizen history, and the 12-check baseline strict validator | The local-link check passed, but machine-specific historical paths remain and 11 source recheck dates were overdue; external URL liveness was not tested. |
-| Safety and integrity | 84 | Finance quality gate, source-state refusal, reversal and approval controls inspected; Python suite and disposable PowerShell suite passed | Statutory final-use gates are intentionally closed pending review; live professional acceptance remains unassessed. |
+| Doctrine | 58 | `doctrine/accounting-finance-doctrine.md`, ledger invariants, finance quality gate and 108-skill inventory | Core boundaries are documented, but this cycle sampled rather than re-audited all output families and had no professional acceptance. |
+| Taxonomy and routing | 60 | `README.md`, `docs/router-map.md`, and 108 active skill paths | Inventory and route map exist, but no executed labelled query set establishes precision@1 or broad routing performance. |
+| Skill depth | 55 | Three task routes and selected skill/reference content; 136 example files counted | Coverage varies; the example count is only a size proxy and broad workflow quality was not measured. |
+| Applied proof | 54 | Baseline 20-test Python run and 12-check strict gate, including 63 accounting assertions | Tests cover deterministic checks, not end-to-end user/model behavior, Windows PowerShell 5.1 or controller acceptance. |
+| Standards currency | 38 | Source-register inventory and official source review recorded in `00-scope-and-evidence.md` | 11 source records required recheck; multiple statutory entries were draft, and cross-jurisdiction review was incomplete. |
+| Output readiness | 48 | Existing journal, EFRIS and payroll examples; the three synthetic task observations | No independently reviewed assembled statement/PBC pack, source support, or client-ready output was demonstrated. |
+| Accessibility and inclusion | 50 | Accessibility/UX skill routes were located | No rendered, assistive-technology or inclusive-output evaluation was performed. |
+| Production and handoff | 48 | Installer, Claude plugin/marketplace, Codex policy helper and CI definitions inspected | No native install/use flow was executed and there was no repository-local Codex catalogue or file-cap guard. |
+| Hygiene | 44 | Baseline file count, source dates, local-link scan, path scan and 12-check gate | The local-link scan passed, but a repeated control-byte defect, overdue source reviews and machine-specific historical references remained. |
+| Safety and integrity | 60 | Finance quality gate, source-state refusal, reversal/approval controls, baseline tests | Statutory outputs were blocked pending review, and live professional acceptance, privacy/system security review and user behavior were unassessed. |
 
-**Raw mean:** 63.6/100. **Calculation:** (74 + 72 + 67 + 63 + 42 + 50 + 70 + 62 + 52 + 84) / 10 = 636 / 10. **Published capped score:** 63.6/100 (`min(63.6,
-65)`). **Blockers:** final statutory outputs using draft, expired or
+**Corrected baseline raw mean:** 51.5/100. **Calculation:** (58 + 60 + 55 + 54 + 38 + 48 + 50 + 48 + 44 + 60) / 10 = 515 / 10. **Standard published capped score:** 51.5/100 (`min(51.5, 65)`). **User-requested initial-baseline cap:** 45/100 (`min(51.5, 45)`). Both caps are applied to the same raw mean; the raw dimension scores are not altered to meet either cap. **Blockers:** final statutory outputs using draft, expired or
 unverified register entries; Windows PowerShell 5.1 and remote CI are
 unassessed; no professional controller acceptance for the three scenario
 outputs.
@@ -53,7 +64,7 @@ outputs.
 | Fixture coverage (3 positives + 2 owned negatives per skill) | `NOT_ASSESSED`; no such complete skill-indexed coverage was found. The repository has 108 active skills and 7 Markdown/JSON files under `tests` counted as fixture candidates, not a complete routing dataset. |
 | Worked-example depth | 136 skill example Markdown files; 1 file has at least 100 lines. This count is a size proxy only, not a quality verdict. |
 | Broken links | Baseline strict gate's `tools/check-links.ps1`: exit 0; 182 local links checked, 0 broken local links, 12 external links seen. External HTTP liveness was not checked by this local-link result. |
-| Machine-specific links/paths | At least 4 Markdown files contain `/home/` strings; additional historical `C:\wamp64\www\...` references occur in dated audit/history records. This is a search observation, not a complete link-integrity count. |
+| Machine-specific links/paths | At least 4 Markdown files contain Unix home-directory path references; additional Windows local web-root references occur in dated audit/history records. This is a search observation, not a complete link-integrity count. |
 | Dangling cross-engine references | Full corpus count `NOT_ASSESSED`. The three named consumer engines were resolved through their canonical aliases and sampled read-only; exact copied/path mismatches are carried to `06-next-cycle.md`. The task-specified Digital Research checkout name/path was absent; matching research governance was read under `chwezi-research-engine`. |
 | Expired source records | 11 records have `expires_or_recheck_due` dates before 2026-10-29 in `doctrine/source-register/`; see `00-scope-and-evidence.md`. A past review date means recheck is due, not that the source claim is false. |
 | Repository file cap | 793 filesystem file entries including `.git`; 756 outside `.git`; 747 Git-tracked files at baseline. All are below the 5,000-file ceiling; the package-oriented count uses a separate documented exclusion policy and will be repeated before release. |
@@ -61,7 +72,20 @@ outputs.
 | PowerShell / Windows-native route | `NOT_ASSESSED`: neither `pwsh` nor `powershell.exe` is installed. No host installation was attempted. |
 | Tier 3 behavioral/model runs | `NOT_ASSESSED`; none requested or run. |
 
-## Baseline risks carried forward
+## Correction history and baseline risks carried forward
+
+| Dimension | Superseded first-draft baseline | Corrected baseline | Reason for correction |
+|---|---:|---:|---|
+| Doctrine | 74 | 58 | The 74 assumed broad adherence without a cross-family re-audit or controller evidence. |
+| Taxonomy and routing | 72 | 60 | Inventory and maps do not establish routing quality or precision@1. |
+| Skill depth | 67 | 55 | File counts and selected route samples do not establish broad operational depth. |
+| Applied proof | 63 | 54 | Deterministic baseline checks do not test client/model behavior or professional acceptance. |
+| Standards currency | 42 | 38 | The unresolved expired/draft record set was more substantial than the prior score reflected. |
+| Output readiness | 50 | 48 | No assembled independent client-ready pack was demonstrated. |
+| Accessibility and inclusion | 70 | 50 | Routes existed, but no accessibility evaluation was run. |
+| Production and handoff | 62 | 48 | Install/use flows had not been run and Codex packaging/cap checks were absent. |
+| Hygiene | 52 | 44 | Link success did not offset repeated control-byte corruption and overdue sources. |
+| Safety and integrity | 84 | 60 | The controls were present, but professional acceptance and live-output evidence were missing. |
 
 1. Recheck due dates and current source admission must remain separate: elapsed
    dates call for review, while draft or unsupported statutory values stay

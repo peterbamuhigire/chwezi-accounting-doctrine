@@ -26,7 +26,17 @@ cd chwezi-accounting-doctrine
 
 On Windows PowerShell, run `./install.ps1 --scope project`. Installed files are recorded in `.chwezi/install-state.json` under the target root, and `node scripts/install-engine.js doctor --scope project` checks an installation.
 
-**Codex.** Codex reads [`AGENTS.md`](AGENTS.md) at the repository root. The Codex-only model-policy helper lives in [`.codex/`](.codex/README.md): run `python <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`, and use `--apply` only when it reports drift. Claude and other runners skip this step.
+**Codex.** Codex reads [`AGENTS.md`](AGENTS.md) at the repository root. To install the local Codex plugin, run these commands from the repository root:
+
+```sh
+codex plugin marketplace add .
+codex plugin add accounting@chwezi-accounting-doctrine-local
+```
+
+The local Codex catalogue name is `chwezi-accounting-doctrine-local`; the
+plugin name is `accounting`. These are distinct from the Claude marketplace
+name `chwezi-accounting` shown above. The Codex-only model-policy helper lives
+in [`.codex/`](.codex/README.md): run `python <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`, and use `--apply` only when it reports drift. Claude and other runners skip this step.
 
 **Manual use.** Clone the repository and point the agent at this README and [`AGENTS.md`](AGENTS.md); `CLAUDE.md` imports `AGENTS.md`. Select skills through the [router map](docs/router-map.md) and read the chosen `SKILL.md` directly. To confirm a checkout is sound, run `powershell -NoProfile -File tools/validate-doctrine.ps1` and `python -m pytest tests`.
 

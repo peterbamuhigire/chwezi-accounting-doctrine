@@ -119,37 +119,59 @@ precision@1 remain `NOT_ASSESSED`.
 **Verification:** both new fixture tests pass as part of the final Python
 suite. **Commit:** `59ef4c0` (`test(accounting): add Section 10 routing fixtures`).
 
+## A1 review correction — open-period journal net
+
+Root review identified a wording error in the worked example: the reversal and
+corrected posting alone net to PPE and repairs expense; the third open-period
+profit-normalisation journal is required for the complete three-journal set to
+net to PPE and opening retained earnings. The example now attributes that net
+to all three open-period journals, says any open-period journal must balance,
+and distinguishes the generic example's historical review date from the
+2026-10-29 source/arithmetic check for this addendum. The Python test asserts
+the corrected explanation. The depreciation, tax, impairment, presentation
+and materiality conclusions remain excluded and `NOT_ASSESSED`.
+
+**Verification:** the Section 10 example test passes; the complete Python suite
+and registered PowerShell gate were rerun on the final tree and are recorded in
+`04-validation-record.md`. **Commit:** `9857cbb` (`fix(accounting): correct
+Section 10 journal net explanation`).
+
 ## A4 — local Claude and Codex marketplace packaging checks
 
 **Hypothesis.** A repository-local structural check can catch incomplete Claude
-and Codex marketplace metadata, missing skill discovery roots, and a package or
-checkout that exceeds the 5,000-file cap without altering existing Claude hook
-settings.
+and Codex marketplace metadata, incomplete or substituted skill discovery
+paths, and a package or checkout that exceeds the non-configurable 5,000-file
+cap without altering existing Claude hook settings.
 
 **Change retained.** The Claude manifest now has a factual description and
 author. A compatibility `.codex-plugin/plugin.json` and a local
 `.agents/plugins/marketplace.json` point to the skills directory. The
 packaging check compares the Codex root and Claude explicit skill paths to all
-active skill directories and validates both local catalog entries. The
-independent file-count check reports full-checkout and package-oriented counts
-and fails over the configured limit. Two disposable negative fixtures test a
-missing skill root and over-limit counts. The host-specific metadata decision
-is supported by official documentation reviewed for this cycle.
+active skill directories as exact path sets, rejects duplicate Claude paths,
+directory traversal and symlink/reparse-point roots, and validates both local
+catalog entries. The independent file-count check reports full-checkout and
+package-oriented counts and refuses a configured maximum above 5,000. The
+host-specific metadata decision is supported by official documentation
+reviewed for this cycle.
 
 **Verification.** The disposable PowerShell 7 strict gate reports 17/17
-checks passed, including 108 active skill directories resolved for both hosts,
-both packaging and file-count negative controls, and counts of 1,141
-full-checkout and 764 package-oriented file entries against the 5,000-entry
-ceiling at that snapshot (full count includes Git objects). Claude CLI manifest checks passed without manifest errors or warnings;
-strict plugin-directory mode exits 1 for the nonblocking icon and root
-`CLAUDE.md` warnings. The existing Claude hook settings are unchanged. The
-root agent's isolated Codex/Claude install lab is established, but its rerun
-against this final integrated tree is pending; native install acceptance is
-therefore `NOT_ASSESSED` at this record. Public listing acceptance is also
-`NOT_ASSESSED`.
+checks passed, including exact 108-path host discovery and all seven packaging
+and three file-count negative/edge controls. At the latest gate snapshot, the
+full checkout had 1,176 file entries and package-oriented count 764 against
+the hard 5,000-entry ceiling (full count includes Git objects and changes when
+commits add objects). Claude native install/details reported 108 skills. Codex
+local install/list succeeded using `accounting@chwezi-accounting-doctrine-local`
+and the installed cache contained 108 skill files. A first root-runner Codex
+attempt used the Claude marketplace selector and failed for that name mismatch;
+the corrected selector passed, so this was an invocation error rather than a
+packaging defect. Claude CLI manifest checks passed without manifest errors or
+warnings; strict plugin-directory mode exits 1 for the nonblocking icon and
+root `CLAUDE.md` warnings. The existing Claude hook settings are unchanged.
+Public listing acceptance remains `NOT_ASSESSED`.
 
 **Measure and decision.** Retain the deterministic local checks: all active
 skill paths resolve in both manifests and failure-path fixtures reject the
 missing-root and over-limit cases. No public acceptance claim is made.
 
 **Commit:** `3abc9b8` (`feat(accounting): add Codex local marketplace packaging`).
+**Hardening follow-up:** `5f17618` (`fix(accounting): harden marketplace path and cap validation`).
