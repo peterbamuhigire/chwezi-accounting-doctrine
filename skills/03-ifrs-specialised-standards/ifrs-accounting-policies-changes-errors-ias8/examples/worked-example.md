@@ -64,7 +64,7 @@ materiality assessment and the prior-period restatement workflow
 For IFRS for SMEs, Section 10 requires a material prior-period error to be
 corrected retrospectively in the first financial statements authorised after
 discovery, by restating comparatives or, where relevant, opening balances; the
-impracticability rule uses the earliest practicable date (IFRS Foundation,
+impracticability rule uses the earliest practicable period (IFRS Foundation,
 third edition, paragraphs 10.19–10.23,
 [official text](https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on),
 accessed 2026-10-29). This financial-statement treatment is distinct from the

@@ -175,3 +175,10 @@ missing-root and over-limit cases. No public acceptance claim is made.
 
 **Commit:** `3abc9b8` (`feat(accounting): add Codex local marketplace packaging`).
 **Hardening follow-up:** `5f17618` (`fix(accounting): harden marketplace path and cap validation`).
+
+## Independent final review
+
+The independent research worker reviewed the real accounting diff and found
+one wording correction: Section10.22 uses the earliest practicable period, not
+date. The example now uses period. No other material finding was reported;
+statutory reviewer/source gaps remain open.
