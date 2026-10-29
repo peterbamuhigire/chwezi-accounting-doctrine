@@ -15,4 +15,14 @@ Tanzania is a skeleton pack only. No final Tanzanian tax, payroll, exchange-rate
 
 All Tanzania outputs are planning drafts until topic YAML files are added, reviewed, archived, and marked `verified-current` or reviewer-approved `verified-with-caveat`.
 
-Last reviewed: 2026-05-14. Next review due: 2026-08-14.
+## October 2026 currentness check
+
+**Access date:** 2026-10-29. **Follow-up review target:** 2026-11-29
+(internal scheduling target, not a statutory date).
+
+The official-source search performed for this pass did not find a current TRA
+2026 tax schedule suitable for PAYE, VAT, WHT or payroll reconciliation.
+**No source found** in the search performed; this does not establish that no
+such official source exists. No Tanzania values are admitted for final use.
+
+Last reviewed: 2026-10-29. Next review due: 2026-11-29.

@@ -15,4 +15,11 @@ Rwanda is a skeleton pack only. No final Rwandan tax, payroll, e-invoicing, exch
 
 All Rwanda outputs are planning drafts until topic YAML files are added, reviewed, archived, and marked `verified-current` or reviewer-approved `verified-with-caveat`.
 
-Last reviewed: 2026-05-14. Next review due: 2026-08-14.
+## October 2026 currentness check
+
+**Access date:** 2026-10-29. **Follow-up review target:** 2026-11-29
+(internal scheduling target, not a statutory date).
+
+RRA's current WHT information page was located and opened ([RRA WHT types](https://www.rra.gov.rw/en/domestic-tax-services/withholding-tax-wht/types-of-withholding-tax)). The RRA Tax Handbook located for this pass is the 2025 edition ([official handbook](https://www.rra.gov.rw/fileadmin/Folder_for_2025/RRA_Tax_Handbook_2025_Final.pdf)). These are source leads, not a full 2026 reconciliation of PAYE, VAT, WHT, payroll contributions, e-invoicing or relevant enacted amendments. All current-year schedules remain **NOT_ASSESSED** for final output; no Rwanda YAML rate entries were promoted.
+
+Last reviewed: 2026-10-29. Next review due: 2026-11-29.

@@ -19,21 +19,41 @@
 - id: IF-IFRS18-PRESENTATION-2027
   topic: IFRS 18 Presentation and Disclosure in Financial Statements
   jurisdiction: IF
-  value_or_rule: "Trigger IFRS 18 presentation and disclosure review for annual periods beginning on or after 2027-01-01 or an approved early-application period; review operating profit, profit before financing and income taxes, MPMs, and aggregation/disaggregation."
-  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/"
+  value_or_rule: "Trigger IFRS 18 presentation and disclosure review for annual periods beginning on or after 2027-01-01 or an approved early-application period. The 2026 issued text requires retrospective application under IAS 8 and a comparative reconciliation for each profit-or-loss line item; exact transition exceptions require paragraph-level review."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/; https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2026/issued/part-a/ifrs-18-presentation-and-disclosure-in-financial-statements.pdf?bypass=on"
   source_tier: 1
-  date_accessed_utc: "2026-09-26T20:44:24Z"
-  verifier: "Official IFRS Foundation page rechecked 2026-09-26 under the Digital Research source-evaluation/currentness gate; independent human IFRS review pending"
+  date_accessed_utc: "2026-10-29T07:22:15Z"
+  verifier: "Official IFRS Foundation IFRS 18 page and 2026 issued text rechecked 2026-10-29 under the source-currentness gate; independent human IFRS review and archive NOT_ASSESSED"
   output_affected:
     - primary-financial-statements
     - mpm-disclosures
     - issued-not-effective-disclosures
     - consolidated-statement-review
   effective_from: "2027-01-01"
-  expires_or_recheck_due: "2026-10-26"
+  expires_or_recheck_due: "2026-12-29"
   state: draft
   archive_snapshot: "capture-required-before-release"
-  notes: "Rechecked the official effective-date and project information on 2026-09-26. The page still lists active implementation projects; review them and issued amendments before each client release. No archive captured; named human IFRS review remains pending."
+  notes: "Official page and 2026 issued text checked 2026-10-29. IFRS 18 applies for annual periods beginning on or after 2027-01-01; earlier application is permitted. Appendix C requires retrospective application under IAS 8 and a reconciliation for each profit-or-loss line item for the immediately preceding comparative period. The engine has not completed line-by-line statement-template or amendment-impact review. No archive captured; named human IFRS review remains pending. Next recheck due 2026-12-29."
+
+- id: IF-IFRS-SMES-THIRD-EDITION
+  topic: IFRS for SMEs Accounting Standard third edition, effective date, transition and amendments
+  jurisdiction: IF
+  value_or_rule: "The third edition applies to annual periods beginning on or after 2027-01-01; earlier application is permitted and must be disclosed. Appendix A requires retrospective application of amended/revised sections under Section 10, subject to specified transition exceptions. On 2026-10-29 the IASB had decided to proceed with a targeted consolidation exception amendment for eligible SMEs; the Foundation expected to issue it before end-2026 for effect from 2027-01-01. Final amendment text was not yet located in this check."
+  source_url_or_doc: "https://www.ifrs.org/issued-standards/ifrs-for-smes/; https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on; https://www.ifrs.org/news-and-events/news/2026/10/iasb-decision-october-2026-meeting/"
+  source_tier: 1
+  date_accessed_utc: "2026-10-29T07:22:15Z"
+  verifier: "Official IFRS Foundation issue page, third-edition text and 2026-10 IASB decision notice checked 2026-10-29; independent human IFRS review and archive NOT_ASSESSED"
+  output_affected:
+    - reporting-framework-selection
+    - first-time-application-transition
+    - prior-period-error-correction
+    - consolidated-financial-statements
+    - financial-statement-presentation
+  effective_from: "2027-01-01"
+  expires_or_recheck_due: "2026-11-29"
+  state: draft
+  archive_snapshot: "NOT_CAPTURED; official page and PDF accessed but no repository snapshot retained"
+  notes: "The October IASB decision is a decision to proceed, not the issued final amendment. Recheck issuance and exact text before consolidation exceptions are treated as current requirements. This source check records effective date and high-level transition basis; it is not a complete paragraph-by-paragraph adoption assessment."
 
 - id: IF-IFRS9-FINANCIAL-INSTRUMENTS
   topic: IFRS 9 Financial Instruments

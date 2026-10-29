@@ -16,3 +16,22 @@
   state: draft
   archive_snapshot: "capture-required-before-release"
   notes: "Handbook URL identified in the uplift report. Final EFRIS implementation must verify current URA platform rules and retain archive evidence."
+
+- id: UG-EFRIS-HANDBOOK-FY2026-27
+  topic: Uganda EFRIS current handbook source lead
+  jurisdiction: UG
+  value_or_rule: "The official URA EFRIS Handbook archive lists an English FY 2026/27 handbook. Its contents, technical requirements, effective dates and differences from the 2024/25 handbook were not opened or extracted in this review; technical changes since 2026-08-28 are NOT_ASSESSED."
+  source_url_or_doc: "https://ura.go.ug/download-category/efris-handbook/; https://ura.go.ug/en/additional-taxpayers-required-to-use-efris/"
+  source_tier: 2
+  date_accessed_utc: "2026-10-29T07:22:15Z"
+  verifier: "Official URA handbook archive and additional-taxpayer notice observed 2026-10-29; tax-systems reviewer and technical change comparison NOT_ASSESSED"
+  output_affected:
+    - efris-invoice-validation
+    - sales-invoice-printing
+    - credit-note-validation
+    - vat-return-pack
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-11-29"
+  state: draft
+  archive_snapshot: "NOT_CAPTURED; archive listing observed but FY2026/27 handbook content not reviewed"
+  notes: "Source lead only. URA published an additional-taxpayer notice in 2026; the listed FY 2026/27 handbook and notice require a content-level comparison with the engine's 2026-08-28 EFRIS record before any technical rule is admitted. Do not infer API schemas, invoice fields or taxpayer coverage from the listing."

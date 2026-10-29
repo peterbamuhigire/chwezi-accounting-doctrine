@@ -1,11 +1,11 @@
 - id: UG-VAT-STANDARD-RATE
   topic: Uganda VAT standard rate and VAT treatment seed
   jurisdiction: UG
-  value_or_rule: "Pending reviewer extraction from the URA Taxation Handbook FY 2024-25 and current law."
-  source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  value_or_rule: "URA's current VAT page states that VAT is charged at 18% on standard-rated supplies. This is a rate observation only; transaction eligibility, exemptions, input-tax recovery, return treatment and legal reconciliation remain subject to review."
+  source_url_or_doc: "https://ura.go.ug/en/value-added-tax-vat/; https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
   source_tier: 2
-  date_accessed_utc: "2026-05-14T21:07:52Z"
-  verifier: "tax reviewer pending"
+  date_accessed_utc: "2026-10-29T07:22:15Z"
+  verifier: "Official URA VAT page rechecked 2026-10-29; independent Uganda VAT reviewer and current source archive NOT_ASSESSED"
   output_affected:
     - sales-tax-codes
     - vat-return-pack
@@ -14,7 +14,7 @@
   expires_or_recheck_due: "2026-08-14"
   state: draft
   archive_snapshot: "capture-required-before-release"
-  notes: "Official source URL identified in the uplift report. Do not use for final VAT rates until reviewed, archived, and marked verified-current or approved verified-with-caveat."
+  notes: "The live URA page displays the 18% standard rate on 2026-10-29. This check does not reconcile enacted law, exceptions, taxpayer-specific eligibility or return mapping. Keep draft until reviewed by a named tax reviewer and archived. Next source/reviewer recheck due 2026-12-29."
 - id: UG-VAT-RETURN-PACK-SOURCE
   topic: Uganda VAT return pack source hierarchy
   jurisdiction: UG
@@ -22,7 +22,7 @@
   source_url_or_doc: "https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
   source_tier: 2
   date_accessed_utc: "2026-05-14T21:07:52Z"
-  verifier: "tax reviewer pending"
+  verifier: "Tax reviewer pending; current VAT return-form mapping NOT_ASSESSED"
   output_affected:
     - vat-return-pack
     - tax-control-reconciliation
