@@ -80,27 +80,27 @@ For Codex specifically: include this block in any system prompt that operates in
 
 ## Per-Engine Specifics
 
-### `skills-web-dev` At `C:\Users\Peter\.claude\skills`
+### `skills-web-dev` (resolve its checkout through the engine catalogue)
 
 - Doctrine mirrored to `skills/_doctrine/`.
 - Finance skills mirrored to `skills/`.
 - Existing finance skills are updated to reference the doctrine at the mirrored path.
 
-### `chwezi-sdlc-documentation` At `C:\wamp64\www\chwezi-sdlc-documentation`
+### `chwezi-sdlc-documentation` (resolve its checkout through the engine catalogue)
 
 - Doctrine mirrored to `doctrine/`.
 - Finance skills mirrored to `skills/finance/`.
 - Every SRS, SDS, and test-plan template adds the finance and accounting trigger block to its preamble.
 - Accountant, controller, CFO, and tax reviewer roles are added to required review lists.
 
-### `proposal-skills` At `C:\wamp64\www\proposal-skills`
+### `proposal-skills` (resolve its checkout through the engine catalogue)
 
 - Doctrine mirrored to `doctrine/`.
 - Finance skills mirrored to `skills/finance/`.
 - Sector annexes reference the doctrine and the relevant IFRS or IFRS for SMEs section.
 - Vendor-replacement language is paired with the standard caveat block.
 
-### `business-plan-skills` At `C:\wamp64\www\business-plan-skills`
+### `business-plan-skills` (resolve its checkout through the engine catalogue)
 
 - Doctrine mirrored to `doctrine/`.
 - Finance skills mirrored to `skills/finance/`.

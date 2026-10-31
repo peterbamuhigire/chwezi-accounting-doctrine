@@ -6,7 +6,7 @@ Use this template when attaching validation evidence to a release, mirror run, o
 
 | Field | Value |
 |---|---|
-| Repository | `C:\wamp64\www\chwezi-accounting-doctrine` |
+| Repository | `chwezi-accounting-doctrine` (checkout path as resolved on the device that ran the validator) |
 | Doctrine version | `<version or commit>` |
 | Source commit | `<git sha>` |
 | Validator command | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/validate-doctrine.ps1` |
