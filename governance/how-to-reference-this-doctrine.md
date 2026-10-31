@@ -4,7 +4,7 @@
 
 The historical mirror instructions below are superseded and must not be
 executed. Resolve `chwezi-accounting-doctrine` from the user's canonical engine
-table (`C:/wamp64/www/chwezi-accounting-doctrine` for this portfolio), then read
+table or the portfolio catalogue (`chwezi-engine-agents/catalog/engines.yaml`), then read
 `README.md`, `doctrine/accounting-finance-doctrine.md`, the relevant specialist
 and `governance/finance-accounting-quality-gate.md` directly in that checkout.
 Consumer projects record adopted version, scope, owner, reviewer and unresolved
