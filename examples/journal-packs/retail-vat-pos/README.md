@@ -35,8 +35,8 @@ Related skills:
 
 | Source key | Use in this pack | State |
 |---|---|---|
-| `UG-VAT-STANDARD-RATE` | VAT split at 18% for fixture sales and refund. | `verified-current-with-conflict-watch` |
-| `UG-EFRIS` | EFRIS receipt/e-invoice evidence required for VAT-registered taxpayer. | `verified-current` |
+| `UG-VAT-STANDARD-RATE` | VAT split at 18% for fixture sales and refund. | `draft` (register state at 2026-10-31) |
+| `UG-EFRIS-HANDBOOK-FY2026-27` | EFRIS receipt/e-invoice evidence required for VAT-registered taxpayer. | `draft` (register state at 2026-10-31) |
 
 If either key is stale or blocked at release, the pack remains valid as a teaching fixture but cannot support client statutory output.
 

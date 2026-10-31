@@ -7,7 +7,7 @@
   "statutory_assumptions": {
     "vat_rate": 0.18,
     "vat_source_key": "UG-VAT-STANDARD-RATE",
-    "efris_source_key": "UG-EFRIS",
+    "efris_source_key": "UG-EFRIS-HANDBOOK-FY2026-27",
     "source_state": "draft",
     "final_output_status": "blocked-pending-source-review",
     "final_output_caveat": "Illustrative fixture only. Final statutory output remains blocked until the applicable source-register entry is reviewed, archived, and approved."
