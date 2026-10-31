@@ -21,22 +21,22 @@ Anything not verified is marked `NOT ASSESSED`. Final statutory output needs a n
 
 1. **Install in Claude Code.** For Codex, the installer script or manual use, see [Installation](#installation).
 
-```text
-/plugin marketplace add peterbamuhigire/chwezi-accounting-doctrine
-/plugin install accounting@chwezi-accounting
-```
+   ```text
+   /plugin marketplace add peterbamuhigire/chwezi-accounting-doctrine
+   /plugin install accounting@chwezi-accounting
+   ```
 
 2. **Check a clone.** Expect `Ran 56 tests` and exit 0. This needs PyYAML.
 
-```sh
-python3 -m unittest discover -s tests -p 'test_*.py'
-```
+   ```sh
+   python3 -m unittest discover -s tests -p 'test_*.py'
+   ```
 
 3. **Use it.** Start from [`AGENTS.md`](AGENTS.md), then route the task as in [Routing and use](#routing-and-use). Before you quote a statutory value, look it up. Exit 3 means the entry cannot support final output; here it is a draft.
 
-```sh
-python3 tools/source_register_lookup.py --jurisdiction UG --register vat --date 2026-10-15
-```
+   ```sh
+   python3 tools/source_register_lookup.py --jurisdiction UG --register vat --date 2026-10-15
+   ```
 
 **Contents**
 
