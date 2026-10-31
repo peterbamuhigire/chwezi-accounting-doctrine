@@ -21,6 +21,11 @@ Documentation only; no skill, doctrine or tool changed.
   `docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md`, which
   records the tool, manifest and cross-engine items left for their owners
   (`0041616`).
+- README: added the subsection "What the October 2026 kaizen improved" to the
+  Quality and improvement section. It lists the kept changes of the 29 and 31
+  October cycles by theme with commit hashes, and gives before and after
+  figures, marking which were re-measured on 2026-10-31 and which are taken
+  from the evidence files.
 
 Pass-2 commits by theme, for reference (the pass-2 entry below is unchanged):
 
