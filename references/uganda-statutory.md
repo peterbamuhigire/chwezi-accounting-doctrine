@@ -1,9 +1,9 @@
 # Uganda Statutory Reference Snapshot
 
-Last verified: 2026-10-31 (register keys and states only)  
-Next review due: 2026-12-29  
-Primary source register: `doctrine/source-register/uganda/` (machine-readable; it wins if this file disagrees)  
-Historical record: `docs/source-registers/ifrs-tax-statutory-2026.md` (2026-07-08, not maintained as machine keys)
+- Last verified: 2026-10-31 (register keys and states only)
+- Next review due: 2026-12-29
+- Primary source register: `doctrine/source-register/uganda/` (machine-readable; it wins if this file disagrees)
+- Historical record: `docs/source-registers/ifrs-tax-statutory-2026.md` (2026-07-08, not maintained as machine keys)
 
 This file is a human-readable snapshot for engine routing and reviewer awareness. It is not a substitute for the source register, and it carries no value that is not also held by a register entry. Every key below resolves to an entry in the register, and `tools/source_register_integrity.py` fails when a key cited here does not. Final statutory output must consume verified source entries and carry reviewer sign-off; the register state, not this file, decides whether an entry can support final output.
 
