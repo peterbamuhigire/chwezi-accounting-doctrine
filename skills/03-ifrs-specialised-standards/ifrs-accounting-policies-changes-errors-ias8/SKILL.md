@@ -1,6 +1,6 @@
 ---
 name: ifrs-accounting-policies-changes-errors-ias8
-description: Use when adopting or changing accounting policies, accounting for changes in estimates, and correcting prior-period errors under IAS 8 / IFRS for SMEs Section 10, including material errors discovered after close.
+description: Use when adopting or changing accounting policies, accounting for changes in estimates, and correcting prior-period errors under IAS 8 / IFRS for SMEs Section 10, including a material prior-period posting error discovered after close, covering reversal and correction in an open period and retrospective restatement of comparatives.
 status: active
 metadata:
   portable: true

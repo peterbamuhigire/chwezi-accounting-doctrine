@@ -1,6 +1,6 @@
 {
   "fixture_id": "ifrs-accounting-policies-changes-errors-ias8-after-close",
-  "status": "expected-labels-only; not a router execution or precision benchmark",
+  "status": "labelled expected routes; executed by tools/route_proxy.py as a Tier-2 lexical regression check; not live model routing and not a precision benchmark",
   "cases": [
     {
       "id": "positive-material-error-after-close",
@@ -31,6 +31,18 @@
       "label": "negative",
       "query": "Design account-code segments and approval controls for a new chart of accounts.",
       "expected_skill": "chart-of-accounts-design-and-governance"
+    },
+    {
+      "id": "negative-events-after-reporting-period",
+      "label": "negative",
+      "query": "After the reporting date but before the statements were authorised for issue, a major customer was declared insolvent. Is this an adjusting or non-adjusting event?",
+      "expected_skill": "ifrs-events-after-reporting-period-ias10"
+    },
+    {
+      "id": "negative-ledger-reversal-design",
+      "label": "negative",
+      "query": "Design reversal and correction postings for an already-posted journal and enforce idempotency.",
+      "expected_skill": "ledger-posting-engine-core"
     }
   ]
 }
