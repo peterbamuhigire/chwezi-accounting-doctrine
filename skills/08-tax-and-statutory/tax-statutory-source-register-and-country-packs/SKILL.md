@@ -1,6 +1,6 @@
 ---
 name: tax-statutory-source-register-and-country-packs
-description: Use when designing, reviewing, or validating tax, payroll, statutory, e-invoicing, exchange-rate, source-register, and country-pack behavior for Uganda, Kenya, Rwanda, Tanzania, South Africa, or future Chwezi country extensions.
+description: Use when designing, reviewing, or validating tax, payroll, statutory, e-invoicing, exchange-rate, source-register, and country-pack behavior for Uganda, Kenya, Rwanda, Tanzania, South Africa, or future Chwezi country extensions, including which register entry applies on a date, its state and recheck date, and whether it may support final output.
 metadata:
   portable: true
   compatible_with:
@@ -83,6 +83,19 @@ Load the required references and examples listed below before implementation or 
 7. Exchange-rate values used in final postings require a source entry for the rate type and date.
 8. When source evidence conflicts, block final output and route to a named reviewer.
 9. Check an entry at the moment of use with `python tools/source_register_lookup.py --jurisdiction <CC> --register <stem> --date <YYYY-MM-DD> --json` (read-only); exit 3 means found but refused for final output.
+10. Judge state, recheck date and archive for each entry on its own. A register file can hold several entries, and the first entry's state says nothing about the others.
+11. A `verified-current` entry needs a named reviewer and an archive file that exists in the repository. A verifier note that a page was read again is an observation, not a review: keep such an entry out of final output until a reviewer is named, and report it.
+12. A recheck date never precedes its access date, and it moves forward only after you have read the source again. An entry you did not re-verify keeps its date and shows as overdue.
+13. Every source key cited in guidance, snapshots and examples must exist in the register. After any register or snapshot edit run `python tools/source_register_integrity.py`: exit 1 names the defect, and its attention list shows overdue draft entries and `verified-current` entries without a named reviewer.
+
+## Capability Contract and Degraded Mode
+
+| Capability | Used for | If it is unavailable |
+|---|---|---|
+| Read access to `doctrine/source-register/` | Every task | Stop. With no entry there is no final value: mark the output `NOT_ASSESSED`. |
+| Python 3 with PyYAML | `tools/source_register_lookup.py` and `tools/source_register_integrity.py`; both are read-only, write nothing and need no network | Read the YAML entries directly and apply the schema state rules and decision rule 10 by hand. Record the tool checks as `NOT_ASSESSED`, not as passed. |
+| Read access to the official source | Re-verifying a value, date or state | Leave the entry's state and recheck date unchanged, record that the source could not be reached, and do not present an older observation as current. |
+| Write access to the register | A reviewed edit that names the source, access date and reviewer | Work read-only: report the proposed entry text and its evidence instead of editing. |
 
 ## Acceptance Evidence
 
@@ -122,9 +135,9 @@ Load the required references and examples listed below before implementation or 
 |---|---|
 | Owner role | Tax and statutory source-register owner |
 | Reviewer roles | Country tax reviewer, controller, tooling reviewer |
-| Last reviewed | 2026-05-15 |
-| Next review due | 2026-08-15 |
+| Last reviewed | 2026-10-31 |
+| Next review due | 2026-12-29 |
 | Release state | Draft until validator enforces stale and missing source gates |
 | Caveat | This skill intentionally contains no final statutory rates. |
 
-Last reviewed: 2026-05-15. Next review due: 2026-11-15.
+Last reviewed: 2026-10-31. Next review due: 2026-12-29.

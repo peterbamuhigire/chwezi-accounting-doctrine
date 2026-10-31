@@ -86,8 +86,11 @@ class NegativeControlTests(unittest.TestCase):
         skills = dict(self.skills)
         skills[TARGET] = "Use when planning a team offsite."
         results = proxy.evaluate(self.cases, proxy.Index(skills))
-        positives = [r for r in results if r["label"] == "positive"]
-        self.assertTrue(all(not r["ok"] for r in positives), positives)
+        target_positives = [r for r in results if r["label"] == "positive" and r["expected"] == TARGET]
+        self.assertEqual(len(target_positives), 3)
+        self.assertTrue(all(not r["ok"] for r in target_positives), target_positives)
+        others = [r for r in results if r["expected"] != TARGET]
+        self.assertTrue(all(r["ok"] for r in others), [r for r in others if not r["ok"]])
 
 
 if __name__ == "__main__":

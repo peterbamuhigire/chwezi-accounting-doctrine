@@ -1,0 +1,36 @@
+{
+  "fixture_id": "tax-statutory-source-register-and-country-packs",
+  "status": "labelled expected routes; executed by tools/route_proxy.py as a Tier-2 lexical regression check; not live model routing and not a precision benchmark",
+  "cases": [
+    {
+      "id": "positive-entry-for-a-payroll-date",
+      "label": "positive",
+      "query": "Which source-register entry applies to Uganda PAYE for a payroll dated October 2026, and can its state support final output?",
+      "expected_skill": "tax-statutory-source-register-and-country-packs"
+    },
+    {
+      "id": "positive-entry-past-recheck-date",
+      "label": "positive",
+      "query": "A source-register entry is past its recheck date. Can the VAT return pack still use it?",
+      "expected_skill": "tax-statutory-source-register-and-country-packs"
+    },
+    {
+      "id": "positive-country-pack-skeleton",
+      "label": "positive",
+      "query": "Add a Rwanda country pack skeleton with an authority hierarchy and no final rates.",
+      "expected_skill": "tax-statutory-source-register-and-country-packs"
+    },
+    {
+      "id": "negative-payroll-journal",
+      "label": "negative",
+      "query": "Compute gross-to-net pay with PAYE and NSSF and post the payroll journal.",
+      "expected_skill": "payroll-and-statutory-postings-east-africa"
+    },
+    {
+      "id": "negative-vat-return-mechanics",
+      "label": "negative",
+      "query": "Work out input and output VAT on a credit purchase and complete the VAT return.",
+      "expected_skill": "indirect-tax-vat-mechanics"
+    }
+  ]
+}
