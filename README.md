@@ -369,16 +369,25 @@ Categories 12 to 17: public sector, project and contract accounting, systems int
 
 ## Installation
 
-Prerequisites: Git; Node.js 18 or later for the installer scripts and the hook tests; Python 3.11 or later with PyYAML for the Python checks, the test suite and the Codex model-policy helper (use `python3` on Linux and macOS); Windows PowerShell 5.1 or PowerShell 7 (`pwsh`) for the principal doctrine gate. The Python checks do not need PowerShell. See [Validation](#validation) for what each command needs.
+Prerequisites:
 
-**Claude Code plugin (recommended).** The repository ships a marketplace and plugin manifest in `.claude-plugin/`:
+- Git.
+- Node.js 18 or later, for the installer scripts and the hook tests.
+- Python 3.11 or later with PyYAML, for the Python checks, the test suite and the Codex model-policy helper. Use `python3` on Linux and macOS.
+- Windows PowerShell 5.1 or PowerShell 7 (`pwsh`), for the principal doctrine gate only. The Python checks do not need PowerShell.
 
-```text
-/plugin marketplace add peterbamuhigire/chwezi-accounting-doctrine
-/plugin install accounting@chwezi-accounting
-```
+[Validation](#validation) lists what each command needs.
 
-**Installer scripts.** Clone the repository and run the installer, which delegates to `scripts/install-engine.js`. It installs into `~/.claude` with `--scope user` (the default) or into `.claude` under the current directory with `--scope project`; `--dry-run` prints the plan without writing and `--json` gives machine-readable output.
+### Claude Code plugin (recommended)
+
+Run the two commands in step 1 of [Start here](#start-here). The repository ships a marketplace and plugin manifest in `.claude-plugin/`.
+
+### Installer scripts
+
+Clone the repository and run the installer. It delegates to `scripts/install-engine.js`.
+
+- `--scope user` (the default) installs into `~/.claude`. `--scope project` installs into `.claude` under the current directory.
+- `--dry-run` prints the plan without writing. `--json` gives machine-readable output.
 
 ```sh
 git clone https://github.com/peterbamuhigire/chwezi-accounting-doctrine
@@ -387,70 +396,115 @@ bash install.sh --scope project --dry-run
 bash install.sh --scope project
 ```
 
-`install.sh` is committed without the executable bit, so run it through `bash`; `./install.sh` fails with "Permission denied". On Windows PowerShell, run `./install.ps1 --scope project`. Installed files are recorded in `.chwezi/install-state.json` under the target root, and `node scripts/install-engine.js doctor --scope project` checks an installation.
+- `install.sh` is committed without the executable bit, so run it through `bash`. `./install.sh` fails with "Permission denied".
+- On Windows PowerShell, run `./install.ps1 --scope project`.
+- Installed files are recorded in `.chwezi/install-state.json` under the target root. `node scripts/install-engine.js doctor --scope project` checks an installation.
 
-**Codex.** Codex reads [`AGENTS.md`](AGENTS.md) at the repository root. To install the local Codex plugin, run these commands from the repository root:
+### Codex
+
+Codex reads [`AGENTS.md`](AGENTS.md) at the repository root. To install the local Codex plugin, run these commands from the repository root:
 
 ```sh
 codex plugin marketplace add .
 codex plugin add accounting@chwezi-accounting-doctrine-local
 ```
 
-The local Codex catalogue name is `chwezi-accounting-doctrine-local`; the
-plugin name is `accounting`. These are distinct from the Claude marketplace
-name `chwezi-accounting` shown above. The Codex-only model-policy helper lives
-in [`.codex/`](.codex/README.md): run `python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check` (exit 1 with a `DRIFT` line when the Codex configuration is missing or differs), and use `--apply` only when it reports drift. Claude and other runners skip this step.
+- The local Codex catalogue name is `chwezi-accounting-doctrine-local`; the plugin name is `accounting`. Both differ from the Claude marketplace name `chwezi-accounting`.
+- The Codex-only model-policy helper lives in [`.codex/`](.codex/README.md). Run `python3 <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`. It exits 1 with a `DRIFT` line when the Codex configuration is missing or differs.
+- Use `--apply` only when the check reports drift. Claude and other runners skip this step.
 
-**Manual use.** Clone the repository and point the agent at this README and [`AGENTS.md`](AGENTS.md); `CLAUDE.md` imports `AGENTS.md`. Select skills through the [router map](docs/router-map.md) and read the chosen `SKILL.md` directly. To confirm a checkout is sound, follow [Validation](#validation).
+### Manual use
+
+Clone the repository and point the agent at this README and [`AGENTS.md`](AGENTS.md); `CLAUDE.md` imports `AGENTS.md`. Select skills through the [router map](docs/router-map.md) and read the chosen `SKILL.md` directly. To confirm a checkout is sound, follow [Validation](#validation).
 
 ## Validation
 
-Run every command from the repository root; none of them modifies a tracked file. Every Python check needs PyYAML (`python3 -m pip install pyyaml`) except `tools/check_machine_paths.py`, which uses only the standard library. The suite is `unittest`-based, so `pytest` is optional: `python3 -m pytest tests` collects the same 56 tests. No registered check needs Pandoc, Mermaid, a browser or LibreOffice, and the 16 PowerShell checks that do not call Python passed with the network disabled.
+- Run every command from the repository root. None of them modifies a tracked file.
+- Every Python check needs PyYAML (`python3 -m pip install pyyaml`), except `tools/check_machine_paths.py`, which uses only the standard library.
+- The suite uses `unittest`, so `pytest` is optional: `python3 -m pytest tests` collects the same 56 tests.
+- No registered check needs Pandoc, Mermaid, a browser or LibreOffice. The 16 PowerShell checks that do not call Python passed with the network disabled.
 
-**Python and Node checks (no PowerShell).** Verified on Linux on 2026-10-31.
+### Python and Node checks (no PowerShell)
+
+Verified on Linux on 2026-10-31.
 
 | Command | What it checks | Passes when |
 |---|---|---|
-| `python3 -m unittest discover -s tests -p 'test_*.py'` | 56 tests over the source-register lookup and integrity tools, the machine-path guard, the routing proxy and its fixtures, skill frontmatter, the approval adapter, runtime orchestration guidance, the Section 10 example and the source-to-report fixture. | Exit 0. |
+| `python3 -m unittest discover -s tests -p 'test_*.py'` | 56 tests: source-register tools, machine-path guard, routing proxy, skill frontmatter, approval adapter, orchestration guidance, Section 10 example, source-to-report fixture. | Exit 0. |
 | `python3 tools/check_frontmatter_yaml.py --root .` | YAML frontmatter of all 108 skills. | Exit 0 and `"state": "pass"`. |
-| `python3 tools/source_register_integrity.py` | Every register entry judged on its own (fields, state, recheck date, archive file) and every cited source key resolving. `--as-of YYYY-MM-DD` tests a future date; `--json` prints JSON. | Exit 0 means no errors; attention items are listed but do not fail. Exit 1 errors; exit 2 unreadable. |
+| `python3 tools/source_register_integrity.py` | Each register entry (fields, state, recheck date, archive file) and every cited source key. | Exit 0: no errors. Exit 1: errors. Exit 2: unreadable. |
 | `python3 tools/check_machine_paths.py` | No drive letter, home directory or mount path in active content. | Exit 0. |
-| `python3 tools/route_proxy.py --fixture tests/router-map/fixtures/section10-after-close.json` (and `source-register-skill.json`) | Tier-2 lexical routing regression over labelled queries. It is a regression guard, not live routing. | Exit 0: every case ranks its expected skill first by a margin of at least 0.05. |
-| `python3 tools/source_register_lookup.py --jurisdiction UG --register paye --date 2026-10-15` | Which register entry applies on a date, and whether it may support final output. `--as-of DATE` sets the date of use. | Exit 0 final use allowed; 3 final use refused (a hard stop for statutory output); 2 no entry; 1 unreadable. The PAYE example exits 3 today because that entry is `draft`. |
+| `python3 tools/route_proxy.py --fixture tests/router-map/fixtures/section10-after-close.json` (and `source-register-skill.json`) | Tier-2 lexical routing regression over labelled queries. A guard, not live routing. | Exit 0: every case ranks its expected skill first by a margin of at least 0.05. |
+| `python3 tools/source_register_lookup.py --jurisdiction UG --register paye --date 2026-10-15` | Which register entry applies on a date, and whether it may support final output. | Exit 0 final use allowed, 3 refused, 2 no entry, 1 unreadable. The PAYE example exits 3 today because that entry is `draft`. |
 | `python3 tests/agent-integration/test_accounting_agent_contract.py` | The `.skills-engine/engine-manifest.yaml` contract. It looks for a sibling `chwezi-engine-agents/catalog/engines.yaml` and prints `NOT ASSESSED` when that is absent. | Exit 0. |
 | `node hooks/test-destructive-bash-gate.js` and `node hooks/test-plugin-hook-config.js` | The destructive-command gate (61 cases) and the hook configuration (7 cases). | Exit 0. |
 | `node scripts/generate-plugin-manifest.js --engine . --check` | The Claude plugin manifest is current with the `skills/` directory (108 skills). | Exit 0. |
 
-**The principal gate (PowerShell).** `pwsh -NoProfile -File tools/validate-doctrine.ps1 -Strict` (Windows PowerShell 5.1: `powershell -NoProfile -File tools/validate-doctrine.ps1 -Strict`) runs 17 registered checks and fails closed on a non-zero exit or missing JSON. They are mojibake, skill contracts, frontmatter YAML, advanced IFRS readiness, source register, links, repository discovery, router-map sync, accounting invariants, and negative controls for the router map, source register, validation state, mojibake, package file count and plugin packaging, plus the package-file-count and plugin-packaging checks themselves. `-Json` prints the report as JSON and `-ReportPath <file>` writes it.
+Notes on the table:
 
-- The frontmatter check calls `python` (not `python3`) and needs PyYAML. A host that has only `python3` fails the aggregate script at that check; provide a `python` command, or run `python3 tools/check_frontmatter_yaml.py --root .` directly.
-- On Linux, install PowerShell 7, or run the checks in the `mcr.microsoft.com/powershell` image with the checkout mounted read-only. That image has no Python. On 2026-10-31 the 16 checks other than the frontmatter wrapper each ran there one by one with `-Json -Strict` and exited 0. The aggregate script itself was not run end to end on Linux, and Windows PowerShell 5.1 was not run in that cycle.
-- CI (`.github/workflows/doctrine-validation.yml`) runs the unit tests and the strict gate on `windows-latest` with Python 3.12 and PyYAML. `.skills-engine/engine-manifest.yaml` registers only the strict gate, for Windows; the Python checks above are not registered there.
+- `source_register_integrity.py` lists attention items but does not fail on them. `--as-of YYYY-MM-DD` tests a future date and `--json` prints JSON.
+- `source_register_lookup.py` takes `--as-of DATE` to set the date of use. Exit 3 is a hard stop for statutory output.
+
+### The principal gate (PowerShell)
+
+`pwsh -NoProfile -File tools/validate-doctrine.ps1 -Strict` runs 17 registered checks. On Windows PowerShell 5.1, use `powershell -NoProfile -File tools/validate-doctrine.ps1 -Strict`.
+
+The gate fails closed on a non-zero exit or missing JSON. `-Json` prints the report as JSON and `-ReportPath <file>` writes it.
+
+- **Nine content checks:** mojibake, skill contracts, frontmatter YAML, advanced IFRS readiness, source register, links, repository discovery, router-map sync and accounting invariants.
+- **Two packaging checks:** package file count and plugin packaging.
+- **Six negative controls:** router map, source register, validation state, mojibake, package file count and plugin packaging.
+
+Limits that apply:
+
+- The frontmatter check calls `python` (not `python3`) and needs PyYAML. A host that has only `python3` fails the aggregate script at that check. Provide a `python` command, or run `python3 tools/check_frontmatter_yaml.py --root .` directly.
+- On Linux, install PowerShell 7, or run the checks in the `mcr.microsoft.com/powershell` image with the checkout mounted read-only. That image has no Python.
+- On 2026-10-31 the 16 checks other than the frontmatter wrapper each ran in that image one by one with `-Json -Strict` and exited 0. The aggregate script was not run end to end on Linux, and Windows PowerShell 5.1 was not run in that cycle.
+- CI (`.github/workflows/doctrine-validation.yml`) runs the unit tests and the strict gate on `windows-latest` with Python 3.12 and PyYAML. `.skills-engine/engine-manifest.yaml` registers only the strict gate, for Windows. The Python checks above are not registered there.
 
 ## Quality and improvement
 
 The engine improves through dated kaizen cycles. Each cycle keeps its evidence in seven files: scope and evidence, baseline scorecard, backlog, experiment log, validation record, final report and next cycle.
 
+### Where the records are
+
 - [`docs/kaizen/2026-10-engine-kaizen-pass-2/`](docs/kaizen/2026-10-engine-kaizen-pass-2/) holds the latest cycle (31 October 2026). Start with its [final report](docs/kaizen/2026-10-engine-kaizen-pass-2/05-final-report.md) and [next cycle](docs/kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md).
 - [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) holds the cycle of 29 October 2026.
 - Earlier records are in [`docs/kaizen/2026-08-27-advanced-ifrs/`](docs/kaizen/2026-08-27-advanced-ifrs/), [`docs/audits/`](docs/audits/) and [`docs/continuous-improvement/`](docs/continuous-improvement/). The [documentation index](docs/README.md) lists the rest of `docs/`.
-- What the two October cycles changed, with before and after figures, is under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
+- What the two October cycles changed is under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
 
-**Latest published score.** At the end of pass 2 the raw mean is 58.2/100 and the published capped score is 58.2/100 (`min(raw, 65)`). On 29 October the raw mean was 57.3/100 and the capped score 57.3/100. These are the cycle owner's evidence-bounded assessment, not an independent audit, and the cap does not clear any source, legal, financial or release blocker. The weakest dimension is standards currency (48/100).
+### Latest published score
 
-**Open findings that matter to a user.**
+- At the end of pass 2 the raw mean is 58.2/100 and the published capped score is 58.2/100 (`min(raw, 65)`).
+- On 29 October the raw mean was 57.3/100 and the capped score 57.3/100.
+- These are the cycle owner's evidence-bounded assessment, not an independent audit. The cap does not clear any source, legal, financial or release blocker.
+- The weakest dimension is standards currency (48/100).
 
-- The source register holds 30 entries: 28 `draft`, 1 `superseded` and 1 `verified-current`. Draft entries cannot support final statutory output. Uganda local service tax, withholding tax, the VAT registration threshold, PAYE (reviewer and archive) and the FY2026-27 EFRIS handbook remain open, and the Kenya, Rwanda, Tanzania and South Africa packs are skeletons.
-- Seven draft entries are past their recheck date: `KE-ETIMS-SKELETON`, `KE-VAT-SKELETON`, `UG-EFRIS-HANDBOOK-2024-25`, `UG-EXCHANGE-RATE-SOURCE-HIERARCHY`, `UG-INCOME-TAX-RULES` and `UG-VAT-RETURN-PACK-SOURCE` (all 2026-08-14), and `UG-LST-RATES` (2026-10-27). A recheck date moves only after the source has been read again.
-- `UG-NSSF-MEMBERSHIP-CONTRIBUTIONS` is marked `verified-current`, but its `verifier` text records a page re-read and names no reviewer, and the schema requires a named reviewer for that state. Until that changes, the lookup tool answers "final use allowed" for NSSF. The decision (name a reviewer, or demote the entry to `verified-with-caveat`) is open; see `06-next-cycle.md` of pass 2, item D5.
-- Not run: live-model routing, a Tier 3 behavioural run, a controller or professional review, Windows PowerShell 5.1, remote CI and a public marketplace test.
+### Open findings that matter to a user
 
-**Date-triggered gates.** Checked on 2026-10-31 by running the checkers with a later date and by moving the entry's recheck date in a scratch copy.
+- **Register state.** 30 entries: 28 `draft`, 1 `superseded` and 1 `verified-current`. Draft entries cannot support final statutory output.
+- **Open Uganda items.** Local service tax, withholding tax, the VAT registration threshold, PAYE (reviewer and archive) and the FY2026-27 EFRIS handbook. The Kenya, Rwanda, Tanzania and South Africa packs are skeletons.
+- **Overdue rechecks.** Seven draft entries are past their recheck date. A recheck date moves only after the source has been read again.
+  - Dated 2026-08-14: `KE-ETIMS-SKELETON`, `KE-VAT-SKELETON`, `UG-EFRIS-HANDBOOK-2024-25`, `UG-EXCHANGE-RATE-SOURCE-HIERARCHY`, `UG-INCOME-TAX-RULES` and `UG-VAT-RETURN-PACK-SOURCE`.
+  - Dated 2026-10-27: `UG-LST-RATES`.
+- **NSSF.** `UG-NSSF-MEMBERSHIP-CONTRIBUTIONS` is `verified-current`, but its `verifier` text records a page re-read and names no reviewer. The schema requires a named reviewer for that state. Until that changes, the lookup tool answers "final use allowed" for NSSF.
+- **NSSF decision, still open.** Name a reviewer, or demote the entry to `verified-with-caveat` (item D5 in `06-next-cycle.md` of pass 2).
+- **Not run.** Live-model routing, a Tier 3 behavioural run, a controller or professional review, Windows PowerShell 5.1, remote CI and a public marketplace test.
 
-| Date | What changes | Action |
-|---|---|---|
-| 2026-11-17 | The NSSF entry passes its recheck date (2026-11-16). `python3 tools/source_register_integrity.py` exits 1 with `INT-008`; `test_live_register_has_no_integrity_errors` and `test_cli_exit_codes` in `tests/test_source_register_integrity.py` fail; `source_register_lookup.py` returns exit 3 (final use refused) for NSSF. `tools/check-source-register.ps1` raises `SRC-005` in strict mode by its code, which reads the system date and has no `--as-of` option, so that check was not run with a future date. | Re-read the NSSF membership page, resolve the reviewer decision above, then move the recheck date. |
-| 2026-11-29, 2026-12-26 and 2026-12-29 | Seven more draft entries pass their recheck dates (two, one and four entries). They add attention items only; with `--as-of 2026-12-30` the integrity tool reports no error other than the NSSF one. The lookup tool already refuses final use of any draft entry. | Recheck each source before the date. 2026-12-29 is also the internal re-audit date of pass 2, not a statutory deadline. |
+### Date-triggered gates
+
+Checked on 2026-10-31 by running the checkers with a later date and by moving the entry's recheck date in a scratch copy.
+
+| Date | What changes |
+|---|---|
+| 2026-11-17 | The NSSF entry passes its recheck date (2026-11-16). The integrity tool exits 1, two tests fail and the lookup refuses final use for NSSF. |
+| 2026-11-29, 2026-12-26 and 2026-12-29 | Seven more draft entries pass their recheck dates (two, one and four entries). They add attention items only. |
+
+- **2026-11-17 detail.** `python3 tools/source_register_integrity.py` exits 1 with `INT-008`. `test_live_register_has_no_integrity_errors` and `test_cli_exit_codes` in `tests/test_source_register_integrity.py` fail. `source_register_lookup.py` returns exit 3 (final use refused) for NSSF.
+- **The PowerShell check was not run with a future date.** `tools/check-source-register.ps1` raises `SRC-005` in strict mode by its code. That code reads the system date and has no `--as-of` option.
+- **Action for 2026-11-17.** Re-read the NSSF membership page, resolve the reviewer decision above, then move the recheck date.
+- **Later dates.** With `--as-of 2026-12-30` the integrity tool reports no error other than the NSSF one. The lookup tool already refuses final use of any draft entry. Recheck each source before its date.
+- 2026-12-29 is also the internal re-audit date of pass 2. It is not a statutory deadline.
 
 ## What the October 2026 kaizen improved
 
