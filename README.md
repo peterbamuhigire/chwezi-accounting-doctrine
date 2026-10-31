@@ -38,7 +38,7 @@ plugin name is `accounting`. These are distinct from the Claude marketplace
 name `chwezi-accounting` shown above. The Codex-only model-policy helper lives
 in [`.codex/`](.codex/README.md): run `python <engine-root>/.codex/ensure_model_policy.py --runtime codex --check`, and use `--apply` only when it reports drift. Claude and other runners skip this step.
 
-**Manual use.** Clone the repository and point the agent at this README and [`AGENTS.md`](AGENTS.md); `CLAUDE.md` imports `AGENTS.md`. Select skills through the [router map](docs/router-map.md) and read the chosen `SKILL.md` directly. To confirm a checkout is sound, run `powershell -NoProfile -File tools/validate-doctrine.ps1` and `python -m pytest tests`.
+**Manual use.** Clone the repository and point the agent at this README and [`AGENTS.md`](AGENTS.md); `CLAUDE.md` imports `AGENTS.md`. Select skills through the [router map](docs/router-map.md) and read the chosen `SKILL.md` directly. To confirm a checkout is sound, run `powershell -NoProfile -File tools/validate-doctrine.ps1` and `python -m unittest discover -s tests -p 'test_*.py'` (the form CI uses; PyYAML is required). On a host without PowerShell the Python checks still run: `python tools/source_register_integrity.py` (register fields, dates, archives and cited source keys), `python tools/check_machine_paths.py` (machine-specific paths in active content) and `python tools/route_proxy.py --fixture tests/router-map/fixtures/<file>.json` (Tier-2 lexical routing regression check, not live routing). They do not replace the PowerShell gate.
 
 ## Capabilities
 

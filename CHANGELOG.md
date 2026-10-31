@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-31 - Finance engine Kaizen, pass 2
+
+- Fixed a false negative in the strict source-register gate: state and recheck
+  date are now judged per entry, not once per file, and two new findings cover
+  a recheck date earlier than the access date and a verified entry whose
+  archive file is missing. Two negative controls were added.
+- Added a draft `UG-VAT-REG-THRESHOLD` entry (URA's own pages now state
+  UGX 300,000,000 a year and UGX 75,000,000 over three months; the amending
+  Act and its commencement date were not located), corrected a recheck date
+  that preceded its access date, and rewrote the Uganda statutory snapshot to
+  cite register keys that exist. No entry was promoted.
+- Added Python checks that run without PowerShell: source-register integrity
+  (including cited source keys), machine-specific path scan, and a Tier-2
+  lexical routing regression check over labelled fixtures. Removed
+  machine-specific paths from three active files.
+- Aligned two skill descriptions with their content and added fixtures for the
+  Section 10 and source-register skills; the source-register skill now states
+  its per-entry, named-reviewer and degraded-mode rules.
+
 ## 2026-10-29 - Finance engine Kaizen
 
 - Extended the strict text-integrity scan to reject forbidden C0 controls and

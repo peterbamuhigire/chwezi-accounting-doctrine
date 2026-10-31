@@ -88,6 +88,12 @@ remains the authority for finance content and controls.
 - Run `tools/validate-doctrine.ps1 -Strict` for the principal structural gate.
 - Run `tests/accounting-invariants/scripts/Test-AccountingInvariants.ps1` for
   deterministic ledger, source-state, duplicate, reversal, and evidence cases.
+- Run `python -m unittest discover -s tests -p 'test_*.py'` for the Python checks. On a
+  host without PowerShell these still run: `tools/source_register_integrity.py` (register
+  entries judged one by one, and every cited source key resolving),
+  `tools/check_machine_paths.py` (no machine-specific paths in active content) and
+  `tools/route_proxy.py` (labelled routing fixtures, a Tier-2 lexical proxy, never live
+  routing). They support the PowerShell gate and do not replace it.
 - Treat structural, behavioural, render, system, and production evidence as
   separate categories. If a check cannot run, record `NOT ASSESSED`.
 
