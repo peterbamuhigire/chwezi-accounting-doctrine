@@ -26,6 +26,16 @@ Documentation only; no skill, doctrine or tool changed.
   October cycles by theme with commit hashes, and gives before and after
   figures, marking which were re-measured on 2026-10-31 and which are taken
   from the evidence files.
+- README kaizen (branch `kaizen/2026-10-readme-kaizen`): the README now opens
+  with an at-a-glance list, three start steps and a contents list. It adds a
+  task-to-skill table, splits the 108-skill tables into four catalogue
+  sections and rewrites the install, validation and quality text as short
+  lists. The source list moved to `docs/cited-sources.md` and the full
+  October notes to `docs/kaizen/2026-10-31-october-changes-detail.md`.
+  Routing steps, the PAYE lookup note and the contract markers keep their
+  wording. Method, limits and editing conventions are in
+  `docs/kaizen/2026-10-readme-kaizen/readme-kaizen-record.md`. (`72d693c`,
+  `aaa73f9`, `b298f54`, `29bb289`)
 
 Pass-2 commits by theme, for reference (the pass-2 entry below is unchanged):
 

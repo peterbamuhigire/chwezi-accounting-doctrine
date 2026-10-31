@@ -29,6 +29,7 @@ Dated records describe the repository as it stood on their date. Their counts, s
 |---|---|
 | [`kaizen/2026-10-engine-kaizen-pass-2/`](kaizen/2026-10-engine-kaizen-pass-2/) | Latest kaizen cycle (31 October 2026): seven files from scope to next cycle. Open work and owner decisions are in [`06-next-cycle.md`](kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md). |
 | [`kaizen/2026-10-engine-kaizen/`](kaizen/2026-10-engine-kaizen/) | Kaizen cycle of 29 October 2026. |
+| [`kaizen/2026-10-readme-kaizen/`](kaizen/2026-10-readme-kaizen/readme-kaizen-record.md) | README kaizen of 31 October 2026: baseline metrics, what changed, and the conventions for editing the README. |
 | [`kaizen/2026-10-31-october-changes-detail.md`](kaizen/2026-10-31-october-changes-detail.md) | Full notes behind the README section "What the October 2026 kaizen improved". |
 | [`kaizen/2026-08-27-advanced-ifrs/`](kaizen/2026-08-27-advanced-ifrs/) | Advanced IFRS kaizen cycle. |
 | [`kaizen/phase-1-finance.md`](kaizen/phase-1-finance.md) | Phase 1 kaizen on finance evidence contracts (2026-09-19). |

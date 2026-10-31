@@ -472,6 +472,7 @@ The engine improves through dated kaizen cycles. Each cycle keeps its evidence i
 - [`docs/kaizen/2026-10-engine-kaizen/`](docs/kaizen/2026-10-engine-kaizen/) holds the cycle of 29 October 2026.
 - Earlier records are in [`docs/kaizen/2026-08-27-advanced-ifrs/`](docs/kaizen/2026-08-27-advanced-ifrs/), [`docs/audits/`](docs/audits/) and [`docs/continuous-improvement/`](docs/continuous-improvement/). The [documentation index](docs/README.md) lists the rest of `docs/`.
 - What the two October cycles changed is under [What the October 2026 kaizen improved](#what-the-october-2026-kaizen-improved).
+- The structure, limits and editing conventions of this README are in the [README kaizen record](docs/kaizen/2026-10-readme-kaizen/readme-kaizen-record.md).
 
 ### Latest published score
 
