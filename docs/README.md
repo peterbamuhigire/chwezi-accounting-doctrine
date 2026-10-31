@@ -1,6 +1,6 @@
 # Documentation index
 
-This folder holds the engine's operating documents, fixtures and dated records. The skills themselves live in [`skills/`](../skills/), the canonical doctrine in [`doctrine/`](../doctrine/) and the release-blocking gate in [`governance/`](../governance/). Start from the repository [`README.md`](../README.md).
+This folder holds the engine's operating documents, fixtures and dated records. The skills themselves live in [`skills/`](../skills/), the canonical doctrine in [`doctrine/`](../doctrine/) and the release-blocking gate in [`governance/`](../governance/). Start from the repository [`README.md`](../README.md). It opens with an at-a-glance list and three start steps, then holds the router, the skill catalogue, installation, validation and quality status.
 
 Dated records describe the repository as it stood on their date. Their counts, scores and paths are history, not current facts; for current facts run the commands in the README section "Validation".
 
@@ -16,6 +16,7 @@ Dated records describe the repository as it stood on their date. Their counts, s
 | [`advanced-ifrs-capability-matrix.md`](advanced-ifrs-capability-matrix.md) | Maps the advanced IFRS capabilities to routes, evidence and release conditions. |
 | [`ai-prompting/domain-prompt-compilation-contract.md`](ai-prompting/domain-prompt-compilation-contract.md) | Local contract for generating ready-to-paste finance prompts. |
 | [`operations/runtime-agnostic-orchestration-2026-09-07.md`](operations/runtime-agnostic-orchestration-2026-09-07.md) | Orchestration contract shared by Claude, Codex and other runners. |
+| [`cited-sources.md`](cited-sources.md) | Books, repositories, standards and official sources cited in this repository. Moved out of the README on 2026-10-31. |
 | [`approval-enforcement.md`](approval-enforcement.md) and [`approval-adapter.json`](approval-adapter.json) | Approval adapter for accounting mutations. |
 | [`control-plane-adoption.md`](control-plane-adoption.md) | How the engine is exposed through `.skills-engine/engine-manifest.yaml`. |
 | [`validation-report-template.md`](validation-report-template.md) and [`release-manifest-template.yaml`](release-manifest-template.yaml) | Templates for validation evidence and release manifests. |
@@ -28,6 +29,7 @@ Dated records describe the repository as it stood on their date. Their counts, s
 |---|---|
 | [`kaizen/2026-10-engine-kaizen-pass-2/`](kaizen/2026-10-engine-kaizen-pass-2/) | Latest kaizen cycle (31 October 2026): seven files from scope to next cycle. Open work and owner decisions are in [`06-next-cycle.md`](kaizen/2026-10-engine-kaizen-pass-2/06-next-cycle.md). |
 | [`kaizen/2026-10-engine-kaizen/`](kaizen/2026-10-engine-kaizen/) | Kaizen cycle of 29 October 2026. |
+| [`kaizen/2026-10-31-october-changes-detail.md`](kaizen/2026-10-31-october-changes-detail.md) | Full notes behind the README section "What the October 2026 kaizen improved". |
 | [`kaizen/2026-08-27-advanced-ifrs/`](kaizen/2026-08-27-advanced-ifrs/) | Advanced IFRS kaizen cycle. |
 | [`kaizen/phase-1-finance.md`](kaizen/phase-1-finance.md) | Phase 1 kaizen on finance evidence contracts (2026-09-19). |
 | [`audits/`](audits/) and [`continuous-improvement/`](continuous-improvement/) | Earlier audits and kaizen waves (August and September 2026). |
