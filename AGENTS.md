@@ -52,8 +52,7 @@ operates within.
 ## Mandatory Digital Research currentness gate for Kaizen
 
 Every Kaizen audit, skill edit, reference update, validator change, and
-standardisation decision MUST begin with the Digital Research Engine at
-`C:\wamp64\www\digital-research-engine`. Read its `source-evaluation` and
+standardisation decision MUST begin with the Digital Research Engine (catalogue id `digital-research-skills`; resolve its checkout through the active engine-routing table or `chwezi-engine-agents/catalog/engines.yaml`, never a fixed path). Read its `source-evaluation` and
 `source-verification` skills and the currentness gate reference
 `docs/continuous-improvement/kaizen-currentness-gate.md`.
 
@@ -142,7 +141,7 @@ any artifact.
 
 ## PORTFOLIO CRAFT CONTRACT
 
-Load `C:\wamp64\www\chwezi-engine-agents\docs\operations\portfolio-craft-standard-2026-09-04.md` when available. Build finance work in bounded, reconciled slices: frame the reporting or control decision, select one transaction flow or statement area, inspect the applicable doctrine and source state, make the smallest reversible change, exercise normal, exception, reversal, and approval paths, reconcile the result, refine, and record evidence. Do not generate a complete ledger, model, or finance module as an opaque batch. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, reviewer, reconciliation, control, audit-trail, or runtime evidence is `NOT ASSESSED`, never a pass.
+Load `chwezi-engine-agents/docs/operations/portfolio-craft-standard-2026-09-04.md` when available (resolve `chwezi-engine-agents` through the active engine-routing table or the catalogue). Build finance work in bounded, reconciled slices: frame the reporting or control decision, select one transaction flow or statement area, inspect the applicable doctrine and source state, make the smallest reversible change, exercise normal, exception, reversal, and approval paths, reconcile the result, refine, and record evidence. Do not generate a complete ledger, model, or finance module as an opaque batch. Apply `Observe -> Baseline -> Select -> Experiment -> Check -> Standardise -> Teach -> Re-measure` to kaizen itself. Missing source, reviewer, reconciliation, control, audit-trail, or runtime evidence is `NOT ASSESSED`, never a pass.
 
 For human-facing finance prose, apply Digital Research's
 `docs/continuous-improvement/machine-errors-editorial-gate-2026-09-03.md` and record ME1-ME7
