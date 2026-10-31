@@ -84,15 +84,23 @@ remains the authority for finance content and controls.
   catalogue from a manually repeated count.
 - Use `docs/router-map.md` for human navigation. Rebuild and check it with
   `tools/update-router-map.ps1`.
-- Run `tools/validate-doctrine.ps1 -Strict` for the principal structural gate.
+- Run `tools/validate-doctrine.ps1 -Strict` (PowerShell 7 `pwsh` or Windows PowerShell
+  5.1; its frontmatter check calls `python` and needs PyYAML) for the principal
+  structural gate. The README section "Validation" lists every command, what it needs
+  and how it was verified.
 - Run `tests/accounting-invariants/scripts/Test-AccountingInvariants.ps1` for
   deterministic ledger, source-state, duplicate, reversal, and evidence cases.
-- Run `python -m unittest discover -s tests -p 'test_*.py'` for the Python checks. On a
-  host without PowerShell these still run: `tools/source_register_integrity.py` (register
-  entries judged one by one, and every cited source key resolving),
-  `tools/check_machine_paths.py` (no machine-specific paths in active content) and
-  `tools/route_proxy.py` (labelled routing fixtures, a Tier-2 lexical proxy, never live
-  routing). They support the PowerShell gate and do not replace it.
+- Run `python3 -m unittest discover -s tests -p 'test_*.py'` for the Python checks (PyYAML
+  required; use `python` on Windows). On a host without PowerShell these still run:
+  `tools/check_frontmatter_yaml.py --root .` (skill frontmatter),
+  `tools/source_register_integrity.py` (register entries judged one by one, and every
+  cited source key resolving), `tools/check_machine_paths.py` (no machine-specific paths
+  in active content) and `tools/route_proxy.py --fixture <file>` (labelled routing
+  fixtures, a Tier-2 lexical proxy, never live routing). They support the PowerShell
+  gate and do not replace it.
+- Before quoting a statutory value for a date, run
+  `python3 tools/source_register_lookup.py --jurisdiction <ISO code> --register <file stem> --date <YYYY-MM-DD>`.
+  Exit 3 means the entry cannot support final output; treat it as a hard stop.
 - Treat structural, behavioural, render, system, and production evidence as
   separate categories. If a check cannot run, record `NOT ASSESSED`.
 
@@ -114,10 +122,11 @@ remains the authority for finance content and controls.
 
 ## Handoff
 
-Route current or uncertain external claims through the Digital Research Engine.
-Route visual and presentation authority to the Design System Engine. Keep
-accounting content, ledger invariants, source-state semantics, and finance
-control evidence in this repository.
+Route current or uncertain external claims through the Digital Research Engine
+(catalogue id `digital-research-skills`). Route visual and presentation authority
+to the design engine (`chwezi-design-engine`). Resolve both through the active
+engine-routing table or the catalogue. Keep accounting content, ledger invariants,
+source-state semantics, and finance control evidence in this repository.
 
 <!-- chwezi-design-engine:trigger v4 -->
 ### Design / typography / UI/UX (cross-cutting — consult IN ADDITION)
