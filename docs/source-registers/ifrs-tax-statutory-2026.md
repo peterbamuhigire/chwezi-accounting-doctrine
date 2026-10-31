@@ -10,6 +10,8 @@ This register is the root-level source map for standards and statutory facts use
 
 **Freshness notice (2026-09-26):** this broad register remains last reviewed 2026-07-08, and its scheduled August review has passed. The scoped PAYE/WHT/LST follow-up below refreshes only those surfaces for current status; other entries have not been refreshed and remain subject to their stated gates. This notice does not renew the whole register.
 
+**Freshness notice (2026-10-31):** the Uganda VAT registration threshold row below is a historical record of 2026-07-08. The machine-readable register now carries `UG-VAT-REG-THRESHOLD` as a `draft` entry recording that URA's own VAT page and FY2026-27 VAT guide state UGX 300,000,000 a year and UGX 75,000,000 over three consecutive months; the amending Act and its commencement date were not located, so the threshold stays blocked for final use. Keys in this file other than those that also appear in `doctrine/source-register/` are not maintained as machine keys; resolve statutory values through the machine-readable register.
+
 ## Usage States
 
 | State | Meaning | Final-output use |

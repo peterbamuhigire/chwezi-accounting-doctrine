@@ -4,15 +4,15 @@
   value_or_rule: "No current WHT rate or transaction-category claim admitted in this entry. The 2024/25 URA handbook is historical context only. URA's 2026-09-23 effective-date notice says WHT returns are among those affected by the Income Tax (Amendment) Act 2026; transaction-specific changes and periods need direct source review."
   source_url_or_doc: "https://ura.go.ug/en/witholding-tax/; https://ura.go.ug/en/effective-date-of-the-income-tax-amendment-act-2026-and-the-excise-duty-amendment-act-2026/; https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf; https://ura.go.ug/en/tax-amendments-for-fy-2026-2027/"
   source_tier: 2
-  date_accessed_utc: "2026-09-27T04:08:33Z"
-  verifier: "Codex source check including official URA FY2026/27 guide review 2026-09-27; independent Uganda tax reviewer NOT_ASSESSED"
+  date_accessed_utc: "2026-10-31T12:49:57Z"
+  verifier: "Official URA WHT page opened 2026-10-31 after the 2026-09-27 source check including the URA FY2026/27 guide; independent Uganda tax reviewer NOT_ASSESSED"
   output_affected:
     - supplier-withholding
     - customer-withholding-credit
     - wht-return-pack
     - tax-control-reconciliation
   effective_from: "pending-review"
-  expires_or_recheck_due: "2026-10-27"
+  expires_or_recheck_due: "2026-12-29"
   state: draft
-  archive_snapshot: "NOT_CAPTURED; the direct fetch of URA's current WHT page timed out during the 2026-09-26 check."
-  notes: "Draft source lead only. The official URA FY2026/27 tax-amendments guide (published page dated 2026-06-23) summarizes several proposed WHT categories; its page 9 exemption for land-based casino winnings was reported removed on reconsideration by Parliament on 2026-08-04. The guide is not the authenticated post-reconsideration Act, and the current URA WHT page direct fetch timed out. No transaction-specific rate is promoted from this guide. Final WHT use remains blocked until the enacted provisions/current authority guidance are reconciled, a named tax reviewer confirms each applicable transaction category and period, and exact source evidence is archived; recheck by 2026-10-27 or sooner if the law/authority guidance changes."
+  archive_snapshot: "NOT_CAPTURED; the direct fetch of URA's current WHT page timed out during the 2026-09-26 check. The page opened on 2026-10-31 but was not archived."
+  notes: "Draft source lead only. The official URA FY2026/27 tax-amendments guide (published page dated 2026-06-23) summarizes several proposed WHT categories; its page 9 exemption for land-based casino winnings was reported removed on reconsideration by Parliament on 2026-08-04. The guide is not the authenticated post-reconsideration Act, and the current URA WHT page direct fetch timed out on 2026-09-26. On 2026-10-31 the page opened and lists percentages by payment category; it carries no reference to the Income Tax (Amendment) Act 2026 and no effective-date statement, and it links a 2026-27 withholding-tax PDF that was not opened. None of those figures is admitted or reconciled here. No transaction-specific rate is promoted from this guide. Final WHT use remains blocked until the enacted provisions/current authority guidance are reconciled, a named tax reviewer confirms each applicable transaction category and period, and exact source evidence is archived; recheck by 2026-12-29 or sooner if the law/authority guidance changes."

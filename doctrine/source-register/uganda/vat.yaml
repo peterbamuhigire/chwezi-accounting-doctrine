@@ -1,20 +1,20 @@
 - id: UG-VAT-STANDARD-RATE
   topic: Uganda VAT standard rate and VAT treatment seed
   jurisdiction: UG
-  value_or_rule: "URA's current VAT page states that VAT is charged at 18% on standard-rated supplies. This is a rate observation only; transaction eligibility, exemptions, input-tax recovery, return treatment and legal reconciliation remain subject to review."
-  source_url_or_doc: "https://ura.go.ug/en/value-added-tax-vat/; https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
+  value_or_rule: "URA's current VAT page and its FY2026-27 VAT guide (Vol. 2 Issue 3) state that VAT is charged at 18% on standard-rated supplies. This is a rate observation only; transaction eligibility, exemptions, input-tax recovery, return treatment and legal reconciliation remain subject to review."
+  source_url_or_doc: "https://ura.go.ug/en/value-added-tax-vat/; https://ura.go.ug/storage/2026/09/VALUE-ADDED-TAX-FY-2026-27ENG-1.pdf; https://ura.go.ug/wp-content/uploads/2024/12/Taxation-Handbook-FY-2024-25.pdf"
   source_tier: 2
-  date_accessed_utc: "2026-10-29T07:22:15Z"
-  verifier: "Official URA VAT page rechecked 2026-10-29; independent Uganda VAT reviewer and current source archive NOT_ASSESSED"
+  date_accessed_utc: "2026-10-31T12:49:57Z"
+  verifier: "Official URA VAT page and FY2026-27 VAT guide rechecked 2026-10-31; independent Uganda VAT reviewer and current source archive NOT_ASSESSED"
   output_affected:
     - sales-tax-codes
     - vat-return-pack
     - efris-invoice-validation
   effective_from: "pending-review"
-  expires_or_recheck_due: "2026-08-14"
+  expires_or_recheck_due: "2026-12-29"
   state: draft
   archive_snapshot: "capture-required-before-release"
-  notes: "The live URA page displays the 18% standard rate on 2026-10-29. This check does not reconcile enacted law, exceptions, taxpayer-specific eligibility or return mapping. Keep draft until reviewed by a named tax reviewer and archived. Next source/reviewer recheck due 2026-12-29."
+  notes: "The live URA page displays the 18% standard rate on 2026-10-31, and the FY2026-27 VAT guide (an image-only PDF) states 18% on its first page. This check does not reconcile enacted law, exceptions, taxpayer-specific eligibility or return mapping. Keep draft until reviewed by a named tax reviewer and archived. Next source/reviewer recheck due 2026-12-29."
 - id: UG-VAT-RETURN-PACK-SOURCE
   topic: Uganda VAT return pack source hierarchy
   jurisdiction: UG
@@ -31,3 +31,20 @@
   state: draft
   archive_snapshot: "capture-required-before-release"
   notes: "Draft hierarchy only. Final VAT return field mapping requires current URA form/source review."
+- id: UG-VAT-REG-THRESHOLD
+  topic: Uganda VAT compulsory registration threshold; amending-Act status and effective date not established
+  jurisdiction: UG
+  value_or_rule: "URA's live VAT page and its FY2026-27 VAT guide (Vol. 2 Issue 3) state a compulsory registration threshold of UGX 300,000,000 of taxable supplies in a year, and UGX 75,000,000 in three consecutive calendar months. Neither URA source states an effective date or names the amending Act. This is a regulator-published observation recorded for review, not an admitted rule."
+  source_url_or_doc: "https://ura.go.ug/en/value-added-tax-vat/; https://ura.go.ug/storage/2026/09/VALUE-ADDED-TAX-FY-2026-27ENG-1.pdf"
+  source_tier: 2
+  date_accessed_utc: "2026-10-31T12:49:57Z"
+  verifier: "Official URA VAT page and FY2026-27 VAT guide opened 2026-10-31; assented Act text, gazette notice, commencement date and independent Uganda VAT reviewer NOT_ASSESSED"
+  output_affected:
+    - vat-registration-check
+    - vat-return-pack
+    - sales-tax-codes
+  effective_from: "pending-review"
+  expires_or_recheck_due: "2026-12-29"
+  state: draft
+  archive_snapshot: "NOT_CAPTURED; the guide PDF contains page images only (no extractable text), so preserve the exact PDF and page before promotion."
+  notes: "Replaces the markdown-only key of the same name in docs/source-registers/ifrs-tax-statutory-2026.md, which recorded URA guidance at UGX 150,000,000 on 2026-07-08. URA's own pages no longer show that figure. An official-source search found no assented Act text. Secondary news and tax-tracker reports (not admitted here) give passage on 21 April 2026 and commencement on 2026-07-01 for UGX 300,000,000; that is not verified against the Act or gazette. Keep draft: no final VAT registration decision may rely on this entry until the amending Act, its commencement date for the relevant period and the guide are reconciled by a named Uganda VAT reviewer and archived."
