@@ -1,5 +1,40 @@
 # Changelog
 
+## 2026-10-31 - Documentation update after Kaizen pass 2
+
+Documentation only; no skill, doctrine or tool changed.
+
+- README: added a Validation section (each command checked on Linux, its
+  dependencies, which checks need PowerShell and the date-triggered gate),
+  and a Quality and improvement section with the pass-2 raw and capped scores
+  (58.2 and 58.2; 57.3 and 57.3 on 29 October), the open register findings
+  and a calendar of gates that fail from 2026-11-17. `bash install.sh` replaces
+  `./install.sh`, which is committed without the executable bit. (`4553cd5`)
+- AGENTS.md: the two portfolio-managed sentences were re-rendered with the
+  shared renderer so they no longer name a workstation path (`f405a5b`);
+  validation bullets, the source-register lookup step and the engine handoff
+  names were updated by hand (`ca7140b`).
+- `governance/how-to-reference-this-doctrine.md`: the active-contract paragraph
+  resolves the doctrine through the engine table and the catalogue instead of a
+  workstation path (`dc8bd25`).
+- Added `docs/README.md`, an index of the documentation folder (`b34416d`), and
+  `docs/kaizen/2026-10-engine-kaizen-pass-2/07-docs-followups.md`, which
+  records the tool, manifest and cross-engine items left for their owners
+  (`0041616`).
+
+Pass-2 commits by theme, for reference (the pass-2 entry below is unchanged):
+
+- Source-register gate judges each entry: `90323f5`.
+- Register content and snapshots: `666655c` (Uganda VAT threshold, dates),
+  `cfed502` and `74df846` (Uganda snapshot cites register keys that exist).
+- Python checks: integrity `cfed502`, machine-specific paths `43e6fc5`,
+  routing proxy and fixtures `3530f82`.
+- Skill descriptions and content: `3530f82` (Section 10), `dc592e7`
+  (source-register skill).
+- Router and changelog teaching: `2d0ed36`.
+- Evidence: `0ec9877` (baseline), `d14b7c7` (backlog), `e955bd0` (experiment
+  log, validation record, final report and next cycle).
+
 ## 2026-10-31 - Finance engine Kaizen, pass 2
 
 - Fixed a false negative in the strict source-register gate: state and recheck
