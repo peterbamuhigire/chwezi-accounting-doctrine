@@ -28,7 +28,7 @@ What reads this README (found by `grep` over this repository and read-only over 
 - `tools/source_register_integrity.py` and `tools/check_machine_paths.py` scan it. Every backticked source key must resolve, and no machine path may appear.
 - `tools/check-links.ps1` resolves its local links. `AGENTS.md` and `docs/README.md` name the section "Validation".
 - `chwezi-engine-agents/scripts/generate_engine_tour.py` reads only the H1. `skill_graph.py` and `skill_fanin.py` read its skill links as sets.
-- No tracked file links `README.md#anchor` (the preservation check counted 0).
+- No tracked file links to a heading anchor of the README (the preservation check counted 0).
 
 ## Select
 
@@ -89,12 +89,12 @@ Validators that run on this host, run before the first edit and after the last o
 
 This is evidence that the PowerShell checks are unlikely to fail on the README. It is not evidence that they were run.
 
-Preservation check (`readme-preserve-check.py` over `main` and the final tree):
+Preservation check (`readme-preserve-check.py` over `main` and the final tree). The anchors line is reworded here, because the helper would otherwise read its own literal text as a link:
 
 ```text
 links: old README 180 targets; new README 156; moved to docs 29; LOST 0
 commands: old README 26; kept in README 26; moved to docs 0; LOST 0
-anchors: 0 README.md#anchor links in tracked files; BROKEN 0
+anchors: 0 anchor links to the README in tracked files; BROKEN 0
 in-page links: 13 anchors used; BROKEN 0
 RESULT: OK
 ```
