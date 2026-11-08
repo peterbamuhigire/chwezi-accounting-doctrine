@@ -124,5 +124,10 @@
       "description": "Run this engine's enforcement hooks (e.g. destructive-command gate, banned-font gate where applicable). Disable hook enforcement while keeping skills and agents available.",
       "default": true
     }
+  },
+  "description": "Apply accounting and finance doctrine across bookkeeping, IFRS and IAS, reporting, tax, close, consolidation, and controls.",
+  "author": {
+    "name": "Peter Bamuhigire",
+    "url": "https://github.com/peterbamuhigire"
   }
 }
