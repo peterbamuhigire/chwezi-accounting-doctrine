@@ -1,7 +1,7 @@
 # Phase 1 Kaizen — finance evidence contracts and workpapers
 
 Date: 2026-09-19  
-Repository: `C:\\wamp64\\www\\chwezi-accounting-doctrine`  
+Repository: `chwezi-accounting-doctrine` (owner-local checkout; workstation path withheld).
 Scope: B03-A01, B03-A02, B07-A01, B07-A02  
 Write boundary: this repository only
 
