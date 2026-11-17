@@ -41,6 +41,17 @@ A passing check verifies stored configuration and policy files. Profiles, projec
 configuration, session overrides and model entitlement can affect the effective
 runtime; verify the active root and explicitly selected subagent models.
 
+The 17 November 2026 policy prefers `gpt-6.2-sol`/medium. Setup reads the host's
+`models_cache.json`, requires a snapshot no more than 24 hours old and listed
+medium reasoning support, and uses `gpt-6.1-terra`/medium only when Sol is absent
+and Terra is available. It reports that fallback. Missing, stale or malformed
+catalogues, or neither model being available, stop setup without writing.
+Refresh the catalogue through the authenticated Codex client and rerun the check.
+The 24-hour limit is a local conservative setup rule, not an OpenAI guarantee.
+Delegation tools can expose a different catalogue; check that surface separately.
+An existing explicit `gpt-6-astra`/high or `gpt-6.2-astra`/high root is preserved.
+Selecting the new default for the root is a separate owner-authorised choice.
+
 Existing custom role paths, extra role settings or differing user instructions
 require explicit reconciliation: the helper stops before changing files. A
 model-only policy update can be applied automatically when the role contract
