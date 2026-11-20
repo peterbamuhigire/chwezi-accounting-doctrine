@@ -72,6 +72,25 @@ class DriverTests(unittest.TestCase):
         self.assertIn(str(Path(execution.__file__).resolve().parent/'find_skill.py'),self.capture_prompt(self.cfg))
     def test_preload_mode_omits_skill_finder(self):
         self.assertNotIn('find_skill.py',self.capture_prompt({**self.cfg,'skills':'preload'}))
+    def test_research_status_reports_missing_and_present_clone(self):
+        # 20 Nov 2026: check tells whether this PC contributes to the private efficiency study. Never blocks.
+        old=os.environ.get('CHWEZI_RESEARCH_REPO')
+        try:
+            os.environ['CHWEZI_RESEARCH_REPO']=str(self.root.parent/'no-such-repo')
+            real=self.d.ROOT; self.d.ROOT=self.root.parent/'isolated'/'repo'
+            try:
+                if not (Path(r'C:\wamp64\www')/self.d.RESEARCH_REPO/'collect'/'sync.py').is_file():
+                    self.assertIn('not set up',self.d.research_status())
+                repo=self.root.parent/'research'; (repo/'collect').mkdir(parents=True); (repo/'collect'/'sync.py').write_text('',encoding='utf8')
+                os.environ['CHWEZI_RESEARCH_REPO']=str(repo)
+                line=self.d.research_status()
+                self.assertTrue(line.startswith('RESEARCH: '+str(repo)),line)
+                self.assertIn('remote',line)
+            finally:
+                self.d.ROOT=real
+        finally:
+            if old is None: os.environ.pop('CHWEZI_RESEARCH_REPO',None)
+            else: os.environ['CHWEZI_RESEARCH_REPO']=old
     def test_skills_mode_is_validated(self):
         (self.root/'auto-agents'/'config.json').write_text(json.dumps({**self.cfg,'skills':'all'}),encoding='utf8')
         self.d.CFG=self.root/'auto-agents'/'config.json'

@@ -11,6 +11,14 @@ Read this before you update another copy of the runner tools: the community copy
 
 The community copy (`chwezi-engine-agents`) was at 2.2.7 on 19 Nov 2026, so it lacks every entry below.
 
+## 2.5.1 (20 Nov 2026): research setup line in `check`
+
+- **Why:** the owner asked that every PC that builds or runs the runner contribute to the private research repository, so the PC used for writing a paper only needs to pull. The study repository now syncs itself across PCs (its v0.2.0).
+- **What:** `driver.research_status()` adds a `RESEARCH:` line to `check` (`preflight`). It reports the clone it finds (`CHWEZI_RESEARCH_REPO`, `CHWEZI_ENGINES_ROOT`, the repository's parent folder, or `C:\wamp64\www`), the clone's `origin`, and whether the Windows task "Chwezi research daily collect" is registered. The line is informational only: it never blocks and changes no run state. README gains "Research metrics".
+- **Tests:** `test_research_status_reports_missing_and_present_clone`.
+- **Files:** `driver.py`, `README.md`, `CHANGES.md`, `tests/test_driver.py`.
+- **Porting notes:** no configuration key and no digest change. Safe to propagate while a run is stopped.
+
 ## 2.5.0 (20 Nov 2026): Explore subagent on the cheapest model class
 
 - **Why:** the owner's rule (20 Nov 2026) is Opus and Sonnet for the work, Haiku only for trivial mechanical work, Fable only on explicit human request. Runner sessions already started Explore subagents even though `Agent` is not on their `--allowedTools` (it needs no approval), and Explore inherited the session model. Garage's three Explore calls on 19 Nov 2026 all ran on Opus. A per-user `~/.claude/agents/Explore.md` fixes one PC only.
@@ -26,7 +34,7 @@ The community copy (`chwezi-engine-agents`) was at 2.2.7 on 19 Nov 2026, so it l
   - Keep owner arguments last, so an explicit `--agents` in `runner_args` wins.
   - Changing `subagents` in a project config changes the run's configuration digest. Do it only between runs.
   - Upgrading the code alone does not change the digest; the default is not written into the config.
-  - The effect is measured in `chwezi-agentic-efficiency-research` amendment A6.
+  - The effect is measured in `chwezi-agentic-research` amendment A6.
 
 ## 2.4.1 (19 Nov 2026): absolute finder path
 

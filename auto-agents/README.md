@@ -86,6 +86,16 @@ Settings, normally in `config.json` so every lane and the default run share them
 - `integration_overlap_ignore` (fnmatch globs, default none): files that do not count as overlap when the target moved, so a clean rebase can still use the quick check. Use it for files the integration commands rebuild and for append-only shared lists the project merges line by line.
 - Publishing takes one shared **publish turn** (first come, first served) when `integrate` is on: the run rebases onto the target, runs the quick check and pushes while holding it, so the target cannot move underneath a passed check. A slice that needs its full gate again releases the turn first. Full gates still run in parallel.
 
+## Research metrics (every PC that runs the runner)
+
+Runner and interactive sessions on each PC feed the private research repository for agentic AI software development [chwezi-agentic-research](https://github.com/peterbamuhigire/chwezi-agentic-research): token economy, iterations, gate results and defect escape. It also holds the pre-registered model-routing experiments, such as A6 (Explore on Haiku).
+
+On each PC, clone it next to the engines (normally `C:\wamp64\www\chwezi-agentic-research`), run `scripts\daily-collect.ps1` once, then `scripts\daily-collect.ps1 -Register`.
+
+Each night the task pulls, collects this PC's data and pushes content-free daily shards. It then rebuilds the shared results from every PC's data and pushes them. Each PC's raw transcripts and full metrics database stay on that PC. The PC used for writing the paper only pulls.
+
+`check` prints a `RESEARCH:` line with the clone found, its remote and whether the nightly task is registered. This line is informational and never blocks a run. Point it at a clone elsewhere with `CHWEZI_RESEARCH_REPO`.
+
 ## Run and observe
 
 ```powershell

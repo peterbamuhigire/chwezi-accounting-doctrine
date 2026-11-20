@@ -195,6 +195,7 @@ def show(base):
 
 def preflight(cfg):
     """Read-only readiness checks. Never authenticates, edits or runs a model."""
+    print(research_status())  # informational; shown even when a later check blocks
     if Path(git(ROOT,'rev-parse','--show-toplevel')).resolve()!=ROOT.resolve():
         raise Stop('Install auto-agents directly beneath the repository root.')
     plan=(ROOT/cfg['plan']).resolve()
@@ -229,6 +230,31 @@ def preflight(cfg):
     print('READY: '+('lane '+cfg['lane']+'; ' if cfg.get('lane') else '')+cfg['runner']+'; plan '+cfg['plan']+'; '+str(len(cfg['verify']))+' slice checks and '+str(len(cfg.get('final_verify',[])))+' final checks.')
     print('Authentication, test services and semantic acceptance remain project-specific checks. Publication: '+str(cfg['publish']).lower())
     return 0
+
+RESEARCH_REPO='chwezi-agentic-research'
+RESEARCH_REMOTE='https://github.com/peterbamuhigire/'+RESEARCH_REPO
+RESEARCH_LEGACY='chwezi-agentic-efficiency-research'  # name before 20 Nov 2026; GitHub redirects it
+RESEARCH_TASK='Chwezi research daily collect'
+
+def research_status():
+    """Informational only (never blocks): whether this PC contributes runner metrics to the private research
+    repository for agentic AI software development. Each PC that runs the runner keeps a clone whose nightly task shares this PC's
+    data (scripts/daily-collect.ps1 -Register)."""
+    candidates=[Path(p) for p in (os.environ.get('CHWEZI_RESEARCH_REPO'),) if p]
+    candidates+=[Path(r)/name for name in (RESEARCH_REPO,RESEARCH_LEGACY) for r in (os.environ.get('CHWEZI_ENGINES_ROOT'),str(ROOT.parent),
+                                                 r'C:\wamp64\www' if os.name=='nt' else None) if r]
+    repo=next((p for p in candidates if (p/'collect'/'sync.py').is_file()),None)
+    if repo is None:
+        return ('RESEARCH: not set up on this PC. Clone '+RESEARCH_REMOTE+' next to the engines and run '
+                'scripts/daily-collect.ps1, then scripts/daily-collect.ps1 -Register (see its README).')
+    remote=subprocess.run(['git','-C',str(repo),'remote','get-url','origin'],capture_output=True,text=True).stdout.strip()
+    task='unknown'
+    if os.name=='nt':
+        try:
+            r=subprocess.run(['schtasks','/query','/tn',RESEARCH_TASK],capture_output=True,text=True,timeout=15)
+            task='registered' if r.returncode==0 else 'NOT registered (run scripts/daily-collect.ps1 -Register)'
+        except (OSError,subprocess.TimeoutExpired): pass
+    return ('RESEARCH: '+str(repo)+'; remote '+(remote or 'NONE (data stays on this PC)')+'; nightly task '+task+'.')
 
 def run(cfg, base, resume_only=False, recover=False):
     from execution import execute
