@@ -49,14 +49,14 @@ Release evidence checked 17 November 2026:
 Account availability must still be checked on the actual execution surface.
 <!-- chwezi-codex-model-policy:end -->
 
-<!-- MODEL-ROUTING-BLOCK v2 2026-11-10 -->
+<!-- MODEL-ROUTING-BLOCK v3 2026-11-20 -->
 ## Model classes and token discipline (Claude Code, Codex and any runner; mandatory)
-Name a class here, never a model version. The owner's routing file maps classes to current models (Knowledge Bank, Development, Anthropic Models: `model-routing.json`; handoff AM-01), so a model upgrade needs no edit in this repository.
-- **Classes:** **M Mundane** (fastest and cheapest; mechanical work with a clear right answer); **N Normal** (default; executes an approved plan); **X Expert** (strongest standard class; plans, judges, hard debugging, final review); **S Special occasion** (premium class above X; rare; only through the seven-test gate, AM-01 s5, including approved billing). A new model is classified by relative price and vendor positioning (AM-01 s1.1). With no S class available, X is the ceiling.
+Name a class here, never a model version. The owner's routing file maps classes to current models (Development engine, `docs/operations/model-routing.json`; today M Haiku, N Sonnet, X Opus, S Fable), so a model upgrade needs no edit in this repository.
+- **Classes:** **M Mundane** (fastest and cheapest; only trivial, mechanical work with a clear right answer, such as file discovery, search, log parsing and tagging; Claude Code's Explore subagent is pinned to it; never judgement, review, money, tenant, security or legal work); **N Normal** (default; executes an approved plan); **X Expert** (strongest standard class; plans, judges, hard debugging, final review); **S Special occasion** (premium class above X; only when a human explicitly asks for it in the current task; never selected, escalated to or used as a fallback automatically, including by runners and subagents). A new model is classified by relative price and vendor positioning in the routing file. Without that explicit request, X is the ceiling.
 - **Escalate one class, on a trigger only:** two failed acceptance checks; an undecidable choice; unreviewed money, tenant, security or legal work. Drop back after the hard step.
 - **Tokens, both runners:** start-up files at most 8,000 tokens and `AGENTS.md` at most 32 KiB (Codex stops at its byte cap); one task per session, clear or new thread between tasks, compact near 80%; plan to a file, execute in a fresh session (resume a plan from its small `RESUME.md` only); read the router section then one `SKILL.md`, search instead of loading; consult only the engine whose domain matches the task; subagents and tools return summaries, cap tool output (`tool_output_token_limit`), disable unused MCP tools; stable prefix first, no instruction edits mid-session; parallel agents only with a written budget; non-interactive runs for bulk (Batch API only with an approved API budget); effort medium by default, high needs a reason, the maximum needs approval.
 - **Class S case for this repository (E-09, AM-02):** design and test a reconciliation and period-close tie-out with exception finding, on anonymised data. Everything else: X plans, N executes, M for mechanical work.
-- **Monthly Kaizen, first step:** Anthropic currency check (AM-01 s8) and the token-budget lint; record `Anthropic currency check YYYY-MM-DD: no change|changed`.
+- **Monthly Kaizen, first step:** Anthropic currency check (routing file `review`) and the token-budget lint; record `Anthropic currency check YYYY-MM-DD: no change|changed`.
 <!-- /MODEL-ROUTING-BLOCK -->
 
 
