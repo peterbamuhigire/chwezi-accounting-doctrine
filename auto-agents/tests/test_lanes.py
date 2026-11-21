@@ -177,6 +177,41 @@ class LaneTests(unittest.TestCase):
         self.assertIn('integration_verified', [e['event'] for e in self.events()])
         self.assertEqual(self.counter.read_text(), 'g')  # no second full gate
 
+    def regen_command(self, path):
+        """An integration command that rebuilds `path` from other.txt and commits it when it changed."""
+        script = Path(self.tmp.name) / ('regen-%s.py' % path.replace('/', '-'))
+        script.write_text(
+            'import pathlib,subprocess\n'
+            'src=pathlib.Path("other.txt"); out=pathlib.Path(%r)\n'
+            'out.parent.mkdir(parents=True,exist_ok=True)\n'
+            'out.write_text("built from "+(src.read_text() if src.exists() else "nothing"))\n'
+            'subprocess.run(["git","add",str(out)],check=True)\n'
+            'if subprocess.run(["git","diff","--cached","--quiet"]).returncode:\n'
+            '    subprocess.run(["git","commit","-qm","Integrate: regenerate"],check=True)\n' % path, encoding='utf8')
+        return [[sys.executable, str(script)]]
+
+    def test_regenerated_ignored_files_keep_the_quick_check(self):
+        self.cfg['integration_verify'] = [[sys.executable, '-c', 'pass']]
+        self.cfg['integration_overlap_ignore'] = ['gen/*']
+        self.cfg['integration_commands'] = self.regen_command('gen/out.txt')
+        self.cfg['verify'].append(self.mover('other.txt', 'x\n', 'other lane slice'))
+        self.assertEqual(self.d.run(self.cfg, self.base), 0)
+        integrated = [e for e in self.events() if e['event'] == 'integrated'][-1]
+        self.assertTrue(integrated['regenerated'])
+        self.assertIn('integration_verified', [e['event'] for e in self.events()])
+        self.assertEqual(self.counter.read_text(), 'g')  # no second full gate
+        self.assertEqual(git(self.remote, 'show', 'main:gen/out.txt'), 'built from x')
+
+    def test_regenerated_source_file_reruns_full_gate(self):
+        self.cfg['integration_verify'] = [[sys.executable, '-c', 'pass']]
+        self.cfg['integration_overlap_ignore'] = ['gen/*']
+        self.cfg['integration_commands'] = self.regen_command('src/out.txt')
+        self.cfg['verify'].append(self.mover('other.txt', 'x\n', 'other lane slice'))
+        self.assertEqual(self.d.run(self.cfg, self.base), 0)
+        self.assertNotIn('integration_verified', [e['event'] for e in self.events()])
+        self.assertEqual(self.counter.read_text(), 'gg')  # gate re-ran on the regenerated head
+        self.assertEqual(git(self.remote, 'show', 'main:src/out.txt'), 'built from x')
+
     def test_conflict_is_integrated_by_next_session_and_regated(self):
         self.write_agent('shared.txt')
         self.cfg['verify'].append(self.mover('shared.txt', 'upstream rewrite\n', 'other lane rewrites shared'))

@@ -889,7 +889,15 @@ class Execution:
                     self.fail('integration command left uncommitted changes')
                 if self.head() != before:
                     regenerated = True
-                    pending.update(head=self.head(), index=0, quick=False)
+                    # Regenerating only files the project marks as rebuilt
+                    # (`integration_overlap_ignore`) keeps the quick check; any
+                    # other file forces the full gate. Without this a lane whose
+                    # slice feeds a generated file re-ran the full gate on every
+                    # move of the target and never published.
+                    rebuilt = self.a.git(self.work, 'diff', '--name-only', before, self.head()).splitlines()
+                    ignore = cfg.get('integration_overlap_ignore', [])
+                    generated_only = bool(rebuilt) and all(any(fnmatch.fnmatch(f, g) for g in ignore) for f in rebuilt)
+                    pending.update(head=self.head(), index=0, quick=pending.get('quick', False) and generated_only)
                 durable.write_json(self.pending_path, pending)
                 if result['state'] != 'passed':
                     pending.update(failures=pending.get('failures', 0) + 1, feedback=output[-1500:] or 'Integration command failed.')

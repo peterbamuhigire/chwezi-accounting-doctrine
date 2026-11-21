@@ -11,6 +11,22 @@ Read this before you update another copy of the runner tools: the community copy
 
 The community copy (`chwezi-engine-agents`) was at 2.2.7 on 19 Nov 2026, so it lacks every entry below.
 
+## 2.5.3 (20 Nov 2026): the runner is named Jidoka (JAD)
+
+- **Why:** the owner named the unattended runner **Jidoka**, the *Jidoka Automated Development* tool (JAD), so every new repository's auto runner carries one name alongside the engines' Kaizen vocabulary.
+- **What:** naming only. The README title and introduction and the `run.ps1` help and error text say Jidoka. The folder `auto-agents`, file names, configuration keys, state files and the logon-resume task name are unchanged.
+- **Tests:** unchanged behaviour; the full suite is rerun.
+- **Files:** `README.md`, `run.ps1`, `CHANGES.md`.
+- **Porting notes:** no configuration key and no digest change. Safe to propagate while a run is stopped.
+
+## 2.5.2 (20 Nov 2026): regenerating generated files keeps the quick check
+
+- **Why:** Medic8 lane `area-09` passed six full gates on one slice between 09:41 and 19:30 on 20 Nov 2026 and never published. Its slice feeds generated files (API inventory, API docs, asset manifest). Every time the target moved, the integration command rebuilt them, the driver treated the rebuild commit as new lane work and re-ran the full gate (about 55 minutes plus queueing), and the target moved again meanwhile.
+- **What:** in `Execution.integrate`, when an integration command commits only files matched by `integration_overlap_ignore`, the quick check is kept (if the rebase already qualified for it). A rebuilt file outside those globs still forces the full gate.
+- **Tests:** `test_regenerated_ignored_files_keep_the_quick_check` (fails without the change), `test_regenerated_source_file_reruns_full_gate`.
+- **Files:** `execution.py`, `CHANGES.md`, `tests/test_lanes.py`.
+- **Porting notes:** no configuration key and no digest change. A project whose `integration_overlap_ignore` lists generated outputs should make its quick check cover them (Medic8 adds its API inventory test and JS tests).
+
 ## 2.5.1 (20 Nov 2026): research setup line in `check`
 
 - **Why:** the owner asked that every PC that builds or runs the runner contribute to the private research repository, so the PC used for writing a paper only needs to pull. The study repository now syncs itself across PCs (its v0.2.0).
